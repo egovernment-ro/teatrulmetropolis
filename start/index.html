@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>APP TM!</title>
+		<meta charset="UTF-8" />
+		<link href="https://www.teatrulmetropolis.ro/view/theme/metro/css/modern.css" rel="stylesheet">
+		<link href="https://www.teatrulmetropolis.ro/view/theme/metro/css/modern-responsive.css" rel="stylesheet">
+		<link href="https://www.teatrulmetropolis.ro/view/theme/metro/css/login.css" rel="stylesheet" type="text/css">
+		<link href="https://www.teatrulmetropolis.ro/view/theme/metro/js/google-code-prettify/prettify.css" rel="stylesheet" type="text/css">
+		<script src="https://www.teatrulmetropolis.ro/view/theme/metro/js/jquery.js"></script>
+		<script src="https://www.teatrulmetropolis.ro/view/theme/metro/js/jquery.ui.core.js"></script>
+		<script src="https://www.teatrulmetropolis.ro/view/theme/metro/js/jquery.ui.widget.js"></script>
+		<script src="https://www.teatrulmetropolis.ro/view/theme/metro/js/jquery.ui.mouse.js"></script>
+		<script src="https://www.teatrulmetropolis.ro/view/theme/metro/js/jquery.ui.draggable.js"></script>
+		<script src="https://www.teatrulmetropolis.ro/view/theme/metro/js/touch.js"></script>
+		<script src="https://www.teatrulmetropolis.ro/view/theme/metro/js/moment.js"></script>
+		<script src="https://www.teatrulmetropolis.ro/view/theme/metro/js/script.js"></script>
+		<script>
+		function fullscreen(){
+		var el = document.documentElement
+		, rfs = // for newer Webkit and Firefox
+			   el.requestFullScreen
+			|| el.webkitRequestFullScreen
+			|| el.mozRequestFullScreen
+			|| el.msRequestFullScreen
+		;
+		if(typeof rfs!="undefined" && rfs){
+		  rfs.call(el);
+		} else if(typeof window.ActiveXObject!="undefined"){
+		  // for Internet Explorer
+		  var wscript = new ActiveXObject("WScript.Shell");
+		  if (wscript!=null) {
+			 wscript.SendKeys("{F11}");
+		  }
+		}
+	}
+	function shutdown(character){
+
+	}
+
+	</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+	<body class="login">
+		<div class="fullScreenItem" id="loginPage" >
+			<div id="loginFormCenter">
+				<div id="LoginFormContainer">
+					<img src="https://www.teatrulmetropolis.ro/view/theme/metro/images/login-logo.png" />
+					<div id="rightContainer">
+						<h1>Autentificare</h1>
+						<form id="loginForm" action="/start/login" method="POST" />
+														<input id="email" type="text" name="email" required="" placeholder="Utilizator" />
+							<input id="pass" name="password" type="password" placeholder="Parolă" required="" />
+							<input type="submit" id="submit" name="auth"/>
+													</form>
+												<div class="clear"></div>
+						<a href="#forgot" class="forgot">Parola uitată?</a>
+											</div>
+				</div>
+			</div>
+		</div>
+		<div id="rightBar" class="bottomBar">
+				<img onclick="shutdown();" src="https://www.teatrulmetropolis.ro/view/theme/metro/images/shutdown.png" alt="Shutdown" />
+		</div>
+		<div id="leftBar" class="bottomBar">
+
+		</div>
+
+
+		
+	</body>
+</html>

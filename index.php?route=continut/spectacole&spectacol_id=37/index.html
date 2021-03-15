@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01//EN”
+“http://www.w3.org/TR/html4/strict.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ro" xml:lang="ro">
+<head>
+<title>Teatrul Metropolis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Teatrul Metropolis" />
+<meta name="keywords" content="" />
+<base href="http://www.teatrulmetropolis.ro/" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+<script  type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20895213-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<body bgcolor = "#000000">
+<a name="top"></a>
+<div id="container">
+	<div id="div2_continut"></div>
+	
+	<div id="header_continut">
+		<table width="100%">
+		<tr><td height="20" colspan="7"></td></tr>
+		<tr><td width="10%"></td><td align="center" valign="top" >
+				
+				<a href="http://www.teatrulmetropolis.ro/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','catalog/view/theme/default/image/prima_pg_hover.png',1)">
+						<img src="catalog/view/theme/default/image/prima_pg_normal.png" name="Image1" width="85" height="45" border="0" id="Image1" />
+					</a></td>
+					<td align="center" valign="top" >
+										<a href="index.php?route=continut/artisti" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','catalog/view/theme/default/image/artisti_hover.png',1)">
+						<img src="catalog/view/theme/default/image/artisti_normal.png" name="Image2" width="195" height="196" border="0" id="Image2" />
+					</a>
+										</td>
+									<td align="center" valign="top" >
+											<a href="index.php?route=continut/spectacole"><img src="catalog/view/theme/default/image/spectacole_hover.png" width="154" height="145" border="0"  /></a>
+									</td>
+					<td align="center" valign="top" >
+									
+					
+					<a href="index.php?route=continut/despre_noi" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','catalog/view/theme/default/image/despre_noi_hover.png',1)">
+						<img src="catalog/view/theme/default/image/despre_noi_normal.png" name="Image6" width="174" height="145" border="0" id="Image6" />
+					</a>
+							</td>
+		<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/index.php?route=continut/stiri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','catalog/view/theme/default/image/stiri_ANTET_hover.png',1)">
+						<img src="catalog/view/theme/default/image/stiri_ANTET_normal.png" name="Image4" width="144" height="120" border="0" id="Image4" />
+					</a>
+									</td>
+		<td width="10%"></td></tr></table>		
+	</div>
+
+
+
+
+<script>
+
+function show(control){
+var pagina = new Array()
+pagina[0]="descriere"
+pagina[1]="distributia"
+pagina[2]="cronici"
+
+if (document.layers) { // NN4+
+	document.layers['table_spectacol'].height = '100%';
+	document.layers['table_caract_spect'].height = '100%';
+	
+	for (i=0;i<pagina.length;i++){
+		
+		if (pagina[i] == control) {
+			document.layers[pagina[i]].visibility = "show";
+			document.layers[pagina[i]].display = "block";
+			document.layers[pagina[i]].position = "absolute";
+			document.layers["martor_" + pagina[i]].visibility = "show";
+			document.layers["martor_" + pagina[i]].display = "block";
+			}
+		else
+			{
+			document.layers[pagina[i]].visibility = "hide";
+			
+			document.layers["martor_" + pagina[i]].visibility = "hide";
+			
+      			}
+  		}
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+		document.getElementById('table_spectacol').style.height='100%';
+		document.getElementById('table_caract_spect').style.height='100%';
+		for (i=0;i<pagina.length;i++){
+			if (pagina[i] == control) {
+				var obj = document.getElementById(pagina[i]);
+				
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "visible";
+				obj.style.display = "block";
+				
+
+				obj.style.position = "relative";
+				objSD.style.visibility = "visible";
+				objSD.style.display = "block";
+				}
+			else
+				{
+				var obj = document.getElementById(pagina[i]);
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "hidden";
+				
+				obj.style.display = "none";
+				objSD.style.visibility = "hidden";
+				
+				}
+		}
+	}
+else if (document.all) { // IE 4
+	document.all['table_spectacol'].style.height = '100%';
+	document.all['table_caract_spect'].style.height = '100%';
+	for (i=0;i<pagina.length;i++){
+		if (pagina[i] == control) {
+			document.all[pagina[i]].style.visibility = "visible";
+			document.all[pagina[i]].style.display = "block";
+			document.all[pagina[i]].style.position = "absolute";
+			document.all["martor_" + pagina[i]].style.visibility = "visible";
+			document.all["martor_" + pagina[i]].style.display = "block";
+			}
+		else {
+			document.all[pagina[i]].style.visibility = "hidden";
+			
+			document.all["martor_" + pagina[i]].style.visibility = "hidden";
+			
+			}
+  		}
+	}
+}
+</script>
+
+<div id="content_continut" >
+	<table cellspacing="0" cellpadding="0" border="0" width="100%" ><tr><td align="center">
+		<div class="center" id="table_spectacol">
+			<table cellspacing="0" cellpadding="0" border="0" ><tr><td align="center" valign="top" width="70%" style="min-height:700px;">
+							<table cellspacing="20" cellpadding="0" width="100%" >
+					<tr><td width="33%" valign="top" align="center" >
+						<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1769%20-%20sc-500x500.png" class="grouped_elements" ><img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1769%20-%20sc-200x300.png" border="0" width="200" height="132"></a><br><br>
+													<div style="display: block;">
+																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1079%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1079%20-%20sc-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1764%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1764%20-%20sc-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1714%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1714%20-%20sc-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1125%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1125%20-%20sc-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1769%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1769%20-%20sc-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1846%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1846%20-%20sc-50x50.png" border="0" width="33" height="50" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1735%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1735%20-%20sc-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1055%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1055%20-%20sc-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1863%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1863%20-%20sc-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1058%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1058%20-%20sc-50x50.png" border="0" width="50" height="33" >
+									</a>
+																								</div>
+												<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('descriere');"><font size="4" >Descriere</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_descriere" style="margin-top:-40px;margin-right:10px;float:right;">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+									
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('distributia');"><font size="4" >Distributia</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_distributia" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+										
+													<div id="martor_cronici" style="display:none;"></div>
+												<br><br>
+						<div class="buton-inapoi"><a href="http://www.teatrulmetropolis.ro/index.php?route=continut/spectacole">< Spectacole</a></div>
+					</td>
+					<td width="67%" valign="top" >
+						<table border='0' width="476" cellspacing='0' cellpadding='0' style="height: auto;">
+							<tr>
+								<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476"  valign="middle">
+									<font size="4" style="margin-left:20px;" color="white">LOVE STORIES de Radu F. ALEXANDRU</font><br>
+									<font size="3" style="margin-left:20px;" color="white">regia: Claudiu GOGA</font>
+																			<br>
+										<table style="margin-left:20px;margin-right:10px;" ><tr><td>
+											<font style="font-size:18px;" color="white"><b><p>
+	Premiul pentru &bdquo;Cea mai bună piesă rom&acirc;nească a anului 2010&rdquo;-<br style="position: relative" />
+	desemnat de juriul UNITER (Nicolae Manolescu, Marina Constantinescu, Marian Popescu)<br style="position: relative" />
+	&nbsp;</p>
+</b></font>
+										</td></tr></table>
+																	</td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/lb.png" width="13" height="13" ></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+							</tr>
+						</table>
+						<br><br>
+												<br><br>
+						
+								<table border='0' width="476" cellspacing='0' cellpadding='0' valign="top" align="left" >
+									<tr>
+										<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+										<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476" >
+											<table style="margin-left:20px;margin-right:10px;" align="left" id="table_caract_spect"><tr><td align="left" valign="top">
+																							<div id="descriere" style="display:block;">
+													<font size="2" color="white"><p>
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span><span _fck_bookmark="1" style="display: none">&nbsp;</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span><span _fck_bookmark="1" style="display: none">&nbsp;</span><span _fck_bookmark="1" style="display: none">&nbsp;</span></p>
+<p style="position: relative; text-align: center">
+	<span style="font-size: 14px"><span style="font-family: arial, helvetica, sans-serif"><span style="color: #fff">Douǎ generaţii, douǎ cupluri &ndash; parinţi şi copii, o emoţionantǎ poveste a cǎutǎrilor de sine, un labirint al emoţiilor şi dramelor existenţiale, un spectacol care vorbeşte despre acceptare şi autenticitate. Despre fascinanta relaţie &icirc;ntre autor şi personajele lui.Despre limite si despre tabuuri.</span></span></span></p>
+<p style="text-align: center">
+	<span style="font-size: 14px"><span style="font-family: arial, helvetica, sans-serif"><span style="color: #fff">Despre adevărul care surprinde şi şocheazǎ.</span></span></span></p>
+<p style="text-align: center">
+	<span style="font-size: 14px"><span style="font-family: arial, helvetica, sans-serif"><span style="color: #fff">De fapt, despre matricea existenţialǎ a fiecaruia dintre noi.</span></span></span></p>
+<p>
+	<span style="font-size: 14px"><span style="font-family: arial, helvetica, sans-serif"><span style="color: #fff"><br style="position: relative" />
+	<span class="Apple-style-span" style="line-height: normal; widows: 2; text-transform: none; font-variant: normal; font-style: normal; text-indent: 0px; border-collapse: separate; white-space: normal; orphans: 2; letter-spacing: normal; font-weight: normal; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">Cu: Maia MORGENSTERN, Mircea RUSU, Alexandru PAVEL, Diana CAVALLIOTI</span></span></span></span></p>
+<p>
+	<span style="font-size: 14px"><span style="font-family: arial, helvetica, sans-serif"><span style="color: #fff"><font class="Apple-style-span"><span class="Apple-style-span">Cu participarea inedita a lui Emil HUREZEANU</span></font></span></span></span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span><span style="font-size: 14px"><span style="font-family: arial, helvetica, sans-serif"><span style="color: #fff"><span class="Apple-style-span" style="line-height: normal; widows: 2; text-transform: none; font-variant: normal; font-style: normal; text-indent: 0px; border-collapse: separate; white-space: normal; orphans: 2; letter-spacing: normal; font-weight: normal; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">Regia: Claudiu Goga</span></span></span></span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span><span style="font-size: 14px"><span style="font-family: arial, helvetica, sans-serif"><span style="color: #fff"><span class="Apple-style-span" style="line-height: normal; widows: 2; text-transform: none; font-variant: normal; font-style: normal; text-indent: 0px; border-collapse: separate; white-space: normal; orphans: 2; letter-spacing: normal; font-weight: normal; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">Scenografia: Lia Dogaru</span></span></span></span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span></p>
+</font>
+													<br>
+													<font size="2" color="white">Durată: 1h 40m (fara pauza)</font><br><br>																											<div class="buton-sus"><a href="http://www.teatrulmetropolis.ro/index.php?route=continut/spectacole&amp;spectacol_id=37#top">^ Sus</a></div>
+																									</div>
+																																		<div id="distributia" style="display:none;">
+													<font size="2" color="white"><p>
+	cu: Maia Morgenster, Mircea Rusu, Alexandru Pavel, Diana Cavallioti</p>
+<p>
+	cu participarea inedita a lui Emil Hurezeanu</p>
+</font><br>
+																									</div>
+																																		<div id="cronici" style="display:none;"></div>
+																						</td></tr></table>
+										</td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450"  height="13"></td>
+										<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+									</tr>
+								</table>
+					</td>
+				</tr>
+			</table>
+		
+		<script>show('descriere');</script>
+	</td>
+<td width="30%" align="center" valign="top"><br><br>
+		<br><img src="catalog/view/theme/default/image/in_constructie.png" border="0" width="178" height="589" onclick="alert('Această zonă a sitului este momentan în fază de testare. Vă rugăm să reveniți pentru a verifica disponibilitatea ei. Vă mulțumim pentru ințelegere.');" /></td>
+</tr></table>
+</div>	
+	
+
+﻿<div class="footer">
+	<div class="center-footer"><br>
+		<table width="90%" cellpadding="0" cellspacing="0"  style="color: #999;font-family:Arial, Helvetica, sans-serif;font-size:14px;">
+  <tr>
+    <td width="23%" rowspan="6" align="right" valign="top" >
+    <img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/sigla_tm.png" width="100" height="100" border="0" style="margin-right:30px;"/>
+    </td>
+    <td width="70%">Adresa: Str. Mihai Eminescu nr.89, sector 2, București.</td>
+    <td width="7%" rowspan="6" align="center" valign="top">
+   <a href="http://www.pmb.ro" target="blank"><img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/primaria_mun_buc.png" width="75" height="150" border="0" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Rezervări bilete se pot face și telefonic, la numerele: <br />
+      <strong style="color:#FFF">021 210 51 08</strong>  sau  <strong style="color:#FFF">0728 138 265</strong><br />
+      (în intervalul orar 10:00 - 19.00)<br />
+    Rezervarea telefonică este valabilă 48 de h.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font style="font-size:16px; color:#FFF">&copy;Teatrul Metropolis. Toate drepturile rezervate</font></td>
+  </tr>
+  <tr>
+    <td ><font style="font-size:12px;">Site produs de <strong style="color: #CCC">Legolas Media</strong><br />
+        Design by <strong style="color: #CCC">Alexandru Șulai</strong></font></td>
+  </tr>
+</table>	</div>
+</div>
+</td></tr></table>
+	
+
+ 
+</div>
+</body></html> 

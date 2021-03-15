@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ro" xml:lang="ro">
+<head>
+<title>Teatrul Metropolis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Teatrul Metropolis" />
+<meta name="keywords" content="" />
+<link href="http://www.teatrulmetropolis.ro/image/data/logo-ico.gif" rel="shortcut icon" type="image/x-icon" />
+<base href="http://www.teatrulmetropolis.ro/" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<!--[if IE]>
+	
+<![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-collapser/jquery.collapser.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+
+</head>
+<body bgcolor="#000000">
+<a name="top"></a>
+<div id="container">
+	<div id="div2_continut"></div>
+	
+	<div id="header_continut">
+		<table width="100%">
+		<tr><td height="20" colspan="8"></td></tr>
+		<tr><td width="10%"></td><td align="center" valign="top" >
+				
+				<a href="http://www.teatrulmetropolis.ro/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','catalog/view/theme/default/image/prima_pg_hover.png',1)">
+						<img src="catalog/view/theme/default/image/prima_pg_normal.png" name="Image1" width="85" height="45" border="0" id="Image1" />
+					</a><br/>
+					<div class="contact_continut">
+                       <a class="contact1_continut" href="http://www.teatrulmetropolis.ro/contact.html" id="fancybox_page_rel">&nbsp;</a>
+                    </div>
+					</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/artisti" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','catalog/view/theme/default/image/artisti_hover.png',1)">
+						<img src="catalog/view/theme/default/image/artisti_normal.png" name="Image2" width="195" height="196" border="0" id="Image2" />
+					</a>
+										</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/program" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','catalog/view/theme/default/image/program_hover.png',1)">
+						<img src="catalog/view/theme/default/image/program_normal.png" name="Image3" width="222" height="175" border="0" id="Image3" />
+					</a>
+										</td>
+					
+				<td align="center" valign="top" >
+											<a href="http://www.teatrulmetropolis.ro/spectacole"><img src="catalog/view/theme/default/image/spectacole_hover.png" width="154" height="145" border="0"  /></a>
+									</td>
+					<td align="center" valign="top" >
+									
+					
+					<a href="http://www.teatrulmetropolis.ro/despre_noi" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','catalog/view/theme/default/image/despre_noi_hover.png',1)">
+						<img src="catalog/view/theme/default/image/despre_noi_normal.png" name="Image6" width="174" height="145" border="0" id="Image6" />
+					</a>
+							</td>
+		<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/stiri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','catalog/view/theme/default/image/stiri_ANTET_hover.png',1)">
+						<img src="catalog/view/theme/default/image/stiri_ANTET_normal.png" name="Image4" width="144" height="120" border="0" id="Image4" />
+					</a>
+									</td>
+		<td width="10%"></td></tr></table>		
+	</div>
+<script>
+
+function show(control){
+var pagina = new Array()
+pagina[0]="descriere"
+pagina[1]="distributia"
+pagina[2]="cronici"
+
+if (document.layers) { // NN4+
+	document.layers['table_spectacol'].height = '100%';
+	document.layers['table_caract_spect'].height = '100%';
+	
+	for (i=0;i<pagina.length;i++){
+		
+		if (pagina[i] == control) {
+			document.layers[pagina[i]].visibility = "show";
+			document.layers[pagina[i]].display = "block";
+			document.layers[pagina[i]].position = "absolute";
+			document.layers["martor_" + pagina[i]].visibility = "show";
+			document.layers["martor_" + pagina[i]].display = "block";
+			}
+		else
+			{
+			document.layers[pagina[i]].visibility = "hide";
+			
+			document.layers["martor_" + pagina[i]].visibility = "hide";
+			
+      			}
+  		}
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+		document.getElementById('table_spectacol').style.height='100%';
+		document.getElementById('table_caract_spect').style.height='100%';
+		for (i=0;i<pagina.length;i++){
+			if (pagina[i] == control) {
+				var obj = document.getElementById(pagina[i]);
+				
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "visible";
+				obj.style.display = "block";
+				
+
+				obj.style.position = "relative";
+				objSD.style.visibility = "visible";
+				objSD.style.display = "block";
+				}
+			else
+				{
+				var obj = document.getElementById(pagina[i]);
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "hidden";
+				
+				obj.style.display = "none";
+				objSD.style.visibility = "hidden";
+				
+				}
+		}
+	}
+else if (document.all) { // IE 4
+	document.all['table_spectacol'].style.height = '100%';
+	document.all['table_caract_spect'].style.height = '100%';
+	for (i=0;i<pagina.length;i++){
+		if (pagina[i] == control) {
+			document.all[pagina[i]].style.visibility = "visible";
+			document.all[pagina[i]].style.display = "block";
+			document.all[pagina[i]].style.position = "absolute";
+			document.all["martor_" + pagina[i]].style.visibility = "visible";
+			document.all["martor_" + pagina[i]].style.display = "block";
+			}
+		else {
+			document.all[pagina[i]].style.visibility = "hidden";
+			
+			document.all["martor_" + pagina[i]].style.visibility = "hidden";
+			
+			}
+  		}
+	}
+}
+</script>
+
+<div id="content_continut" >
+	<table cellspacing="0" cellpadding="0" border="0" width="100%" ><tr><td align="center">
+		<div class="center" id="table_spectacol">
+			<table width="1000" cellspacing="0" cellpadding="0" border="0" ><tr><td align="center" valign="top" width="700" style="min-height:700px;">
+							<table cellspacing="20" cellpadding="0" width="100%" >
+					<tr><td width="33%" valign="top" align="center" >
+						<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/afis%20alex.-500x500.png" class="grouped_elements" ><img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/afis%20alex.-200x300.png" border="0" width="200" height="283"></a><br><br>
+													<div style="display: block;">
+																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_2224-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_2224-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_1548-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_1548-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_1491-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_1491-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_1484-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_1484-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_1477-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_1477-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_1463-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_1463-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_1457-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/10/IMG_1457-50x50.png" border="0" width="33" height="50" >
+									</a>
+																								</div>
+												<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('descriere');"><font size="4" >Descriere</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_descriere" style="margin-top:-40px;margin-right:10px;float:right;">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+									
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('distributia');"><font size="4" >Distributia</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_distributia" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+										
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('cronici');"><font size="4" >Cronici</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_cronici" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+												<br><br>
+						<div class="buton-inapoi"><a href="http://www.teatrulmetropolis.ro/spectacole">< Spectacole</a></div>
+					</td>
+					<td width="67%" valign="top" >
+						<table border='0' width="476" cellspacing='0' cellpadding='0' style="height: auto;">
+							<tr>
+								<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476"  align="center" valign="middle">
+									<font size="4"  color="white">BABA CARE ASCULTĂ ABBA de Catherine AIGNER  </font><br>
+									<font size="3"  color="white">Regia: Theo HERGHELEGIU</font>
+																	</td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/lb.png" width="13" height="13" ></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+							</tr>
+						</table>
+						<br><br>
+												<br><br>
+						
+								<table border='0' width="476" cellspacing='0' cellpadding='0' valign="top" align="left" >
+									<tr>
+										<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+										<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476" >
+											<table style="margin-left:20px;margin-right:10px;" align="left" id="table_caract_spect"><tr><td align="left" valign="top">
+																							<div id="descriere" style="display:block;">
+													<font size="2" color="white"><p>
+	Cu: Luminiţa GHEORGHIU, Emilia DOBRIN, Ion ARCUDEANU,&nbsp;</p>
+<p>
+	Dana VOICU, Gabriel DUŢU</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>
+	BABA CARE ASCULTĂ ABBA este povestea a două&nbsp;femei care işi retrăiesc&nbsp; tinereţea, simbolizată de muzica cunoscutei formaţii, ABBA.&nbsp;O comedie dulce &ndash; amăruie despre sensul vieţii, despre părinţi şi copii, despre &icirc;ncredere şi&nbsp;prietenie.</p>
+<p>
+	<br />
+	<strong>Luminiţa GHEORGHIU- actriţă<br />
+	</strong>&nbsp;&nbsp;<em>&quot;Dragostea și r&acirc;sul sunt cele mai bune leacuri pentru a putea trece cu sens prin această viață scurtă și destul de complicată pentru fiecare dintre noi. Dacă Dumnezeu &icirc;ți mai face cadou și simțul umorului ești salvat și dacă printre hohotele de r&acirc;s &icirc;ți apare o lacrimă, vino să dansezi cu &bdquo;Baba&rdquo; și să asculți Abba.&quot;<br />
+	<br />
+	</em><strong>Emilia DOBRIN- actriţă<br />
+	</strong><em>&quot; La teatru, batr&acirc;nețea tulbură c&acirc;nd dă lecții de &icirc;nțelepciune, nu de mondenitate. &quot; Frumusețea ridurilor &quot; pentru a-l cita pe Peter Brook, contează mai mult dec&acirc;t liftingul, căci, de data asta, adevărul &icirc;nvinge falsul. Dar ce trebuie făcut pentru ca acest adevăr să nu devină spectacol, marfă de v&acirc;nzare. Ne impresionează nu actorul care se resemnează &icirc;n fața v&acirc;rstei invadatoare, ci actorul care ne &icirc;ngăduie să asistăm la &icirc;mbătr&acirc;nirea lui...&nbsp; povestea unor&nbsp; ființe care emoționează, și nu comercializarea bătr&acirc;neții. Pe scenă, actorul&nbsp;&icirc;n v&acirc;rstă &icirc;l răscumpără pe omul care &icirc;mbătr&acirc;neşte &icirc;n sală.&quot;&nbsp;</em></p>
+<p>
+	&nbsp;&nbsp;&nbsp; <br />
+	<strong>Theo HERGHELEGIU - regizor <br />
+	</strong><em>&quot;In viaţă, nu primim dec&acirc;t fix ceea ce merităm şi, &icirc;n mod implacabil, suntem consecinţele propriilor fapte. De aceea, e important cum &icirc;mbatr&acirc;nim, cum ne creştem copiii, cum ne creştem părinţii. De aceea, e important să ne antrenăm toleranţa, generozitatea şi umorul. C&acirc;nd acestea trei nu mai fac casă bună cu traiul nostru, apar, inevitabil, acreala şi răutatea şi &icirc;ncepem să ne călcăm pe cap &icirc;ntre noi. Exerciţiul de recuperare a bucuriei trebuie făcut ca o gimnastică zilnică...&quot;<br />
+	</em></p>
+<p style="text-align: center; ">
+	&nbsp;</p>
+<p>
+	<iframe allowfullscreen="" frameborder="0" height="349" src="http://www.youtube.com/embed/W5kuFCzcac4?hl=ro&amp;fs=1" width="425"></iframe></p>
+</font>
+													<br>
+													<font size="2" color="white">Durată: 1h 45min</font><br><br>																									</div>
+																																		<div id="distributia" style="display:none;">
+													<font size="2" color="white"><p>
+	Cu: <a href="http://www.teatrulmetropolis.ro/index.php?route=continut/artisti&amp;artist_id=3">Luminiţa GHEORGHIU</a>, Emilia DOBRIN, Ion ARCUDEANU, Dana VOICU, Gabriel DUŢU</p>
+</font><br>
+																									</div>
+																																		<div id="cronici" style="display:none;">
+													<font size="2" color="white"><p>
+	<em><span style="font-size: 16px; "><strong>LUMEBUNA.RO de&nbsp;Tiberiu Iacomi</strong></span></em></p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><span style="font-size:16px;"><strong>ABBA Care-Asculta Baba</strong></span></em></p>
+<p>
+	<em><span style="font-size:16px;">Am crezut si am sperat ca merg la un spectacol (n.a. piesa Baba Care-Asculta Abba jucata pe scena Teatrului Metropolis) care ma va face sa fiu deopotriva nostalgic inainte de vreme si visator peste timp un pic prea tarziu. Si asa a fost. Am simtit ca nu sunt spectator, ci ca merg inapoi in viitor si redevin fiu, parinte si bunic, toti deodata, pentru a putea intelege o farama din spiritul peren al piesei.</span></em></p>
+<p>
+	<em><span style="font-size:16px;">Mamma mia! Am uitat care este diferenta artistica si profund umana intre ras si plans, nuantele estetice ale tristetii adanci si ale bucuriei de a trai. As putea spune, in mod metaforic, ca piesa a semanat cu o melodie. Mama este refrenul. Copiii, prietenii, necunoscutii ce pot deveni apropiati &ndash; versurile. Piesa a semanat, insa, cu o armonie in constructie. Note puse pe un portativ scenic, in cadere, in urcare, note care isi asteapta nu (doar) ecoul ci si continuarea in vietile publicului.</span></em></p>
+<p>
+	<em><span style="font-size:16px;">Astfel, Lucile (Luminita Gheorghiu) este mama care, dupa moartea sotului, traieste insingurata, vorbind in continuare cu acesta prin fotografia lui, incercand sa umple golurile din casa si din suflet prin teleshopping si programe TV (televizorul fiind, aparent, raspunsul substituent al tuturor fiilor si fiicelor la nevoia permanenta a parintilor de a-i avea in preajma la batranete), plimbari haotice prin oras si cumparaturi pentru care nu are bani, probleme care cad mereu pe capul fiicei (Dana Voicu). Antonia face de toate: da cu aspiratorul, sterge geamurile dulapului, plateste facturile, are grija de mama sa, se cearta cu Philipp (Gabriel Dutu), fratele trecut de 40 ani si fara un viitor stabil si incearca, sub o presiune teribila din toate partile, sa mentina un echilibru in familie, incercand sa nu uite intre timp si de propria casnicie.</span></em></p>
+<p>
+	<em><span style="font-size:16px;">Ernestine (Emilia Dobrin), vecina, de asemenea, singura care, poate da sau poate nu, isi bate mereu pisica, o viziteaza constant pe Lucile, ca intre asa-zise prietene &ndash; a se citi tovarase de singuratate &ndash; pentru un joc de carti la care, desi triseaza, nu castiga niciodata, pentru un paharel de lichior, doua, trei si pentru a mai simti un pic viata din risipirea pe cadouri si lucruri aparent inutile a lui Lucile.</span></em></p>
+<p>
+	<em><span style="font-size:16px;">Cand Philipp pare ca reuseste sa se stabileasca, in sfarsit, si prinde un post de consultant financiar datorita caruia poate castiga bani neverosimil de usor si de rapid, acesta o roaga pe mama sa sa-i garanteze o serie de actiuni bancare prin contul ei, iar Lucile, de dragul fiului, semneaza fara urma de indoiala si cu speranta crescanda. Philipp reuseste sa faca, intr-adevar, foarte multi bani ca dintr-un foc si ii aduce mamei o planta deosebita cadou si un plic plin cu bani pe care aceasta ii foloseste pentru a pregati un Craciun nemaipomenit, cu brad proaspat impodobit, cu artificii cumparate de la teleshopping si cu un boschetar (Ion Gheorghe Arcudeanu) inchipuit, in dorinta de vindecare artificiala a insingurarii, drept un unchi pe care nu-l mai intalnise de mult timp.</span></em></p>
+<p>
+	<em><span style="font-size:16px;">Craciunul, desi inceput pe ritmuri de dans, cu Abba pe fundal, se termina abrupt cu vizita Antoniei si a lui Philipp, acesta din urma, scos din arest de sora sa, fiind acuzat intr-un proces de delapidare a unor sume uriase. Ajunsa in pragul disperarii, inconjurata, aparent, de nebuni, Antonia ia decizia de a o muta pe mama sa intr-un azil. In final, intr-un decor in care mobilele sunt acoperite de o panza alba, in noaptea de Revelion, Lucile nu mai asteapta plecarea la azil, ia fotografia inramata a sotului si pleaca. Spre o posibila reintalnire.</span></em></p>
+<p>
+	<em><span style="font-size:16px;">Consider ca regizorul Theo Herghelegiu a pastrat caracterul universal al problematicii piesei, dar a reusit, totodata, sa apropie piesa de sufletul publicului roman prin caldura transmisa si drama studiata in detaliu prin momentele de monolog si confruntare. Boschetarul (Ion Gheorghe Arcudeanu) nu este un boschetar din cei pe care ii cunoastem, ci, in ciuda tarelor binecunoscute, este acel batranel simpatic ce stie sa danseze si sa petreaca, si sa vada in Lucile o femeie cu un suflet extraordinar de cald. Gabriel Dutu reuseste, de asemenea, sa confere o nota de copil rasfatat si naiv-inocent personajului sau, adaugand, in final, profunzimea chipului de fiu risipitor si a omului maturizat dintr-odata, izbit fiind de o cotitura nemaivazuta a vietii. In contrast, Dana Voicu exprima prin Antonia exact acea framantare si dorinta chinuitoare de a indrepta lucrurile ce par mereu sa se strice si sa se tot strice in urma sa, a fiicei ce devine, in mod surprinzator, stalpul unei familii fara acoperis. In acest context, Emilia Dobrin devine sarea, piperul cat si stropul de dulceata al acestei piese, prin confuzia simulata si aparenta lipsa de implicare, comicul sau traversand mimica, gesturile si situatiile. Precum un corolar matern, Luminita Gheorghiu o joaca pe baba care-asculta Abba, insa este pe deplin mama si sotie si, mai ales, oratoare indirecta. Astfel, ea demonstreaza acea capacitate extraordinara de a nu-si interpreta rolul, ci de a dialoga subtil cu publicul, personajul fiind doar un pretext pentru mesaj.</span></em></p>
+<p>
+	<em><span style="font-size:16px;">Si poate ma voi repeta dar uneori actorii merita acest lucru. Admiratia artistica este un lucru de la sine inteles in acest context. Insa acesti actori, acest regizor, aceasta piesa m-au facut, inainte de a ma gandi, critic si analitic, la jocul si interpretarea lor, sa ma gandesc cu drag la ai mei, cate-un strop din toti ai mei. Asta inseamna ca au depasit bariera analizei si introspectiei si au patruns umanul. Teatrul poate fi jucat deopotriva cu Lucile sau cu Doamna Smith, cu Philipp sau cu Hamlet, cu Boschetarul sau cu Godot, insa teatrul are datoria de a-i intoarce pe oameni la oamenii din adancul lor. Iar baba a implinit exact aceasta misiune.</span></em></p>
+<p>
+	<em><span style="font-size:16px;"><b id="internal-source-marker_0.8746244951616973" style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; "><span style="font-family: Georgia; color: rgb(51, 51, 51); background-color: transparent; font-weight: normal; vertical-align: baseline; white-space: pre-wrap; ">Marturisesc. Si acum ascult Abba. Din cand in cand. Abba s-au despartit acum ceva timp, insa, nu? Slagarele raman. Baba ramane. Si membrii Abba au avut, cu siguranta, o baba pe care au ascultat-o la vremea lor. Iar pe aceasta&nbsp;</span><span style="font-family: Georgia; color: rgb(51, 51, 51); background-color: transparent; vertical-align: baseline; white-space: pre-wrap; ">Baba care-asculta Abba</span><span style="font-family: Georgia; color: rgb(51, 51, 51); background-color: transparent; font-weight: normal; vertical-align: baseline; white-space: pre-wrap; ">&nbsp;as vrea sa o ascultati si voi, in continuare.</span><br />
+	<span style="font-family: Georgia; color: rgb(51, 51, 51); background-color: transparent; vertical-align: baseline; white-space: pre-wrap; ">O a doua premiera a piesei va fi dumnica, 14 noiembrie. Asadar, grabiti-va pentru bilete!Si cum ar spune Abba, Thank You For The Music.</span></b> </span></em></p>
+<p>
+	<span style="font-size: 15px;"><b><i><br />
+	</i></b></span></p>
+<p>
+	<b id="internal-source-marker_0.6516611743718386" style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; "><span style="font-size: 19px; font-family: Arial; background-color: transparent; vertical-align: baseline; white-space: pre-wrap; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YORICK</span></strong><br />
+	<br />
+	<br />
+	<strong><span style="font-size:16px;">de Monica Andronescu<br />
+	in 21 February 2011</span></strong><br />
+	<b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; "><br />
+	<br />
+	</b><span style="font-size:16px;"><a href="http://comedia/">Baba, ABBA şi jocul de-a comedia</a></span><br />
+	<br />
+	<br />
+	<em><span style="font-size:16px;">Se &icirc;nt&acirc;mplă rar pe scenele din Bucureşti să descoperi un spectacol cu adevărat echilibrat din punct de vedere al interpretării, mai ales c&acirc;nd e vorba de o montare care mizează pe jocul actorilor şi mai puţin pe viziunea regizorală. E cazul spectacolului de la Teatrul Metropolis, &bdquo;Baba care ascultă ABBA&rdquo;, după textul lui Catherine Aigner, &icirc;n regia lui Theo Herghelegiu.<img src="https://lh4.googleusercontent.com/vOZBmhaJOqa2jLiDhs1NW9nGRNQhI0AIqcG0MgeMWt-ZCBijz-XSn4mCDTIFt3pw2ZqWv8wbNZ9B4S9zpTA_NzNtSS6p9_HIXlTNJGHvGFrkFCT3xD0" /><br />
+	Povestea, extrem de simplă, un subiect aproape banal &ndash; relaţiile dintre părinţi şi copii plus tristeţea singurătăţii bătr&acirc;neţii &ndash; &icirc;i permite regizoarei să le ofere actorilor partituri adevărate. Şi tocmai ăsta e meritul lui Theo Herghelegiu &icirc;n montarea de la Metropolis. Că nu &icirc;ncarcă spectacolul şi scena, că lasă povestea să curgă firesc şi că direcţionează cu mare subtilitate actorii, &icirc;n aşa fel &icirc;nc&acirc;t &icirc;nt&acirc;lnirea lor lasă &icirc;n permanenţă impresia de echilibru.<br />
+	De-ar fi să pornesc dinspre v&acirc;rful piramidei, aş spune că interpretarea Luminiţei Gheorghiu şi a Emiliei Dobrin &icirc;n rolurile Lucile &ndash; Ernestine este una din acele puţine situaţii &icirc;n care comunicarea funcţionează perfect. Comunicarea cu personajul, cu spaţiul scenic şi mai ales comunicare dintre cele două actriţe. Există o dramă, iar drama se ad&acirc;nceşte la fiecare scenă şi la fiecare cuv&acirc;nt, cu at&acirc;t mai mult cu c&acirc;t totul se &icirc;neacă &icirc;n comedie. Regia alege să păstreze &icirc;n permanenţă spectacolul &icirc;ntr-o zonă predominant comică, ceea ce &icirc;i sporeşte &icirc;ncărcătura dramatică. Şi la fel se &icirc;nt&acirc;mplă cu jocul celor două actriţe, bătr&acirc;nele care &icirc;şi umplu una alteia bătr&acirc;neţea, cu partide de cărţi, discuţii fără cap şi fără coadă şi de cele mai multe ori cu simpla prezenţă. Lucile (Luminiţa Gheorghiu) şi-a pierdut soţul şi stă de vorbă ore &icirc;ntregi cu fotografia lui, Ernestine (Emilia Dobrin) e singură şi vine să-şi umple timpul &icirc;n casa prietenei răsfăţate de vizitele şi atenţia copiilor&hellip;<br />
+	Iar aici, &icirc;ntr-un spaţiu desenat simplu de Daniel Tiţa, o &icirc;ncăpere oarecare &ndash; poate uşor transmutată &icirc;n spaţiul nostru autohton cu puternice rădăcini &icirc;n &bdquo;bunul gust&rdquo; răsădit &icirc;n aparatmentele comuniste &ndash; cu covor persian, vitrină plină cu farfurii şi pahare aşezate ca la expoziţie, două fotolii şi-o măsuţă, două femei peste care viaţa a trecut ascultă Abba. Lucile din pasiune, Ernestine din nevoie&hellip; Iar muzica formaţiei Abba mobilează perfect interiorul &ndash; şi al personajelor şi al &icirc;ncăperii.<br />
+	Povestea &icirc;n sine, cu cei doi copii, Antonia (Dana Voicu) şi Philipp (Gabriel Duţu) &ndash; ea, fiica cea (prea)grijulie şi mereu neglijată, el, băiatul cel (prea)iubit şi mereu ocrotit şi cel care va fi &icirc;n final autorul micii (sau marii) tragedii &ndash; aproape că nu contează. Contează, &icirc;n schimb, povestea care se petrece pe scenă. Şi, o spun din nou, rar se &icirc;nt&acirc;mplă ca doi actori să creeze &icirc;n scenă o plasă at&acirc;t de bine lucrată, dincolo de cuvinte, dincolo de text&hellip; O plasă de relaţii interumane şi intraumane, construită din detalii de gest, din inflexiuni ale vocii, din mişcări, din simpla prezenţă &icirc;n scenă. Luminiţa Gheorghiu, bătr&acirc;na care-şi trăieşte cu un umor desăv&acirc;rşit drama bătr&acirc;neţii, tristeţea relaţiilor cu copiii şi &icirc;nsingurarea după moartea soţului, &icirc;ngroapă totul &icirc;n muzica formaţiei Abba. Exuberanţa din jocul ei este cuceritoare, simplitatea şi ştiinţa at&acirc;t de rară de a nu complica lucrurile simple sunt mici detalii ale jocului ei. Felul cum dansează, felul cum se mişcă, felul cum se preface, toate sunt &icirc;ntr-un echilibru perfect cu interpretarea Emiliei Dobrin. Care construişte un personaj cu totul straniu, plin de taine, de o tristeţe copleşitoare tocmai prin scenele de umor, şi ale cărui mici gesturi-detaliu capătă o pregnanţă aparte. Intrările ei &icirc;n scenă sunt de fiecare dată la fel de puternice.<br />
+	Cu c&acirc;t mai plin de taine e personajul &ndash; a cărui biografie este inexistentă, spre deosebire de Lucile al Luminiţei Gheorghiu, care dezvăluie &icirc;n permanenţă lucruri din trecut &ndash;, cu at&acirc;t mai acută este simpla ei prezenţă modelată din gesturi tic, dintr-o anume imobilitate a privirii, dintr-o anume rigiditate a corpului, din tremurul degetelor pe pachetul de ţigări sau pe brichetă&hellip; Toată lumea ei neştiută e cuprinsă &icirc;n micile gesturi cu care umple spaţiul fie că merge, stă, vorbeşte, fură biscuiţi sau lichior, fumează sau dansează&hellip;<br />
+	Ce se &icirc;nt&acirc;mplă &icirc;n final, tragi-comedia, toate răm&acirc;n &icirc;n umbră şi nu pentru că n-ar fi construite minuţios şi aproape delicat, ci tocmai din acest motiv. Iar la un moment dat ai impresia că orice vorbe ar spune cei de pe scenă, povestea ar fi aceeaşi, pentru că povestea, aşa cum e construită de Theo Herghelegiu, se desprinde de cuvinte. Spre exemplificare, răm&acirc;ne scena construită sută la sută pe reacţii fizice şi gest &icirc;n care trei femei &ndash; mama, fiica şi prietena mamei &ndash; de v&acirc;rste diferite, se trezesc faţă &icirc;n faţă cu o scenă erotică la televizor&hellip; Surpriza o veţi descoperi &icirc;n sala de la Teatrul Metropolis.</span></em></p>
+</font><br>
+																											<div class="buton-sus"><a href="http://www.teatrulmetropolis.ro/spectacole/baba-care-asculta-abba-de-catherine-aigner.html#top">^ Sus</a></div>
+																									</div>
+																						</td></tr></table>
+										</td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450"  height="13"></td>
+										<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+									</tr>
+								</table>
+					</td>
+				</tr>
+			</table>
+		
+		<script>show('descriere');</script>
+	</td>
+<td width="300" align="center" valign="top"><br><br>
+		<br>
+<div class="dreapta-cautare">
+		
+			<input type="text" id="keyword" value="Scrie aici și ..." onfocus="if (this.value == 'Scrie aici și ...') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Scrie aici și ...';}" class="search-input" size="19" onKeyPress="return submitenter_cauta(event)">
+			<a onclick="moduleSearch();" class="buton" >Caută</a>
+		
+</div>
+<br>
+<div class="dreapta-cos">	
+	<div id="module_cart" >
+ <div class="middle">
+	
+    	<table cellpadding="5" cellspacing="0" style="width: 200px;color:white;" background="catalog/view/theme/default/image/c.png"><tr><td>
+		<img src="catalog/view/theme/default/image/bilete_fara_rezervari.png" width="181" height="129" border="0"/>
+	</td></tr></table>
+    	
+  </div>
+</div>
+<script type="text/javascript"><!--
+$(document).ready(function () {
+	$('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+	$("a[id^='adaugabilet']").click(function () {
+		 var randlocIDValSplitter    = (this.id).split("-");
+    var rand            = randlocIDValSplitter[1];
+	var loc            = randlocIDValSplitter[2];
+	var reprezentatie_id            = randlocIDValSplitter[3];
+	
+	control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoatebilet']").click(function () {
+		 var randlocIDValSplitter   = (this.id).split("-");
+		 var rand            		= randlocIDValSplitter[1];
+		 var loc            		= randlocIDValSplitter[2];
+		 var reprezentatie_id       = randlocIDValSplitter[3];
+	
+		control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control_scoate='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoate_sala']").click(function () {
+		var randlocIDValSplitter    = (this.id).split("-");
+		var reprezentatie_id        = randlocIDValSplitter[1];
+	
+	
+    
+        $.ajax({
+            url: 'index.php?route=continut/cart/callback&reprezentatie_id='+reprezentatie_id,
+            type: 'get',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='clear_cart']").click(function () {
+		$.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/clear',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            } 
+                   
+        });
+		
+	});
+	
+	 $('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+ 
+});
+</script>
+
+
+</div>
+<br>
+<div class="dreapta-cont">
+	<table width="200" cellspacing='0' cellpadding='0'>
+		
+				<tr><td background="catalog/view/theme/default/image/c.png" width="110" height="30" valign="middle" align="center" >
+				<font color="#d2d0d0">Accesează cont</font>
+		</td>
+		<td width="90" valign="middle" align="center">
+			<a class="buton" href="http://www.teatrulmetropolis.ro/creaza_cont.html" id="fancybox_page_no_reload">Cont nou ?</a>
+		</td></tr>
+		<tr><td colspan="2" height="50" width="200" background="catalog/view/theme/default/image/c.png" valign="middle" align="center">
+			<form action="http://www.teatrulmetropolis.ro/index.php?route=common/home/autentificare" method="post" id="form_autentificare">
+				<input type="text" name="email" value="Email utilizator" onfocus="if (this.value == 'Email utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Email utilizator';}" class="user-input">
+				<input type="password" name="password" value="Parola utilizator" onfocus="if (this.value == 'Parola utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Parola utilizator';}" class="pass-input" onKeyPress="return submitenter_login_cont(event)">
+				<input type="hidden" name="redirect" value="http://www.teatrulmetropolis.ro/index.php?route=continut/spectacole&amp;spectacol_id=10">
+			</form>
+		</td></tr>
+		<tr><td width=110" height="30"></td>
+		<td background="catalog/view/theme/default/image/c.png" width="90" height="30" valign="middle" align="center">
+			<a onClick="$('#form_autentificare').submit();"  class="buton" >Accesează</a>
+		</td></tr>
+		</table>
+</div>
+<br>
+<br>
+<div class="dreapta-comentarii">
+	<a href="http://www.teatrulmetropolis.ro/stiri/adela-popescu-si-mihai-bendeac-in-premiera-pe-o-banca-la-metropolis.html#comentariu3" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','catalog/view/theme/default/image/parereaTA_hover.png',1)">
+		<img src="catalog/view/theme/default/image/parereaTA_normal.png" name="Image50" width="188" height="126" border="0" id="Image50" /><br>
+		<table id="Ultim_Coment">
+							<tr>
+								<td id="dataUltim_Coment">
+									15 octombrie 2011 la 16:17
+								</td>
+							<tr>
+								<td id="idUltim_Coment">
+									*Nume:
+								</td>
+							<tr>
+								<td id="contentUltim_Coment">
+									nu va suparati , cand se va mai juca piesa?
+								</td>
+							</tr>
+						</table>		
+	</a>
+</div>
+<br>
+<br>
+<div class="dreapta-ajutor">
+	<a href="http://www.teatrulmetropolis.ro/ajutor" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','catalog/view/theme/default/image/ajutor_hover.png',1)" id="fancybox_page_rel">
+		<img src="catalog/view/theme/default/image/ajutor_normal.png" name="Image51" width="171" height="101" border="0" id="Image51" /><br>
+	</a>
+</div>
+<div style="width:210px;margin-top:20px;"><img src="catalog/view/theme/default/image/visa_icon.jpg"></div></td>
+</tr></table>
+</div>	
+</td>
+</tr></table>
+</div>				
+
+<div id="footer_continut">
+	<table width="1000" align="center" height="200" background="catalog/view/theme/default/image/c.png"><tr><td><br>
+		<table width="90%" cellpadding="0" cellspacing="0"  style="color: #999;font-family:Arial, Helvetica, sans-serif;font-size:14px;">
+  <tr>
+    <td width="23%" rowspan="6" align="right" valign="top" >
+    <img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/sigla_tm.png" width="100" height="100" border="0" style="margin-right:30px;"/>
+    </td>
+    <td width="70%">Adresa: Str. Mihai Eminescu nr.89, sector 2, București.</td>
+    <td width="7%" rowspan="6" align="center" valign="top">
+   <a href="http://www.pmb.ro" target="blank"><img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/primaria_mun_buc.png" width="75" height="150" border="0" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Rezervări bilete se pot face și telefonic, la numerele: <br />
+      <strong style="color:#FFF">021 210 51 08</strong>  sau  <strong style="color:#FFF">0728 138 265</strong><br />
+      (în intervalul orar 10:00 - 19.00)<br />
+    Rezervarea telefonică este valabilă 48 de h.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font style="font-size:16px; color:#FFF">&copy;Teatrul Metropolis. Toate drepturile rezervate</font></td>
+  </tr>
+  <tr>
+    <td ><font style="font-size:12px;">Site produs de <strong style="color: #CCC">Legolas Media</strong><br />
+        Design by <strong style="color: #CCC">Alexandru Șulai</strong></font></td>
+  </tr>
+</table>	</td></tr></table>
+</div>
+
+
+</div>
+
+</body></html> 

@@ -1,0 +1,15 @@
+#qLoverlay {
+	background-color: #fff !important;
+	z-index: 9999;
+}
+
+#qLbar {
+	background: #fff;
+}
+
+#qLpercentage {
+	color:#2ac5ee !important;
+	font-family:"Raleway", sans-serif !important;
+	font-weight: 500 !important;
+	font-size:28px !important;
+}

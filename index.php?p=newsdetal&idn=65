@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Teatrul Metropolis Teatrul Metropolis</title>
+<meta name="description" content="Teatrul Metropolis Bucuresti: Cel mai iubit teatru">
+<link href="teatru.css" rel="stylesheet" type="text/css" />
+<meta name="verify-v1" content="x96fyGWKPcSemL9NihlvICPkRGJV7JglT2qIhgBOdlA=" />
+<script type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<script type="text/JavaScript">
+<!--
+function textClear (input) {
+	if ( input.value == input.defaultValue ) {
+		input.value = "";
+	}
+}
+
+function textRestore (input) {
+	if ( input.value == "" ) {
+		input.value = input.defaultValue;
+	}
+}
+// -->
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" onload="MM_preloadImages('teatru/stagiunea-curenta-teatru-on.gif','teatru/programul-teatru-on.gif','teatru/actori-teatru-on.gif','teatru/piese-teatru-on.gif','teatru/rezervari-online-teatru-on.gif','teatru/parteneri-teatru-on.gif','teatru/contact-teatru-on.gif','teatru/noutati-teatru-on.jpg','teatru/stagiunea-curenta-teatru-on.jpg','teatru/programul-teatru-on.jpg','teatru/actori-teatru-on.jpg','teatru/piese-teatru-on.jpg','teatru/rezervari-online-teatru-on.jpg','teatru/parteneri-teatru-on.jpg','teatru/contact-teatru-on.jpg','teatru/despre-metropolis-teatru-on.jpg','teatru/evenimente-teatru-on.jpg','teatru/despre-piesa-teatru-on.jpg','teatru/distributii-teatru-on.jpg','teatru/galerie-foto-piesa-on.jpg','teatru/galerie-audio-piesa-on.jpg','teatru/galerie-video-piesa-on.jpg','teatru/afise-piesa-teatru-on.jpg','teatru/despre-actor-teatru-on.jpg','teatru/roluri-actor-teatru-on.jpg','teatru/galerie-foto-actor-on.jpg','teatru/galerie-audio-actor-on.jpg','teatru/galerie-video-autor-on.jpg','teatru/contact-actor-teatru-on.jpg');">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="*" rowspan="3">&nbsp;</td>
+    <td width="940" height="460" valign="top"><table width="940" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+		<td width="940" height="440" valign="top"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="940" height="440" id="top" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="top_daniel.swf" /><param name="menu" value="false" /><param name="quality" value="high" /><param name="bgcolor" value="#000000" /><embed src="top_daniel.swf" menu="false" quality="high" bgcolor="#000000" width="940" height="440" name="top" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object></td>
+	  </tr>
+      <tr>
+        <td width="940" height="20" valign="top"><img src="teatru/bacgrd-top-content.gif" width="940" height="20" /></td>
+      </tr>
+    </table></td>
+    <td width="*" rowspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="940"><table width="940" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="18" bgcolor="#2D0003">&nbsp;</td>
+        <td width="170" bgcolor="#2D0003" valign="top"><table width="170" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		<td width="170" height="28" valign="top"><a href="index.php?p=noutati" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image15','','teatru/noutati-teatru-on.jpg',1)"><img src="teatru/noutati-teatru-off.jpg" name="Image15" width="170" height="18" border="0" id="Image15" /></a></td>          </tr>
+		  <tr>
+		<td width="170" height="28" valign="top"><a href="index.php?p=companie" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image16','','teatru/despre-metropolis-teatru-on.jpg',1)"><img src="teatru/despre-metropolis-teatru-off.jpg" name="Image16" width="170" height="18" border="0" id="Image16" /></a></td>          </tr>
+		  <tr>
+		<td width="170" height="28" valign="top"><a href="index.php?p=evenimente" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image17','','teatru/evenimente-teatru-on.jpg',1)"><img src="teatru/evenimente-teatru-off.jpg" name="Image17" width="170" height="18" border="0" id="Image17" /></a></td>          </tr>
+          <tr>
+		<td width="170" height="28" valign="top"><a href="index.php?p=program" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','teatru/programul-teatru-on.jpg',1)"><img src="teatru/program-teatru-off.jpg" name="Image5" width="170" height="18" border="0" id="Image5" /></a></td>          </tr>
+          <tr>
+		<td width="170" height="28" valign="top"><a href="index.php?p=actori" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','teatru/actori-teatru-on.jpg',1)"><img src="teatru/actori-teatru-off.jpg" name="Image6" width="170" height="18" border="0" id="Image6" /></a></td>          </tr>
+          <tr>
+		<td width="170" height="28" valign="top"><a href="index.php?p=piese" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','teatru/piese-teatru-on.jpg',1)"><img src="teatru/piese-teatru-off.jpg" name="Image7" width="170" height="18" border="0" id="Image7" /></a></td>          </tr>
+          <tr>
+		<td width="170" height="28" valign="top"><a href="index.php?p=rezervari" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','teatru/rezervari-online-teatru-on.jpg',1)"><img src="teatru/rezervari-online-teatru-off.jpg" name="Image8" width="170" height="18" border="0" id="Image8" /></a></td>          </tr>
+          <tr>
+		<td width="170" height="28" valign="top"><a href="index.php?p=parteneri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image9','','teatru/parteneri-teatru-on.jpg',1)"><img src="teatru/parteneri-teatru-off.jpg" name="Image9" width="170" height="18" border="0" id="Image9" /></a></td>          </tr>
+          <tr>
+		<td width="170" height="28" valign="top"><a href="index.php?p=contact" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image10','','teatru/contact-teatru-on.jpg',1)"><img src="teatru/contact-teatru-off.jpg" name="Image10" width="170" height="18" border="0" id="Image10" /></a></td>          </tr>
+          <tr>
+            <td width="170" valign="middle" align="center"><table width='170' border='0' cellspacing='0' cellpadding='0'></table></td>
+          </tr>
+          <tr>
+            <td width="170" valign="top"><table width="170" border="0" cellspacing="0" cellpadding="0"><form action="login.php" method="post" enctype="multipart/form-data">
+              <tr>
+                <td width="170"><img src="teatru/utilizator-teatru.jpg" width="170" height="22" /></td>
+			  </tr>
+			  <tr>
+                <td width="170"><input type="text" name="user" value="scrie adresa de email" onFocus="textClear(this);" onBlur="textRestore(this);" style="font-size:14px; font-family:Georgia, 'Times New Roman', Times, serif; font-style:italic; background-color:#2d0003; color:#ffffff; width:160px; height:19px; border:1px solid #666666;"/></td>
+			  </tr>
+			  <tr>
+				<td width="170"><img src="teatru/parola-teatru.jpg" width="170" height="22" /></td>
+			  </tr>
+			  <tr>
+                <td width="170"><input type="password" name="pass" style="font-size:14px; background-color:#2d0003; color:#ffffff; width:160px; height:19px; border:1px solid #666666;"/></td>
+			  </tr>
+			  <tr>
+                <td width="170" style="padding-top:5px;"><input type="submit" style="cursor:pointer; background-color:#FFFFFF; border:1px solid #666666; height:19px; width:39px;" value="Intra" /></td>
+			  </tr>
+            </form></table></td>
+          </tr>
+		  <tr>
+              <td width="170" height="20" valign="bottom"><a href="cont.php" class="off" onmouseover="this.className='on'" onmouseout="this.className='off'" style="text-decoration:none;">Creeaza cont</a> &nbsp;&nbsp;<a href="parola.php" class="off" onmouseover="this.className='on'" onmouseout="this.className='off'" style="text-decoration:none;">Ai uitat parola?</a></td>
+		  </tr>
+		  <tr>
+              <td width="170" height="20">&nbsp;</td>
+		  </tr>
+		  <tr>
+              <td width="170" valign="top"><table width="170" border="0" cellspacing="0" cellpadding="0"><form action="index.php?p=newsletter" method="post" enctype="multipart/form-data">
+              <tr>
+                <td width="170"><img src="teatru/newsletter-teatru.jpg" width="170" height="22" /></td>
+			  </tr>
+			  <tr>
+                <td width="170"><input type="text" name="addr" value="scrie adresa de email" onFocus="textClear(this);" onBlur="textRestore(this);" style="font-size:14px; font-family:Georgia, 'Times New Roman', Times, serif; font-style:italic; background-color:#2d0003; color:#ffffff; width:160px; height:19px; border:1px solid #666666;"/></td>
+			  </tr>
+			  <tr>
+                <td width="170" style="padding-top:5px;"><input type="submit" style="cursor:pointer; background-color:#FFFFFF; border:1px solid #666666; height:19px; width:49px;" value="Inscrie" /></td>
+			  </tr>
+            </form></table></td>
+		  </tr>
+        </table></td>
+        <td width="18" bgcolor="#2D0003">&nbsp;</td>
+        <td width="18" bgcolor="#620007">&nbsp;</td>
+        <td width="18" bgcolor="#000000">&nbsp;</td>
+        <td width="680" bgcolor="#000000" valign="top"><table width="680" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+            <td width="441" valign="top"><table width="441" border="0" cellspacing="0" cellpadding="0"><tr>
+                <td colspan='2' height="25" valign="top" style="border-bottom:1px dotted #666666;"><span class="tit"><b>F</b>anny Ardant: „Olga Tudorache este o Jeanne Moreau a României”</span></td>
+              </tr>
+              <tr>
+                <td colspan='2' style='padding-top:5px;'>INTERVIU. Celebra actri&#355;&#259;, trecut&#259; de curând în spatele camerei, spune c&#259;, pe durata film&#259;rilor în Transilvania, a fost intimidat&#259; în fa&#355;a actorilor români.<br><br>Prima încercare în regie a actri&#355;ei Fanny Ardant, „Cenu&#351;&#259; &#351;i sânge”, filmat&#259; lâng&#259; Sfântu Gheorghe &#351;i prezentat&#259;, vineri, la Cannes, a avut parte de cronici dure. Subliniind repetitiv admira&#355;ia pentru talentul ei de actri&#355;&#259;, publica&#355;iile franceze, &#351;i nu numai, o îndeamn&#259; politicos s&#259; nu repete experien&#355;a. Fanny Ardant este, îns&#259;, extrem de luminoas&#259; la interviu &#351;i pare c&#259; ori n-a deschis ziarele, ori toate astea chiar nu conteaz&#259;. Când vorbe&#351;te despre România gesticuleaz&#259; larg &#351;i zâmbe&#351;te.<br><br>„Am f&#259;cut o pasiune pentru Transilvania”, spune, amintindu-&#351;i de dimine&#355;ile în care alerga la trenul de 8.00 sau cele în care st&#259;tea la taclale cu Olga Tudorache. În povestea ei despre o femeie (Ronit Elkabetz) care se întoarce în locul de unde plecase cu mult timp <br>în urm&#259; &#351;i care se treze&#351;te în mijlocul a dou&#259; familii rivale, apar &#351;i Ion Besoiu, R&#259;zvan Vasilescu, Tudor Aaron Istodor, M&#259;d&#259;lina Constatin. Ardant m&#259;rturise&#351;te, în exclusivitate pentru EVZ, c&#259; prima întâlnire cu ei a intimidat-o.  <br>EVZ: Are vreo leg&#259;tur&#259; „Cenu&#351;&#259; &#351;i sânge” cu o istorie din trecutul dvs., din familia dvs.? Care a fost punctul de plecare?<br>Fanny Ardant: Dac&#259; m&#259; gândesc acum, la rece, cred c&#259; punctul de plecare a fost dragostea mea pentru tragedia greac&#259;. Îl voiam ca pe un fel de omagiu pentru acest gen. Totodat&#259;, am citit un mic document albanez, numit „Canon”, un fel de cod civil în care orice act uman e trecut &#351;i „reglementat”. &#350;i în Fran&#355;a exist&#259; acela&#351;i tip de carte care-&#355;i spune c&#259; n-ai voie s&#259; fumezi, n-ai voie s&#259; scuipi pe strad&#259;, n-ai voie s&#259; &#355;ipi pe strad&#259; dup&#259; ora 22.00... Bun. În cartea aceea din Albania e scris totul. Pornind de la ea, mi-am imaginat ac&#355;iunea într-o &#355;ar&#259; nedefinit&#259;, într-un timp nedefinit. Nu po&#355;i în&#355;elege totul în film, nu po&#355;i în&#355;elege toate rela&#355;iile dintre personaje, e ca &#351;i cum ai veni în vacan&#355;&#259; într-o &#355;ar&#259; cu totul str&#259;in&#259; &#355;ie, într-o familie pe care nu o cuno&#351;ti, &#351;i încerci s&#259; în&#355;elegi amenin&#355;area care plute&#351;te în sânul ei. Nu e o istorie cu totul ra&#355;ional&#259;, mi-ar fi pl&#259;cut s&#259; fie a&#351;a, îns&#259; când am scris scenariul, aveam în minte imaginile, nu dialogul. Voiam s&#259; fie un fel de canto d´amore pentru p&#259;mânt. P&#259;mânt pentru care e&#351;ti preg&#259;tit s&#259; ucizi. E un film arhaic, plin de ritualuri, stilizat. Unul în care firul care leag&#259; totul e violen&#355;a. Dar nu acel tip de violen&#355;&#259; în care sco&#355;i un cu&#355;it sau o arm&#259; &#351;i ataci pe cineva, ci aceea dinl&#259;untrul t&#259;u, latent&#259;. Nu voiam s&#259; fiu optimist&#259;, prefer filmele întunecate.<br><br>Povestea se petrece în România, dar ar putea fi plasat&#259; oriunde în sudul mediteranean...<br>M-am gândit la Sicilia &#351;i la Italia de Nord, unde oamenii sunt înc&#259; îmbr&#259;ca&#355;i ca în trecut. Mi-ar fi pl&#259;cut s&#259;-l filmez în Albania, dar pentru c&#259; nu exist&#259; acolo nici o structur&#259; cinematografic&#259;, am renun&#355;at. Putea fi turnat &#351;i în nordul Greciei – citisem un eseu de Ismail Kadare, care spunea c&#259; nimic nu s-a schimbat în esen&#355;&#259;, în aceast&#259; parte de lume, de la Eschil încoace. <br>Pentru c&#259; aveam la dispozi&#355;ie un buget foarte mic, voiam s&#259; stilizez totul, ca s&#259; nu m&#259; pierd în detalii care mi-ar fi cheltuit banii. Casele <br>trebuiau s&#259; fie la fel de vii ca fiin&#355;ele umane, pietrele &#351;i fa&#355;adele lor s&#259; poarte urmele timpului, la fel cum oamenii au riduri, cicatrici. Cum am stilizat totul, se putea petrece oriunde. <br><br>Peisajele sunt extraordinare. E motivul pentru care a&#355;i ales s&#259; filma&#355;i în România?<br>Ah, Transilvania. Acolo nimic nu s-a schimbat din secolul 19. Nu vorbesc de Bucure&#351;ti &#351;i de ora&#351;e. Ci de zona agricol&#259;. În Transilvania înc&#259; exist&#259; c&#259;ru&#355;e cu cai, oamenii fac fân cu grebla &#351;i furca. Am f&#259;cut o pasiune pentru Transilvania, pentru frumuse&#355;ea &#351;i dulcea&#355;a liniilor... Nu-mi pl&#259;cea când mi se amintea tot timpul de Dracula. Bine, Dracula e simpatic, dar Transilvania e cu totul alt&#259; poveste! <br>Acolo am g&#259;sit râul perfect, casa <br>perfect&#259;. Toat&#259; lumea m&#259; avertiza „Dac&#259; filmezi toamna, va ninge acolo, va fi frig”. &#350;i în &#351;apte s&#259;pt&#259;mâni am avut doar o zi de ploaie! Miraculos. Aveam nevoie de un tren din acelea vechi, care s&#259; fac&#259; zgomotul acela specific, &#351;i tot acolo l-am g&#259;sit. Îmi amintesc c&#259; plecam cu trenul de acolo, cu toat&#259; echipa, dat fiind bugetul. &#350;i pentru c&#259; singurul tren era la 8.00 diminea&#355;a, dac&#259;-l pierdeam, acolo r&#259;mâneam, de aceea îi zoream tot timpul pe actori. Ca actri&#355;&#259;, n-o s&#259; mai întârzii niciodat&#259;!<br><br>Cum a fost prima dvs. diminea&#355;&#259; ca regizor &#351;i nu actri&#355;&#259;? Rolul dvs. era de-acum cu totul altul.<br>Îmi amintesc c&#259; m-am trezit dis-diminea&#355;&#259; &#351;i m&#259; gândeam la prima scen&#259;. Era secven&#355;a în care tân&#259;rul fumeaz&#259; o &#355;igar&#259; cu fata, lâng&#259; râu. M-am trezit înaintea tuturor, aveam emo&#355;ii. Deodat&#259;, m-am uitat spre drum &#351;i soseau camioanele <br>. Începeau s&#259; vin&#259; oamenii, se improviza cantina, se umplea setul. Îmi b&#259;tea inima foarte puternic &#351;i mi-am spus. „Gata. Am pornit”. &#350;i mi-am promis s&#259; nu-mi fac gânduri negre, s&#259; nu-mi imaginez c&#259; asta sau asta nu va merge, pentru c&#259; nu va fi bine. Seara, citeam o poveste romantic&#259; care se petrecea în Viena, unde oamenii dansau vals... Dac&#259; încep cu autocritica, n-o s&#259; termin niciodat&#259; filmul &#259;sta, îmi spuneam. Mi-aduc aminte c&#259; de fiecare dat&#259; când cineva venea alergând peste câmp, mi se strângea inima. M&#259; a&#351;teptam s&#259;-mi spun&#259; „S-a terminat, nu mai sunt bani!”. Dar nu s-a întâmplat.<br><br>De cât timp pl&#259;nuia&#355;i s&#259; trece&#355;i de partea cealalt&#259;, la regie?<br>Scenariul l-am scris acum doi ani, era foarte dificil la început, pentru c&#259; toat&#259; lumea era sceptic&#259;. Noroc c&#259; statul francez, prin CNC, mi-a dat suficien&#355;i bani cât s&#259; încep. Pe Claude Berri, care din nefericire s-a stins, l-am rugat atunci s&#259;-mi citeasc&#259; scenariul s&#259; vezi dac&#259; face vreun ban. La dou&#259; zile dup&#259; aceea, m-a sunat. „Câ&#355;i bani î&#355;i trebuie?”. Gra&#355;ie lui, gra&#355;ie avansului din Fran&#355;a, &#351;i a celui din România, din partea CNC, l-am putut face. Faptul c&#259; l-am putut face a fost sfâr&#351;itul acestui cerc. Wooow! e tot ce pot s&#259; spun.<br><br>V-a&#355;i ales, în România, câ&#355;iva actori foarte buni...<br>În primul rând, România e o &#355;ar&#259; francofon&#259;, &#351;i to&#355;i actorii vorbesc franceza mai bine decât vorbesc eu engleza, cu un accent fantastic. Aveam nevoie de asta. Am g&#259;sit ni&#351;te actori extraordinari, forma&#355;i în teatru în primul rând. <br>Olga Tudorache...<br>Olga Tudorache! E un fel de Jeanne Moreau a României! To&#355;i actorii au fost impecabili. M&#259; intimidau pu&#355;in la început, din cauza asta. Îmi amintesc cum îmi vorbea Olga, cu vocea ei sever&#259;: „De ce îmi ceri s&#259; fac asta, dac&#259; nu &#351;tii de ce? Nu &#351;tii, dar totu&#351;i mi-o ceri?” (râde). <br><br>EXPERIEN&#354;&#258;<br>„Când era fericit, Antonioni avea lacrimi în ochi...”<br><br>A&#355;i lucrat cu foarte mul&#355;i regizori, de la Antonioni, la Zefirelli &#351;i Claude Berri. Cine v-a inspirat, ca mod de lucru, când a&#355;i trecut în spatele camerei?<br>To&#355;i regizorii cu care am lucrat nu-mi vorbeau decât foarte pu&#355;in pe platou. Îmi l&#259;sau libertate. S&#259; fii dirijat de cineva care are încredere în tine, care se uit&#259; în ochii t&#259;i &#351;i vede c&#259; ai în&#355;eles te ajut&#259; mult mai tare decât atunci când se &#355;ip&#259; la tine, &#351;i e&#351;ti admonestat la fiecare pas. La finalul scenei, nu te sim&#355;i în largul t&#259;u.<br>Antonioni era foarte precis. Chiar &#351;i la ultimele filme, când nu se mai sim&#355;ea bine deloc. La o scen&#259;, st&#259;team pe o canapea &#351;i-l întrebam dac&#259; e bine. Îmi f&#259;cea semne din cap s&#259; m&#259; dau mai încolo, mai încolo. Cum nu st&#259;team bine, a venit la mine, &#351;i cu mâna lui de fier, m-a împins zece centimetri. Atât. Voia ca totul s&#259; fie la milimetru. Dar când Antonioni era fericit, avea lacrimi în ochi. &#350;i sim&#355;eai c&#259; s-a întâmplat ceva extraordinar. Zefirelli, în „Callas Forever”, mi-a s&#259;rutat mâna &#351;i mi-a spus „Mul&#355;umesc”. Nimic nu poate înlocui asta.<br>Eu am avut emo&#355;ii la prima întâlnire cu actorii din filmul meu. Cred c&#259; am fost destul de timid&#259; la început &#351;i nu m&#259; întreceam în a da indica&#355;ii. Îns&#259; am avut încredere în ei, &#351;i asta vine din felul în care am fost modelat&#259; de cei cu care am lucrat la actri&#355;&#259;. Se spune c&#259; un copil b&#259;tut va bate &#351;i el la rândul lui, dar eu am fost foarte r&#259;sf&#259;&#355;at&#259;. <br><br>Un al doilea film? De ce va depinde?<br>Ce va fi, va fi. Am remarcat c&#259; pl&#259;cerea mea de a juca a r&#259;mas intact&#259;, fiindc&#259; atunci când eram în spatele camerei de filmat îmi doream s&#259; fiu în fa&#355;a ei. M-am gândit la început chiar s&#259; am un rol în el &#351;i produc&#259;torul Paolo Branco mi-a spus „E o nebunie, nu le vei putea face pe amândou&#259;!”. &#350;i nu le-am f&#259;cut.<br>Florentina Ciuverca<br>Luni, 25 Mai 2009<br><br>sursa: Evenimentul Zilei<br></td>
+              </tr>
+			  <tr>
+                <td width="441" height="20" align='right' style="padding-bottom:5px; padding-top:5px; border-bottom:1px dotted #666666;"><a href="index.php?p=noutati" class="off" onmouseover="this.className='on'" onmouseout="this.className='off'" style="text-decoration:none;">Inapoi la noutati</a></td>
+              </tr>
+			  <tr>
+                <td colspan='2' height="10" valign="top">&nbsp;</td>
+              </tr>
+			  <tr></tr>
+			  <tr></tr>
+			  <tr>
+                <td colspan='2' height="20" valign="top">&nbsp;</td>
+              </tr></table></td>
+            <td width="239" valign="top"><table width="239" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="18">&nbsp;</td>
+                <td width="221"><table width='221' border='0' cellspacing='0' cellpadding='0'></table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+        <td width="18" bgcolor="#000000">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td width="940" height="55" align="center" background="teatru/backgrd-bottom.jpg"><a href="http://www.logicindustry.com" target="_blank"><img src="teatru/logic-industry.jpg" title="Logic Industry&reg; - Web Design for Business&reg;" border="0" /></a></td>  </tr>
+</table>
+<script type="text/javascript" src="./fixflash.js">
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11604404-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

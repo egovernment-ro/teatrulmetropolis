@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="teatrul metropolis" />
+    <meta name="author" content="www.pixozz.com">
+	<meta property="og:title" content="Cumpără Bilete - Teatrul Metropolis" />
+	<meta property="og:image" content="https://www.teatrulmetropolis.ro/view/theme/front/images/fbshare.jpg" />
+	<meta property="og:description" content="" />
+    <title>Cumpără Bilete - Teatrul Metropolis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="google-site-verification" content="VjLzf8ebl_NgoK_drWZD47l4a0rxVMFJsMtnYEEIds0" />
+    <link rel="stylesheet" href="https://www.teatrulmetropolis.ro/view/theme/front/css/style.css">
+    <link rel="stylesheet" href="https://www.teatrulmetropolis.ro/view/theme/front/css/login.css">
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <link rel="shortcut icon" href="https://www.teatrulmetropolis.ro/view/theme/front/images/logo-tm-25-20.png">
+</head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38399383-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<body class="front resetareparola computer">
+﻿        <div id="navigation" class="clearfix fixedsticky">
+        <nav class="navbar navbar-default collapsed" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="fa fa-bars"></span>
+                            </button>
+                            <a class="navbar-brand" href="https://www.teatrulmetropolis.ro">
+                                <img src="https://www.teatrulmetropolis.ro/view/theme/front/images/logo.png" title="" alt="" />
+                                <span class="logo-text">Teatrul Metropolis</span>
+                            </a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                            <div class="hidden-bars">
+                                <span class="fa fa-bars"></span>
+                            </div>
+                            <ul class="nav navbar-nav">
+								<li> <a href="https://www.teatrulmetropolis.ro" class="active">Acasă</a></li>
+								<li><a href="https://www.teatrulmetropolis.ro/program" id="program">Program</a></li>
+								<li> <a href="https://www.teatrulmetropolis.ro/bilete">Cumpără Bilete</a></li>
+                                <li><a href="https://www.teatrulmetropolis.ro/spectacole">Spectacole </a></li>
+								<li><a href="https://www.teatrulmetropolis.ro/artisti">Artiști</a></li>
+                                <li> <a href="https://www.teatrulmetropolis.ro/noutati">Noutăți</a></li>
+								<li> <a href="https://www.teatrulmetropolis.ro/despre">Despre Noi</a></li>
+                                <li> <a href="https://www.teatrulmetropolis.ro/contact">Contact</a> </li>
+                                <li>
+																<div id="topnav" class="topnav"><a class="signin"><span>Contul Meu</span><i class="fa fa-user"></i></a> </div>
+								  <fieldset id="signin_menu">
+									<form method="post" id="loginForm">
+									  <label for="email">Email</label>
+									  <input id="email" name="email" onKeyPress="return submitenter(this,event);" value="" title="email" tabindex="4" type="email">
+									  </p>
+									  <p>
+										<label for="password">Parola</label>
+										<input id="password" onKeyPress="return submitenter(this,event);" name="password" value="" title="password" tabindex="5" type="password">
+									  </p>
+									  <p id="warning"></p>
+									 <p class="login">
+										<a id="gologin" onclick="login();">Conectare</a><a href="/resetareparola" class="forgot tipsy" title="Dacă ați uitat parola, o puteți reseta folosind adresa de email atasată contului personal">Ai uitat parola?</a>
+									  </p>
+									  <p class="register">  <a class="register tipsy" href="/inregistrare" title="Daca nu aveti un cont personal Metropolis, puteti crea unul in mai putin de 2 minute.">Nu aveti un cont Metropolis?</a> </p>
+									</form>
+								  </fieldset>
+																</li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.container -->
+        </nav>
+	
+    </div>
+	<script>
+function login(){
+var form = $("#loginForm").serializeArray();
+$.post("/front/auth/", {data: form}).done(function(response) {
+	var login = $.parseJSON(response); 
+	if(login.warning){
+		$("p#warning").html(login.warning);
+		$("a#gologin").html('Reincearcă');
+	} 
+	if(login.customer){
+		location.reload();
+	}
+	
+}); 
+}
+function submitenter(myfield,e)
+{
+var keycode;
+if (window.event) keycode = window.event.keyCode;
+else if (e) keycode = e.which;
+else return true;
+
+if (keycode == 13)
+   {
+   login();
+   return false;
+   }
+else
+   return true;
+}
+</script>		<section id="account">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+		
+            <!-- head -->
+            <div class="head big blog-home-head wow bounceIn">
+					<h3 class="login-title">Resetare parola <span class="blue">Cont Client</span></h3>
+					<div class="head-break-line">
+						<span class="head-line-blue"></span>
+					</div>
+					<h6 class="subtext">Dacă nu te poți conecta la contul tau personal Teatrul Metropolis și trebuie să resetezi parola urmează instrucțiunile de mai jos.</h6>
+
+            </div>
+			<div id="contclient" class="contact-form big-bottom" style="margin-bottom: 130px;">
+                    <form  method="post" class="contact_form" id="resetareForm" action="javascript:resetareparola();">
+                        <div class="col-md-12" style="padding-bottom: 30px;">
+                            <!-- add class has-success or has-error -->
+							<div class="col-md-1"></div>
+                            <div class="col-md-10" id="inp"><i class="fa fa-envelope" id="data" style="font-size:20px;position: absolute;left: 24px;top: 7px;"></i><input id="data" type="email" class="form-control" style="padding-left: 40px;font-size:14px;" placeholder="Introduceți adresa de e-mail asociată contului dvs." name="email" /></div>
+							<div class="col-md-1"></div>
+                            <br><p id="warning"></p>
+				
+                        
+							
+                        </div>
+                        <div class="col-md-12">
+						<p id="stepinfo"><strong>Pasul I:</strong>Introduceți adresa de e-mail asociată contului dvs personal <strong>Teatrul Metropolis</strong> in <strong>campul de mai sus</strong><br/> si apăsați butonul <strong>pasul următor</strong> de mai jos. </p>
+							<br/>
+							<br/>
+							<div class="button top-button reset" style="visibility: visible;  margin:0;">
+							<a id="resetareparola" href="javascript:void(0);" onclick="resetareparola();"> pasul următor <i class="fa fa-chevron-right"></i></a>
+							</div>
+                        </div>
+                        
+                    </form>
+			</div>
+        </div>
+        <!-- .row -->
+    </div>
+
+        <!-- End Container -->
+
+
+	</section>
+    <!-- End Site Wrapper -->
+	<script>
+function phoneincorect(){
+	$("p#stepinfo").html('Vă rugăm să ne contactați la numarul scurt <strong style="color:red;font-size:28px;">*7707</strong> sau la email <strong style="color:red;">bilete.online@teatrulmetropolis.ro</strong>, specificand codul de referinta <strong style="color:red;">#RP03</strong>.');
+	$(".reset").hide(0);
+}
+function resetareparola(email){
+	var form = $("#resetareForm").serializeArray();
+	if(!email){
+		$.post("/front/resetareparola/", {data: form}).done(function(response) {
+			var resetare = $.parseJSON(response); 
+			if(resetare.warning){
+				$("p#warning").html(resetare.warning);
+				$("a#resetareparola").html('Reincearcă');
+			} 
+			if(resetare.status){
+				$("#inp").hide(0);
+				$("input#data").val('');
+				$("i#data").removeClass('fa-envelope');
+				$("i#data").addClass('fa-lock');
+				$("p#stepinfo").html(resetare.status.text);
+				$("a#resetareparola").attr('href', "javascript:resetareparola(\'"+resetare.status.email+"\');");
+				$("a#resetareparola").html('<i class="fa fa-check"></i> DA');
+				$("div.button").append('<a id="resetareparola" class="ban" href="javascript:phoneincorect();"><i class="fa fa-ban"></i> NU</a>');
+				$("p#warning").html('');
+			}
+			
+		}); 
+	} else {
+		$.post("/front/resetareparola/"+email, {data: form}).done(function(response) {
+			var resetare = $.parseJSON(response); 
+			$("p#stepinfo").html(resetare.status.text);
+			$("a#resetareparola").attr('href', "/cont");
+			$("a#resetareparola").html('<i class="fa fa-user"></i> Accesare cont client');
+			$("a#resetareparola.ban").hide(0);
+			
+		});
+	
+	}
+}
+
+</script>    <div class="scroll-to-top wow rollIn" data-wow-delay="0.5s">
+        <a href="#home"><i class="fa fa-angle-up"></i></a>
+    </div>
+    <footer class="dark wow flipInY">
+      <table width="100%"><tr>
+      <td width="50%"><center>
+<img src="https://www.teatrulmetropolis.ro/view/theme/front/images/secure.png" style="width:500px;"></>
+</center>
+      </td>
+
+       <td width="50%"> <center><p class="copyright">
+            <img src="https://www.teatrulmetropolis.ro/view/theme/front/images/logo-tm-25-20.png" title="Teatrul Metropolis" alt="Teatrul Metropolis">
+            <span class="logo-text">Teatrul Metropolis</span>
+            <span class="text-divide">|</span>by
+            <a href="http://pixozz.com" title="Web Design" target="_blank">
+                 <img src="https://www.teatrulmetropolis.ro/view/theme/front/images/logo-pixozz.png" style="height:auto; width:70px;" alt="Dezvoltare Web">
+            </a>
+            <br />&copy; 2015 Toate drepturile rezervate.</p></center></td></tr></table>
+    </footer>
+	<script src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/QueryLoader.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/wow.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/sticky.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/easing.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/gmap3.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.flexslider-min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.mb.YTPlayer.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/fitVids.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/isotope.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/form-validate.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/SmoothScroll.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/backstretch.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/twitter/jquery.tweet.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/twitter/ticker.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/functions.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/custom.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.metadata.min.js"></script>
+	<script type="text/javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.maphilight.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/zebra_dialog.js"></script>
+	<script type="text/javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.tipsy.js"></script>
+	<script src="https://www.teatrulmetropolis.ro:8000/socket.io/socket.io.js"></script>	
+	<script type="text/javascript">
+	$( document ).ready(function() {
+		$.ajax({
+			url: "https://www.teatrulmetropolis.ro:8000/socket.io",
+			type: "get",
+			cache: false,
+			dataType: 'jsonp', // it is for supporting crossdomain
+			crossDomain : true,
+			asynchronous : false,
+			jsonpCallback: 'deadCode',
+			timeout : 700, // set a timeout in milliseconds
+			complete : function(xhr, responseText, thrownError) {
+				if(xhr.status == "200") {
+					var firewall_alert = 'Conectare la sala cu success!';
+				} else {
+					var firewall_alert = 'Atentie Firewall-ul dumneavoastra blocheaza conexiunea cu Teatrul Metropolis!.';
+				}
+				$("body").attr("firewall", firewall_alert);
+			}
+		});	
+		$(".day").on( "mouseover", function() {
+			var id = $(this).attr('id');
+			$( "div.spectacol[id!='"+id+"']").addClass('fade');
+		})
+		.on( "mouseout", function() {
+			$( "div.spectacol" ).removeClass("fade");
+		});
+		$(".spectacol").on( "mouseover", function() {
+			var id = $(this).attr('id');
+			$( "div.day[id='"+id+"']").addClass('over');
+			$( "div.spectacol[id!='"+id+"']").addClass('fade');
+		})
+		.on( "mouseout", function() {
+			var id = $(this).attr('id');
+			$( "div.day[id='"+id+"']").removeClass("over");
+			$( "div.spectacol" ).removeClass("fade");
+		});		
+			var footer = $("footer").height();
+			var header = $("#navigation").height();
+			var windowh = $(window).height();
+			var pano = windowh-footer-header-71;
+			$("#pano").height(pano);	
+			$('table#comenzi').dataTable( {
+				"sDom": '<"toolbar">frtip'
+			} );
+			$("a#comenzi_previous").html('');
+			$("a#comenzi_next").html('');
+	});		
+	</script>	
+	<script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".signin").click(function(e) {          
+				e.preventDefault();
+                $("fieldset#signin_menu").toggle();
+				$(".signin").toggleClass("menu-open");
+            });
+			
+			$("fieldset#signin_menu").mouseup(function() {
+				return false
+			});
+			$(document).mouseup(function(e) {
+				if($(e.target).parent("a.signin").length==0) {
+					$(".signin").removeClass("menu-open");
+					$("fieldset#signin_menu").hide();
+				}
+			});			
+			
+        });
+		$(function() {
+		  $('a.tipsy').tipsy({gravity: 'w'});   
+		});		
+	</script>
+</body>
+</html>

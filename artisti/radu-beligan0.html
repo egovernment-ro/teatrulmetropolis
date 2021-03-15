@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ro" xml:lang="ro">
+<head>
+<title>Teatrul Metropolis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Teatrul Metropolis" />
+<meta name="keywords" content="" />
+<link href="http://www.teatrulmetropolis.ro/image/data/logo-ico.gif" rel="shortcut icon" type="image/x-icon" />
+<base href="http://www.teatrulmetropolis.ro/" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<!--[if IE]>
+	
+<![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-collapser/jquery.collapser.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+
+</head>
+<body bgcolor="#000000">
+<a name="top"></a>
+<div id="container">
+	<div id="div2_continut"></div>
+	
+	<div id="header_continut">
+		<table width="100%">
+		<tr><td height="20" colspan="8"></td></tr>
+		<tr><td width="10%"></td><td align="center" valign="top" >
+				
+				<a href="http://www.teatrulmetropolis.ro/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','catalog/view/theme/default/image/prima_pg_hover.png',1)">
+						<img src="catalog/view/theme/default/image/prima_pg_normal.png" name="Image1" width="85" height="45" border="0" id="Image1" />
+					</a><br/>
+					<div class="contact_continut">
+                       <a class="contact1_continut" href="http://www.teatrulmetropolis.ro/contact.html" id="fancybox_page_rel">&nbsp;</a>
+                    </div>
+					</td>
+					<td align="center" valign="top" >
+											<a href="http://www.teatrulmetropolis.ro/artisti"><img src="catalog/view/theme/default/image/artisti_hover.png" width="195" height="196" border="0"  /></a>
+										</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/program" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','catalog/view/theme/default/image/program_hover.png',1)">
+						<img src="catalog/view/theme/default/image/program_normal.png" name="Image3" width="222" height="175" border="0" id="Image3" />
+					</a>
+										</td>
+					
+				<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/spectacole" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','catalog/view/theme/default/image/spectacole_hover.png',1)">
+						<img src="catalog/view/theme/default/image/spectacole_normal.png" name="Image5" width="154" height="145" border="0" id="Image5" />
+					</a>
+									</td>
+					<td align="center" valign="top" >
+									
+					
+					<a href="http://www.teatrulmetropolis.ro/despre_noi" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','catalog/view/theme/default/image/despre_noi_hover.png',1)">
+						<img src="catalog/view/theme/default/image/despre_noi_normal.png" name="Image6" width="174" height="145" border="0" id="Image6" />
+					</a>
+							</td>
+		<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/stiri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','catalog/view/theme/default/image/stiri_ANTET_hover.png',1)">
+						<img src="catalog/view/theme/default/image/stiri_ANTET_normal.png" name="Image4" width="144" height="120" border="0" id="Image4" />
+					</a>
+									</td>
+		<td width="10%"></td></tr></table>		
+	</div>
+<script>
+
+function show(control){
+var pagina = new Array()
+pagina[0]="descriere"
+pagina[1]="roluri"
+pagina[2]="premii"
+
+if (document.layers) { // NN4+
+	document.layers['table_artist'].height = '100%';
+	document.layers['table_caract_artist'].height = '100%';
+	
+	for (i=0;i<pagina.length;i++){
+		
+		if (pagina[i] == control) {
+			document.layers[pagina[i]].visibility = "show";
+			document.layers[pagina[i]].display = "block";
+			document.layers[pagina[i]].position = "absolute";
+			document.layers["martor_" + pagina[i]].visibility = "show";
+			document.layers["martor_" + pagina[i]].display = "block";
+			}
+		else
+			{
+			document.layers[pagina[i]].visibility = "hide";
+			
+			document.layers["martor_" + pagina[i]].visibility = "hide";
+			
+      			}
+  		}
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+		document.getElementById('table_artist').style.height='100%';
+		document.getElementById('table_caract_artist').style.height='100%';
+		for (i=0;i<pagina.length;i++){
+			if (pagina[i] == control) {
+				var obj = document.getElementById(pagina[i]);
+				
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "visible";
+				obj.style.display = "block";
+				
+
+				obj.style.position = "relative";
+				objSD.style.visibility = "visible";
+				objSD.style.display = "block";
+				}
+			else
+				{
+				var obj = document.getElementById(pagina[i]);
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "hidden";
+				
+				obj.style.display = "none";
+				objSD.style.visibility = "hidden";
+				
+				}
+		}
+	}
+else if (document.all) { // IE 4
+	document.all['table_artist'].style.height = '100%';
+	document.all['table_caract_artist'].style.height = '100%';
+	for (i=0;i<pagina.length;i++){
+		if (pagina[i] == control) {
+			document.all[pagina[i]].style.visibility = "visible";
+			document.all[pagina[i]].style.display = "block";
+			document.all[pagina[i]].style.position = "absolute";
+			document.all["martor_" + pagina[i]].style.visibility = "visible";
+			document.all["martor_" + pagina[i]].style.display = "block";
+			}
+		else {
+			document.all[pagina[i]].style.visibility = "hidden";
+			
+			document.all["martor_" + pagina[i]].style.visibility = "hidden";
+			
+			}
+  		}
+	}
+}
+</script>
+
+<div id="content_continut">
+	<table cellspacing="0" cellpadding="0" border="0"  width="100%"><tr><td align="center" >
+		<div class="center" id="table_artist">
+			<table width="1000" cellspacing="0" cellpadding="0" border="0" >
+             <tr>
+              <td align="center" valign="top"  style="min-height:700px;" width="700" >
+								<table cellspacing="20" cellpadding="0" width="100%" >
+					<tr>
+                     <td width="33%" valign="top" align="center" >
+						<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/artisti/30/radu_beligan-500x500.png" class="grouped_elements" title="Imagine 1 din 1"><img src="http://www.teatrulmetropolis.ro/image/cache/data/artisti/30/radu_beligan-200x300.png" border="0" width="200" height="221"></a>
+                        <br>
+                        <br>
+						                                                <br>
+                        <br>
+						<table border='0' width="126" cellspacing='0' cellpadding='0' >
+							<tr>
+                                <td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+                                <td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+                                <td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+                            	<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+								 <a onclick="show('descriere');"><font size="4" >Descriere</font></a>
+								</td>
+                            </tr>
+							<tr>
+                                <td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+                                <td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+                                <td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+                            </tr>
+						</table>
+						<div id="martor_descriere" style="margin-top:-40px;margin-right:10px;float:right;"><img src="catalog/view/theme/default/image/martor.png"></div>
+																		<br><br>
+						<table border='0' width="126" cellspacing='0' cellpadding='0' >
+							<tr>
+                                <td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+                                <td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+                                <td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+                                <td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+                                    <a onclick="show('roluri');"><font size="4" >Roluri</font></a>
+                                </td>
+                            </tr>
+							<tr>
+                                <td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+                                <td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+                                <td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+                            </tr>
+						</table>
+						<div id="martor_roluri" style="margin-top:-40px;margin-right:10px;float:right;"><img src="catalog/view/theme/default/image/martor.png"></div>
+																			<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+                                    <td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+                                    <td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+                                    <td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+                                	<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('premii');"><font size="4" >Premii</font></a>
+									</td>
+                                </tr>
+								<tr>
+                                	<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+                                    <td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+                                    <td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+                                </tr>
+							</table>
+							<div id="martor_premii" style="margin-top:-40px;margin-right:10px;float:right;"><img src="catalog/view/theme/default/image/martor.png"></div>
+												<br>
+                        <br>
+						<div class="buton-inapoi" ><a href="http://www.teatrulmetropolis.ro/artisti">< Artiști</a></div>
+					</td>
+					<td width="67%" valign="top" height="56">
+						<table border='0' width="476" cellspacing='0' cellpadding='0' style="height: auto;">
+							<tr>
+								<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+                            	<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476"  valign="middle">
+								<font size="4" style="margin-left:20px;" color="white">Radu Beligan</font>
+								</td>
+                            </tr>
+							<tr>
+                            	<td background="catalog/view/theme/default/image/lb.png" width="13" height="13" ></td>
+                                <td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+                                <td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+                            </tr>
+						</table>
+					<br>
+                    <br>
+					<table border='0' width="476" cellspacing='0' cellpadding='0' valign="top" align="left" >
+									<tr>
+										<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+										<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476" >
+											<table style="margin-left:20px;margin-right:10px;" align="left" id="table_caract_artist">
+                                            	<tr>
+                                                	<td align="left" valign="top">
+																													<div id="descriere" style="display:block;">
+                                                                <font size="2" color="white"><p>
+	(n.14.12.1918, satul Gălbeni, judeţul Bacău)</p>
+<p>
+	Formaţie&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	1937-1938: studiază Dreptul şi Filosofia la Bucureşti&nbsp;</p>
+<p>
+	Academia Regală de Muzică şi Artă Dramatică, profesoară Lucia Sturdza Bulandra - studii neterminate&nbsp;</p>
+<div>
+	Director al Teatrului Naţional Bucureşti: 1969 - 1990&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<p>
+		Alte activităţi&nbsp;</p>
+	<p>
+		Profesor la Institutul de Teatru şi Film: 1950 - 1965&nbsp;</p>
+	<p>
+		Director al Teatrului de Comedie: 1961 - 1969&nbsp;</p>
+	<p>
+		Preşedinte activ (1971) şi apoi Preşedinte de onoare pe viaţă (1977) al Institutului Internaţional de Teatru&nbsp;</p>
+	<p>
+		Autorul mesajului internaţional pentru Ziua Mondială a Teatrului: 27 martie 1977&nbsp;</p>
+	<p>
+		Co-preşedinte, cu Yehudi Menuhin, al Festivalurilor Internaţionale de Teatru şi Muzică organizate de UNESCO: 1971 - 1978&nbsp;</p>
+	<p>
+		Membru al Cartelului Internaţional de Teatru: 1967&nbsp;</p>
+	<p>
+		Membru &icirc;n Consiliul Superior al Teatrului Naţiunilor, sub preşedinţia lui Pierre Moinet, directorul general al artelor şi literaturii din Ministerul Afacerilor Culturale al Franţei &nbsp;</p>
+	<p>
+		Membru al Academiei Le Muse din Florenţa&nbsp;</p>
+	<p>
+		Semnatar al Apelului Artiştilor pentru Securitate şi Cooperare &icirc;n Europa, Helsinki, 1985&nbsp;</p>
+	<p>
+		&nbsp;</p>
+	<p>
+		&nbsp;</p>
+	<p>
+		Cărţi publicate&nbsp;</p>
+	<p>
+		&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>2001 - &bdquo;Note de insomniac&quot;&nbsp;</p>
+	<p>
+		&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>1978 - &bdquo;Luni, Marţi, Miercuri...&quot;&nbsp;</p>
+	<p>
+		&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>1968 - &bdquo;Pretexte şi subtexte&quot;&nbsp;</p>
+</div>
+</font>
+                                                                <br>
+                                                                															</div>
+														                                                            <div id="roluri" style="display:none;" >
+                                                                <font size="2" color="white"><p>
+	&nbsp;</p>
+<p>
+	Radu Beligan</p>
+<p>
+	14.12.1918, satul Gălbeni, judeţul Bacău</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	Roluri in teatru:</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Leon Saint Pe - &bdquo;Egoistul&quot; de Jean Anouilh, regie proprie, 2004&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Ianke - &bdquo;Take, Ianke şi Cad&acirc;r&quot; de Victor Ion Popa, regia Grigore Gonţa, 2001&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Guglielmo - &bdquo;Numele trandafirului&quot; de Umberto Eco, regia Grigore Gonţa, 1998&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Actorul - &bdquo;Azilul de noapte&quot; de Maxim Gorki, regia Ion Cojar, 1998&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Bătr&acirc;nul - &bdquo;Cotletele&quot; de Bertrand Blier, regia Gelu Colceag, 1998&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Kondilas - &bdquo;Moştenirea&quot; de Titus Popovici, regia Horea Popescu, Mihai Manolescu, 1989&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Contrabasul&quot; (one man show) de Patrick Suskind, regia Grigore Gonţa, 1987&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Herb Tucker - &bdquo;Poveste din Hollywood&quot; de Neil Simon, regia Grigore Gonţa, 1984 şi 1994&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Spirache - &bdquo;Titanic Vals&quot; de Teodor Muşatescu, regia Mihai Berechet, 1983&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Domenico - &bdquo;Filumena Marturano&quot; de Eduardo De Fillippo, regia Anca Ovanez Doroşenco, 1981&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Chereea - &bdquo;Caligula&quot; de Albert Camus, regia Horea Popescu, 1980&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Romulus - &bdquo;Romulus cel Mare&quot; de Friedrich D&uuml;rrenmatt, regia Sanda Manu, 1977&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Richard al III-lea - &bdquo;Richard al III-lea&quot; de William Shakespeare, regia Horea Popescu, 1976&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Autorul dramatic - &bdquo;Viaţa unei femei&quot; autor şi regia Aurel Baranga, 1976&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Robespierre - &bdquo;Danton&quot; de Camil Petrescu, regia Horea Popescu, 1974&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Mel - &bdquo;Prizonierul din Manhattan&quot; de Neil Simon, regia Mihai Berechet, 1973&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Mayer Bayer - &bdquo;Simfonia patetică&quot; de Aurel Baranga, regia Aurel Baranga, 1973&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Ştefan Valeriu - &bdquo;Jocul de-a vacanţa&quot; de Mihail Sebastian, regia Mihai Berechet, 1971&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>George - &bdquo;Cui i-e frică de Virginia Woolf?&quot; de Edward Albee, regia Michel Făgădău, 1970&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Eduard Forţian - &bdquo;&Icirc;n valea cucului&quot; de Mihai Beniuc, regia Sică Alexandrescu, 1959&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>C.N. Mollin - &bdquo;Anii negri&quot; de Aurel Baranga, regia Sică Alexandrescu, 1958&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Iacob Bardin - &bdquo;Duşmanii&quot; de Maxim Gorki, regia Alexandru Finţi, 1958&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Horace, Frederic - &bdquo;Invitaţie la castel&quot; de Jean Anouilh, regia Sică Alexandrescu, 1958&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Trinculo - &bdquo;Furtuna&quot; de William Shakespeare, regia Moni Ghelerter, 1958&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Filipetto - &bdquo;Bădăranii&quot; de Carlo Goldoni, regia Sică Alexandrescu, 1957&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Alexandru - &bdquo;Reţeta fericirii sau despre ceea ce nu se vorbeşte&quot; de Aurel Baranga, regia Marietta Sadova, 1957&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Profesorul - &bdquo;Steaua fără nume&quot; de Mihail Sebastian, regia Sică Alexandrescu, 1956&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Cerchez - &bdquo;Ziariştii&quot; de Alexandru Mirodan, regia Moni Ghelerter, 1956&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Agamemnon Dandanache - &bdquo;O scrisoare pierdută&quot; de I.L. Caragiale, regia Sică Alexandrescu, 1956&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Dr. Smil - &bdquo;Apus de soare&quot; de Barbu Ştefănescu Delavrancea, regia Marietta Sadova, Mihail Zirra, 1956 şi 1973&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Poludin - &bdquo;O chestiune personală&quot; de Alexandr Stein, regia Sică Alexandrescu, 1955&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Stepa - &bdquo;Platon Krecet&quot; de Alexandr Korneiciuk, regia Alexandru Finţi, 1954&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Mircea Cavafu - &bdquo;Mielul turbat&quot; de Aurel Baranga, regia Sică Alexandrescu, 1954&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Mitică - &bdquo;Matei Millo&quot; de Mircea Ştefănescu, regia Sică Alexandrescu, 1953&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Voicu - &bdquo;Ultima oră&quot; de Mihail Sebastian, regia Moni Ghelerter, 1953&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Hlestakov - &bdquo;Revizorul&quot; de Nikolai Vasilievici Gogol, regia Sică Alexandrescu, 1952&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Momente&quot; de I.L. Caragiale, regia Sică Alexandrescu, 1952&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Catindatul - &bdquo;D`ale carnavalului&quot; de I.L. Caragiale, regia Sică Alexandrescu, (Sala Studio), 1951&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Tuzenbach - &bdquo;Trei surori&quot; de A.P. Cehov, regia Moni Ghelerter, (Sala Comedia), 1950&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Victor Dumitrescu - &bdquo;Iarba rea&quot; de Aurel Baranga, regia Sică Alexandrescu, 1949&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Rică Venturiano - &bdquo;O noapte furtunoasă&quot; de I.L. Caragiale, regia Sică Alexandrescu, (Sala Comedia), 1949&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Agamiţă Dandanache - &bdquo;O scrisoare pierdută&quot; de I.L. Caragiale, regia Sică Alexandrescu, (Sala Comedia), 1948&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Studentul - &bdquo;Confruntarea&quot; de Tur şi Lev Seinin, regia Moni Ghelerter, (Sala Studio), 1948&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Romeo - &bdquo;Romeo şi Julieta, actul 6&quot;, &bdquo;&Icirc;ntre filologi&quot;, &bdquo;Cine răspunde?&quot; de D.D. Pătrăşcanu, regia N.Gh. Kirilov, 1945&nbsp;</p>
+<p>
+	Teatrul Odeon:&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Talleyrand - &bdquo;Supeul&quot; de Jean Claude Brinsville, regia Florentina Enache, 1997&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Antonio Salieri - &bdquo;Amadeus&quot; de Peter Schaffer, regia Dinu Cernescu, 1982&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Helen, Tommy şi Joe&quot; de James Thurber şi Elliot Nugent, regia Marietta Sadova, 1948&nbsp;</p>
+<p>
+	Teatrul Evreiesc de Stat:&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Wille Clark - &bdquo;Băieţii de aur&quot; de Neil Simon, regia Ion Lucian, 1997&nbsp;</p>
+<p>
+	Teatrul Naţional din Craiova&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Zeus - &bdquo;Danaidele&quot; după Eschil, regia Silviu Purcărete, 1995&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>George - &bdquo;Cui i-e frică de Virginia Woolf?&quot; de Edward Albee, regia Mircea Cornişteanu, 1990&nbsp;</p>
+<p>
+	Teatrul Lucia Sturdza Bulandra:&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Don - &bdquo;Transplantarea inimii necunoscute&quot; de Alexandru Mirodan, regia Moni Ghelerter, 1969&nbsp;</p>
+<p>
+	Teatrul de Comedie: 1961 - 1968&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Berenger - &bdquo;Ucigaş fără simbrie&quot; de Eugene Ionesco, regia Lucian Giurchescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Chitlaru - &bdquo;Opinia publică&quot; de Aurel Baranga, regia Mihai Berechet&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Cirivis - &bdquo;Capul de răţoi&quot; de George Ciprian, regia David Esrig&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Berenger - &bdquo; Rinocerii&quot; de Eugene Ionesco, regia Lucian Giurchescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Gore, Şeful - &bdquo;Şeful sectorului suflete&quot; de Alexandru Mirodan, regia Moni Ghelerter&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Juraţii - &bdquo;Procesul domnului Caragiale&quot; de Mircea Ştefănescu, regia David Esrig&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Cheryl - &bdquo;Celebrul 702&quot; de Alexandru Mirodan, regia Moni Ghelerter&nbsp;</p>
+<p>
+	Teatrul Tineretului:&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>Doctorul - &bdquo;Un flăcău din oraşul nostru&quot; de Konstantin Simonov, regia Vlad Mugur, 1952&nbsp;</p>
+<p>
+	Teatrul Alhambra: 1943 - 1949&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Ruşinea familiei&quot; de Mircea Ştefănescu, după Ronald Harwood, regia Ion Talianu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Steaua fără nume&quot; de Mihail Sebastian, regia Soare Z. Soare&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Nu mai beau&quot; de Gaston de Caillavet şi Robert de Flers, regia Soare Z. Soare&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Pensiunea dragostei&quot; de Alexandru Kiriţescu, regia Soare Z. Soare&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Sărmanul Jonathan&quot; de Karl Milloker&nbsp;</p>
+<p>
+	Compania Radu Beligan: 1947 - 1948&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Clasa a 8-a B&quot; de Roger Ferdinand, regia Ionel Ţăranu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Ruşinea familiei&quot; de Mircea Ştefănescu, după Ronald Harwood, regia Ion Talianu&nbsp;</p>
+<p>
+	Teatrul Comedia: 1945 - 1947&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Primăvara a venit&quot; de John van Druten, regia Sică Alexandrescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Racheta spre lună&quot; de Clifford Odets, regia Marietta Sadova&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Vis de secătură&quot; de Mircea Ştefănescu, regia W. Siegfried&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;O femeie răpită&quot; de Louis Verneuil, regia Sică Alexandrescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Knock&quot; de Jules Romaine, regia Sică Alexandrescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Sărută-mă imediat&quot; de Tudor Muşatescu şi V. Timuş, după Janos Vaszari, regia Ion Talianu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Unul cu bani&quot; de George S. Kaufman, regia Sică Alexandrescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Am visat paradisul&quot; de Guido Cantini, regia Sică Alexandrescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Medicul &icirc;n dilemă&quot; de George Bernard Shaw, regia Sică Alexandrescu&nbsp;</p>
+<p>
+	Teatrul Nostru: 1946 - 1947&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Viaţa &icirc;ncepe m&acirc;ine&quot; de Marc Gilbert Sauvajon, regia Val Mugur&nbsp;</p>
+<p>
+	Teatrul Municipal: 1944 - 1945&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Omul care a văzut moartea&quot; de Victor Eftimiu, regia Sică Alexandrescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Amantul de carton&quot; de Jacques Deval, regia Sică Alexandrescu&nbsp;</p>
+<p>
+	Teatrul Maria Filotti (Sărindar): 1942 - 1943&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Sextet&quot; de Gregor Schmitt, regia Sică Alexandrescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Domnişoara de ciocolată&quot; de Paul Gavault, regia Ion Şahighian&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;D-ra Butterfly&quot; de Tudor Muşatescu, după Tibor Varady, regia Tudor Muşatescu&nbsp;</p>
+<p>
+	Teatrul Majestic: 1940 - 1941&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Omul care z&acirc;mbeşte&quot; de Luigi Bonelli şi Aldo de Benedetti, regia Ion Şahighian&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Frumoasa aventură&quot; de Gaston de Caillavet şi Robert de Flers, regia Sică Alexandrescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Oraşul fără avocaţi&quot; de Nicola Manzari, regia Ion Iancovescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Banii nu fac nici două parale&quot; de Armando Curcio, regia Sică Alexandrescu&nbsp;</p>
+<p>
+	Teatrul Tudor Muşatescu (Roxy): 1940 - 1941&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;&Icirc;mi pare rău de mine&quot; de Mouezy-Eon şi Guitton, regia Ion Sava&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Titanic Vals&quot; de Tudor Muşatescu, regia Tudor Muşatescu&nbsp;</p>
+<p>
+	Grădina C.A. Rosetti: 1940&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Ascultă, Ionescule&quot; de Tudor Muşatescu, după Mirande şi Quinson&nbsp;</p>
+<p>
+	Teatrul din Sărindar: 1939 - 1940&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Calul năzdrăvan&quot; de Gherardo Gherardi, regia Ion Iancovescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Aproape de cer&quot; de Julien Luchaire, regia Aurel Ion Maican&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Figurantul&quot; de Alfred Savoir, regia Ion Iancovescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Domnişoara Butterfly&quot; de Tudor Muşatescu după Tibor Varady, regia Tudor Muşatescu&nbsp;</p>
+<p>
+	Teatrul Uranus - Comedia: 1938 - 1939&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Tinereţe&quot; de Swarkin, regia Muratov&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Quadratura cercului&quot; de Valentin Kataiev, regia Victor Ion Popa&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Zile vesele după război&quot; de Mihail Sadoveanu, regia Victor Ion Popa&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Jederman&quot; de Hugo von Hoffmanstall, regia Victor Ion Popa&nbsp;</p>
+<p>
+	Liedertafel - Alhambra - Regina Maria: 1937 - 1938&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Molima&quot; de Ion Marin Sadoveanu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Pescuitorul de umbre&quot; de Jean Sarment, regia Sergiu Dumitrescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Crimă şi pedeapsă&quot; de Gaston Bary, după Fiodor Mihailovici Dostoievski, regia Mihai Zirra (Debut)&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span></p>
+<p>
+	Regie de teatru&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Egoistul&quot; de Jean Anouilh, 2004&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;De partea cui eşti?&quot; de Ronald Harwood, 1996&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;O scrisoare pierdută&quot; de I.L. Caragiale, 1979&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Poveste din Irkutsk&quot; de Aleksei Arbuzov, 1960&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Sălbaticii&quot; de Serghei Mihalkov, 1959&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Doctor fără voie&quot; de J.B.P. Moli&egrave;re (co-regie cu Sică Alexandrescu), 1955&nbsp;</p>
+<p>
+	Televiziune:&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Al matale, Caragiale&quot;, regia Mircea Cornişteanu, 2002&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Cui i-e frică de Virginia Wolf?&quot; de Edward Albee, regia Olimpia Arghir, 1995&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Amadeus&quot; de Peter Shaffer, regia Dinu Cernescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Aventură sub păm&acirc;nt&quot; de Ion Băieşu, regia Sergiu Ionescu, 1982&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Titanic vals&quot; de Tudor Muşatescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Supeul&quot; de Jean Claude Brinsville&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Muşatinii&quot;&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Harvey&quot; de Mary Chase&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Tren de plăcere&quot; de I.L. Caragiale&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Momente Caragiale&quot; după I.L. Caragiale&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Conu Leonida&quot; după I.L. Caragiale&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Marii Artişti pe Micul Ecran&quot;&nbsp;</p>
+<p>
+	Roluri &icirc;n film&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;După-amiaza unui torţionar&quot;, regia Lucian Pintilie, 2001&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Trahir&quot;, regia Radu Mihăileanu, 1992&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Horea&quot;, regia Mircea Mureşan, 1984&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Galax, omul păpuşă&quot;, regia Ion Popescu Gopo, 1984&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;&Icirc;ntoarcere la dragostea dint&acirc;i&quot;, regia Mircea Mureşan, 1981&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Iancu Jianu&quot;, regia Dinu Cocea, 1980&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Reţeaua S&quot;, regia Virgil Calotescu, 1980&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Braţele Afroditei&quot;, regia Mircea Drăgan, 1978&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Aurel Vlaicu&quot;, regia Mircea Drăgan, 1977&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Singurătatea florilor&quot;, regia Mihai Constantinescu, 1976&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Cuibul salamandrelor&quot;, regia Mircea Drăgan, 1976&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Instanţa am&acirc;nă pronunţarea&quot;, regia Dinu Cocea, 1976&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Premiera&quot;, regia Mihai Constantinescu, 1976&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Tată de duminică&quot;, regia Mihai Constantinescu, 1975&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Agentul straniu&quot;, regia Savel Stiopul, 1974&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;&Icirc;ntoarcerea lui Magellan&quot;, regia Cristina Nicolae,1973&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Explozia&quot;, regia Mircea Drăgan, 1972&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Şeful sectorului suflete&quot;, regia Gheorghe Vitanidis, 1967&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Castelanii&quot;, regia Gheorghe Turcu, 1966&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Paşi spre lună&quot;, regia Ion Popescu Gopo, 1964&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Lanterna cu amintiri&quot;, regia Jean Georgescu, 1963&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Celebrul 702&quot;, regia Mihai Iacob, 1962&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Directorul nostru&quot;, regia Jean Georgescu, 1960&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Bădăranii&quot;, regia Sică Alexandrescu şi Gheorghe Naghi, 1960&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Afacerea Protar&quot;, regia Haralambie Boroş, 1955&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;O scrisoare pierdută&quot;, regia Sică Alexandrescu şi Victor Iliu, 1953&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Lanţul slăbiciunilor&quot;, regia Jean Georgescu, 1952&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Bulevardul Fluieră V&acirc;ntu&quot;, regia Jean Mihail, 1950&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Rasună valea&quot;, regia Paul Călinescu, 1949&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;Visul unei nopţi de iarnă&quot;, regia Jean Georgescu, 1946&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space:pre"> </span>&bdquo;O noapte furtunoasă&quot;, regia Jean Georgescu, 1943 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p></font>
+                                                                                                                                    <div class="buton-sus"><a href="http://www.teatrulmetropolis.ro/artisti/radu-beligan0.html#top">^ Sus</a></div>
+                                                                                                                            </div>
+                                                                                                                        <div id="premii" style="display:none;">
+                                                                <font size="2" color="white"><p>
+	&nbsp;</p>
+<p>
+	Premii şi distincţii&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Ordinul Naţional &bdquo;Steaua Rom&acirc;niei&quot; &icirc;n gradul de &bdquo;Mare Cruce&quot; cu &icirc;nsemn pentru civili, 2008&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Membru de Onoare al Academiei Rom&acirc;ne, drept recunoaştere a activităţii &icirc;n domeniul artei, 2004&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Decorat cu Ordinul Drapelul Iugoslav cu steaua de aur şi colan&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Decorat cu Ordinul Serviciul Credincios &bdquo;Mare Ofiţer&quot;&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Doctor Honoris Causa al Universităţii Naţionale de Artă Teatrală şi Cinematografică &bdquo;I.L. Caragiale&quot;, 2003&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Trofeul &bdquo;Rom&acirc;nia 2000&quot;, 2003&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Marele Premiu acordat de Guvernul Rom&acirc;niei, &icirc;n cadrul Premiilor Naţionale de Teatru, 2002&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Preşedintele Franţei, Jacques Chirac a semnat Decretul prin care Radu Beligan este numit &icirc;n grad de Ofiţer al Ordinului Naţional al Legiunii de Onoare, 2002&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Premiul revistei &bdquo;Moftul Rom&acirc;n&quot;, 2001&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Premiul Revistei &bdquo;Flacăra&quot;, 2000&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Trofeul Eugene Ionesco, 1999&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Premiul Fundaţiei TOFAN, 1998&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>PRIX 14 JUILLET 1998 al Ministerului de Externe din Franţa&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Premiul Academiei Rom&acirc;ne, 1997&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Premiul Galei UNITER - Trofeul Dionysos, 1995-1996&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Doctor Honoris Causa al Academiei &bdquo;George Enescu&quot; din Iaşi, 1994&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Doctor Honoris Causa al Academiei George Enescu&nbsp;</p>
+<p>
+	&middot;<span class="Apple-tab-span" style="white-space: pre; "> </span>Premiul Academiei &bdquo;Le Muse&quot; din Florenţa, 1980</p>
+</font>
+                                                                                                                            </div>
+                                                        													</td>
+                                                 </tr>
+                                             </table>
+										</td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450"  height="13"></td>
+										<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+									</tr>
+								</table>
+					</td></tr>
+				</table>
+			</div>
+			<script>show('descriere');</script>
+					</td>
+	<td width="300" align="center" valign="top"><br><br>
+		<br>
+<div class="dreapta-cautare">
+		
+			<input type="text" id="keyword" value="Scrie aici și ..." onfocus="if (this.value == 'Scrie aici și ...') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Scrie aici și ...';}" class="search-input" size="19" onKeyPress="return submitenter_cauta(event)">
+			<a onclick="moduleSearch();" class="buton" >Caută</a>
+		
+</div>
+<br>
+<div class="dreapta-cos">	
+	<div id="module_cart" >
+ <div class="middle">
+	
+    	<table cellpadding="5" cellspacing="0" style="width: 200px;color:white;" background="catalog/view/theme/default/image/c.png"><tr><td>
+		<img src="catalog/view/theme/default/image/bilete_fara_rezervari.png" width="181" height="129" border="0"/>
+	</td></tr></table>
+    	
+  </div>
+</div>
+<script type="text/javascript"><!--
+$(document).ready(function () {
+	$('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+	$("a[id^='adaugabilet']").click(function () {
+		 var randlocIDValSplitter    = (this.id).split("-");
+    var rand            = randlocIDValSplitter[1];
+	var loc            = randlocIDValSplitter[2];
+	var reprezentatie_id            = randlocIDValSplitter[3];
+	
+	control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoatebilet']").click(function () {
+		 var randlocIDValSplitter   = (this.id).split("-");
+		 var rand            		= randlocIDValSplitter[1];
+		 var loc            		= randlocIDValSplitter[2];
+		 var reprezentatie_id       = randlocIDValSplitter[3];
+	
+		control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control_scoate='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoate_sala']").click(function () {
+		var randlocIDValSplitter    = (this.id).split("-");
+		var reprezentatie_id        = randlocIDValSplitter[1];
+	
+	
+    
+        $.ajax({
+            url: 'index.php?route=continut/cart/callback&reprezentatie_id='+reprezentatie_id,
+            type: 'get',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='clear_cart']").click(function () {
+		$.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/clear',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            } 
+                   
+        });
+		
+	});
+	
+	 $('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+ 
+});
+</script>
+
+
+</div>
+<br>
+<div class="dreapta-cont">
+	<table width="200" cellspacing='0' cellpadding='0'>
+		
+				<tr><td background="catalog/view/theme/default/image/c.png" width="110" height="30" valign="middle" align="center" >
+				<font color="#d2d0d0">Accesează cont</font>
+		</td>
+		<td width="90" valign="middle" align="center">
+			<a class="buton" href="http://www.teatrulmetropolis.ro/creaza_cont.html" id="fancybox_page_no_reload">Cont nou ?</a>
+		</td></tr>
+		<tr><td colspan="2" height="50" width="200" background="catalog/view/theme/default/image/c.png" valign="middle" align="center">
+			<form action="http://www.teatrulmetropolis.ro/index.php?route=common/home/autentificare" method="post" id="form_autentificare">
+				<input type="text" name="email" value="Email utilizator" onfocus="if (this.value == 'Email utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Email utilizator';}" class="user-input">
+				<input type="password" name="password" value="Parola utilizator" onfocus="if (this.value == 'Parola utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Parola utilizator';}" class="pass-input" onKeyPress="return submitenter_login_cont(event)">
+				<input type="hidden" name="redirect" value="http://www.teatrulmetropolis.ro/index.php?route=continut/artisti&amp;artist_id=30">
+			</form>
+		</td></tr>
+		<tr><td width=110" height="30"></td>
+		<td background="catalog/view/theme/default/image/c.png" width="90" height="30" valign="middle" align="center">
+			<a onClick="$('#form_autentificare').submit();"  class="buton" >Accesează</a>
+		</td></tr>
+		</table>
+</div>
+<br>
+<br>
+<div class="dreapta-comentarii">
+	<a href="http://www.teatrulmetropolis.ro/stiri/adela-popescu-si-mihai-bendeac-in-premiera-pe-o-banca-la-metropolis.html#comentariu3" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','catalog/view/theme/default/image/parereaTA_hover.png',1)">
+		<img src="catalog/view/theme/default/image/parereaTA_normal.png" name="Image50" width="188" height="126" border="0" id="Image50" /><br>
+		<table id="Ultim_Coment">
+							<tr>
+								<td id="dataUltim_Coment">
+									15 octombrie 2011 la 16:17
+								</td>
+							<tr>
+								<td id="idUltim_Coment">
+									*Nume:
+								</td>
+							<tr>
+								<td id="contentUltim_Coment">
+									nu va suparati , cand se va mai juca piesa?
+								</td>
+							</tr>
+						</table>		
+	</a>
+</div>
+<br>
+<br>
+<div class="dreapta-ajutor">
+	<a href="http://www.teatrulmetropolis.ro/ajutor" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','catalog/view/theme/default/image/ajutor_hover.png',1)" id="fancybox_page_rel">
+		<img src="catalog/view/theme/default/image/ajutor_normal.png" name="Image51" width="171" height="101" border="0" id="Image51" /><br>
+	</a>
+</div>
+<div style="width:210px;margin-top:20px;"><img src="catalog/view/theme/default/image/visa_icon.jpg"></div>			</td>
+	</tr></table>
+		</div>
+	</td>
+</tr></table>
+</div>
+
+<div id="footer_continut">
+	<table width="1000" align="center" height="200" background="catalog/view/theme/default/image/c.png"><tr><td><br>
+		<table width="90%" cellpadding="0" cellspacing="0"  style="color: #999;font-family:Arial, Helvetica, sans-serif;font-size:14px;">
+  <tr>
+    <td width="23%" rowspan="6" align="right" valign="top" >
+    <img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/sigla_tm.png" width="100" height="100" border="0" style="margin-right:30px;"/>
+    </td>
+    <td width="70%">Adresa: Str. Mihai Eminescu nr.89, sector 2, București.</td>
+    <td width="7%" rowspan="6" align="center" valign="top">
+   <a href="http://www.pmb.ro" target="blank"><img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/primaria_mun_buc.png" width="75" height="150" border="0" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Rezervări bilete se pot face și telefonic, la numerele: <br />
+      <strong style="color:#FFF">021 210 51 08</strong>  sau  <strong style="color:#FFF">0728 138 265</strong><br />
+      (în intervalul orar 10:00 - 19.00)<br />
+    Rezervarea telefonică este valabilă 48 de h.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font style="font-size:16px; color:#FFF">&copy;Teatrul Metropolis. Toate drepturile rezervate</font></td>
+  </tr>
+  <tr>
+    <td ><font style="font-size:12px;">Site produs de <strong style="color: #CCC">Legolas Media</strong><br />
+        Design by <strong style="color: #CCC">Alexandru Șulai</strong></font></td>
+  </tr>
+</table>	</td></tr></table>
+</div>
+
+
+</div>
+
+</body></html> 

@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ro" xml:lang="ro">
+<head>
+<title>Teatrul Metropolis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Teatrul Metropolis" />
+<meta name="keywords" content="" />
+<link href="http://www.teatrulmetropolis.ro/image/data/logo-ico.gif" rel="shortcut icon" type="image/x-icon" />
+<base href="http://www.teatrulmetropolis.ro/" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<!--[if IE]>
+	
+<![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-collapser/jquery.collapser.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+
+</head>
+<body bgcolor="#000000">
+<a name="top"></a>
+<div id="container">
+	<div id="div2_continut"></div>
+	
+	<div id="header_continut">
+		<table width="100%">
+		<tr><td height="20" colspan="8"></td></tr>
+		<tr><td width="10%"></td><td align="center" valign="top" >
+				
+				<a href="http://www.teatrulmetropolis.ro/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','catalog/view/theme/default/image/prima_pg_hover.png',1)">
+						<img src="catalog/view/theme/default/image/prima_pg_normal.png" name="Image1" width="85" height="45" border="0" id="Image1" />
+					</a><br/>
+					<div class="contact_continut">
+                       <a class="contact1_continut" href="http://www.teatrulmetropolis.ro/contact.html" id="fancybox_page_rel">&nbsp;</a>
+                    </div>
+					</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/artisti" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','catalog/view/theme/default/image/artisti_hover.png',1)">
+						<img src="catalog/view/theme/default/image/artisti_normal.png" name="Image2" width="195" height="196" border="0" id="Image2" />
+					</a>
+										</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/program" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','catalog/view/theme/default/image/program_hover.png',1)">
+						<img src="catalog/view/theme/default/image/program_normal.png" name="Image3" width="222" height="175" border="0" id="Image3" />
+					</a>
+										</td>
+					
+				<td align="center" valign="top" >
+											<a href="http://www.teatrulmetropolis.ro/spectacole"><img src="catalog/view/theme/default/image/spectacole_hover.png" width="154" height="145" border="0"  /></a>
+									</td>
+					<td align="center" valign="top" >
+									
+					
+					<a href="http://www.teatrulmetropolis.ro/despre_noi" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','catalog/view/theme/default/image/despre_noi_hover.png',1)">
+						<img src="catalog/view/theme/default/image/despre_noi_normal.png" name="Image6" width="174" height="145" border="0" id="Image6" />
+					</a>
+							</td>
+		<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/stiri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','catalog/view/theme/default/image/stiri_ANTET_hover.png',1)">
+						<img src="catalog/view/theme/default/image/stiri_ANTET_normal.png" name="Image4" width="144" height="120" border="0" id="Image4" />
+					</a>
+									</td>
+		<td width="10%"></td></tr></table>		
+	</div>
+<script>
+
+function show(control){
+var pagina = new Array()
+pagina[0]="descriere"
+pagina[1]="distributia"
+pagina[2]="cronici"
+
+if (document.layers) { // NN4+
+	document.layers['table_spectacol'].height = '100%';
+	document.layers['table_caract_spect'].height = '100%';
+	
+	for (i=0;i<pagina.length;i++){
+		
+		if (pagina[i] == control) {
+			document.layers[pagina[i]].visibility = "show";
+			document.layers[pagina[i]].display = "block";
+			document.layers[pagina[i]].position = "absolute";
+			document.layers["martor_" + pagina[i]].visibility = "show";
+			document.layers["martor_" + pagina[i]].display = "block";
+			}
+		else
+			{
+			document.layers[pagina[i]].visibility = "hide";
+			
+			document.layers["martor_" + pagina[i]].visibility = "hide";
+			
+      			}
+  		}
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+		document.getElementById('table_spectacol').style.height='100%';
+		document.getElementById('table_caract_spect').style.height='100%';
+		for (i=0;i<pagina.length;i++){
+			if (pagina[i] == control) {
+				var obj = document.getElementById(pagina[i]);
+				
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "visible";
+				obj.style.display = "block";
+				
+
+				obj.style.position = "relative";
+				objSD.style.visibility = "visible";
+				objSD.style.display = "block";
+				}
+			else
+				{
+				var obj = document.getElementById(pagina[i]);
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "hidden";
+				
+				obj.style.display = "none";
+				objSD.style.visibility = "hidden";
+				
+				}
+		}
+	}
+else if (document.all) { // IE 4
+	document.all['table_spectacol'].style.height = '100%';
+	document.all['table_caract_spect'].style.height = '100%';
+	for (i=0;i<pagina.length;i++){
+		if (pagina[i] == control) {
+			document.all[pagina[i]].style.visibility = "visible";
+			document.all[pagina[i]].style.display = "block";
+			document.all[pagina[i]].style.position = "absolute";
+			document.all["martor_" + pagina[i]].style.visibility = "visible";
+			document.all["martor_" + pagina[i]].style.display = "block";
+			}
+		else {
+			document.all[pagina[i]].style.visibility = "hidden";
+			
+			document.all["martor_" + pagina[i]].style.visibility = "hidden";
+			
+			}
+  		}
+	}
+}
+</script>
+
+<div id="content_continut" >
+	<table cellspacing="0" cellpadding="0" border="0" width="100%" ><tr><td align="center">
+		<div class="center" id="table_spectacol">
+			<table width="1000" cellspacing="0" cellpadding="0" border="0" ><tr><td align="center" valign="top" width="700" style="min-height:700px;">
+							<table cellspacing="20" cellpadding="0" width="100%" >
+					<tr><td width="33%" valign="top" align="center" >
+						<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic11-500x500.png" class="grouped_elements" ><img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic11-200x300.png" border="0" width="199" height="300"></a><br><br>
+													<div style="display: block;">
+																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic11-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic11-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic15-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic15-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic14-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic14-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mi9-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mi9-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mi7-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mi7-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic1-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic1-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic6-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic6-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic3-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic3-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic12-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic12-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic5-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic5-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic2-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic2-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic8-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic8-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic10-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic10-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic13-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic13-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic16-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic16-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic17-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/15/mic17-50x50.png" border="0" width="50" height="33" >
+									</a>
+																								</div>
+												<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('descriere');"><font size="4" >Descriere</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_descriere" style="margin-top:-40px;margin-right:10px;float:right;">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+									
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('distributia');"><font size="4" >Distributia</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_distributia" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+										
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('cronici');"><font size="4" >Cronici</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_cronici" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+												<br><br>
+						<div class="buton-inapoi"><a href="http://www.teatrulmetropolis.ro/spectacole">< Spectacole</a></div>
+					</td>
+					<td width="67%" valign="top" >
+						<table border='0' width="476" cellspacing='0' cellpadding='0' style="height: auto;">
+							<tr>
+								<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476"  align="center" valign="middle">
+									<font size="4"  color="white">FUNCŢIONARII după A.P.Cehov </font><br>
+									<font size="3"  color="white">Regia: Alexandru MAZGAREANU</font>
+																			<br>
+										<table style="margin-left:20px;margin-right:10px;" ><tr><td>
+											<font style="font-size:18px;" color="white"><b><p>
+	O comedie dulce amăruie care te poartă cu grijă şi tandreţe &icirc;n universul cehovian</p>
+</b></font>
+										</td></tr></table>
+																	</td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/lb.png" width="13" height="13" ></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+							</tr>
+						</table>
+						<br><br>
+													<table border='0'  cellspacing='0' cellpadding='0' valign="top">
+							<tr>
+																	<td background="catalog/view/theme/default/image/miercuri/l.png" width="7" height="20"></td>
+									<td background="catalog/view/theme/default/image/miercuri/c.png" width="90" height="20" align="center" valign="middle">
+										<a href="http://www.teatrulmetropolis.ro/program/reprezentatie_functionarii-dupa-apcehov-_325.html" class="buton-data">
+											<font size="1"><b>M</b></font> | <font size="1">21 mar | 19:00</font>										</a>
+									</td>
+									<td background="catalog/view/theme/default/image/miercuri/r.png" width="7" height="20"></td>
+									<td width="20" height="20"></td>
+															</tr>
+							</table>
+												<br><br>
+						
+								<table border='0' width="476" cellspacing='0' cellpadding='0' valign="top" align="left" >
+									<tr>
+										<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+										<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476" >
+											<table style="margin-left:20px;margin-right:10px;" align="left" id="table_caract_spect"><tr><td align="left" valign="top">
+																							<div id="descriere" style="display:block;">
+													<font size="2" color="white"><p>
+	Un spectacol care te &icirc;nvăluie&nbsp; şi te face prizonier prin umorul de calitate, energia extraordinară şi performanţă.<br />
+	FUNCŢIONARII - este un discurs regizoral susţinut,&nbsp; ai cărui martori trebuie să fiţi.durată spectacol: 1h 45 min<br />
+	<br />
+	Alexandru Măzgăreanu - regizor<br />
+	&ldquo;Spectacolul de la Teatrul Metropolis a &icirc;nsemnat &icirc;n primul r&acirc;nd şansa de a mă &bdquo;juca&rdquo; cu o parte din proza lui Cehov şi &icirc;n al doilea r&acirc;nd oportunitatea de a &icirc;nchega o echipă de actori formată atat din debutanţi (la fel ca şi mine) cat şi din actori consacraţi, unii dintre ei chiar profesorii celor mai sus menţionaţi. 6 &icirc;nsemnări, una mai disperată dec&acirc;t alta, un birou trist şi necăjit şi c&acirc;ţiva funcţionari care se dau &icirc;ntr-un spectacol de zile din ce &icirc;n ce mai nevrozate.<br />
+	Cat mai multe teatre din Bucuresti si din tara ar trebui sa preia initiativa Teatrului Metropolis, si anume de a da o sansa tinerilor regizori, actori, scenografi!&rdquo;</p>
+<p>
+	<br />
+	CATEVA INSEMNARI DISPERATE ALE UNOR FUNCTIONARI NECAJITI DINTR-UN BIROU AFLAT LA SUBSOLUL UNEI CLADIRI DARAPANATE<br />
+	sau pe scurt FUNCTIONARII dupa A.P. Cehov<br />
+	<br />
+	traducerea: Masha Dinescu<br />
+	dramatizarea: Alexandru Mazgareanu<br />
+	<br />
+	<br />
+	DIN INSEMNARILE UNUI AJUTOR DE CONTABIL<br />
+	Constantin Bojog<br />
+	<br />
+	SFATUL<br />
+	Domnul &ndash; ALIN STATE<br />
+	Ajutorul de contabil &ndash; CONSTANTIN BOJOG<br />
+	<br />
+	DIPLOMATUL<br />
+	Ajutorul de contabil &ndash; CONSTANTIN BOJOG<br />
+	Piskariov &ndash; MARIUS GALEA<br />
+	Kuvaldin &ndash; COSMIN NEDELCU<br />
+	<br />
+	CANTECUL DE SIRENA<br />
+	Jilin &ndash; GABRIEL COSTIN<br />
+	Nikolski &ndash; GELU NITU<br />
+	Grig &ndash; ALIN STATE<br />
+	Ajutorul de contabil &ndash; CONSTANTIN BOJOG<br />
+	<br />
+	TRAGEDIAN FARA VOIE<br />
+	Vanea &ndash; MARIUS GALEA<br />
+	Aliosa &ndash; ALIN STATE<br />
+	<br />
+	CUM AU STAT DE VORBA UN BOU BEAT SI UN DRAC TREAZ<br />
+	Egor &ndash; CONSTANTIN BOJOG<br />
+	Lahmatov &ndash; GELU NITU<br />
+	Domnisoara &ndash; SORINA STEFANESCU<br />
+	Dracul &ndash; IONUT VISAN<br />
+	<br />
+	O FIINTA LIPSITA DE APARARE<br />
+	Sciukina &ndash; MIRELA GOREA<br />
+	Seful &ndash; GELU NITU<br />
+	Vanea &ndash; COSMIN NEDELCU<br />
+	Alexei &ndash; MARIUS GALEA<br />
+	Ajutorul de contabil &ndash; CONSTANTIN BOJOG<br />
+	<br />
+	si...<br />
+	VIATA E MINUNATA<br />
+	cu participarea actritei Roxana Ivanciu<br />
+	<br />
+	<br />
+	regia: ALEXANDRU MAZGAREANU<br />
+	scenografia: IOANA PASHCA<br />
+	ilustratia muzicala: ALEXANDRU MAZGAREANU<br />
+	sound design: ANDREI CONSTANTINESCU<br />
+	coordonator de proiect: ROXANA IVANCIU<br />
+	<br />
+	Spectacol prezentat in cadrul programului STAGIARII, realizat &icirc;n parteneriat cu Universitatea Naţională de Artă Teatrală şi Cinematografică &ldquo;I.L. Caragiale&rdquo;.</p>
+<p>
+	<iframe allowfullscreen="" frameborder="0" height="390" src="http://www.youtube.com/embed/3VkFcbQZKck" title="YouTube video player" width="480"></iframe></p>
+</font>
+													<br>
+													<font size="2" color="white">Durată: 1 h 45 min</font><br><br>																											<div class="buton-sus"><a href="http://www.teatrulmetropolis.ro/spectacole/functionarii-dupa-apcehov.html#top">^ Sus</a></div>
+																									</div>
+																																		<div id="distributia" style="display:none;">
+													<font size="2" color="white"><p>
+	Cu: Mirela GOREA, Gelu NITU, Marius GALEA, Costel BOJOG, Alin STATE, Cosmin NEDELCU, Gabriel COSTIN, Sorina STEFANESCU, Ionut VISAN</p>
+</font><br>
+																									</div>
+																																		<div id="cronici" style="display:none;">
+													<font size="2" color="white"><p>
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span></p>
+<p>
+	FUNCȚIONARII&rdquo; onorează și sporește prestigilu Teatrului Metropolis, ce a sărbătorit de cur&acirc;nd trei ani de la &icirc;nființare. Spectacolul era &icirc;ncadrat &icirc;n FNT la compartimentul debuturi.</p>
+<p>
+	&nbsp;&ldquo;C&acirc;teva &icirc;nsemnări disperate ale unor funcționari necăjiți dintr-un birou aflat la subsolul unei clădiri dărăpănate&rdquo; sau pe scurt &ldquo;Funcționarii&rdquo; este examenul de masterat al t&acirc;nărului regizor Alexandru M&acirc;zgăreanu. El a ansamblat inteligent dramatiz&acirc;nd, fragmente din opt schițe de Cehov, &icirc;n traducerea dibace a Mașei Dinescu. Scopul dramatizării urmărit de regizor era prezentarea funcționarilor, cu metehnele lor, cu birocația lor, dar și raportul acestora cu cetățeanul solicitant care uneori &icirc;i umilește prin atitudinea sa. Tema aleasă este foarte actuală și beneficiază de o viziune regizorală inventivă gestionată. Pentru a da coerență dramatizării sale, Alexandru M&acirc;zgăreanu a ales că ajutorul de contabil, un funcționar ambițios care vrea să devină șef, să fie liantul celor opt proze de Cehov : &ldquo;Din &icirc;nsemnările unui ajutor de contabil&rdquo;, &ldquo;Sfatul&rdquo;, &ldquo;Diplomatul&rdquo;, &ldquo;C&acirc;ntecul de sirenă&rdquo;, &ldquo;Tragedian fără voie&rdquo;, &ldquo;Viața e minunată&rdquo;, &ldquo;Cum am stat de vorbă cu un bou beat și un drac treaz&rdquo; și &ldquo;O ființă lipsită de apărare&rdquo;. Dramatizarea sa se transformă &icirc;ntr-un scenariu comic savuros , o satiră bogată &icirc;n trimiteri subtile la actualitate. Cu dexteritate regizorul oferă și unor tineri actori colegi de generație posibilitatea de a interpreta mai multe roluri de care ei se achită ireproșabil. Lor li se alătură și experimentații actori Mirela Gorea și Gelu Nițu. Regizorul demonstrează că știe să conducă actorii pentru evidențierea cuceritoare a personajelor &icirc;n care i-a distribuit. Alexandru M&acirc;zgăreanu are capacitatea de a &icirc;și ilustra conceptul regizoral prin actori, cărora le propune o viziune credibilă, ferită de falsul exploziei de efecte ieftine lipsite de sens. Această capacitate deosebită a manifestat-o și &icirc;n spectacolele anterioare &ldquo;Romanțioșii&rdquo; și recentul experiment cu actori și liceeni, &ldquo;Dragă Elena Sergheevna / Șantaj&rdquo;. &Icirc;n &ldquo;Funcționarii&rdquo; regizorul alege o ilustrare teatrală pe linie realistă mustind de accente satirice. Are drept sprijin substanțial și scenografia Ioanei Pashca (masterand anul II scenografie, clasa prof. univ. dr. Ștefania Cenean). Decorul său funcțional este un sugestiv element pentru atmosfera solicitată de dramatizare și regie. Activii funcționari &icirc;și mută măsuțele modeste la care lucrează &icirc;n spațiul aflat la demisolul unei clădiri amăr&acirc;te, &icirc;n funcție de situația conflictuală &icirc;n care sunt implicați. Biroul are și un geam prin care se văd picioarele celor care &icirc;l vizitează, și o sobă și multe alte elemente aparent minore, dar exploatate cu iz comic. De pildă, un difuzor ce transmite ilustrația muzicală prin care se punctează cu haz unele momente sau la care se transmite monologul &ldquo;Viața e minunată&rdquo;, &icirc;nregistrare audio cu pricepere susținută de Roxana Ivanciuc. Monologul este introdus inspirat pentru a sporii comicul finalului scenei &ldquo;Tragedian fără voie&rdquo;. Umorul spectacolului sporește și prin manevrarea unor obiecte, ca de exemplu, o pernuță sau floarea ce stă &icirc;n preajma mașinii de scris a ajutorului de contabil. Decorul joacă &icirc;n acest fel un rol important &icirc;n reprezentație.</p>
+<p>
+	&nbsp;Distribuția prilejuiește numeroase surprize și prin descoperirea unor tineri actori.&nbsp;...</p>
+<p>
+	&nbsp;&ldquo;Funcționarii&rdquo; este un spectacol ce merită a fi văzut, at&acirc;t pentru consistența sa comică și aluziile la actualitate, c&acirc;t și pentru a cunoaște mai bine pe tinerii actori de talent și pe un t&acirc;năr regizor. &Icirc;nscris &icirc;n FNT la secția debut, a prilejuit afirmarea lui Alexandru M&acirc;zgăreanu ca un regizor deosebit. A reușit să construiască spectacolul &ldquo;Funcționarii&rdquo; cu fantezie, cu mult haz, cu țintă precisă, o satiră la adresa veșnicei relații funcționar &ndash; solicitant.</p>
+<p>
+	<em><strong>ILEANA LUCACIU</strong></em></p>
+<p>
+	&nbsp;</p>
+<p>
+	Comicul situaţiilor şi al personajelor lui Cehov, toţi mici funcţionari prinşi &icirc;n mecanismul extenuant şi ridicol al vieţii de zi cu zi explodează cu vervă, scenă după scenă, &icirc;n ritmul vesel al melodiilor ruseşti ce răsunădintr-un difuzor plasat pe peretele din spate al unui birou.<br />
+	&Icirc;n definitiv povestea unui t&acirc;năr funcţionar care aşteaptă plin de speranţă moartea celui mai bătr&acirc;n coleg de birou pentru a avansa &icirc;n funcţie nu este cu nimic diferită de cea a celui mai recent angajat &icirc;ntr-o companie multinaţională care visează să ajungă &icirc;n şase luni country manager.</p>
+<p>
+	T&acirc;nărul regizor Alexandru Măzgăreanu (student &icirc;n anul II Master Regie, U.A.T.C), care este şi autorul dramatizării nuvelelor cehoviene ce se &icirc;nlănţuie &icirc;ntr-un &icirc;ntreg coerent, construieşte inteligent un univers uman ce g&acirc;lg&acirc;ie de viaţă, &icirc;n care spectatorul este absorbit de la prima replică.</p>
+<p>
+	Această lume zgomotoasă şi agitată &icirc;şi cere dreptul la existenţă cu fiecare personaj pe care &icirc;l conţine. Distribuţia, aparent eclectică, &icirc;n care alături de nume importante ca Mirela Gorea, Gelu Niţu şi Marius G&acirc;lea găsim studenţi actori ai secţiei de Master Actorie a U.N.A.T.C, funcţionează pe tot parcursul spectacolului ca un organism unitar. Un spectacol excelent, &icirc;n care deopotrivă actorii tineri, ca şi cei consacraţi, fac roluri memorabile.<br />
+	<em><strong>Anca Ionita - Time Out</strong></em></p>
+<p>
+	<em>Dezvăluire şoc: şi funcţionarii sunt oameni </em><br />
+	Da. Chiar aşa. &Icirc;n subsolul unei clădiri dărăpănate, c&acirc;ţiva funcţionari suferă. Sunt disperaţi.Aşteaptă avansările &icirc;n funcţie care nu vor veni niciodată, sunt agasaţi şi &icirc;n cele din urmă cedează &icirc;n faţa unor clienţi insistenţi, suferă deoarece sunt prea pofticioşi, suferă pentru că sunt stresaţi din cauza unui program infernal.</p>
+<p>
+	&Icirc;n acest subsol e un univers uman complex şi cuceritor prin diversitate. Se iubeşte, se invidiază, se moare. Nu e numai un loc de muncă, e şi un confesional, un spaţiu al camaraderiei şi confidenţelor. E Dumnezeu dar şi Satana. Primul se manifestă prin prezenţa obsedantă aproape tragică a Speranţei. Cel de-al doilea se &icirc;nfăţişează &icirc;n &quot;carne şi oase&quot; (sintagmă discutabilă) şi &icirc;şi oferă preţioasele servicii.</p>
+<p>
+	Un lucru foarte interesant: textul este semnat de Anton Pavlovici Cehov dar spectacolul este at&acirc;t de valoros &icirc;nc&acirc;t apartenenţa la o dramaturgie, la o epocă, aproape nu mai contează. E actual, totul se &icirc;nt&acirc;mplă acum, la fel ca atunci şi ca mereu de acum &icirc;ncolo. O echipă de actori tineri (Constantin Bojog, Alin State, Cosmin Nedelcu, Gabriel Costin, Sorina Ştefănescu, Ionuţ Vişan) &icirc;nsoţiţi de mai titraţii Gelu Niţu, Mirela Gorea şi Marius G&acirc;lea realizează sub &icirc;ndrumarea regizorului Alexandru M&acirc;zgăreanu un spectacol excepţional, o comedie &icirc;n buna şi de calitate tradiţie a genului, ca la carte.</p>
+<p>
+	Asistăm la o montare curajoasă pentru că toate scenele au un crescendo ce se finalizează cu o ajungere la paroxism dar construcţia e impecabilă şi adevărul scenic tulburător.</p>
+<p>
+	Fireşte, totul are şi o altă dimensiune, &icirc;n plan metaforic. Oare nu suntem şi noi, la r&acirc;ndul nostru funcţionari ai propriului destin, legaţi dramatic de patimile, de ambiţiile şi de slăbiciunile noastre? &Icirc;n spatele fiecărui chip e un ghişeu deschis nonstop unde se primesc deopotrivă şi veştile bune şi cele rele. Căci aşa e viaţa (ca şi moartea) tot timpul &icirc;n criză. Nu numai de personal....</p>
+<p>
+	<em><strong>Razvana Nita - Port.ro</strong></em></p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">
+	<b style="mso-bidi-font-weight: normal"><span style="line-height: 115%; font-family: 'times new roman', 'serif'; color: red; font-size: 14pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Mircea Morariu </span></b><b style="mso-bidi-font-weight: normal"><span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 14pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">&ndash; Debuturi &icirc;n FNT</span></b><span style="line-height: 115%; font-family: 'helvetica', 'sans-serif'; color: red; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro"><span style="mso-spacerun: yes">&nbsp; </span></span><span style="line-height: 115%; font-family: 'helvetica', 'sans-serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">(</span><span style="line-height: 115%; font-family: mistral; font-size: 18pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro; mso-bidi-font-family: helvetica">TEATRUL</span><span style="line-height: 115%; font-family: 'helvetica', 'sans-serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro"> </span><span style="line-height: 115%; font-family: 'brush script mt'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro; mso-bidi-font-family: helvetica">azi</span><span style="line-height: 115%; font-family: 'helvetica', 'sans-serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">, nr.1-2, 2011 )<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Non multora&hellip;<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Una din cele mai izbutite secţiuni ale ediţiei din anul 2010 a<span style="mso-spacerun: yes">&nbsp; </span>Festivalului Naţional de Teatru mi se pare a fi fost cea consacrată debuturilor. Mai puţin consistent cantitativ dec&acirc;t &icirc;n anii anteriori, nu a reţinut &icirc;n cuprinsul ei dec&acirc;t două spectacole de afcturi stilistice evident diferite, dar selecţia fiind mai riguroasă a adus cu sine şi o creştere valorică &icirc;n economia Festivalului.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Am văzut ambele spectacole &icirc;n ultima zi de festival, o superbă duminică de toamnă, iar ceea ce am văzut mi-a umplut inima de bucurie.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Mărturisesc că la prima reprezentaţie, văzută la matineu, am mers cu multă emoţie. [&hellip;] &ldquo;<b style="mso-bidi-font-weight: normal"><i style="mso-bidi-font-style: normal">C&acirc;teva &icirc;nsemnări disperate din viaţa unor funcţionari necăjiţi aflaţi la subsolul unei clădiri dărăpănate</i></b> sau pe scurt <b style="mso-bidi-font-weight: normal"><i style="mso-bidi-font-style: normal">Funcţionarii</i></b>&rdquo; este un spectacol produs de Teatrul bucureştean &ldquo;Metropolis&rdquo; şi a fost reprezentat &icirc;n cadrul programului Stagiarii, realizat &icirc;n parteneriat cu Universitatea Naţională de Artă Teatrală şi Cinematografică &rdquo;I.L. Caragiale&rdquo;.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">A &icirc;nsemnat pentru regizor examenul de absolvire a Secţiei &ldquo;Master&rdquo;. [&hellip;] Mi se pare că t&acirc;nărul director de scenă are ceva din &icirc;ncăpăţ&acirc;narea creatoare a lui Victor Ioan Frunză şi din migala lucrului dovedită acum, la maturitate mai ales, de Alexandru Dabija şi care &icirc;l caracteriza &icirc;n tinereţe pe Alexandru Darie.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">T&acirc;nărul regizor Alexandru M&acirc;zgăreanu a ales o seamă de schiţe din creaţia lui A.P.Cehov, le-a dramatizat şi le-a dramatizat bine, a făcut din personajul ajutorul de contabil, cu aplicaţie interpretat de Constantin Bojog, <i style="mso-bidi-font-style: normal">personajul-aspirator</i>, unificatorul celor şase istorioare ce reprezintă miezul spectacolului, le-a alăturat acestora un prolog, un intermezzo de factură sonoră foarte bine susţinut vocal de actriţa Roxana Ivanciu şi un epilog dansant de efect. I-a distribuit &icirc;n spectacol pe o seamă dintre colegii săi de la Secţia de actorie, i-a coordonat cu o grijă a detaliului admirabilă, a asigurat montării vervă, dinamism, umor, umor negru, a lucrat astfel &icirc;nc&acirc;t ne lasă tuturor spectatorilor o plăcută, stenică impresie de calvacadă. Mi-au plăcut toţi aceşti tineri actori &ndash; lui Constantin Bojog i s-au alăturat Alin State, Cosmin Nedelcu, Sorina Ştefănescu, Ionuţ Vişan, dar cel mai mult mi-a atras atenţia, pentru că a fost şi cel mai savuros, Gabriel Costin. <span style="mso-spacerun: yes">&nbsp;</span><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Deopotrivă Alexandru M&acirc;zgăreanu i-a convins să adere la proiectul lui pe trei actori cu experienţă. Este vorba despre: Marius G&acirc;lea, plin de vervă, de elan tineresc, de energie, &icirc;n toate cele trei episoade &icirc;n care apare; despre Gelu Niţu, cu totul remarcabil &icirc;n ceea ce face pe scenă (actorul a acceptat chiar şi un rol secundar) şi strălucitor &icirc;n secvenţa &ldquo;O fiinţă lipsită de apărare&rdquo; şi despre Mirela Gorea. Nu &icirc;mi mai amintesc de c&acirc;nd nu am ami văzut-o pe scenă pe această actriţă care, după un debut remarcabil la &icirc;nceput de carieră la Naţionalul ieşean, a interpretat c&acirc;teva roluri semnificative la Teatrul &ldquo;Bulandra&rdquo;, mai cu seamă &icirc;n anii 80. M-am bucurat să o revăd năvalnică, acaparatoare, plină de forţă &icirc;n <i style="mso-bidi-font-style: normal">Funcţionarii.</i>[&hellip;] <o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Scenografia Ioanei Pashca [&hellip;] e &icirc;n armonie perfectă cu necesităţile şi stilul spectacolului &ndash; biroul aflat la subsolul unei clădiri dărăpănate, &icirc;n care se află nişte funcţionari după cum am văzut[&hellip;] care ne-au oferit, prin dialogul pe care Alexandru M&acirc;zgăreanu</span>&nbsp;<span class="Apple-style-span" style="line-height: 18px; font-family: 'times new roman', serif; font-size: 16px">şi l-a dorit cu Anton Pavlovici, o &icirc;nc&acirc;ntătoare dimineaţă de festival.</span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<b style="mso-bidi-font-weight: normal"><span style="line-height: 115%; font-family: 'times new roman', 'serif'; color: red; font-size: 14pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Nicolae Prelipceanu &ndash; </span></b><b style="mso-bidi-font-weight: normal"><span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 14pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Naţionalul actorilor tineri</span></b><b style="mso-bidi-font-weight: normal"><span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro"> </span></b><span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro"><span style="mso-spacerun: yes">&nbsp;</span>(</span><span style="line-height: 115%; font-family: mistral; font-size: 18pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro; mso-bidi-font-family: helvetica">TEATRUL</span><span style="line-height: 115%; font-family: 'helvetica', 'sans-serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro"> </span><span style="line-height: 115%; font-family: 'brush script mt'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro; mso-bidi-font-family: helvetica">azi</span><span style="line-height: 115%; font-family: 'helvetica', 'sans-serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">, nr.1-2, 2011 )<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'helvetica', 'sans-serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'helvetica', 'sans-serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Funcţionarii sunt priviţi &icirc;ntotdeauna cu ne&icirc;ncredere şi ironie, iar &icirc;n zilele noastre chiar cu ură, aşa cum se uită şi ei de multe ori la noi, din spatele tradiţionalului ghişeu. De fapt demonizarea funcţionarului vine din faptul că ei operează cu date şi concepte &icirc;n general necunoscute nouă, celorlalţi, chiar dacă suntem şi noi, la r&acirc;ndul nostru, funcţionari &icirc;n altă parte. Oricum, să spui despre un actor că e un funcţionar e să-l ofensezi. Sau despre scriitor, sau despre orice alt artist.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'helvetica', 'sans-serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Cel mai departe de funcţionari sunt actorii tineri, care &icirc;ncă nu s-au plafonat, cum li se &icirc;nt&acirc;mplă at&acirc;t de des multora, atunci c&acirc;nd ajung angajaţi pe viaţă te miri la ce teatru naţional. C&acirc;ndva spuneam, exager&acirc;nd fireşte, că pentru mine teatrul naţional este &ldquo;Casandra&rdquo;. Astăzi &ldquo;Casandra&rdquo; nu mai există, iar spectacolele studenţilor le mai poţi vedea prin vreo sală de la UNATC, &icirc;n general impropie, dar care nu poate stăvili talentul şi dorinţa lor de a face bine ceea ce fac, dar şi, uneori, la vreun teatru mai primitor.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'helvetica', 'sans-serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Nu de mult &icirc;n cadrul Festivalului Naţional de Teatru a fost programat şi un spectacol cu studenţi, alături de actori maturi. Spectacolul după Cehov, </span><span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">&ldquo;<b style="mso-bidi-font-weight: normal"><i style="mso-bidi-font-style: normal">C&acirc;teva &icirc;nsemnări disperate din viaţa unor funcţionari necăjiţi aflaţi la subsolul unei clădiri dărăpănate</i></b> sau pe scurt <b style="mso-bidi-font-weight: normal"><i style="mso-bidi-font-style: normal">Funcţionarii</i></b>&rdquo; este regizat de Alexandru M&acirc;zgăreanu. Cele şapte secvenţe cu a opta inclusă &icirc;n a şasea dacă &icirc;mi mai aduc eu aminte bine, au constituit o &icirc;nc&acirc;ntare pentru spectactorul care a avut norocul de a intra &icirc;n seara aceea la teatrul Metropolis <span style="color: red">unde s-a jucat montarea de la UNATC</span>. Spectacolul a constituit examenul t&acirc;nărului regizor la secţia Master Regie Teatru. Şi, trebuie să spunem de la &icirc;nceput că a fost un examen trecut cu brio, cel puţin &icirc;n ochii unui spectator aşa cum mă consider eu. Toată povestea tristă, &icirc;ntr-adevăr, a micilor funcţionari, de nu ştiu c&acirc;te ori mai fericiţi dec&acirc;t cei din Rom&acirc;nia de azi, cu multe procente din salarii reduse, devine de un comic nebun, &icirc;n interpretarea actorilor tineri, dăruiţi artei lor cu totul, pătrunz&acirc;nd cu virtuozitate &icirc;n pielaea personajelor.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Dacă firul (roşu, neroşu, nu ştiu) care trece prin toate cele şapte sevenţe, Constantin Bojog, &icirc;n rolul ajutorului de contabil care tot speră să moară contabilul plin ca să-i ia locul şi moare el p&acirc;nă la urmă, din credulitate şi imprudenţă, are un comic irezistibil, nici cu cielalţi interpreţi nu mi-e ruşine. Remarcabil, &icirc;n comicul său debordant a fost şi cel care evoca m&acirc;ncăruri, Gabriel Costin, constriund parcă din m&acirc;ini şi din gură felurile la care funcţionarii, flăm&acirc;nzi, visează. Niciodată nu am văzut pe cineva care, imit&acirc;nd mestecatul m&acirc;ncărurilor despre care se vorbeşte cu gura plină, chiar pare că e la masă şi că are &icirc;n faţă felul respectiv. Lasă că pe t&acirc;nărul actor &icirc;l ajută şi carura de gurmand. Aş fi nedrept dacă nu i-aş menţiona şi pe Alin State, Marius G&acirc;lea, un t&acirc;năr actor pe care l-am văzut şi &icirc;n alte spectacole, Cosmin Nedelcu, Ionuţ Vişan, cu aerul său de copilaş, distribuit excelent &icirc;n, nici mai mult nici mai puşin dec&acirc;t Dracul, sau Sorina Ştefănescu, fiecare construindu-şi personajul cu multă minuţie şi dăruindu-se cu o &icirc;ncredere<span style="mso-spacerun: yes">&nbsp; </span>de care actorii v&acirc;rstnici rau dau dovadă.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Printre ei doi actori maturi, Mirela Gorea, &icirc;ntr-un rol admirabil, cu mişcări mici, care construiesc personajul femeii cam t&acirc;mpite dar perseverente, pl&acirc;ng&acirc;ndu-se mereu că e o femeie slabă, dar la rigoare lu&acirc;ndu-i la şuturi zdravene pe funcţionari, &icirc;nc&acirc;t obţine ceea ce dorea, şi Gelu Niţu, cobor&acirc;t şi el &icirc;n timp, parcă, la v&acirc;rsta studenţiei, alături de mai tinerii săi colegi<span style="color: red">, cărora probabil le este profesor</span>. Ceea ce i-a contaminat pe cei doi este verva tinerească a &icirc;ntregului spectacol, şi aici, desigur, trebuie notat meritul regizorului, care i-a pus &icirc;n mişcare, scoţ&acirc;nd din ei ceea ce era de scos. Mirela Gorea apare &icirc;n ultimul timp mai rar şi e păcat pentru că este o actriţă excelentă. Nici Gelu Niţu nu poate fi văzut &icirc;n fiecare seară pe vreo scenă, dar asta nu-l &icirc;mpiedică, iată, să realizeze adevărate mici bijuterii, atunci c&acirc;nd i se <span style="mso-spacerun: yes">&nbsp;</span>&icirc;nt&acirc;mplă.<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro">Spectacolul curge cu o vervă şi &icirc;ntr-un ritm care te prinde, ca spectator, făc&acirc;ndu-te să uiţi că se va termina &icirc;n cele din urmă, din păcate foarte repede. Acuitatea cu care tinerii actori şi cei mai puţin tineri &icirc;şi desenează personajele este, cred, unul dintre secretele reuşitei. Şi firescul lor, faptul că &icirc;şi asumă rolurile aşa cum &icirc;şi asumă viaţa proprie.</span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	&nbsp;</p>
+<p>
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span></p>
+<p class="MsoNormal">
+	<span style="color: #f00"><span class="apple-style-span"><b><span style="text-decoration: none">Alice GEORGESCU</span></b></span></span><span _fck_bookmark="1" style="display: none">&nbsp;</span><span _fck_bookmark="1" style="display: none">&nbsp;</span><span class="apple-converted-space"><b>&nbsp; - Dilema Veche -</b></span><span class="apple-style-span"><b> viaţa scenei / scena vieţii</b></span></p>
+<p class="MsoNormal">
+	&nbsp;</p>
+<p class="MsoNormal">
+	<span><span class="apple-style-span"><b><o:p></o:p></b></span></span></p>
+<p class="MsoNormal">
+	<span><span class="apple-style-span">[&hellip; ] Mergeam pe strada Mihai Eminescu, spre Teatrul Metropolis. Şi mi-am (re)dat seama, brusc, &icirc;n ce oraş absurd, suprarealist şi uluitor mi-a fost dat să mă nasc şi să vieţuiesc. Sau, mă rog, să supravieţuiesc. Aşa cum supravieţuiesc, &icirc;n spectacolul foarte t&icirc;nărului Alexandru Măzgăreanu, necazurile funcţionarilor cehovieni, p&icirc;nă azi ori, măcar, p&icirc;nă prin anii &rsquo;60 ai unui imperiu la fel de nepieritor ca şi gheţurile Siberiei. (Credeţi că nu? Hm...)</span><span class="apple-converted-space">&nbsp;</span><em style="font-weight: inherit"><span style="font-family: calibri, sans-serif">C&icirc;teva &icirc;nsemnări disperate ale unor funcţionari necăjiţi dintr-un birou aflat la subsolul unei clădiri dărăpănate</span></em><span class="apple-converted-space">&nbsp;</span><span class="apple-style-span">(titlu complet) sau</span><span class="apple-converted-space">&nbsp;</span><em style="font-weight: inherit"><span style="font-family: calibri, sans-serif">Funcţionarii</span></em><span class="apple-converted-space"><i>&nbsp;</i></span><span class="apple-style-span">(prescurtat) e o montare mai veche pe care &icirc;nsă, din felurite motive, nu apucasem să o văd. Dramatizarea, semnată tot de Măzgăreanu (după traducerea plastică a Maşei Dinescu), adună &icirc;n pomenitul subsol (frumos desenat şi mobilat de scenografa Ioana Pashca) mai multe personaje din schiţele lui Anton Pavlovici, care, ca şi Tolkaciov din sceneta Tragedian fără voie, trăiesc pe graniţa subţire ce desparte comedia bufă de drama existenţială. Oarecum dator &icirc;n privinţa acestei din urmă dimensiuni, spectacolul (produs de Teatrul Metropolis &icirc;n cadrul unui program numit &bdquo;Stagiarii&ldquo; şi dedicat tinerilor artişti) pune &icirc;n mişcare, cu o remarcabilă precizie a caracterizării şi &icirc;ntr-un ritm atent menţinut, tipuri şi tipare &icirc;n aparenţă banale, neinteresante, pe care c&icirc;te un mic detaliu de comportament, c&icirc;te o fină nuanţă de rostire le scot din anonimat pentru a le revela umanitatea &ndash; totuşi &ndash; inerentă. Alexandru Măzgăreanu (aflat, aici, la debutul pe o scenă profesionistă) vădeşte claritate &icirc;n concepţie, fantezie aplicată &icirc;n soluţii şi autoritate &icirc;n conducerea distribuţiei, lucru mai rar &icirc;nt&icirc;lnit la un debutant, mai ales atunci c&icirc;nd trebuie să &bdquo;manevreze&ldquo; generaţii diferite de interpreţi. Or, at&icirc;t experimentaţii Mirela Gorea, Gelu Niţu şi Marius Galea, c&icirc;t şi tinerii Sorina Ştefănescu, Constantin Bojog, Gabriel Costin, Cosmin Nedelcu, Alin State şi Ionuţ Vişan se &icirc;nfăţişează, &icirc;n</span><span class="apple-converted-space">&nbsp;</span><em style="font-weight: inherit"><span style="font-family: calibri, sans-serif">Funcţionarii,</span></em><span class="apple-converted-space">&nbsp;</span><span class="apple-style-span">ca o echipă omogenă, ce &bdquo;comunică&ldquo; foarte bine. C&icirc;nd am ieşit de la Metropolis, uitasem de necazurile iernii; mă preocupau doar cele ale funcţionarilor...</span></span></p>
+<p class="MsoNormal">
+	&nbsp;</p>
+<p>
+	<span style="font-size: 14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 24px"><strong>DILEMA VECHE </strong></span><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nr. 365, 10 - 16 februarie 2011<br />
+	</span></p>
+<p>
+	<span style="font-size: 16px"><br />
+	de Alice Georgescu<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poveşti de iarnă<br />
+	</span><br />
+	<em><br />
+	<img src="https://lh3.googleusercontent.com/q-DeVqHwZIQU__UnSkFwT2zRlJBgb-4WEVTkB0uiTuy0jiiSgx7Xxy9YhvwJTjcFYodbJ0joo59PCLgXY09HUtUndu_eo3rbIGApIWR3lwQPI0sPN18" /><br />
+	<span style="font-size: 16px">Datoriile neonorate se răzbună, mai devreme sau mai t&icirc;rziu, şi se cer, &icirc;ntr-un fel sau altul, plătite... La această mostră de &icirc;nţelepciune practică, ce mi-a fost furnizată &icirc;n copilărie spre a putea fi neglijată, la maturitate, &icirc;n cunoştinţă de cauză, mă g&icirc;ndeam &icirc;ntr-una din serile trecute, plescăind, cu cizmele muiate bine, prin băltoacele de zăpadă apoasă din rigole, patin&icirc;nd fără graţie pe bucăţile de asfalt denivelat şi acoperit cu gheaţă veche, ascunsă perfid sub ninsoarea nouă ce cădea (foarte pitoresc) peste acoperişurile prăbuşite ale caselor, c&icirc;ndva, presupun, negustoreşti şi peste &bdquo;gipanurile&ldquo; lucioase din faţa unor &bdquo;viloaie&ldquo;, presupun, tot negustoreşti, păzite de garduri electronice, peste statuia bietului Tudor Vladimirescu, păr&icirc;nd, pe &icirc;ntuneric (nici un felinar nu ardea), cu sabia scoasă şi potcapul niţel pe-o ureche, o replică a fratelui său de suferinţă de la Cluj (bietul Avram Iancu), peste firma galbenă a nu ştiu cărui restaurant chinezesc şi peste curţile unde se ghiceau, sub nămeţi, straturile din care regina-nopţii şi petuniile mov or să miroasă aşa de frumos la vară... <br />
+	Mergeam pe strada Mihai Eminescu, spre Teatrul Metropolis. Şi mi-am (re)dat seama, brusc, &icirc;n ce oraş absurd, suprarealist şi uluitor mi-a fost dat să mă nasc şi să vieţuiesc. Sau, mă rog, să supravieţuiesc. Aşa cum supravieţuiesc, &icirc;n spectacolul foarte t&icirc;nărului Alexandru Măzgăreanu, necazurile funcţionarilor cehovieni, p&icirc;nă azi ori, măcar, p&icirc;nă prin anii &rsquo;60 ai unui imperiu la fel de nepieritor ca şi gheţurile Siberiei. (Credeţi că nu? Hm...) C&icirc;teva &icirc;nsemnări disperate ale unor funcţionari necăjiţi dintr-un birou aflat la subsolul unei clădiri dărăpănate (titlu complet) sau Funcţionarii (prescurtat) e o montare mai veche pe care &icirc;nsă, din felurite motive, nu apucasem să o văd. Dramatizarea, semnată tot de Măzgăreanu (după traducerea plastică a Maşei Dinescu), adună &icirc;n pomenitul subsol (frumos desenat şi mobilat de scenografa Ioana Pashca) mai multe personaje din schiţele lui Anton Pavlovici, care, ca şi Tolkaciov din sceneta Tragedian fără voie, trăiesc pe graniţa subţire ce desparte comedia bufă de drama existenţială. Oarecum dator &icirc;n privinţa acestei din urmă dimensiuni, spectacolul (produs de Teatrul Metropolis &icirc;n cadrul unui program numit &bdquo;Stagiarii&ldquo; şi dedicat tinerilor artişti) pune &icirc;n mişcare, cu o remarcabilă precizie a caracterizării şi &icirc;ntr-un ritm atent menţinut, tipuri şi tipare &icirc;n aparenţă banale, neinteresante, pe care c&icirc;te un mic detaliu de comportament, c&icirc;te o fină nuanţă de rostire le scot din anonimat pentru a le revela umanitatea &ndash; totuşi &ndash; inerentă. Alexandru Măzgăreanu (aflat, aici, la debutul pe o scenă profesionistă) vădeşte claritate &icirc;n concepţie, fantezie aplicată &icirc;n soluţii şi autoritate &icirc;n conducerea distribuţiei, lucru mai rar &icirc;nt&icirc;lnit la un debutant, mai ales atunci c&icirc;nd trebuie să &bdquo;manevreze&ldquo; generaţii diferite de interpreţi. Or, at&icirc;t experimentaţii Mirela Gorea, Gelu Niţu şi Marius Galea, c&icirc;t şi tinerii Sorina Ştefănescu, Constantin Bojog, Gabriel Costin, Cosmin Nedelcu, Alin State şi Ionuţ Vişan se &icirc;nfăţişează, &icirc;n Funcţionarii, ca o echipă omogenă, ce &bdquo;comunică&ldquo; foarte bine. C&icirc;nd am ieşit de la Metropolis, uitasem de necazurile iernii; mă preocupau doar cele ale funcţionarilor... <br />
+	DE ACELASI AUTOR<br />
+	La fel cum, ieşind, o zi mai t&icirc;rziu, de la Teatrul Foarte Mic, &icirc;ncercam să-mi &icirc;nchipui ce şi c&icirc;t ar regăsi din viaţa lor &bdquo;homeleşii&ldquo; bucureşteni &icirc;n spectacolul pe care tocmai &icirc;l văzusem: Ca pe tine &icirc;nsuţi de Maria Manolescu, pus &icirc;n scenă de Radu Apostol. Căci despre nişte &bdquo;homeleşi&ldquo; este vorba at&icirc;t &icirc;n piesă c&icirc;t şi &icirc;n songurile (le numesc aşa pentru că efectul brechtian e scontat) compuse şi interpretate, &icirc;n completarea &bdquo;acţiunii&ldquo; şi ca un contrapunct al ei, de Bogdan Burlăcianu. Greu de spus. &bdquo;...&icirc;n fiecare iarnă &icirc;n Bucureşti mor 300 de persoane fără adăpost. Mor &icirc;n linişte, &icirc;n zăpadă şi &icirc;n singurătate absolută. &Icirc;ntre noi. (...) Bonus: o foarte tristă poveste de dragoste&ldquo;, zice poetic t&icirc;năra autoare pe cartonaşul-program al montării, &icirc;ncerc&icirc;nd să dea ad&icirc;ncime socială acestei istorii cu doi vagabonzi &bdquo;de meserie&ldquo; (o femeie &icirc;ncă t&icirc;nără şi instabilă psihic şi un fost preot pe cale să &icirc;mbătr&icirc;nească) şi un june momentan refugiat printre ei din cauza unei ciudate relaţii amoroase (pentru amănunte, a se vedea spectacolul!). Că personajele s&icirc;nt &bdquo;homeleşi&ldquo; sau orice altceva nu este, după părerea mea, prea important (după cum nici numărul de victime avansat spre sensibilizarea noastră nu e: se schimbă ceva dacă &icirc;n loc de trei sute mor, &icirc;n condiţiile descrise, trei oameni?); psihologia lor şi relaţiile dintre ele, construite solid (dar) şi cu ajutorul unor clişee grosuţe, nu ar fi fost substanţial modificate de un &ndash; ca să zic aşa &ndash; statut socio-profesional diferit. Important e că povestea funcţionează şi că este, din punct de vedere dramatic, credibilă (&icirc;n linii mari, cel puţin). Mizanscena lui Radu Apostol (&icirc;n decorul simplu şi sugestiv conceput de Adrian Cristea) apasă prea tare expoziţiunea conflictului, instal&icirc;nd o senzaţie de plictiseală ce se prelungeşte p&icirc;nă după mijlocul reprezentaţiei, c&icirc;nd &icirc;nsă, din fericire, tonusul creşte &ndash; datorită uneia dintre cele mai frumoase scene de dragoste pe care le-am văzut &icirc;n ultima vreme pe &bdquo;sc&icirc;ndura&ldquo; autohtonă &ndash;, păstr&icirc;ndu-se astfel p&icirc;nă la sf&icirc;rşit. C&icirc;nd, parcă, &icirc;ţi pare un pic rău că spectacolul s-a terminat... Esenţială, contribuţia unor actori foarte buni şi relativ puţin folosiţi &ndash; Mihaela Rădescu, Mihai Gruia Sandu şi Viorel Cojanu &ndash; &icirc;ntăreşte sentimentul de bine cu care pleci, prin ger, spre casă. Ca să te g&icirc;ndeşti, o clipă, la cei fără casă. Oare? <br />
+	</span></em></p>
+<p class="MsoNormal">
+	<b style="font-family: 'times new roman'; color: rgb(0,0,0); font-size: medium"><br />
+	<span style="background-color: transparent; font-style: italic; white-space: pre-wrap; vertical-align: baseline">Alice Georgescu </span><span style="background-color: transparent; font-style: italic; white-space: pre-wrap; vertical-align: baseline; font-weight: normal">este critic de teatru.</span></b></p>
+<p>
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span><span _fck_bookmark="1" style="display: none">&nbsp;</span><span _fck_bookmark="1" style="display: none">&nbsp;</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span></p>
+<p class="MsoNormal" style="text-align: justify; margin-bottom: 0pt">
+	<span style="line-height: 115%; font-family: 'helvetica', 'sans-serif'; font-size: 12pt; mso-ansi-language: en-us; mso-fareast-font-family: 'times new roman'; mso-fareast-language: ro"><o:p></o:p></span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span></p>
+</font><br>
+																											<div class="buton-sus"><a href="http://www.teatrulmetropolis.ro/spectacole/functionarii-dupa-apcehov.html#top">^ Sus</a></div>
+																									</div>
+																						</td></tr></table>
+										</td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450"  height="13"></td>
+										<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+									</tr>
+								</table>
+					</td>
+				</tr>
+			</table>
+		
+		<script>show('descriere');</script>
+	</td>
+<td width="300" align="center" valign="top"><br><br>
+		<br>
+<div class="dreapta-cautare">
+		
+			<input type="text" id="keyword" value="Scrie aici și ..." onfocus="if (this.value == 'Scrie aici și ...') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Scrie aici și ...';}" class="search-input" size="19" onKeyPress="return submitenter_cauta(event)">
+			<a onclick="moduleSearch();" class="buton" >Caută</a>
+		
+</div>
+<br>
+<div class="dreapta-cos">	
+	<div id="module_cart" >
+ <div class="middle">
+	
+    	<table cellpadding="5" cellspacing="0" style="width: 200px;color:white;" background="catalog/view/theme/default/image/c.png"><tr><td>
+		<img src="catalog/view/theme/default/image/bilete_fara_rezervari.png" width="181" height="129" border="0"/>
+	</td></tr></table>
+    	
+  </div>
+</div>
+<script type="text/javascript"><!--
+$(document).ready(function () {
+	$('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+	$("a[id^='adaugabilet']").click(function () {
+		 var randlocIDValSplitter    = (this.id).split("-");
+    var rand            = randlocIDValSplitter[1];
+	var loc            = randlocIDValSplitter[2];
+	var reprezentatie_id            = randlocIDValSplitter[3];
+	
+	control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoatebilet']").click(function () {
+		 var randlocIDValSplitter   = (this.id).split("-");
+		 var rand            		= randlocIDValSplitter[1];
+		 var loc            		= randlocIDValSplitter[2];
+		 var reprezentatie_id       = randlocIDValSplitter[3];
+	
+		control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control_scoate='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoate_sala']").click(function () {
+		var randlocIDValSplitter    = (this.id).split("-");
+		var reprezentatie_id        = randlocIDValSplitter[1];
+	
+	
+    
+        $.ajax({
+            url: 'index.php?route=continut/cart/callback&reprezentatie_id='+reprezentatie_id,
+            type: 'get',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='clear_cart']").click(function () {
+		$.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/clear',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            } 
+                   
+        });
+		
+	});
+	
+	 $('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+ 
+});
+</script>
+
+
+</div>
+<br>
+<div class="dreapta-cont">
+	<table width="200" cellspacing='0' cellpadding='0'>
+		
+				<tr><td background="catalog/view/theme/default/image/c.png" width="110" height="30" valign="middle" align="center" >
+				<font color="#d2d0d0">Accesează cont</font>
+		</td>
+		<td width="90" valign="middle" align="center">
+			<a class="buton" href="http://www.teatrulmetropolis.ro/creaza_cont.html" id="fancybox_page_no_reload">Cont nou ?</a>
+		</td></tr>
+		<tr><td colspan="2" height="50" width="200" background="catalog/view/theme/default/image/c.png" valign="middle" align="center">
+			<form action="http://www.teatrulmetropolis.ro/index.php?route=common/home/autentificare" method="post" id="form_autentificare">
+				<input type="text" name="email" value="Email utilizator" onfocus="if (this.value == 'Email utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Email utilizator';}" class="user-input">
+				<input type="password" name="password" value="Parola utilizator" onfocus="if (this.value == 'Parola utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Parola utilizator';}" class="pass-input" onKeyPress="return submitenter_login_cont(event)">
+				<input type="hidden" name="redirect" value="http://www.teatrulmetropolis.ro/index.php?route=continut/spectacole&amp;spectacol_id=15">
+			</form>
+		</td></tr>
+		<tr><td width=110" height="30"></td>
+		<td background="catalog/view/theme/default/image/c.png" width="90" height="30" valign="middle" align="center">
+			<a onClick="$('#form_autentificare').submit();"  class="buton" >Accesează</a>
+		</td></tr>
+		</table>
+</div>
+<br>
+<br>
+<div class="dreapta-comentarii">
+	<a href="http://www.teatrulmetropolis.ro/stiri/adela-popescu-si-mihai-bendeac-in-premiera-pe-o-banca-la-metropolis.html#comentariu3" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','catalog/view/theme/default/image/parereaTA_hover.png',1)">
+		<img src="catalog/view/theme/default/image/parereaTA_normal.png" name="Image50" width="188" height="126" border="0" id="Image50" /><br>
+		<table id="Ultim_Coment">
+							<tr>
+								<td id="dataUltim_Coment">
+									15 octombrie 2011 la 16:17
+								</td>
+							<tr>
+								<td id="idUltim_Coment">
+									*Nume:
+								</td>
+							<tr>
+								<td id="contentUltim_Coment">
+									nu va suparati , cand se va mai juca piesa?
+								</td>
+							</tr>
+						</table>		
+	</a>
+</div>
+<br>
+<br>
+<div class="dreapta-ajutor">
+	<a href="http://www.teatrulmetropolis.ro/ajutor" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','catalog/view/theme/default/image/ajutor_hover.png',1)" id="fancybox_page_rel">
+		<img src="catalog/view/theme/default/image/ajutor_normal.png" name="Image51" width="171" height="101" border="0" id="Image51" /><br>
+	</a>
+</div>
+<div style="width:210px;margin-top:20px;"><img src="catalog/view/theme/default/image/visa_icon.jpg"></div></td>
+</tr></table>
+</div>	
+</td>
+</tr></table>
+</div>				
+
+<div id="footer_continut">
+	<table width="1000" align="center" height="200" background="catalog/view/theme/default/image/c.png"><tr><td><br>
+		<table width="90%" cellpadding="0" cellspacing="0"  style="color: #999;font-family:Arial, Helvetica, sans-serif;font-size:14px;">
+  <tr>
+    <td width="23%" rowspan="6" align="right" valign="top" >
+    <img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/sigla_tm.png" width="100" height="100" border="0" style="margin-right:30px;"/>
+    </td>
+    <td width="70%">Adresa: Str. Mihai Eminescu nr.89, sector 2, București.</td>
+    <td width="7%" rowspan="6" align="center" valign="top">
+   <a href="http://www.pmb.ro" target="blank"><img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/primaria_mun_buc.png" width="75" height="150" border="0" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Rezervări bilete se pot face și telefonic, la numerele: <br />
+      <strong style="color:#FFF">021 210 51 08</strong>  sau  <strong style="color:#FFF">0728 138 265</strong><br />
+      (în intervalul orar 10:00 - 19.00)<br />
+    Rezervarea telefonică este valabilă 48 de h.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font style="font-size:16px; color:#FFF">&copy;Teatrul Metropolis. Toate drepturile rezervate</font></td>
+  </tr>
+  <tr>
+    <td ><font style="font-size:12px;">Site produs de <strong style="color: #CCC">Legolas Media</strong><br />
+        Design by <strong style="color: #CCC">Alexandru Șulai</strong></font></td>
+  </tr>
+</table>	</td></tr></table>
+</div>
+
+
+</div>
+
+</body></html> 

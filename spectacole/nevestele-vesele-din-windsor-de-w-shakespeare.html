@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ro" xml:lang="ro">
+<head>
+<title>Teatrul Metropolis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Teatrul Metropolis" />
+<meta name="keywords" content="" />
+<link href="http://www.teatrulmetropolis.ro/image/data/logo-ico.gif" rel="shortcut icon" type="image/x-icon" />
+<base href="http://www.teatrulmetropolis.ro/" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<!--[if IE]>
+	
+<![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-collapser/jquery.collapser.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+
+</head>
+<body bgcolor="#000000">
+<a name="top"></a>
+<div id="container">
+	<div id="div2_continut"></div>
+	
+	<div id="header_continut">
+		<table width="100%">
+		<tr><td height="20" colspan="8"></td></tr>
+		<tr><td width="10%"></td><td align="center" valign="top" >
+				
+				<a href="http://www.teatrulmetropolis.ro/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','catalog/view/theme/default/image/prima_pg_hover.png',1)">
+						<img src="catalog/view/theme/default/image/prima_pg_normal.png" name="Image1" width="85" height="45" border="0" id="Image1" />
+					</a><br/>
+					<div class="contact_continut">
+                       <a class="contact1_continut" href="http://www.teatrulmetropolis.ro/contact.html" id="fancybox_page_rel">&nbsp;</a>
+                    </div>
+					</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/artisti" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','catalog/view/theme/default/image/artisti_hover.png',1)">
+						<img src="catalog/view/theme/default/image/artisti_normal.png" name="Image2" width="195" height="196" border="0" id="Image2" />
+					</a>
+										</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/program" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','catalog/view/theme/default/image/program_hover.png',1)">
+						<img src="catalog/view/theme/default/image/program_normal.png" name="Image3" width="222" height="175" border="0" id="Image3" />
+					</a>
+										</td>
+					
+				<td align="center" valign="top" >
+											<a href="http://www.teatrulmetropolis.ro/spectacole"><img src="catalog/view/theme/default/image/spectacole_hover.png" width="154" height="145" border="0"  /></a>
+									</td>
+					<td align="center" valign="top" >
+									
+					
+					<a href="http://www.teatrulmetropolis.ro/despre_noi" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','catalog/view/theme/default/image/despre_noi_hover.png',1)">
+						<img src="catalog/view/theme/default/image/despre_noi_normal.png" name="Image6" width="174" height="145" border="0" id="Image6" />
+					</a>
+							</td>
+		<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/stiri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','catalog/view/theme/default/image/stiri_ANTET_hover.png',1)">
+						<img src="catalog/view/theme/default/image/stiri_ANTET_normal.png" name="Image4" width="144" height="120" border="0" id="Image4" />
+					</a>
+									</td>
+		<td width="10%"></td></tr></table>		
+	</div>
+<script>
+
+function show(control){
+var pagina = new Array()
+pagina[0]="descriere"
+pagina[1]="distributia"
+pagina[2]="cronici"
+
+if (document.layers) { // NN4+
+	document.layers['table_spectacol'].height = '100%';
+	document.layers['table_caract_spect'].height = '100%';
+	
+	for (i=0;i<pagina.length;i++){
+		
+		if (pagina[i] == control) {
+			document.layers[pagina[i]].visibility = "show";
+			document.layers[pagina[i]].display = "block";
+			document.layers[pagina[i]].position = "absolute";
+			document.layers["martor_" + pagina[i]].visibility = "show";
+			document.layers["martor_" + pagina[i]].display = "block";
+			}
+		else
+			{
+			document.layers[pagina[i]].visibility = "hide";
+			
+			document.layers["martor_" + pagina[i]].visibility = "hide";
+			
+      			}
+  		}
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+		document.getElementById('table_spectacol').style.height='100%';
+		document.getElementById('table_caract_spect').style.height='100%';
+		for (i=0;i<pagina.length;i++){
+			if (pagina[i] == control) {
+				var obj = document.getElementById(pagina[i]);
+				
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "visible";
+				obj.style.display = "block";
+				
+
+				obj.style.position = "relative";
+				objSD.style.visibility = "visible";
+				objSD.style.display = "block";
+				}
+			else
+				{
+				var obj = document.getElementById(pagina[i]);
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "hidden";
+				
+				obj.style.display = "none";
+				objSD.style.visibility = "hidden";
+				
+				}
+		}
+	}
+else if (document.all) { // IE 4
+	document.all['table_spectacol'].style.height = '100%';
+	document.all['table_caract_spect'].style.height = '100%';
+	for (i=0;i<pagina.length;i++){
+		if (pagina[i] == control) {
+			document.all[pagina[i]].style.visibility = "visible";
+			document.all[pagina[i]].style.display = "block";
+			document.all[pagina[i]].style.position = "absolute";
+			document.all["martor_" + pagina[i]].style.visibility = "visible";
+			document.all["martor_" + pagina[i]].style.display = "block";
+			}
+		else {
+			document.all[pagina[i]].style.visibility = "hidden";
+			
+			document.all["martor_" + pagina[i]].style.visibility = "hidden";
+			
+			}
+  		}
+	}
+}
+</script>
+
+<div id="content_continut" >
+	<table cellspacing="0" cellpadding="0" border="0" width="100%" ><tr><td align="center">
+		<div class="center" id="table_spectacol">
+			<table width="1000" cellspacing="0" cellpadding="0" border="0" ><tr><td align="center" valign="top" width="700" style="min-height:700px;">
+							<table cellspacing="20" cellpadding="0" width="100%" >
+					<tr><td width="33%" valign="top" align="center" >
+						<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE_VESELE3mik-500x500.png" class="grouped_elements" ><img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE_VESELE3mik-200x300.png" border="0" width="200" height="133"></a><br><br>
+													<div style="display: block;">
+																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/5553908976_121d390932_b-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/5553908976_121d390932_b-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE3-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE3-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE9-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE9-50x50.png" border="0" width="33" height="50" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE_VESELE_mik-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE_VESELE_mik-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE7-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE7-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/5553936278_c25cde6d0e_b-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/5553936278_c25cde6d0e_b-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/5553715812_aa45a4789c_b-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/5553715812_aa45a4789c_b-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE4-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE4-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE2-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE2-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE8-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE8-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/5553298127_f76099730f_b-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/5553298127_f76099730f_b-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE1-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE1-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE5-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE5-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE6-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/30/NEVESTELE%20VESELE6-50x50.png" border="0" width="33" height="50" >
+									</a>
+									<br>															</div>
+												<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('descriere');"><font size="4" >Descriere</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_descriere" style="margin-top:-40px;margin-right:10px;float:right;">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+									
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('distributia');"><font size="4" >Distributia</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_distributia" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+										
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('cronici');"><font size="4" >Cronici</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_cronici" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+												<br><br>
+						<div class="buton-inapoi"><a href="http://www.teatrulmetropolis.ro/spectacole">< Spectacole</a></div>
+					</td>
+					<td width="67%" valign="top" >
+						<table border='0' width="476" cellspacing='0' cellpadding='0' style="height: auto;">
+							<tr>
+								<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476"  align="center" valign="middle">
+									<font size="4"  color="white">NEVESTELE VESELE DIN WINDSOR de W. Shakespeare</font><br>
+									<font size="3"  color="white">Regia: Alexandru TOCILESCU</font>
+																			<br>
+										<table style="margin-left:20px;margin-right:10px;" ><tr><td>
+											<font style="font-size:18px;" color="white"><b><p>
+	Un spectacol proaspăt şi actual, o comedie muzicală care reinventează universul lui Shakespeare.</p>
+</b></font>
+										</td></tr></table>
+																	</td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/lb.png" width="13" height="13" ></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+							</tr>
+						</table>
+						<br><br>
+												<br><br>
+						
+								<table border='0' width="476" cellspacing='0' cellpadding='0' valign="top" align="left" >
+									<tr>
+										<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+										<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476" >
+											<table style="margin-left:20px;margin-right:10px;" align="left" id="table_caract_spect"><tr><td align="left" valign="top">
+																							<div id="descriere" style="display:block;">
+													<font size="2" color="white"><p>
+	<span style="font-size: 16px"><em><strong>NEVESTELE VESELE DIN WINDSOR</strong></em></span>, un musical de excepţie, un remake din anul 1978. Un spectacol pe muzica lui Nicu Alifantis, textul lui W. Shakespeare, dirijat de Alexandru Tocilescu.</p>
+<p>
+	Un spectacol cu muzică live care&nbsp; reuneşte pe aceeaşi scenă unele dintre cele mai importante nume ale teatrului şi muzicii romaneşti, după cum urmează:</p>
+<p>
+	<br />
+	&nbsp;<strong><em>SIR JOHN FALSTAFF</em></strong>................................&nbsp;Lucian IANCU<br />
+	<em><strong>&nbsp;FORD</strong></em>......................................................George IVAŞCU <br />
+	<strong><em>&nbsp;DOAMNA QUICKLY</em></strong>...........................Adriana TRANDAFIR <br />
+	<strong><em>&nbsp;PAGE</em></strong>..............................................................Ion GROSU <br />
+	<em><strong>&nbsp;DOAMNA PAGE</strong></em>...................................Mariana DĂNESCU <br />
+	<em><strong>&nbsp;DOAMNA FORD</strong></em>.......................................Crina MUREŞAN<br />
+	<em><strong>&nbsp;SIMPLE</strong></em>...........................................................Mihai NIŢĂ&nbsp;<br />
+	<em><strong>&nbsp;FENTON</strong></em>........................Victor APETREI / Mihai STĂNESCU<br />
+	<em><strong>BARDOLPH</strong></em>..................................................Marcel LOVIN<br />
+	<strong><em>SHALLOW</em></strong>.....................................................Gelu NIŢU <br />
+	<em><strong>SLENDER</strong></em>............Răzvan ROTARU / Dorin Eugen IONESCU<br />
+	<strong><em>JOHN</em></strong>........................................................Eduard HARIS<br />
+	<strong><em>DOCTOR CAIUS</em></strong>.........................................Adi CIOBANU <br />
+	<strong><em>EVANS</em></strong>.....................................................Şerban CELEA <br />
+	<em><strong>HANGIUL</strong></em>.................Dani POPESCU / Dan COGĂLNICEANU&nbsp; <br />
+	<strong><em>PISTOL</em></strong>....................................Ionuţ CIOCIA / Andrei BRATU<br />
+	<strong><em>NYM</em></strong>.......................................................Darius DARADICI <br />
+	<strong><em>ROBIN</em></strong>...................................................Dan RĂDULESCU <br />
+	<strong><em>ANNE PAGE</em></strong>.........Ştefania DUMITRU / Loredana CĂVĂŞDAN /<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Raluca BOTEZ / Oana BERBEC<br />
+	<strong><em>RUGBY</em></strong>......................................................Eduard C&Acirc;RLAN <br />
+	<strong><em>POVESTITORUL</em></strong>&nbsp;......................................Nicu ALIFANTIS</p>
+<p style="text-align: center">
+	<br />
+	MUZICA ORIGINALA&nbsp;&nbsp;&nbsp; <strong>Nicu ALIFANTIS &copy; 2011</strong></p>
+<p style="text-align: center">
+	DECORUL&nbsp;&nbsp; <strong>Francois PAMFIL</strong></p>
+<p style="text-align: center">
+	COSTUMELE&nbsp;&nbsp;&nbsp; <strong>Corina GRAMOSTEANU</strong></p>
+<p style="text-align: center">
+	COREGRAFIA&nbsp;&nbsp;&nbsp; <strong>Felicia DALU</strong></p>
+<p style="text-align: center">
+	<br />
+	texte cantece: William Shakespeare<br />
+	traducere texte c&acirc;ntece: Vlaicu Barna</p>
+<p>
+	<strong>m u z i c i e n i<br />
+	</strong>Nicu Alifantis &ndash; voce, chit.ac., percuţii</p>
+<p>
+	<strong>Byron<br />
+	</strong>Dan Byron &ndash; chit. ac., flaut, percuţii; <br />
+	6fingers &ndash; keyboards, acordeon; <br />
+	Costin Oprea &ndash; chit. ac., chit. el.; <br />
+	Dan Georgescu &ndash; bass; <br />
+	John Ciurea &ndash; tobe, percuţii; <br />
+	Codruţ Dumitrescu &ndash; manager</p>
+<p>
+	aranjamente orchestrale: <strong>Nicu Alifantis &amp; Byron<br />
+	</strong>aranjamente vocale: <strong>Virgil Ianţu<br />
+	</strong>pregatire vocală &amp; coordonatori repetiţii: <strong>Irina S&acirc;rbu &amp; Monica Ciuta<br />
+	</strong>partituri editor: <strong>Irina S&acirc;rbu<br />
+	</strong>coordonator designe sunet live: <strong>Victor Panfilov<br />
+	</strong>sunet live: Clara Litescu<br />
+	editor &amp; producător muzical: <strong>Nicu Alifantis [Fundaţia NICU ALIFANTIS]<br />
+	</strong>producător: Teatrul Metropolis&nbsp; p 2011</p>
+<p>
+	&nbsp;</p>
+<p style="text-align: center">
+	<iframe allowfullscreen="" frameborder="0" height="390" src="http://www.youtube.com/embed/7QjxStd8T_4" title="YouTube video player" width="480"></iframe></p>
+</font>
+													<br>
+													<font size="2" color="white">Durată: 3 h  (cu pauza)</font><br><br>																											<div class="buton-sus"><a href="http://www.teatrulmetropolis.ro/spectacole/nevestele-vesele-din-windsor-de-w-shakespeare.html#top">^ Sus</a></div>
+																									</div>
+																																		<div id="distributia" style="display:none;">
+													<font size="2" color="white"><p>
+	&nbsp;Cu:&nbsp; Lucian IANCU, George IVAŞCU, Adriana TRANDAFIR,<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ion GROSU, Mariana DĂNESCU, Crina MUREŞAN, Mihai NIŢĂ, <br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Victor APETREI / Mihai STĂNESCU, <br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Marcel LOVIN, Gelu NIŢU, Răzvan ROTARU / Eduard HARIS /<br />
+	&nbsp;&nbsp;&nbsp;&nbsp; Dorin Eugen IONESCU, Adi CIOBANU, Serban CELEA,<br />
+	&nbsp;Dani POPESCU / Dan COGĂLNICEANU , Ionuţ CIOCIA / Andrei&nbsp; BRATU,<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Darius DARADICI, Dan RĂDULESCU, <br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Loredana CAVASDAN / Oana BERBEC / Ştefania DUMITRU<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / Raluca BOTEZ, Eduard C&Acirc;RLAN</p>
+<p>
+	<br />
+	muzica : Nicu Alifantis &copy; 2011<br />
+	texte cantece: William Shakespeare<br />
+	traducere texte c&acirc;ntece: Vlaicu Barna</p>
+<p>
+	m u z i c i e n i<br />
+	Nicu Alifantis &ndash; voce, chit.ac., percuţii</p>
+<p>
+	Byron<br />
+	Dan Byron &ndash; chit. ac., flaut, percuţii; <br />
+	6fingers &ndash; keyboards, acordeon; <br />
+	Costin Oprea &ndash; chit. ac., chit. el.; <br />
+	Dan Georgescu &ndash; bass; <br />
+	John Ciurea &ndash; tobe, percuţii; <br />
+	Codruţ Dumitrescu &ndash; manager</p>
+<p>
+	aranjamente orchestrale: Nicu Alifantis &amp; Byron<br />
+	aranjamente vocale: Virgil Ianţu<br />
+	pregatire vocală &amp; coordonatori repetiţii: Irina S&acirc;rbu &amp; Monica Ciuta<br />
+	partituri editor: Irina S&acirc;rbu<br />
+	coordonator designe sunet live: Victor Panfilov<br />
+	sunet live: Clara Litescu<br />
+	editor &amp; producător muzical: Nicu Alifantis [Fundaţia NICU ALIFANTIS]<br />
+	producător: Teatrul Metropolis&nbsp; p 2011</p>
+</font><br>
+																									</div>
+																																		<div id="cronici" style="display:none;">
+													<font size="2" color="white"><p>
+	&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-outline-level:3">
+	<span style="font-size:18px;"><strong>BALADA TOCILESCULUI PE MUZICA DE ALIFANTIS. INTERPRETEAZA WILLIAM SHAKESPEARE.</strong></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal">
+	<strong><span style="font-size:12.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-no-proof:no">Postat de <span style="color:#f00;">Maria Zarnescu</span> in 14 March 2011 &ndash; Revista Yorick nr. 66</span></strong><span style="font-size:12.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-no-proof:no"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+15.0pt">
+	<span style="font-size:12.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-no-proof:no">&ldquo;Nu există o formă unică de teatru, care să pretindă a fi singura adevărată&rdquo; &ndash; sunt cuvintele prin care Max Reinhardt &icirc;şi rezuma &icirc;ntreaga viziune artistică. Considerat cel mai eclectic regizor pe care l-a cunoscut epoca modernă, Reinhardt răm&acirc;ne celebru prin uriaşul său apetit pentru teatru, curaj şi o imaginaţie mult prea mare ca să &icirc;ncapă idei prea mici. Ironia face &icirc;nsă ca tocmai acest har al versatilităţii sale creatoare să constituie şi cel mai aprig motiv de critică&hellip;<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+15.0pt">
+	<span style="font-size:12.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-no-proof:no">Istoria pare să se repete &icirc;ntr-un alt timp şi un alt spaţiu. De la debutul său, &icirc;n urmă cu patruzeci de ani, ca regizor (şi actor!) pe scena Studioului Casandra, cu &ldquo;S&acirc;nziana şi Pepelea&rdquo; de Vasile Alecsandri (muzica: Dan Chebac), p&acirc;nă la cea mai nouă premieră de la Teatrul Metropolis cu &ldquo;Nevestele vesele din Windsor&rdquo; de William Shakespeare (muzica: Nicu Alifantis), Alexandru Tocilescu dovedeşte o capacitate de invenţie, ce depăşeşte adesea puterea de &icirc;nţelegere a cronicarilor. Căci nimic din ceea ce este teatral, deci omenesc, nu &icirc;i este străin: de la comedia autohtonă frustă (&ldquo;Paradis de ocazie&rdquo;, &ldquo;Concurs de frumuseţe&rdquo;) p&acirc;nă la comicul tragic (&ldquo;Tartuffe&rdquo;, &ldquo;Cabala bigoţilor&rdquo;), de la texte esenţiale, clasice, indiferent de provenienţa temporală (&ldquo;Hamlet&rdquo;, &ldquo;Antigona&rdquo;, &ldquo;Sf&acirc;rşit de partidă&rdquo;) p&acirc;nă la cele moderne (&ldquo;Poate Eleonora&rdquo;, &ldquo;Libertinul&rdquo;, &ldquo;Elisaveta Bam&rdquo;) sau p&acirc;nă la cele temeinic localizate &icirc;n timp şi spaţiu (&ldquo;O zi din viaţa lui Nicolae Ceauşescu&rdquo;, &ldquo;Poker&rdquo;) &ndash; toate &icirc;ntr-o enumerare de martor subiectiv. &Icirc;n drumul său tenace şi imperturbabil, regizorul este mai mereu &icirc;nsoţit de muzică: de la &ldquo;Faust&rdquo; pe scena Operei p&acirc;nă la &ldquo;Broadway &ndash; Bucureşti&rdquo; la Operetă. Şi atunci nu are de ce să ne mire dorinţa de a relua un mai vechi succes de la Teatrul Tineretului din Piatra Neamţ &ndash; musicalul &ldquo;Nevestele vesele din Windsor&rdquo; (1978) şi nici &icirc;ndrăzneala de a trata piesa lui Shakespeare aşa cum abordase şi &ldquo;Scrisoarea pierdută&rdquo; a lui Caragiale acum douăzeci de ani la Naţionalul bucureştean. Căci regăsim aici acelaşi curaj de a se juca şi a izbi de păm&acirc;nt cu orice tabu sau clişeu, numai pentru a se bucura apoi (cu intensitatea de care numai copiii sunt &icirc;n tare) la auzul bufniturii. Sau, vorba unui banc: De ce? &ndash; Pentru că poate!<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+15.0pt">
+	<span style="font-size:12.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-no-proof:no">Ca urmare, &ldquo;Nevestele&hellip;&rdquo; se mută la Bucureşti, pe mica scenă de la Teatrul Metropolis, cu arme şi bagaje. Principala armă, ca şi &icirc;n varianta originală, este muzica lui Nicu Alifantis, marcă &icirc;nregistrată lesne de recunoscut, nu numai datorită experienţei de compozitor pentru scenă, c&acirc;t, mai ales, abilităţii de a crea linii melodice izbutite, &icirc;ntr-un context armonic de o simplitate dezarmantă. Ori tocmai această parcimonie a celor c&acirc;teva acorduri per c&acirc;ntec dă prospeţime &icirc;ntregului spectacol, fără a-l &icirc;mpovăra cu orchestraţii complicate şi savante, stabilind o ierarhie clară &icirc;ntre jocul teatral şi interpretarea muzicală. De altfel, nici versurile c&acirc;ntecelor (&icirc;n vechea traducere a lui Vlaicu B&acirc;rna) nu sunt concepute ca suport al unor arii nemuritoare, lipsindu-le ritmul şi rima necesare unui atare scop.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+15.0pt">
+	<span style="font-size:12.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-no-proof:no">Muzica instrumentală este executată de trupa Byron, un grup activ &icirc;ntr-o zonă mai apropiată de rock-ul alternativ dec&acirc;t de Shakespeare, dar dovedindu-se o remarcabilă alegere a compozitorului. Cu siguranţă că partiturile interpretate &icirc;n spectacol sunt mult mai simple &icirc;n comparaţie cu cele proprii, dar asta nu &icirc;i &icirc;mpiedică să &icirc;şi ia &icirc;n serios rolurile, inclusiv pe cele de mişcare scenică, demonstr&acirc;nd o &icirc;nţelegere superioară a actului artistic, de orice natură ar fi el.<i>&nbsp;</i>Obişnuiţi cu scena, chiar dacă uşor &icirc;nghesuiţi &icirc;ntr-un spaţiu deloc generos, cei de la Byron c&acirc;ntă şi se aud foarte bine. Faptul nu e valabil &icirc;ntotdeauna şi pentru actorii-c&acirc;ntăreţi, al căror efort personal de a interpreta liniile vocale este demn de admiraţie, dar care este adesea &icirc;nfr&acirc;nat, fie de neobişnuinţa cu microfonul, fie de tendinţa unei amplificări exagerate a vocilor, duc&acirc;nd &icirc;n strident. Acest nefiresc este &icirc;nsă compensat de partiturile actoriceşti şi, mai ales, de scenele de ansamblu (ce fac deliciul oricărui musical ce se respectă), atunci c&acirc;nd muzicii i se adaugă şi dansul, &icirc;n coregrafia dinamică şi tinerească a Feliciei Dalu. Căci &ldquo;tineresc&rdquo; este epitetul potrivit reprezentaţiei, nu numai datorită v&acirc;rstei celor mai mulţi dintre actorii ce susţin aceste scene, ci, &icirc;n special, energiei molipsitoare care pare a-i uni pe toţi creatorii săi. Ritmul este permanent susţinut de muzică, prezentă at&acirc;t ca element de bază al spectacolului, ci şi ca principală sursă de inspiraţie &icirc;n construcţia eroilor &ndash; de la comportament p&acirc;nă la detaliul vestimentar. Toată gama de stiluri este trecută &icirc;n revistă prin personajele lui Tocilescu şi costumele Corinei Grămoşteanu, de la bătr&acirc;nul rock&rsquo;n&rsquo;roll p&acirc;nă la glam, punk sau trash, culmin&acirc;nd cu jilţul-adăpost pentru &ldquo;cerbul&rdquo; Falstaff, &icirc;n parcul din Windsor, ale cărui coarne sunt &icirc;nlocuite de cele diavoleşti, din binecunoscutul simbol pacifist al rock-ului de orişiunde (decorul: Francois Pamfil).<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+15.0pt">
+	<span style="font-size:12.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-no-proof:no">Echipa de actori funcţionează eficient &icirc;n plen, dar şi pe secţiuni, atunci c&acirc;nd dispare senzaţia unui ansamblu prea mare pentru un spaţiu at&acirc;t de mic, şi c&acirc;nd protagoniştii se pot distinge &icirc;n roluri comice, amintind de vechea şcoală a detaliului scenic. &Icirc;n rolul potenţial-&icirc;ncornoratului domn Ford, George Ivaşcu aduce cu sine elementele verficate &icirc;n &ldquo;Iluzia comică&rdquo; şi &ldquo;Moartea lui Tarelkin&rdquo;, cărora le adaugă o nouă imagine de latin-lover &icirc;n dublul său, domnul Brook, făurind un rol proaspăt ca un nou-născut. Coleg de suferinţă &icirc;ntr-ale prostelii de către neveste, domnul Page este desenat cu linii precise de către Ion Grosu, care rezistă tentaţiei de a se inspira dintr-un alt personaj de-al său, Mackie Şiş din &ldquo;Opera de trei parale&rdquo;. &Icirc;n schimb, apelează la &icirc;ntreg spectrul expresivităţii sale, de la naivitatea sinceră sau vicleană a soţului p&acirc;nă la accesele de furie ale tatălui &ndash; insuficient respectat de familie şi prieteni &icirc;n ambele ipostaze. Cele două neveste vesele, Crina Mureşan şi Mariana Dănescu, se completează prin personalitate şi dungile din costum, nelăs&acirc;ndu-se impresionate de vocea profund-specială a unui Falstaff &icirc;ntruchipat cu onestitate de Lucian Iancu. &Icirc;n rolul doamnei Quickly, Adriana Trandafir mijloceşte nu numai relaţiile dintre personaje, ci le şi manipulează, odată cu publicul vrăjit de această Tina Turner autohtonă, dezlănţuită &icirc;ntr-o explozie irezistibilă de energie. &Icirc;i ţine piept cu mult umor curat, ca partener de scenă, dar şi ca stăp&acirc;n &icirc;n piesă (franţuzitul doctor Caius) &ndash; Adrian Ciobanu, pentru care, de douăzeci de ani, tot aşteptăm&nbsp;<i>acel</i>&nbsp;regizor care să &icirc;i ofere&nbsp;<i>acel</i>&nbsp;rol. &Icirc;n fine, mult r&acirc;vnita domnişoară Anne Page este figurată de Ştefania Dumitru ca o adolescentă emo, &icirc;ntr-un rol extrem de expresiv prin non-expresivitate.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+15.0pt">
+	<span style="font-size:12.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:Arial;mso-no-proof:no">&Icirc;ntreaga echipă de actori (mare &ndash; douăzeci de persoane) funcţionează &icirc;nsă unitar şi invaziv-tineresc, d&acirc;nd naştere unui spectacol recomandat nu numai neofililor &icirc;ntr-ale teatrului şi amatorilor de comedie fără tuşe grosiere, ci, mai ales, nostalgicilor. Fie ca simpatizanţi ai lui Tocilescu, fie ca fani ai musicalului autohton, martori ai unui &ldquo;hit&rdquo; al anilor &rsquo;80 &ndash; &ldquo;Mitică Popescu&rdquo;, pe muzica lui Alifantis.</span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+15.0pt">
+	&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+15.0pt">
+	&nbsp;</p>
+<p>
+	<span _fck_bookmark="1" style="display: none; ">&nbsp;</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none; ">&nbsp;</span></p>
+<p>
+	<strong><span style="font-size:16px;">Alexandru Tocilescu: Trăiesc cu spaima că &icirc;ntr-o zi se termină talentul&hellip;</span></strong></p>
+<p>
+	<strong><span style="font-size:16px;">&nbsp;</span></strong><span lang="FR" style="font-size: 16px; font-family: Arial, sans-serif; ">Postat de <span style="color:#f00;">Monica Andronescu</span>&nbsp;</span><span class="Apple-style-span" style="font-size: 16px; font-family: Arial, sans-serif; ">in 17 October 2011 - Revista Yorick</span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal">
+	&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal">
+	<span class="Apple-style-span" style="font-size: 16px; line-height: 18px; "><i><span lang="FR" style="font-size: 12pt; line-height: 150%; font-family: Arial, sans-serif; ">&quot;[...]&bdquo;Nevestele vesele&rdquo; este o poveste orăşenească, o poveste &icirc;ntre mitocani la oraş. Ce-mi pasă mie &icirc;n ce an e oraşul ăla? Şi cu toată muzica şi nebunia, şi grupul tinerilor&hellip; nu mi s-a părut că am forţat &icirc;n niciun fel nota. Nici nu prea am tăiat din text. Ei vorbesc de Curte&hellip; dar Curte e şi-acum. </span><span lang="EN-US" style="font-size: 12pt; line-height: 150%; font-family: Arial, sans-serif; ">Totul e valabil. Dar să ştii că &bdquo;Nevestele vesele&rdquo; l-am făcut dintr-o singură raţiune. </span><span lang="FR" style="font-size: 12pt; line-height: 150%; font-family: Arial, sans-serif; ">&Icirc;mi părea rău de muzica lui Alifantis care se pierdea pentru totdeauna, dacă nu se relua spectacolul. Acum am scos şi disc. Muzica aia n-a fost aşa&hellip; că eu am făcut un spectacol şi el a venit şi-a pus nişte muzică. Noi am stat nouă luni &icirc;mpreună acolo şi se năştea un c&acirc;ntec dintr-o situaţie sau o situaţie dintr-un c&acirc;ntec. E ceva unic. Nimeni n-a mai lucrat cu un compozitor care să stea l&acirc;ngă el &icirc;n provincie mai bine de juma de an şi să compună odată cu mersul spectacolului. Muzica e născută din spectacol şi spectacolul din muzică. Nu se &icirc;nt&acirc;mplă des chestia asta.</span></i></span>&quot;</p>
+<p>
+	&nbsp;</p>
+<div>
+	&nbsp;</div>
+<div>
+	<strong><span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">OBSERVATORUL CULTURAL</span></span></strong></div>
+<div>
+	<span style="font-size:12px;"><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">Autor:&nbsp;Iulia POPOVICI&nbsp;|</span>&nbsp;Nr. 598 din 28.10.2011</span></span></div>
+<div>
+	<span style="font-size:12px;"><span style="font-family:arial,helvetica,sans-serif;"><br />
+	</span></span></div>
+<div>
+	<strong><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">&nbsp;TEATRU. Shakespeare, sitcom şi remake</span></span></strong></div>
+<div>
+	<font class="Apple-style-span" face="arial, helvetica, sans-serif"><br />
+	</font></div>
+<div>
+	<span style="font-size:14px;"><em><span style="font-family:arial,helvetica,sans-serif;">&nbsp; &nbsp; &nbsp;&bdquo;Nevestele vesele din Windsor reprezintă un mare show, un splendid divertisment, realizat &icirc;ntr-o stare de graţie colectivă. Un spectacol de grup, unde culoarea, muzica şi dansul, cuv&icirc;ntul şi mişcarea, actorul şi decorul fuzionează pentru a transmite, cu maxim impact vizual şi impuls emoţional, senzaţia unei participări frenetice la un joc special, la un mister teatral modern.&ldquo; Astfel scria Mira Iosif, &icirc;n revista Teatrul, numărul din iunie 1978, despre montarea iniţială cu Nevestele&hellip; a lui Alexandru Tocilescu, a cărei premieră va fi avut loc fie pe 28 ianuarie (versiunea instituţiei producătoare), fie pe 8 aprilie (versiunea revistei de specialitate) 1978, la Teatrul Tineretului din Piatra Neamţ.</span></em></span></div>
+<div>
+	<span style="font-size:14px;"><em><span style="font-family:arial,helvetica,sans-serif;">33 de ani mai t&icirc;rziu, alte Neveste vesele&hellip;, ale aceluiaşi Tocilescu, se apropie de premiera oficială, la Teatrul Metropolis din Bucureşti. &Icirc;n rolul lui Falstaff &ndash; Lucian Iancu (la Piatra Neamţ, fusese Cornel Nicoară). Doamna Ford e Crina Mureşan (&icirc;n 1978, era Virginia Rogin). Domnul Ford &ndash; George Ivaşcu (predecesorul lui: Valentin Uritescu). Doamna Quickly: Adriana Trandafir (la Teatrul Tineretului &ndash; Eugenia Balaure). Materialele de promovare pentru spectacolul de la Metropolis afirmă desluşit că ar fi vorba despre &bdquo;un remake&ldquo;, la care regizorul colaborează din nou cu acelaşi compozitor &ndash; Nicu Alifantis &ndash; şi acelaşi scenograf &ndash; Fran&ccedil;ois Pamfil. Doar fotografiile, &icirc;nsă, dau măsura gestului lui Tocilescu: pentru prima dată &icirc;n istoria noastră teatrală recentă, iată un regizor care &icirc;şi reia, practic, un spectacol, la distanţă &icirc;n timp de c&icirc;teva decenii, cu o altă distribuţie (şi evident alte costume); şi cu muzică live, de data asta (c&icirc;ntată de trupa byron). Dar care n-ar putea naşte entuziasme pe măsura celui care animă cronica Mirei Iosif.</span></em></span></div>
+<div>
+	<span style="font-size:14px;"><em><span style="font-family:arial,helvetica,sans-serif;">Ce &icirc;ncerca, &icirc;n 1978, să facă Alexandru Tocilescu intra &icirc;ntr-un curent al vremii, un al doilea sau al treilea val rom&acirc;nesc al plasării textelor shakespeariene &icirc;n contexte contemporane, cu niveluri de referinţă complexe, inclusiv &icirc;n ce priveşte costumele, fiind, &icirc;n acelaşi timp, o abordare &icirc;ndrăzneaţă a genului musicalului. &Icirc;n 2011, trimiterile la tablouri moderniste s&icirc;nt &icirc;nlocuite de Tina Turner (Adriana Trandafir, care c&icirc;ntă şi se mişcă incredibil &ndash; o actriţă care chiar poate să facă musical), de Duffy Duck şi fabricile Ford, Peter Simple e un rom&acirc;n &ndash; slugă la englezi, iar dacă domnul Ford se deghizează &icirc;ntr-un tip pe nume Brook, el trebuie să fie Peter Brook. Avantajul muzicii live se pierde, din c&icirc;nd &icirc;n c&icirc;nd, din cauza lipsei de suficientă pregătire vocală a multor actori (dar Victor Apetrei, &icirc;n Fenton, unul dintre peţitorii lui Anne Page, are o voce remarcabilă, şi nu e singurul). Iar scena de la Metropolis e cam prea mică pentru nevoile spectacolului, &icirc;ncep&icirc;nd cu frecvenţa momentelor de grup şi termin&icirc;nd cu rezonanţa instrumentelor.</span></em></span></div>
+<div>
+	<span style="font-size:14px;"><strong><em><span style="font-family:arial,helvetica,sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ca spectacol,Nevestele vesele din Windsor de la Metropolis face o iremediabilă impresie de teatru bine jucat, bine construit muzical (dar nu musical, pentru că uzul muzicii nu e, &icirc;n general, cel presupus de genul &icirc;n cauză) şi c&icirc;t se poate de optzecist. Ceea ce nu e un reproş, ci o constatare şi o anume afiliere estetică.</span></em></strong></span></div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<p>
+		<em><span style="font-size:16px;"><span style="color:#fff;"><b id="internal-source-marker_0.5975924297235906" style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; "><span style="font-family: 'Arial Black'; background-color: transparent; font-weight: normal; vertical-align: baseline; white-space: pre-wrap; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b></span></span></em><span style="font-size:16px;"><span style="font-size:26px;"><span style="color:#fff;"><b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; "><span style="font-family: 'Arial Black'; background-color: transparent; font-weight: normal; vertical-align: baseline; white-space: pre-wrap; ">&nbsp;</span></b></span>Cotidianul </span></span><strong><span style="font-size:16px;"><br />
+		<br />
+		21.05.2011<br />
+		<br />
+		<br />
+		</span></strong> <em><span style="font-size:16px;">Un spectacol exploziv la Teatrul Metropolis<br />
+		Nevestele vesele din Windsor</span></em></p>
+	<p>
+		<strong><span style="font-size:16px;"><br />
+		Tocilescu şi sfidarea sfidării</span></strong><em><span style="font-size:16px;"><br />
+		&quot;Să nu rataţi spectacolul cu &bdquo;Nevestele vesele&quot; din Windsor de la Teatrul Metropolis, &icirc;n regia lui Alexandru Tocilescu, pe muzica originală a lui Nicu Alifantis şi &icirc;n decorul lui Fran&ccedil;ois Pamfil.<br />
+		E un remake, căci musicalul s-a jucat &icirc;n 1978 la Piatra Neamţ şi a ajuns şi la Bucureşti o singură dată spre groaza cenzurii şi activismului din epocă.<br />
+		Rock and roll-ul era socotit o muzică putredă şi decadentă, care azv&acirc;rlea tineretul patriei &icirc;n bolgiile infernului. C&acirc;nd l-am cunoscut pe Toca &icirc;n 1979, venit să regizeze &bdquo;Paradis de ocazie&quot; de Tudor Popescu la Teatrul Ion Vasilescu, unde mă angajase Sorana Coroamă Stanca secretar literar, prezenţa lui era &icirc;nsoţită de haloul legendei şi scandalului pe care-l provocase &quot;acest spectacol de discotecă impertinent&quot; &bdquo;care a &icirc;ndrăznit să facă un musical din marele Shakespeare!&quot;. Regizorul era pus la index, acuzat de sfidare, tupeu şi obrăznicie politică. Trezise valuri de indignare şi stupoare dimpreună cu Nicu Alifantis şi muzica lui extraordinară, electrizantă, inteligentă şi liberă. &Icirc;ndrăznise să lucreze cu decorul &bdquo;minimalist&quot; al admirabilului artist şi scenograf Fran&ccedil;ois Pamfil, un soi de pilotă sau pernă ori plapumă uriaşă, c&acirc;t toate scena, &icirc;n care lumea din Windsor &icirc;şi &icirc;nvelea toate iluziile, păcatele şi planurile mai mult sau mai puţin ruşinoase. Ca şi cum universul ar fi fost tot una cu un pat, &icirc;n care comunitatea &icirc;şi consumă viaţa casnică, iubirile şi cochetăriile, gelozia atroce sau indiferenţa, beţiile şi furtişagurile, curiozităţi, invidii şi colportări. Ideea era genială amestec&acirc;nd alcovul &icirc;n toate cele &icirc;ntr- un decor simili-oriental, mai de grabă de fanar, dec&acirc;t britanic, suger&acirc;nd lene şi voluptăţi, traiul &icirc;n puf, gustat de Falstaff, Seducătorul petrecăreţ şi soldatul fanfaron, ce visează &bdquo;căpătuială, să facă rost de bani de la nevestele ispitite cu o prefăcută iubire: &quot;Vreau să le am &icirc;n m&acirc;nă pe am&acirc;ndouă, să le jumulesc după plac. Ele vor fi Indiile mele, de răsărit şi de apus şi voi face negoţ cu am&acirc;ndouă&quot;.<br />
+		Gelosul Domn Ford &icirc;ncerc&acirc;nd să afle dacă este &icirc;ncornorat<br />
+		Nu ştiu dacă musicalul cu &bdquo;Nevestele vesele din Windsor&quot; s-a născut din faptul că doamna Quickly fredonează şi c&acirc;ntă &icirc;n piesă, după cum aflăm din indicaţiile de scenă din text. Dar ideea de a face o operă pop şi rock and roll descătuşa &icirc;n anii &#39;70 şi &#39;80 energii şi valori controlate de cultura oficială. Tocilescu punea &icirc;n scenă trepidant, alaiul instrumentelor electrice, decibelii tinereţii şi acest carnavalesc universal, adus la zi de cultura populară americană, de la gospel, country, blues şi jazz p&acirc;nă la musical fiind doar c&acirc;ţiva paşi. Sunt sigură &icirc;nsă că dragul lui Tocilescu după muzica lui Alifantis şi muzica generaţiei beat şi rock, cvasi interzisă, l-au &icirc;mpins cu toată fiinţa şi inteligenţa lui buimăcitoare spre o concepţie regizorală de tip sfidarea sfidării. Tot ce era interzis era amplificat şi condus de t&acirc;nărul regizor la paroxism. Tocilescu urca circul şi rock-ul pe scenă, transforma teatrul &icirc;ntr-un Cal troian menit să dăr&acirc;me cetatea inexpugnabilă a unei lumii ce &icirc;nlocuia drepturile cu interdicţii. Teribilismul lui percuta, era vital, teroriza. A fost şi a rămas adolescentul teribil al regiei rom&acirc;neşti, ţinută de el sub semnul unei avangarde la fel de proaspăte azi ca şi ieri. C&acirc;tă culoare şi carnavalesc a pus acest mare regizor &icirc;n piesele regizate de el şi la c&acirc;tă nebunie şi tinereţe şi-a condus din totdeauna actorii, făc&acirc;ndu-i să c&acirc;nte, să danseze, să joace o piesă &icirc;ntreagă pe o bătută de circ şi să sară pe elastica-i plasă, precum Marieta Luca şi Hamdi Cerchez, la teatrul din strada Eremia Grigorescu juc&acirc;nd rolurile unor părinţi, trăitori &icirc;ntr-o lume de circ ai unei vieţi de circ. Tocilescu transforma fiecare piesă &icirc;ntr-un carnaval şi aprindea toate petardele teatrului şi muzicii interzise. Erau şi vremurile acelea cenuşii cu vizionări de spectacole la care participa un pluton de activişti pe l&acirc;ngă profesionişti. Eram sătui de acea realitate &icirc;n care normalitatea era &icirc;nlocuită de nesf&acirc;rşite acrobaţii, de mersul pe s&acirc;rma limbajului dublu, de prestidigitaţie, salturi mortale şi dresajul de... animale. Muzica aleasă de Tocilescu şi &icirc;ntreaga viziune scenică au deranjat, nu faptul că regizorul ar fi fost ireverenţios cu Shakespeare. De parcă povestea lui Falstaff, prinsă &icirc;ntr-o comedie uşoară, la cererea reginei, se spune, n-ar mai fi inspirat libretul unor opere scrise de Otto Nicolai şi de Giuseppe Verdi. E drept că pentru orchestre liniştite şi nu pentru trupe de rock and roll c&acirc;nt&acirc;nd sălbatic şi haotic o muzică &icirc;n care se descarcă fulgere şi curcubee şi se leagănă rugăciunile către Dumnezeu. Reflectă iadul şi pierzania din capitalism.<br />
+		Musicalul de la Piatra Neamţ a folosit pe atunci muzica &icirc;n play back. &bdquo;Nevestele vesele din Winsdor&quot; răm&acirc;ne un spectacol legendă şi e parte din istoria teatrului rom&acirc;nesc redată şi re&icirc;ncărcată de spectacolul Teatrului &bdquo;Metropolis&quot; cu o forţă, o nonşalanţă şi o creativitate seducătoare.<br />
+		Un spectacol care ne &icirc;ntinereşte<br />
+		Falstaff (Lucian Iancu) &icirc;ntre Doamna Page (Mariana Dănescu) şi Doamna Ford (Crina Mureşan), nevestele vesele<br />
+		Veţi &icirc;ntineri, dragii mei. Veţi re&icirc;nvăţa c&acirc;tă comoară se ascunde &icirc;n orice gest necanonic şi &icirc;n orice teribilism care devine sută la sută pasiune de a face teatru şi muzică, de a scoate lumea din ţ&acirc;ţ&acirc;nii ruginiţi de prejudecăţi. Vă veţi molipsi de un ritm ameţitor şi vă va copleşi o vitalitate &icirc;n cascadă. Veţi slobozi fără m&acirc;na la gură acel hohot de r&acirc;s pantagruelic, molipsitor, &icirc;n sala seduşilor spectatori, contaminaţi de ideea de a vedea un musical construit din celebra comedie. Un bric-&agrave;-brac de costume rock, pop, vintage, care-mi aduc aminte nu doar concerte şi &icirc;nregistrări cu &bdquo;The Rolling Stones&quot;, Elvis Presley, Jim Morrison, Michael Jackson sau Jimi Hendrix, cu &bdquo;Metallica&quot;, grupul irlandez &bdquo;U 2&quot;, cu &bdquo;Fats Domino&quot; şi Chuck Berry, cu Janis Joplin şi al său psihedelic blues-rock, cu rock-ul de borangic şi mătase creat de &bdquo;Everly Brothers&quot;, &icirc;n anii 50 şi 60, care i-a influenţat pe &bdquo;Beatles&quot; pe &bdquo;Hollies&quot; sau pe cei de la &bdquo;The Birds&quot;, &bdquo;The Who&quot; cu acele explozive şi dinamice atacuri şi cu agresivitatea de adolescenţă frustrată... cu costumele lui de scenă şocante, cu catifea şi fireturi şi arabescuri tivite pretutindeni &icirc;n vreme ce tobele intrau &icirc;n delir. Spectacolul de la &bdquo;Metropolis&quot;, un teatru fenomenal condus de un actor şi director surreal &icirc;mi răscoleşte sufletul. Mă uit la trupurile &icirc;n &icirc;naintarea de maree a actorilor care reaprind pe scenă emoţia noului val sonor, chitare electrice, acel &bdquo;wah wah&quot; al lui Jimi Hendrix, nebunia vremurilor ce s-au numit &bdquo;Age of psyhedelia&quot;, amplificarea sunetelor la maximum... După trei ore şi jumătate de musical realizez că am văzut o legendă a teatrului rom&acirc;nesc, &icirc;ncă o piesă din acel arhipelag al cenzurilor şi excomunicărilor la amintirea acelui fetiş numit ochiul lui Dumnezeu făcut din trei andrele suprapuse şi răsucirea &icirc;n jurul lor a unor fire de l&acirc;nă viu colorată... Era marota lui Janis Joplin simplă şi genială precum spectacolele lui Tocilescu născute din poezie şi barbarie.<br />
+		O avalanşă de parodii la parodii<br />
+		Am văzut comedia scrisă de Shakespeare &bdquo;Nevestele vesele din Windsor&quot; cu directorul artistic al teatrului &bdquo;Globe&quot; &icirc;n sală. Domnul Dominic Dromgoole a venit să vadă dacă spectacolul poate fi invitat la Olimpiada ce va avea loc &icirc;n Anglia. Englezii vor să aducă cele mai importante şi percutante spectacole cu piese de Shakespeare la Olimpiada pe care o vor găzdui. El &icirc;nsuşi regizor şi atent la poetica haosului &icirc;n teatru, cunoscut pentru pasiunea cu care pune &icirc;n scenă Shakespeare, nu ştiu dacă a resimţit ca şi publicul rom&acirc;n de ce a fost şi răm&acirc;ne important acest spectacol. De ce teatrul rezistenţei şi antidictaturii este teatrul rock and roll, de ce identificarea personajelor piesei cu gestica, ticurile şi faima unor monştri sacri &icirc;n muzica anilor &#39;70, &#39;80, &#39;90...<br />
+		De la Nicu Alifantis la Cleveland Rock and Roll Hall of Fame<br />
+		Cele trei apariţii feminine electrizante, Mariana Dănescu, Adriana Trandafir şi Crina Mureşan<br />
+		Se joacă Shakespeare la &bdquo;Metropolis&quot; &icirc;ntr-un exploziv musical. Pe muzica dragului nostru zeu autohton al muzicii libere, Nicu Alifantis, mult interzisă şi excomunicată &icirc;n tinereţe. Mişcarea actorilor, remarcabili, transmiţ&acirc;ndu-şi ca nişte atleţi frenetici ştafeta, de la unul la altul, &icirc;n costumele admirabile desenate de Corina Grămoşteanu şi coregrafia Feliciei Dalu, ţine piept profesionalismului marilor musicaluri americane, fără să aibă &icirc;n spate actorii şi dansatorii de pe Broadway, de la strada 42, de la Radio City Music Hall, de l&acirc;ngă Madison Square Garden, experienţa celebrelor &bdquo;Roquette&quot;. Privesc spectacolul şi mi-amintesc de parada gay-lor şi travestiţilor, &bdquo;The Gay Pride Parade&quot; sau &bdquo;March&quot; &icirc;n Greenwich Village, de suporteri de finală de fotbal ori de megaconcerte cu Tina Turner, &icirc;ntr-un remake fantast jucat, dansat şi parodiat de Adriana Trandafir care reaprinde v&acirc;ltoarea rochiei cu franjuri şi a genunchilor şi coapselor sexy pe scena Teatrului &bdquo;Metropolis&quot;. Mă g&acirc;ndesc dacă directorul teatrului &bdquo;Globe&quot; poate &icirc;nţelege şi mai ales simţi ce &icirc;nseamnă pentru noi rom&acirc;nii şi cei din Estul Europei acest spectacol. Lui poate să i se pară o ciudată aglomerare de piese, citate şi artefacte de muzeu, ceva &icirc;n genul Muzeului din Cleveland Rock and Roll Hall of Fame. E, &icirc;n fond, din totdeauna un om liber să b&acirc;ntuie concerte şi cluburi. Vede pe viu baletele lui Mark Morris, ale cărui costume de la spectacolul &bdquo;The Hard Nut&quot; par să fi urcat pe scena de la &bdquo;Metropolis&quot;, căci ţin de moda şi artefactele epocii rock, de găselniţele şi accesoriile unui stil impus de grafica lui Charles Burns şi benzile desenate care &icirc;nfloreau cu generaţia Flower Power &icirc;n vremea c&acirc;nd noi trăiam sub căderea şi ridicarea Cortinei de Fier.<br />
+		Distribuţia spectacolului joacă realitatea şi o parodiază &icirc;naint&acirc;nd către sufletul nostru tonifiat şi binedispus cu viteza cu care se rostogolesc vagonetele unui fulgerător montagne russe. Mişcarea biciuie vorbele din replici şi din c&acirc;ntece pe ritm de twist, de rock ori pisicesc de feline pe... acoperişul/ plapuma, perna iubirii. Personajele lui Shakespeare sunt scuturate de orice naftalină proteguitoare faţă de contextul istoric. Textul e c&acirc;ntat sau rostit ca o cavalcadă. Senzaţia de avalanşă ne contaminează de vervă şi ironie. Talentul regizorului şi jocul actorilor dimpreună cu muzica tinereţii noastre, descoperită şi de tinerii veacului XXI, ne ating ad&acirc;nc p&acirc;nă &icirc;n suflet. Toţi spectatorii avem aerul că am pierdut peste treizeci de ani şi ne vine să dansăm pe scaune, să c&acirc;ntăm cu actorii pe muzica lui Alifantis povestea &bdquo;Nevestelor vesele din Windsor&quot;.<br />
+		George Ivaşcu, &icirc;ncerc&acirc;nd să-şi surprindă rivalul cu ajutorul prietenilor chemaţi la petrecere<br />
+		Un ritm drăcesc şi o vitalitate pestriţă, aiuritoare care nu cedează nici unor oprelişti dictate de mode, comenzi, dictaturi ideologice sau estetice contaminează toate generaţiile de actori. P&acirc;nă şi Lucian Iancu &icirc;n rolul unui Casanova expirat, jucat cu tot dichisul lui Faux Semblant, e un Falstaff rocker care mi-a amintit de Leon Russel cel de azi, colabor&acirc;nd cu Elton John, am&acirc;ndoi prezenţi anul acesta la ceremonia de la Waldorf Astoria. Ritm, ritm afurisit şi iarăşi ritm. &Icirc;nteligenţă şi umor p&acirc;nă &icirc;n v&acirc;rful unghiilor, o avalanşă de parodii la parodii şi trimiteri la tot ce ţine de realitatea memoriei şi memoria realităţii, ca şi cum tot ce a fost spectacol ieri e lăsat să intre &icirc;n spectacolul de azi, dar cu toate costumele şi măştile rock and rollului, dintre care Tocilescu afişează din totdeauna inele cu aer boieresc şi boem pe degete, pandantiv din monedă de argint de valoare numismatică at&acirc;rnat de colier cu design antic, rubaşte şi blugi, blasere sofisticate &icirc;n stilul Dr John.<br />
+		Adriana Trandafir, &icirc;n rolul Doamnei Quickly, asist&acirc;ndu-l pe Doctorul Caius (Adi Ciobanu)<br />
+		Un rol uluitor şi memorabil face George Ivaşcu &icirc;n ipostaza gelosului domn Ford, a cărui suferinţă şi suspiciune sunt lucrate stil filmele de &icirc;nceput ale lui Chaplin. Actorul dezvoltă toate ticurile unei inocenţe şi credulităţi ce &icirc;nduioşează. Sub muşcătura de şarpe a ideii că este un soţ &icirc;ncornorat siguranţa de sine păleşte şi se transformă &icirc;n convulsii, b&acirc;lb&acirc;ială şi incontinenţă verbală se amestecă &icirc;n planuri de răzbunare colosale ce angrenează alaiul din nou carnavalesc de bătăuşi, beţivani şi hoţi de buzunare, plus persoanele respectabile care se &icirc;ntrec &icirc;n invocarea credinţei &icirc;n Dumnezeu şi onorabilitate. Crina Mureşan &icirc;n Doamna Ford joacă o cochetărie de franţuzoaică gata oric&acirc;nd să deseneze triunghiul adulterului şi totuşi precaută &icirc;n a-şi crea alibiuri şi o soluţie de salvare &icirc;n coşul cu rufe murdare. Spre deosebire de Doamna Page, interpretată de Mariana Dănescu, Crina Mureşan joacă juvenil zburdălnicia şi inconsecvenţa, cu aer de subretă ori t&acirc;nără consoartă dezabuzată &icirc;n faţa torentelor unui soţ coleric, prăpăstios.<br />
+		Ritm drăcesc şi o vitalitate pestriţă<br />
+		&Icirc;n schimb, Mariana Dănescu adoptă registrul de mezzo-soprană şi de englezoaică &icirc;nţepată uşor, care-şi &icirc;ngroaşă onorabilitatea şi trăieşte prin corespondenţă experienţele doamnei Ford din celebrele bancuri seci englezeşti cu Sir şi servitorul. &bdquo;&Icirc;n dragoste norocu-i avuţie, Cu bani păm&acirc;nturi cumperi, nu soţie&quot;, spune un personaj văz&acirc;nd eterna &icirc;ntoarcere a sentimentelor, care sunt confundate cu simţirile şi sunt un izvor nesecat &icirc;n comicul de situaţii al comediei uşoare scrise de Shakespeare. Anne Page a fost jucată la matineul vizionat de directorul de la &bdquo;Globe&quot;, &icirc;ntr-un simpatic degradeu şi crescendo, care a mers de la condiţia de martoră apatică a aranjamentelor matrimoniale ce-o vizează la aceea de &icirc;ndrăgostită eliberată de paralizia unei feţe fără expresie şi reacţii. Adriana Trandafir a strălucit. Ion Grosu &icirc;n rolul domnului Page a jucat bine plictiseala şi participarea, condiţia unui om fără &icirc;nsuşiri, care mai mult se odihneşte &icirc;n viaţă dec&acirc;t trăieşte, asemeni unei păpuşi mecanice pe care n-o mai trezeşte la viaţă nici o cheie. Foarte convingător şi pitoresc Simple, jucat de Mihai Niţă, Shallow, cu o ironie de &icirc;nvechit &icirc;n rele şi spovedanii. Bărbaţii foarte buni, cu roluri conturate memorabil, precum caracterele şi caricaturile romanelor &icirc;n foileton de secolul XIX.<br />
+		Falstaff refugiat de teama răfuielilor<br />
+		Un lucru cu actorii intertextualist cu citate din mai multe secole şi partituri dramatice, ataş&acirc;nd trimiteri limpezi la VIP-uri media ori din lumea rock-ului, fie că vorbim de interpretarea lui Fenton, Bardolph, Slender, John, de admirabilul rol al doctorului Caius care l-a influenţat pe Alecsandri &icirc;n ciclul Chiriţei, de Evans, Pistol, Nym şi hangiu, de Robin, de Rugby ori de povestitor. Ar fi multe de spus şi de lăudat. Nicu Alifantis c&acirc;nt&acirc;nd voce, chitară, percuţii, trupa Byron cu Dan Byron la chitară, flaut şi percuţii, fingers, keyboards, acordeon, Costin Oprea la chitară şi chitară electrică, Dan Georgescu, la bass, John Ciurea la tobe şi percuţii. Un spectacol revigorant şi ironic, nostalgic şi ca o cursă de formula unu. O echipă fantastică pe care am aplaudat-o cu poftă, chiar dacă &icirc;n lume există şcoli pentru actorii de musical la care n-au &icirc;nvăţat actorii de la &bdquo;Metropolis&quot;. Am văzut şi ceva dezabuzaţi şi spectatori apatici şi critici, unii doar c&acirc;rtitori. Mi s-au părut bătr&acirc;ni şi snobi de provincie.&quot;</span></em></p>
+	<div dir="ltr">
+		<em><span style="font-size:16px;"><span style="color:#fff;"><b id="internal-source-marker_0.5975924297235906" style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; "><br />
+		</b></span></span></em></div>
+	<div dir="ltr">
+		<span style="font-size:24px;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HAI LA TEATRU.RO <br />
+		</strong></span><span style="font-size:16px;">23.05.2011</span><em><span style="font-size:16px;"><br />
+		<br />
+		&ldquo;Nevestele vesele&rdquo; cu accente gay, cu step şi cu Tina Turner<br />
+		Un text scris &icirc;n anul 1602, montat (a doua oară) de un regizor născut &icirc;n 1946 şi cu o distribuţie a cărei v&acirc;rstă medie (aproximată) este de 35-37 de ani. &ldquo;<a href="about:blank">Nevestele vesele din Windsor</a>&rdquo; de la <a href="about:blank">Teatrul Metropolis</a> oferă publicului o prospeţime pe care mi-aş dori s-o &icirc;nt&acirc;lnesc ceva mai des pe scenele noastre.<br />
+		Recunosc că n-am mai trecut de c&acirc;teva luni pe la Teatrul Metropolis. De fapt, ultima perioada m-a desprins de teatru &icirc;n general, motivul fiind legat de un masterat pe care &icirc;l fac la <a href="about:blank">London School of Journalism</a>. Revenirea mi-a adus bucurie şi speranţă. Bucurie pentru că am vazut un Tocilescu care tratează cu un umor fin subiectele acide şi care-i plasează pe tineri actorii &icirc;ntr-un exercitiu de toleranţă pe care orice cetăţean al acestei naţiuni ar trebui să-l practice mai des. Speranţa vine din plăcerea cu care (se) joacă, de exemplu, Gelu Niţu şi Adriana Trandafir şi care are o forţă potenţială molipsitoare pentru colegii de scena mai puţin &icirc;ncrezători &icirc;n ei &icirc;nşişi.<br />
+		Dar să exemplific. Uitaţi de versiunea originală a textului, pentru că din Nevestele lui Shakespeare n-au rămas dec&acirc;t firul epic, tema şi durata spectacolului (mult peste trei ore). Nu ştiu cine a făcut adaptarea textului, dar are toată admiraţia mea. Dacă vrem ca publicul t&acirc;năr să vină la teatru pentru teatru, atunci trebuie să-l atragem cu un limbaj viu, adecvat v&acirc;rstei şi mediului &icirc;n care trăieşte fără a fi, totuşi, vulgar. [Ieşind puţin din sfera teatrală, &icirc;mi amintesc de o &icirc;ncercare similară a editurii Polirom care a decis să aducă la zi o carte de căpăt&acirc;i a fiecărui adolescent: <a href="about:blank">De veghe-n lanul de secar</a>ă. Citiţi cele două versiuni (prima tradusă de Catinca Ralea, cea de-a doua de Cristian Ionescu) şi-o să-mi dati dreptate.]<br />
+		Tocilescu &icirc;mbracă noua variantă de text &icirc;n costum de piele, apelează la Alifantis pentru a adapta povestirea la portativ, aduce şi-un band pe scenă şi &icirc;i pune pe actori să transpire &icirc;n paşi de step. &Icirc;n acest peisaj &icirc;şi găsesc locul un homosexual (pe care Răzvan Rotaru &icirc;l &icirc;ntruchipează sublim) şi o asistentă medicală &icirc;n care doarme Tina Turner (Adriana Trandafir). Partitura doctorului (Adrian Ciobanu) nu este altceva dec&acirc;t o şop&acirc;rlă, un apropos delicat la un subiect sensibil pe care fie &icirc;l urmărim aproape zilnic la ştirile TV, fie &icirc;l constatăm pe pielea noastra &icirc;n spitale.<br />
+		Există, totuşi, c&acirc;teva amănunte creatoare de disconfort. &Icirc;n primul r&acirc;nd, spectacolul ar trebui jucat pe o scenă mai mare. Muzica şi dansul produc un zgomot aparte pe care spaţiul mic al Teatrului Metropolis nu-l poate absorbi. Din acest motiv, spectatorul nu poate desluşi foarte bine textul, iar construcţia, ansamblul &icirc;şi pierd astfel din farmec.<br />
+		Un alt lucru care mi-a sărit &icirc;n ochi a fost uşoara blazare a c&acirc;torva dintre mai tinerii actori. Sper ca aceasta să dispară pe măsură ce spectacolul creşte.<br />
+		La capitolul plusuri, &icirc;nsă, se poziţionează muzicienii &ndash; Dan Byron &icirc;n mod special &ndash; care se transformă &icirc;n personaje. Uitaţi-vă la mimica, la gestica lor. Bucuraţi-vă, totodată, de momentul de jazz oferit de Gelu Niţu şi fiţi atenţi la picioarele actorilor care sunt pregătite să zburde &icirc;n paşi de step.<br />
+		Nevestele vesele din Windsor, un remake de Alexandru Tocilescu (durata 3h 15min) cu: Lucian Iancu, George Ivaşcu, Adriana Trandafir, Ion Grosu, Mariana Dănescu, Crina Mureşan, Mihai Niţă, Victor Apetrei/Mihai Stănescu, Marcel Lovin, Gelu Niţu, Răzvan Rotaru/Dorin Eugen Ionescu, Eduard Haris, Adi Ciobanu, Şerban Celea, Dani Popescu/Dan Cogălniceanu, Ionuţ Ciocia/Andrei Bratu, Darius Daradici, Dan Rădulescu, Ştefania Dumitru, Loredana Căvăşdan, Raluca Botez, Oana Berbec, Eduard C&acirc;rlan, Nicu Alifantis. </span></em></div>
+</div>
+<div>
+	<div dir="ltr">
+		<span style="color:#fff;"><b id="internal-source-marker_0.5975924297235906"><font face="'Arial Black'" size="3"><span style="white-space: pre-wrap;"><br />
+		</span></font> </b></span></div>
+	<div dir="ltr">
+		<span style="font-size:16px;"><img src="https://lh6.googleusercontent.com/VFtQSdkqE1S5Z27W5uv8kuncy-W7YNldMgOgEXsAX7-VEzjBObHqz2qIjmp4zUNm1n1dhWLM5eXxdZKPJaO4bcHuUD2vcMzmH6MO9Ck6i9jLmJR-pt0" /></span><b><br />
+		<span style="font-size: 11px; font-family: Verdana; color: rgb(35, 31, 32); background-color: transparent; vertical-align: baseline; white-space: pre-wrap; ">9 mai 2011</span><br />
+		</b><span style="font-size:36px;">Nevestele vesele de la Teatrul Metropolis</span><span style="font-size:22px;"><br />
+		Autor: <a href="http://eduard/">SEBASTIAN S. EDUARD</a><br />
+		<br />
+		</span><span style="font-size:16px;"><em>&quot;Un act cultural de excepţie a avut loc s&acirc;mbătă seară pe scena Teatrului Metropolis. Musicalul &quot;Neves te le vesele din Windsor&quot; este un re make al spectaco lului de mare succes din anul 1978 &ndash; controversat şi cenzurat &icirc;n perioada comunistă, şi care revine astăzi pe sce na Teatrului Me tro po lis sub aceeaşi ba ghetă artistică, dar cu o distribuţie nouă.<br />
+		<br />
+		Comedia muzicală reinventează &icirc;n cheie inedită universul lui Shakespeare plec&acirc;nd de la textul dramaturgului britanic, &quot;cernut&quot; prin regia lui Alexandru Tocilescu şi muzica lui Nicu Alifantis. Rezultatul este un musical intim, favorizat de dimensiunile mici ale sălii de la Metropolis, cu excelentă muzică live (Byron să trăiască!) cu multă mişcare scenică. Şi chiar dacă uneori actorii rom&acirc;ni nu se ridică vocal la &icirc;nălţimea colegilor vestici, mai exersaţi &icirc;n astfel de deprinderi artistice, jocul actoricesc compensează acest lucru din plin. Cu scuze că amintim doar o parte din distribuţie &ndash; o Adriana Trandafir aplaudată la scenă deschisă, un George Ivaşcu permanent &quot;&icirc;n priză&quot; (personal cred că energia lui ar putea hrăni un nou reactor nuclear de la Cernavodă), Ion Grosu impecabil.<br />
+		<br />
+		Duceţi-vă şi vedeţi un gen teatral mai puţin popular &icirc;n Rom&acirc;nia, o piesă care ţine puţin peste trei ore, dar care vă va destinde cu siguranţă şi vă va (re)deschide apetitul pentru teatru. Acum, c&acirc;t nu se termină stagiunea.&quot;</em></span></div>
+	<div dir="ltr">
+		&nbsp;</div>
+	<div dir="ltr">
+		<font color="#000000" face="'Arial Black'" size="3"><span style="white-space: pre-wrap;"><br />
+		</span></font>
+		<div dir="ltr">
+			<em><b style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; "><br />
+			<b id="internal-source-marker_0.8760363007895648"><span style="font-size: 19px; background-color: transparent; vertical-align: baseline; white-space: pre-wrap; "> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b></b></em></div>
+		<div dir="ltr">
+			<em><span style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; "><br />
+			<span style="font-size: 15px; white-space: pre-wrap;"><br />
+			</span></span></em></div>
+	</div>
+</div>
+</font><br>
+																											<div class="buton-sus"><a href="http://www.teatrulmetropolis.ro/spectacole/nevestele-vesele-din-windsor-de-w-shakespeare.html#top">^ Sus</a></div>
+																									</div>
+																						</td></tr></table>
+										</td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450"  height="13"></td>
+										<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+									</tr>
+								</table>
+					</td>
+				</tr>
+			</table>
+		
+		<script>show('descriere');</script>
+	</td>
+<td width="300" align="center" valign="top"><br><br>
+		<br>
+<div class="dreapta-cautare">
+		
+			<input type="text" id="keyword" value="Scrie aici și ..." onfocus="if (this.value == 'Scrie aici și ...') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Scrie aici și ...';}" class="search-input" size="19" onKeyPress="return submitenter_cauta(event)">
+			<a onclick="moduleSearch();" class="buton" >Caută</a>
+		
+</div>
+<br>
+<div class="dreapta-cos">	
+	<div id="module_cart" >
+ <div class="middle">
+	
+    	<table cellpadding="5" cellspacing="0" style="width: 200px;color:white;" background="catalog/view/theme/default/image/c.png"><tr><td>
+		<img src="catalog/view/theme/default/image/bilete_fara_rezervari.png" width="181" height="129" border="0"/>
+	</td></tr></table>
+    	
+  </div>
+</div>
+<script type="text/javascript"><!--
+$(document).ready(function () {
+	$('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+	$("a[id^='adaugabilet']").click(function () {
+		 var randlocIDValSplitter    = (this.id).split("-");
+    var rand            = randlocIDValSplitter[1];
+	var loc            = randlocIDValSplitter[2];
+	var reprezentatie_id            = randlocIDValSplitter[3];
+	
+	control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoatebilet']").click(function () {
+		 var randlocIDValSplitter   = (this.id).split("-");
+		 var rand            		= randlocIDValSplitter[1];
+		 var loc            		= randlocIDValSplitter[2];
+		 var reprezentatie_id       = randlocIDValSplitter[3];
+	
+		control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control_scoate='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoate_sala']").click(function () {
+		var randlocIDValSplitter    = (this.id).split("-");
+		var reprezentatie_id        = randlocIDValSplitter[1];
+	
+	
+    
+        $.ajax({
+            url: 'index.php?route=continut/cart/callback&reprezentatie_id='+reprezentatie_id,
+            type: 'get',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='clear_cart']").click(function () {
+		$.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/clear',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            } 
+                   
+        });
+		
+	});
+	
+	 $('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+ 
+});
+</script>
+
+
+</div>
+<br>
+<div class="dreapta-cont">
+	<table width="200" cellspacing='0' cellpadding='0'>
+		
+				<tr><td background="catalog/view/theme/default/image/c.png" width="110" height="30" valign="middle" align="center" >
+				<font color="#d2d0d0">Accesează cont</font>
+		</td>
+		<td width="90" valign="middle" align="center">
+			<a class="buton" href="http://www.teatrulmetropolis.ro/creaza_cont.html" id="fancybox_page_no_reload">Cont nou ?</a>
+		</td></tr>
+		<tr><td colspan="2" height="50" width="200" background="catalog/view/theme/default/image/c.png" valign="middle" align="center">
+			<form action="http://www.teatrulmetropolis.ro/index.php?route=common/home/autentificare" method="post" id="form_autentificare">
+				<input type="text" name="email" value="Email utilizator" onfocus="if (this.value == 'Email utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Email utilizator';}" class="user-input">
+				<input type="password" name="password" value="Parola utilizator" onfocus="if (this.value == 'Parola utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Parola utilizator';}" class="pass-input" onKeyPress="return submitenter_login_cont(event)">
+				<input type="hidden" name="redirect" value="http://www.teatrulmetropolis.ro/index.php?route=continut/spectacole&amp;spectacol_id=30">
+			</form>
+		</td></tr>
+		<tr><td width=110" height="30"></td>
+		<td background="catalog/view/theme/default/image/c.png" width="90" height="30" valign="middle" align="center">
+			<a onClick="$('#form_autentificare').submit();"  class="buton" >Accesează</a>
+		</td></tr>
+		</table>
+</div>
+<br>
+<br>
+<div class="dreapta-comentarii">
+	<a href="http://www.teatrulmetropolis.ro/stiri/adela-popescu-si-mihai-bendeac-in-premiera-pe-o-banca-la-metropolis.html#comentariu3" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','catalog/view/theme/default/image/parereaTA_hover.png',1)">
+		<img src="catalog/view/theme/default/image/parereaTA_normal.png" name="Image50" width="188" height="126" border="0" id="Image50" /><br>
+		<table id="Ultim_Coment">
+							<tr>
+								<td id="dataUltim_Coment">
+									15 octombrie 2011 la 16:17
+								</td>
+							<tr>
+								<td id="idUltim_Coment">
+									*Nume:
+								</td>
+							<tr>
+								<td id="contentUltim_Coment">
+									nu va suparati , cand se va mai juca piesa?
+								</td>
+							</tr>
+						</table>		
+	</a>
+</div>
+<br>
+<br>
+<div class="dreapta-ajutor">
+	<a href="http://www.teatrulmetropolis.ro/ajutor" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','catalog/view/theme/default/image/ajutor_hover.png',1)" id="fancybox_page_rel">
+		<img src="catalog/view/theme/default/image/ajutor_normal.png" name="Image51" width="171" height="101" border="0" id="Image51" /><br>
+	</a>
+</div>
+<div style="width:210px;margin-top:20px;"><img src="catalog/view/theme/default/image/visa_icon.jpg"></div></td>
+</tr></table>
+</div>	
+</td>
+</tr></table>
+</div>				
+
+<div id="footer_continut">
+	<table width="1000" align="center" height="200" background="catalog/view/theme/default/image/c.png"><tr><td><br>
+		<table width="90%" cellpadding="0" cellspacing="0"  style="color: #999;font-family:Arial, Helvetica, sans-serif;font-size:14px;">
+  <tr>
+    <td width="23%" rowspan="6" align="right" valign="top" >
+    <img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/sigla_tm.png" width="100" height="100" border="0" style="margin-right:30px;"/>
+    </td>
+    <td width="70%">Adresa: Str. Mihai Eminescu nr.89, sector 2, București.</td>
+    <td width="7%" rowspan="6" align="center" valign="top">
+   <a href="http://www.pmb.ro" target="blank"><img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/primaria_mun_buc.png" width="75" height="150" border="0" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Rezervări bilete se pot face și telefonic, la numerele: <br />
+      <strong style="color:#FFF">021 210 51 08</strong>  sau  <strong style="color:#FFF">0728 138 265</strong><br />
+      (în intervalul orar 10:00 - 19.00)<br />
+    Rezervarea telefonică este valabilă 48 de h.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font style="font-size:16px; color:#FFF">&copy;Teatrul Metropolis. Toate drepturile rezervate</font></td>
+  </tr>
+  <tr>
+    <td ><font style="font-size:12px;">Site produs de <strong style="color: #CCC">Legolas Media</strong><br />
+        Design by <strong style="color: #CCC">Alexandru Șulai</strong></font></td>
+  </tr>
+</table>	</td></tr></table>
+</div>
+
+
+</div>
+
+</body></html> 

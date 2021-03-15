@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ro" xml:lang="ro">
+<head>
+<title>Teatrul Metropolis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Teatrul Metropolis" />
+<meta name="keywords" content="" />
+<link href="http://www.teatrulmetropolis.ro/image/data/logo-ico.gif" rel="shortcut icon" type="image/x-icon" />
+<base href="http://www.teatrulmetropolis.ro/" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<!--[if IE]>
+	
+<![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-collapser/jquery.collapser.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+
+</head>
+<body bgcolor="#000000">
+<a name="top"></a>
+<div id="container">
+	<div id="div2_continut"></div>
+	
+	<div id="header_continut">
+		<table width="100%">
+		<tr><td height="20" colspan="8"></td></tr>
+		<tr><td width="10%"></td><td align="center" valign="top" >
+				
+				<a href="http://www.teatrulmetropolis.ro/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','catalog/view/theme/default/image/prima_pg_hover.png',1)">
+						<img src="catalog/view/theme/default/image/prima_pg_normal.png" name="Image1" width="85" height="45" border="0" id="Image1" />
+					</a><br/>
+					<div class="contact_continut">
+                       <a class="contact1_continut" href="http://www.teatrulmetropolis.ro/contact.html" id="fancybox_page_rel">&nbsp;</a>
+                    </div>
+					</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/artisti" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','catalog/view/theme/default/image/artisti_hover.png',1)">
+						<img src="catalog/view/theme/default/image/artisti_normal.png" name="Image2" width="195" height="196" border="0" id="Image2" />
+					</a>
+										</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/program" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','catalog/view/theme/default/image/program_hover.png',1)">
+						<img src="catalog/view/theme/default/image/program_normal.png" name="Image3" width="222" height="175" border="0" id="Image3" />
+					</a>
+										</td>
+					
+				<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/spectacole" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','catalog/view/theme/default/image/spectacole_hover.png',1)">
+						<img src="catalog/view/theme/default/image/spectacole_normal.png" name="Image5" width="154" height="145" border="0" id="Image5" />
+					</a>
+									</td>
+					<td align="center" valign="top" >
+									
+					
+					<a href="http://www.teatrulmetropolis.ro/despre_noi" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','catalog/view/theme/default/image/despre_noi_hover.png',1)">
+						<img src="catalog/view/theme/default/image/despre_noi_normal.png" name="Image6" width="174" height="145" border="0" id="Image6" />
+					</a>
+							</td>
+		<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/stiri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','catalog/view/theme/default/image/stiri_ANTET_hover.png',1)">
+						<img src="catalog/view/theme/default/image/stiri_ANTET_normal.png" name="Image4" width="144" height="120" border="0" id="Image4" />
+					</a>
+									</td>
+		<td width="10%"></td></tr></table>		
+	</div>
+<div id="content_continut">
+	<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%"><tr><td align="center" >
+		<div class="center">
+			<table cellspacing="0" cellpadding="0" border="0" style="margin-bottom:20px;"><tr><td align="center" width="70%" valign="top">
+							<table width="100%" cellspacing="30" cellpadding="0" >
+					<tr><td width="100%"valign="top" align="center">
+						<table border='0' width="476" cellspacing='0' cellpadding='0' >
+							<tr>
+							<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+							<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+							<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr><td background="catalog/view/theme/default/image/c.png" colspan='3' width="476"  valign="middle" align="center">
+								<font size="3" color="white"><b>Nici un rezultat.</b></font><br><font color="white">
+								Va sugerăm să verificați dacă ați introdus corect criteriul de căutare <br>sau (dacă este cazul) folosiți diacritice.
+								</font>
+							</td></tr>
+							<tr><td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td><td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td><td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td></tr>
+						</table>
+					</td></tr>
+				</table>
+					</td>
+	<td width="30%" align="center" valign="top"><br><br>
+		<br>
+<div class="dreapta-cautare">
+		
+			<input type="text" id="keyword" value="Scrie aici și ..." onfocus="if (this.value == 'Scrie aici și ...') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Scrie aici și ...';}" class="search-input" size="19" onKeyPress="return submitenter_cauta(event)">
+			<a onclick="moduleSearch();" class="buton" >Caută</a>
+		
+</div>
+<br>
+<div class="dreapta-cos">	
+	<div id="module_cart" >
+ <div class="middle">
+	
+    	<table cellpadding="5" cellspacing="0" style="width: 200px;color:white;" background="catalog/view/theme/default/image/c.png"><tr><td>
+		<img src="catalog/view/theme/default/image/bilete_fara_rezervari.png" width="181" height="129" border="0"/>
+	</td></tr></table>
+    	
+  </div>
+</div>
+<script type="text/javascript"><!--
+$(document).ready(function () {
+	$('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+	$("a[id^='adaugabilet']").click(function () {
+		 var randlocIDValSplitter    = (this.id).split("-");
+    var rand            = randlocIDValSplitter[1];
+	var loc            = randlocIDValSplitter[2];
+	var reprezentatie_id            = randlocIDValSplitter[3];
+	
+	control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoatebilet']").click(function () {
+		 var randlocIDValSplitter   = (this.id).split("-");
+		 var rand            		= randlocIDValSplitter[1];
+		 var loc            		= randlocIDValSplitter[2];
+		 var reprezentatie_id       = randlocIDValSplitter[3];
+	
+		control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control_scoate='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoate_sala']").click(function () {
+		var randlocIDValSplitter    = (this.id).split("-");
+		var reprezentatie_id        = randlocIDValSplitter[1];
+	
+	
+    
+        $.ajax({
+            url: 'index.php?route=continut/cart/callback&reprezentatie_id='+reprezentatie_id,
+            type: 'get',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='clear_cart']").click(function () {
+		$.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/clear',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            } 
+                   
+        });
+		
+	});
+	
+	 $('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+ 
+});
+</script>
+
+
+</div>
+<br>
+<div class="dreapta-cont">
+	<table width="200" cellspacing='0' cellpadding='0'>
+		
+				<tr><td background="catalog/view/theme/default/image/c.png" width="110" height="30" valign="middle" align="center" >
+				<font color="#d2d0d0">Accesează cont</font>
+		</td>
+		<td width="90" valign="middle" align="center">
+			<a class="buton" href="http://www.teatrulmetropolis.ro/creaza_cont.html" id="fancybox_page_no_reload">Cont nou ?</a>
+		</td></tr>
+		<tr><td colspan="2" height="50" width="200" background="catalog/view/theme/default/image/c.png" valign="middle" align="center">
+			<form action="http://www.teatrulmetropolis.ro/index.php?route=common/home/autentificare" method="post" id="form_autentificare">
+				<input type="text" name="email" value="Email utilizator" onfocus="if (this.value == 'Email utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Email utilizator';}" class="user-input">
+				<input type="password" name="password" value="Parola utilizator" onfocus="if (this.value == 'Parola utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Parola utilizator';}" class="pass-input" onKeyPress="return submitenter_login_cont(event)">
+				<input type="hidden" name="redirect" value="http://www.teatrulmetropolis.ro/index.php?route=continut/cautare&amp;cuvant_cheie=Scrie aici și ...">
+			</form>
+		</td></tr>
+		<tr><td width=110" height="30"></td>
+		<td background="catalog/view/theme/default/image/c.png" width="90" height="30" valign="middle" align="center">
+			<a onClick="$('#form_autentificare').submit();"  class="buton" >Accesează</a>
+		</td></tr>
+		</table>
+</div>
+<br>
+<br>
+<div class="dreapta-comentarii">
+	<a href="http://www.teatrulmetropolis.ro/stiri/adela-popescu-si-mihai-bendeac-in-premiera-pe-o-banca-la-metropolis.html#comentariu3" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','catalog/view/theme/default/image/parereaTA_hover.png',1)">
+		<img src="catalog/view/theme/default/image/parereaTA_normal.png" name="Image50" width="188" height="126" border="0" id="Image50" /><br>
+		<table id="Ultim_Coment">
+							<tr>
+								<td id="dataUltim_Coment">
+									15 octombrie 2011 la 16:17
+								</td>
+							<tr>
+								<td id="idUltim_Coment">
+									*Nume:
+								</td>
+							<tr>
+								<td id="contentUltim_Coment">
+									nu va suparati , cand se va mai juca piesa?
+								</td>
+							</tr>
+						</table>		
+	</a>
+</div>
+<br>
+<br>
+<div class="dreapta-ajutor">
+	<a href="http://www.teatrulmetropolis.ro/ajutor" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','catalog/view/theme/default/image/ajutor_hover.png',1)" id="fancybox_page_rel">
+		<img src="catalog/view/theme/default/image/ajutor_normal.png" name="Image51" width="171" height="101" border="0" id="Image51" /><br>
+	</a>
+</div>
+<div style="width:210px;margin-top:20px;"><img src="catalog/view/theme/default/image/visa_icon.jpg"></div>			</td>
+	</tr></table>
+		</div>
+	
+	
+
+<b>Notice</b>: Undefined variable: footer_continut in <b>/home/teatmetr/public_html/catalog/view/theme/default/template/continut/cautare.tpl</b> on line <b>113</b><br />
+<b>Warning</b>:  fopen(/home/teatmetr/public_html/system/logs/error.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in <b>/home/teatmetr/public_html/system/library/logger.php</b> on line <b>12</b><br />
+<br />
+<b>Warning</b>:  fwrite(): supplied argument is not a valid stream resource in <b>/home/teatmetr/public_html/system/library/logger.php</b> on line <b>14</b><br />
+<br />
+<b>Warning</b>:  fclose(): supplied argument is not a valid stream resource in <b>/home/teatmetr/public_html/system/library/logger.php</b> on line <b>16</b><br />
+ 

@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ro" xml:lang="ro">
+<head>
+<title>Teatrul Metropolis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Teatrul Metropolis" />
+<meta name="keywords" content="" />
+<link href="http://www.teatrulmetropolis.ro/image/data/logo-ico.gif" rel="shortcut icon" type="image/x-icon" />
+<base href="http://www.teatrulmetropolis.ro/" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<!--[if IE]>
+	
+<![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-collapser/jquery.collapser.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+
+</head>
+<body bgcolor="#000000">
+<a name="top"></a>
+<div id="container">
+	<div id="div2_continut"></div>
+	
+	<div id="header_continut">
+		<table width="100%">
+		<tr><td height="20" colspan="8"></td></tr>
+		<tr><td width="10%"></td><td align="center" valign="top" >
+				
+				<a href="http://www.teatrulmetropolis.ro/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','catalog/view/theme/default/image/prima_pg_hover.png',1)">
+						<img src="catalog/view/theme/default/image/prima_pg_normal.png" name="Image1" width="85" height="45" border="0" id="Image1" />
+					</a><br/>
+					<div class="contact_continut">
+                       <a class="contact1_continut" href="http://www.teatrulmetropolis.ro/contact.html" id="fancybox_page_rel">&nbsp;</a>
+                    </div>
+					</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/artisti" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','catalog/view/theme/default/image/artisti_hover.png',1)">
+						<img src="catalog/view/theme/default/image/artisti_normal.png" name="Image2" width="195" height="196" border="0" id="Image2" />
+					</a>
+										</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/program" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','catalog/view/theme/default/image/program_hover.png',1)">
+						<img src="catalog/view/theme/default/image/program_normal.png" name="Image3" width="222" height="175" border="0" id="Image3" />
+					</a>
+										</td>
+					
+				<td align="center" valign="top" >
+											<a href="http://www.teatrulmetropolis.ro/spectacole"><img src="catalog/view/theme/default/image/spectacole_hover.png" width="154" height="145" border="0"  /></a>
+									</td>
+					<td align="center" valign="top" >
+									
+					
+					<a href="http://www.teatrulmetropolis.ro/despre_noi" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','catalog/view/theme/default/image/despre_noi_hover.png',1)">
+						<img src="catalog/view/theme/default/image/despre_noi_normal.png" name="Image6" width="174" height="145" border="0" id="Image6" />
+					</a>
+							</td>
+		<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/stiri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','catalog/view/theme/default/image/stiri_ANTET_hover.png',1)">
+						<img src="catalog/view/theme/default/image/stiri_ANTET_normal.png" name="Image4" width="144" height="120" border="0" id="Image4" />
+					</a>
+									</td>
+		<td width="10%"></td></tr></table>		
+	</div>
+<script>
+
+function show(control){
+var pagina = new Array()
+pagina[0]="descriere"
+pagina[1]="distributia"
+pagina[2]="cronici"
+
+if (document.layers) { // NN4+
+	document.layers['table_spectacol'].height = '100%';
+	document.layers['table_caract_spect'].height = '100%';
+	
+	for (i=0;i<pagina.length;i++){
+		
+		if (pagina[i] == control) {
+			document.layers[pagina[i]].visibility = "show";
+			document.layers[pagina[i]].display = "block";
+			document.layers[pagina[i]].position = "absolute";
+			document.layers["martor_" + pagina[i]].visibility = "show";
+			document.layers["martor_" + pagina[i]].display = "block";
+			}
+		else
+			{
+			document.layers[pagina[i]].visibility = "hide";
+			
+			document.layers["martor_" + pagina[i]].visibility = "hide";
+			
+      			}
+  		}
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+		document.getElementById('table_spectacol').style.height='100%';
+		document.getElementById('table_caract_spect').style.height='100%';
+		for (i=0;i<pagina.length;i++){
+			if (pagina[i] == control) {
+				var obj = document.getElementById(pagina[i]);
+				
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "visible";
+				obj.style.display = "block";
+				
+
+				obj.style.position = "relative";
+				objSD.style.visibility = "visible";
+				objSD.style.display = "block";
+				}
+			else
+				{
+				var obj = document.getElementById(pagina[i]);
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "hidden";
+				
+				obj.style.display = "none";
+				objSD.style.visibility = "hidden";
+				
+				}
+		}
+	}
+else if (document.all) { // IE 4
+	document.all['table_spectacol'].style.height = '100%';
+	document.all['table_caract_spect'].style.height = '100%';
+	for (i=0;i<pagina.length;i++){
+		if (pagina[i] == control) {
+			document.all[pagina[i]].style.visibility = "visible";
+			document.all[pagina[i]].style.display = "block";
+			document.all[pagina[i]].style.position = "absolute";
+			document.all["martor_" + pagina[i]].style.visibility = "visible";
+			document.all["martor_" + pagina[i]].style.display = "block";
+			}
+		else {
+			document.all[pagina[i]].style.visibility = "hidden";
+			
+			document.all["martor_" + pagina[i]].style.visibility = "hidden";
+			
+			}
+  		}
+	}
+}
+</script>
+
+<div id="content_continut" >
+	<table cellspacing="0" cellpadding="0" border="0" width="100%" ><tr><td align="center">
+		<div class="center" id="table_spectacol">
+			<table width="1000" cellspacing="0" cellpadding="0" border="0" ><tr><td align="center" valign="top" width="700" style="min-height:700px;">
+							<table cellspacing="20" cellpadding="0" width="100%" >
+					<tr><td width="33%" valign="top" align="center" >
+						<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/Henri_de_Toulouse-Lautrec_060-500x500.png" class="grouped_elements" ><img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/Henri_de_Toulouse-Lautrec_060-200x300.png" border="0" width="200" height="285"></a><br><br>
+													<div style="display: block;">
+																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_4723-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_4723-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/aaIMG_4700%20copy-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/aaIMG_4700%20copy-50x50.png" border="0" width="31" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_4698-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_4698-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_4842%20copy-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_4842%20copy-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_4917-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_4917-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_5169-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_5169-50x50.png" border="0" width="33" height="50" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_5249-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_5249-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_4757-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_4757-50x50.png" border="0" width="50" height="35" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_5205-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/52/IMG_5205-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>															</div>
+												<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('descriere');"><font size="4" >Descriere</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_descriere" style="margin-top:-40px;margin-right:10px;float:right;">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+									
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('distributia');"><font size="4" >Distributia</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_distributia" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+										
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('cronici');"><font size="4" >Cronici</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_cronici" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+												<br><br>
+						<div class="buton-inapoi"><a href="http://www.teatrulmetropolis.ro/spectacole">< Spectacole</a></div>
+					</td>
+					<td width="67%" valign="top" >
+						<table border='0' width="476" cellspacing='0' cellpadding='0' style="height: auto;">
+							<tr>
+								<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476"  align="center" valign="middle">
+									<font size="4"  color="white">LAUTREC LA BORDEL</font><br>
+									<font size="3"  color="white">Regia: Horatiu MALAELE</font>
+																			<br>
+										<table style="margin-left:20px;margin-right:10px;" ><tr><td>
+											<font style="font-size:18px;" color="white"><b><div>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">după Mario MORETTI</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">traducerea Angela IOAN</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		&nbsp;</p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Cu: George IVAŞCU - Henri de Toulouse Lautrec</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Vlad IVANOV - Aristide Bruant<br />
+		</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Ana COVALCIUC</span></span></strong></em><em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">&nbsp;- Suzanne Valadon<br />
+		</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Ozana BARABANCEA - Madama<br />
+		</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Ruxandra MANIU -&nbsp;</span></span></strong></em><em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Matroana 1</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Raluca VERMEŞAN -&nbsp;</span></span></strong></em><em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Matroana 2</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Cristina ILIN - Paulette/ Rosa la Rouge</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Gilda STAN - Claudine</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Iulia V&Acirc;NTUR - Adele, mama lui Henri</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Augustin POP - Alphonso, tatal lui Henri</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Simona POP - Jane Avril</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Orlando PETRICEANU - Marcel</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Raluca DINCULESCU - Jane Pantera</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Oana DRAGNEA - Alter-Ego</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Valentin FLOREA - Valentin de Cauciuc</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		&nbsp;</p>
+	<p style="text-align: center; ">
+		<span style="font-size:16px;"><em><strong><span style="font-family: arial, helvetica, sans-serif; ">Regia: Horaţiu MĂLĂELE</span></strong></em></span></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">asistent regie: Alexandru NAGY</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">scenografia: Dragos BUHAGIAR</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<span style="font-size:12px;"><em><strong><span style="font-family:arial,helvetica,sans-serif;">asistent decor: Vladimir IUGANU&nbsp;</span></strong></em></span></p>
+	<p style="text-align: center; ">
+		<span style="font-size:12px;"><em><strong><span style="font-family:arial,helvetica,sans-serif;">asistent costume: Ioana PASHCA</span></strong></em></span></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">muzica originala: Razvan Alexandru DIACONU</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">coregrafia: Felicia DALU</span></span></strong></em></p>
+	<p style="text-align: center; ">
+		<span style="font-size:12px;"><em><strong><span style="font-family:arial,helvetica,sans-serif;">machiaj: Ioana PASHCA, Viviana GHERASIM</span></strong></em></span></p>
+	<p style="text-align: center; ">
+		<span style="font-size:12px;"><em><strong><span style="font-family:arial,helvetica,sans-serif;">sufleur: Viviana&nbsp;GHERASIM</span></strong></em></span></p>
+	<p style="text-align: center; ">
+		<em><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">Inregistrarile audio au fost efectuate si cu participarea artistilor: Catalina GRAMA (JOJO), George ALEXANDRU, Robert NAGY si Anca NAGY</span></span></strong></em></p>
+</div>
+</b></font>
+										</td></tr></table>
+																	</td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/lb.png" width="13" height="13" ></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+							</tr>
+						</table>
+						<br><br>
+													<table border='0'  cellspacing='0' cellpadding='0' valign="top">
+							<tr>
+																	<td background="catalog/view/theme/default/image/miercuri/l.png" width="7" height="20"></td>
+									<td background="catalog/view/theme/default/image/miercuri/c.png" width="90" height="20" align="center" valign="middle">
+										<a href="http://www.teatrulmetropolis.ro/program/reprezentatie_lautrec-la-bordel_299.html" class="buton-data">
+											<font size="1"><b>M</b></font> | <font size="1">22 feb | 19:00</font>										</a>
+									</td>
+									<td background="catalog/view/theme/default/image/miercuri/r.png" width="7" height="20"></td>
+									<td width="20" height="20"></td>
+																	<td background="catalog/view/theme/default/image/joi/l.png" width="7" height="20"></td>
+									<td background="catalog/view/theme/default/image/joi/c.png" width="90" height="20" align="center" valign="middle">
+										<a href="http://www.teatrulmetropolis.ro/program/reprezentatie_lautrec-la-bordel_300.html" class="buton-data">
+											<font size="1"><b>J</b></font> | <font size="1">23 feb | 19:00</font>										</a>
+									</td>
+									<td background="catalog/view/theme/default/image/joi/r.png" width="7" height="20"></td>
+									<td width="20" height="20"></td>
+															</tr>
+							</table>
+												<br><br>
+						
+								<table border='0' width="476" cellspacing='0' cellpadding='0' valign="top" align="left" >
+									<tr>
+										<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+										<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476" >
+											<table style="margin-left:20px;margin-right:10px;" align="left" id="table_caract_spect"><tr><td align="left" valign="top">
+																							<div id="descriere" style="display:block;">
+													<font size="2" color="white"><p style="text-align: center">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:16px;">Un spectacol care aduce &icirc;n prim plan viaţa boemă a Parisului de acum două secole.</span></span></p>
+<div style="text-align: center">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:16px;">Personaje decadente dar pline de fior artistic.<br />
+	O lume a stabilimentelor rău famate şi a cabaretelor<br />
+	Miltiron şi Moulin Rouge<br />
+	&icirc;n</span></span></div>
+<div style="text-align: center">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:16px;">LAUTREC LA BORDEL,&nbsp;<br />
+	Un cabaret al distracţiilor de bulevard şi a petrecerilor dansante,<br />
+	&icirc;mbibat de absinth şi de peregrinări nocturne.<br />
+	</span></span></div>
+<div style="text-align: center">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:16px;">Iată caracterele reflectate in opera lui&nbsp;<br />
+	Toulouse Lautrec, pe canavaua scenografică a lui Dragoş Buhagiar,<br />
+	&icirc;n&nbsp; tuşa satirico-expresivă a lui Horaţiu Mălăele ce semnează regia spectacolului.</span></span></div>
+<div style="text-align: center">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:16px;"><br />
+	</span></span></div>
+<div style="text-align: center">
+	<div>
+		<span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Regia: Horaţiu MĂLĂELE</span></span></div>
+	<div>
+		&nbsp;</div>
+	<div>
+		<span class="Apple-style-span" style="font-family: arial, helvetica, sans-serif; font-size: 16px; ">Cu: George IVAŞCU, Vlad IVANOV, Iulia V&Acirc;NTUR, Ozana BARABANCEA, Ana COVALCIUC, Gilda STAN, Cristina ILIN, Simona POP, Ruxandra MANIU, Raluca DINCULESCU,&nbsp; Raluca VERMEŞAN, Oana DRAGNEA , Orlando PETRICEANU,Valentin FLOREA, Augustin POP</span></div>
+</div>
+<div style="text-align: center">
+	<font class="Apple-style-span" face="arial, helvetica, sans-serif" size="4"><br />
+	</font></div>
+<div style="text-align: center">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:16px;">Scenografia: Dragos Buhagiar </span></span>
+	<div style="text-align: center">
+		<span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Asistent decor: Vladimir Iuganu</span></span></div>
+</div>
+<div style="text-align: center">
+	<span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Asistent costume: Ioana Pashca</span></span></div>
+</font>
+													<br>
+													<font size="2" color="white">Durată: 1h 20 min</font><br><br>																									</div>
+																																		<div id="distributia" style="display:none;">
+													<font size="2" color="white"><p>
+	<em><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">Cu:George IVAŞCU - Henri de Toulouse Lautrec<br />
+	</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">Vlad IVANOV - Aristide Bruant<br />
+	</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Ana COVALCIUC</span></span></strong></em><em><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">&nbsp;- Suzanne Valadon<br />
+	</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">Ozana BARABANCEA - Madama<br />
+	</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Ruxandra MANIU -&nbsp;</span></span></strong></em><em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Matroana 1</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Raluca VERMEŞAN -&nbsp;</span></span></strong></em><em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Matroana 2</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Cristina ILIN - Paulette/Rosa la Rouge</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">Gilda STAN - Claudine</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Iulia V&Acirc;NTUR - Adele, mama lui Henri</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Augustin POP - Alphonso, tatal lui Henri</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Simona POP - Jane Avril</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Orlando PETRICEANU - Marcel</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family: arial, helvetica, sans-serif; "><span style="font-size: 14px; ">Raluca DINCULESCU - Jane Pantera</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">Oana DRAGNEA - Alter-Ego</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">Valentin FLOREA - Valentin de Cauciuc</span></span></strong></em></p>
+<p>
+	<em><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;">Regia: Horaţiu MĂLĂELE</span></span></strong></em></p>
+</font><br>
+																											<div class="buton-sus"><a href="http://www.teatrulmetropolis.ro/spectacole/lautrec-la-bordel.html#top">^ Sus</a></div>
+																									</div>
+																																		<div id="cronici" style="display:none;">
+													<font size="2" color="white"><p>
+	&nbsp;</p>
+<p dir="ltr">
+	<span style="font-size:22px;"><strong>ADEVARUL</strong></span></p>
+<p>
+	<span style="font-size:16px;"><em><br />
+	19 noiembrie 2011<br />
+	Autor: Dan Boicea&nbsp;<br />
+	</em></span></p>
+<h2 dir="ltr">
+	<span style="font-size:16px;"><em>CRONICĂ DE TEATRU: Un tablou cu Toulouse-Lautre</em></span></h2>
+<p>
+	<span style="font-size:16px;"><em><br />
+	&nbsp;<img src="https://lh4.googleusercontent.com/fjxiV-IlgfkhCw8VlRvj5M5teqWGbV9hMMekbsRT6Xc_KHTLmR1nprPzyVtqWEHitPmSITLUSIYzeBfr4Y4Qp8dPhkjsrlW0rImcDaqmA7Z3mB_3Xng" /><br />
+	Vlad Ivanov &icirc;n rolul c&acirc;ntăreţului Aristide Bruant <br />
+	&bdquo;Lautrec la bordel&ldquo; e un spectacol admirabil jucat şi impecabil &icirc;ncadrat de scenografia lui Dragoş Buhagiar. Spectacolul are &icirc;nsă aceleaşi probleme de consistenţă pe care le-a avut la &icirc;nceput şi &bdquo;Leonce şi Lena&ldquo;, montat tot de Horaţiu Mălăele, la Teatrul de Comedie. <br />
+	Regizorul Horaţiu Mălăele insistă mai puţin asupra elementelor solide din biografia pictorului Toulouse-Lautrec (studiul, boala, opera) şi păstrează &icirc;n viaţă doar o caricatură care se distrează şi care &icirc;şi &icirc;ncalecă fanteziile la bordel. Ireproşabil George Ivaşcu, care &icirc;i face personajului său un corp de şampanie - e spumos, efervescent şi din c&acirc;nd &icirc;n c&acirc;nd un z&acirc;mbet lichid i se scurge de pe faţă, către o mare tristeţe.<br />
+	<br />
+	Pictor cu picioarele zdrobite, dar cu pasiunea intactă, Lautrec se refugiază la bordel, la cabaret şi la restaurant, locuri &icirc;n care lasă viaţa să-i contamineze inspiraţia. Pictează flirtul de cafenea, amorul de lupanar, dansul, bucuria şi periferia plină de poveşti.<br />
+	<br />
+	Din fericire, Mălăele &icirc;şi asumă lipsa de consistenţă, explic&acirc;nd că spectacolul său nu dezvoltă o acţiune dramatică at&acirc;t de puternică, &icirc;nc&acirc;t să st&acirc;rnească obişnuita curiozitate pentru spectatorul de teatru. Şi alege să creeze imagini pe muzică. Tablouri colorate abundent, &icirc;n roşul aprins al bordelului: picioare lungi cu voci groase, matroane impertinente şi misterioase siluete masculine.<br />
+	George Ivaşcu &icirc;n rolul pictorului Toulouse-Lautrec<br />
+	<br />
+	Mai multe genii<br />
+	<br />
+	Lautrec nimereşte de multe ori &icirc;n clubul de noapte al c&acirc;ntăreţului Aristide Bruant, un loc &icirc;n care se simte at&acirc;t de bine &icirc;nc&acirc;t se pierde cu totul. Fascinant şi personajul creat de Vlad Ivanov, un actor care face uitată sobrietatea paralizantă pe care o afişează &icirc;n filme. E molipsitor de exploziv şi de maleabil atunci c&acirc;nd c&acirc;ntă jignind publicul şi atunci c&acirc;nd dansează aproape imperceptibil, prăbuşit pe canapele. E acel Vlad Ivanov pe care &icirc;l ştiam din musicalul-buf pus de Alexandru Tocilescu la Teatrul Bulandra, &bdquo;Elizaveta Bam&quot;.<br />
+	<br />
+	Vedeta Pro tv Iulia V&acirc;ntur are şi ea o apariţie &icirc;n spectacol. E şi mamă, dar şi prostituată, iar Mălăele a sfătuit-o să nu &icirc;ncerce să iasă prea mult &icirc;n evidenţă şi bine a făcut, pentru că, prin discreţie, Iulia V&acirc;ntur nu face, din fericire, nicio greşeală.<br />
+	<br />
+	Textul lui Moretti, mai spune Mălăele, este o frescă ce conţine şi viaţa unui geniu. Prin urmare, nu ne răm&acirc;ne dec&acirc;t să admirăm un tablou cu multe personaje, &icirc;n care iese &icirc;n evidenţă tocmai cel care le pictează. Scenograful Dragoş Buhagiar răstoarnă din nou spaţiul şi foloseşte un mecanism ingenios - un pian - mai &icirc;nt&acirc;i ca pe o scenă şi apoi ca pe un subsol care se deschide către o lume inaccesibilă. Se c&acirc;ntă, se dansează, se spun porcării, se bea şi se fumează, se sting şi &icirc;ncep din nou maratoanele de amor, iar excesul &icirc;n desfr&acirc;u trimite libertatea spre moarte. Pentru că, &icirc;n patul lui, consumat de nopţile nedormite, Toulouse mai păcăleşte un pic moartea, pentru un ultim dans. &Icirc;l vedem trăind şi plecăm din sală fericiţi, deşi enciclopediile ne spun că alcoolicul deloc anonim a murit la doar 36 de ani.<br />
+	<br />
+	&bdquo;Lautrec la bordel&quot; e genul de spectacol la care te opreşti &icirc;n drum spre altceva. Nu te duci acasă să rumegi esenţele, ci la o cr&acirc;şmă să-ţi bei simţurile. Mălăele dă dezlegare la pofta de viaţă, te aruncă cu g&acirc;ndul la petrecere, la r&acirc;s şi la prietenii dispuşi să &icirc;mpartă clipa cu tine. <br />
+	<br />
+	</em>Teatrul Metropolis<br />
+	<br />
+	Lautrec la bordel, după Mario Moretti<br />
+	Regia: Horaţiu Mălăele<br />
+	Scenografia: Dragoş Buhagiar<br />
+	Cu: George Ivaşcu, Vlad Ivanov, Ana Covalciuc, Ozana Barabancea, Raluca Vermeşan, Iulia V&acirc;ntur, Orlando Petriceanu ş.a</span></p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p dir="ltr">
+	<span style="font-size:24px;"><strong>ileanalucaciu.blogspot.com</strong></span></p>
+<p dir="ltr">
+	&nbsp;</p>
+<p>
+	<span style="font-size:16px;">luni, 19 decembrie 2011<br />
+	</span></p>
+<p dir="ltr">
+	<span style="font-size:16px;"><a href="http://ileanalucaciu.blogspot.com/2011/12/lautrec-la-bordel-teatrul-metropolis.html">&ldquo; LAUTREC LA BORDEL &ldquo; &ndash; TEATRUL METROPOLIS</a> </span></p>
+<p dir="ltr">
+	<span style="font-size:16px;">&nbsp;UN REMARCABIL SPECTACOL DE IMAGINE </span></p>
+<p dir="ltr">
+	<em><span style="font-size:16px;">Teatrul Metropolis și-a aniversat patru ani de existență fructuoasă de la &icirc;nființare printr-un remarcabil spectacol de imagine &ndash; &ldquo;Lautrec la bordel&rdquo; &ndash; reunind nume prețuite pentru realizarea sa. Reamintim că este singurul teatru de proiecte instituționalizat din Capitală ce a reușit să se impună ca personalitate &icirc;n peisajul teatral prin o sumedenie de spectacole apreciate de public și de &ldquo;analiștii&rdquo; din zona culturală.<img src="https://lh3.googleusercontent.com/pknp8u8sPHHqcaAkgT3ycBUAsFREZVpJHwo2CH0iQbo0xnVpHLySRtLRGeaMrTCo2GzV9y0eQf6FZGmQ4ZGCv9jyTye1IknnJUzvJTeglbnqDSsaYxk" /></span></em></p>
+<p dir="ltr">
+	<em><span style="font-size:16px;">Spectacolul readuce &icirc;n atenție pe regizorul, și nu actorul de vază, Horațiu Mălăele, un căutător al inovației teatrale . Acest artist poate fi considerat astăzi un &hellip; &ldquo;amiral pe vasul&rdquo; greu de manevrat pe navigația din zona culturală. Este consacrat ca actor, dar și ca regizor prin &ldquo;Revizorul&rdquo; (Teatrul de Comedie), și mai deține și un talent special &icirc;n arta plastică, de desenator, caricaturist. Cum are harul plastic și știe efectul vizual pentru ilustrarea dramaturgiei, a optat pentru conceperea unui spectacol &ldquo;după&rdquo; textul lui Mario Moretti. Textul este &icirc;nsă, mediocru, autorul nu s-a impus &icirc;n dramaturgie, dar subiectul răm&acirc;ne incitant ca rost cultural actual. Lautrec , celebrul plastician postimpresionist, prețuit astăzi, care populează muzee importante prin opera sa, devine doar un pretext al textului pentru o satiră la adresa unei lumi aflată &icirc;n degradare la sf&acirc;rșitului secolului XIX. Bordelul, cabaretul parizian sunt personajele principale. Lautrec a trăit &icirc;n acest mediu care i-a fost sursă de inspirație. Provenind dintr-o familie aristocrată, suferind două accidente ce &icirc;l lasă infirm, Lautrec se refugiază ambițios &icirc;n viața de plăceri a Parisului. Textul nu &icirc;l are drept erou pe Lautrec, ci imaginea unei lumi &icirc;n degringolată &icirc;n care doar, plăcerea momentului dictează existența . &Icirc;n debutul reprezentației sunt precizate datele esențiale ale propunerii textului prin invocarea pe scurt ca pretext, a biografiei lui Lautrec &icirc;ntr-o scenă strălucit compusă teatral de regizorul Horațiu Mălăele. &Icirc;n prolog, Lautrec, ca o păpușă cu chipul interpretului său George Ivașcu, precizează biografic ce l-a apropiat de viața din bordel.</span></em></p>
+<p dir="ltr">
+	<em><span style="font-size:16px;">Cum textul este șubred &icirc;n construcția dramatică, regizorul urmărește să &icirc;i exploateze posibilitatea de frescă socială a unei epoci surprinsă și &icirc;n grafica, și tablourile lui Lautrec. &Icirc;și găsește sprijin vizual pentru a concepe tablouri vivante ale epocii prin scenograful de marcă, Dragoș Buhagiar. Inspir&acirc;ndu-se din litografiile lui Lautrec, scenograful și echipa sa (Vladimir Iuganu, Ioana Pascha) au construit impresionant imaginea unei lumi aflată la sf&acirc;rșit de veac, pitorescul ei, dar discret prăfuit pentru privitorul mileniului trei. Decorul este senzațional și prin plasarea sugestivă a numeroase obiecte semnificative pentru a sugera starea unei lumi la un pas de dispariție. Scena este &hellip; capacul unui pian cu coadă, iar clapele sale mărginesc spațiul de joc. Capacul său se va ridica după prolog, și va deveni un tavan oglindă al bordelului a cărui intrare sugerează discret sexul femenin. Roșul va fi culoarea de bază. Costumele lucrate &icirc;n amănunt, ca și machiajul, par desprinse din desenele-fotografii ale epocii. Scenografia exploatată inspirat de regizor este baza unui spectacol de imagine cuceritor prin sensurile sugerate. Dar &hellip; intervine un mare regret. Spațiul de joc ( scena Teatrului Metropolis) este lipsit de condiții, fiind mult prea mic pentru o astfel de scenogrfie amplă, și dezavantajează bunele intenții ale viziunii regizorale de vizualizare supuse astfel, &icirc;nghesuirii mișcării scenice, ce deservește interpreții.</span></em></p>
+<p dir="ltr">
+	<em><span style="font-size:16px;">Regizorul Horațiu Mălăele a vrut și a reușit să prezinte admirabil, șocant emoțional, o radiografie cu scop satiric a decăderii unui mediu social prin personajele care au ajuns să &icirc;l populeze. Pentru fiecare personaj din planul activ al bordelului și cabaretului său a apelat la distribuirea unor personalități recunoscute &icirc;n alte manifestări cu scop cultural, apereciate de marele public. A alcătuit o așa zisă &ldquo;figurație&rdquo; specială pentru a construi tipologii perfect conturate de fiecare interpret. &Icirc;nt&acirc;lnim &icirc;n acest &ldquo;cor&rdquo; activ și reprezentativ pentru imaginea unei societăți aflate &icirc;n degringoladă personalități apreciate &icirc;n viața artistică, nu special din teatru. O remarcăm pe Ozana Barabancea (Madama) care deține o vocea de excepție afirmată &icirc;n jazz și chiar operă, pe Raluca Vermeșan (Matroana 2) care uimește prin interpretare &icirc;n &ldquo;XXL&rdquo; spectacolul de la Teatrul Act, pe Iulia V&acirc;ntur (Adele și mama lui Henri), frumoasa și distinsa doamnă de la buletinele de știri Pro Tv și din emisiunea de succes &ldquo;Dansez pentru tine&rdquo;, pe Ana Covalciuc (Suzanne &ndash; remarcabil interpretată &icirc;n momentul solistic ), Roxandra Maniu (Matroana 1) , Cristina Ilin (Paulette/Rosa la Rouge), Gilda Stan (Claudine), Simona Pop (Jane Avril) , alături de alți tineri actori &ndash; Augustin Pop, Orlando Petriceanu, Raluca Dinculescu, Oana Dragnea, Valentin Florea &ndash; remarcați unii, &icirc;n spectacolele de absolvirea studiilor. Fiecare desenează credibil tipologia ce &icirc;i revine de interpretat. Toți contribuie &icirc;n numeroase scene apropiate de un spectacol musical, prin dans (coregrafia Felicia Dalu) și c&acirc;ntec, la creșterea efervescentă a ritmului reprezentației. Muzica originală compusă de Răzvan Alexandru Diaconu sporește atractivitatea spectacolului. Toți cei care dau viață lumii frivole aflate la apus, merită aplauze pentru adaptarea la cerințele manifestării cu sens major a unui personaj colectiv, pentru dăruirea implicării ilustrării &icirc;n fiecare moment a unui tablou unde punctul forte al acțiunii răm&acirc;n, fie Aristide Bruant (Vlad Ivanov), fie Henri de Toulouse Lautrec (George Ivașcu).</span></em></p>
+<p dir="ltr">
+	<em><span style="font-size:16px;">&Icirc;n acest spectacol &icirc;nt&acirc;lnim un alt &hellip; Vlad Ivanov, cum de fapt ne-a și obișnuit prin interpretarea rolurilor din diverse filme și chiar din teatru. Este de nerecunoscut actorul &icirc;n cinicul și activul animator al cabaretului din bordel. C&acirc;ntă, dansează și expresiv definește portretul lui Aristide Bruant. Un alt rol de neuitat &icirc;nfăptuiește acum, Vlad Ivanov. Durerile personale, dar și pofta de viață ale infirmului Lautrec sunt transmise cu multă finețe și măsură de George Ivașcu. Momentul dramatic al destăinuirii lui Lautrec, aflat la sf&acirc;rșitul &icirc;ncercării de a trăi cu vivacitate, normal viața, ca și scena morții &icirc;ntr-un imens pat așezat vertical, sunt alte scene de excepție ale spectacolului lui Horațiu Mălăele. Este &icirc;nsă, prea lungă și datorită textului destăinuirea finală a suferindului Lautrec și nu &icirc;și găsește o &icirc;mplinire credibilă &icirc;n interpretare. </span></em></p>
+<p dir="ltr">
+	<em><span style="font-size:16px;">&ldquo;Lautrec la bordel&rdquo; răm&acirc;ne un eveniment teatral pentru oferta de a urmăririi un spectacol deosebit, atractiv prin imagine și posibilitatea de a cunoaște c&acirc;te ceva despre o valoare culturală, Henri de Toulouse Lautrec și mai ales despre epoca &icirc;n care a trăit, ce are multe &icirc;n comun cu unele imagini ale prezentului. Imaginea spectaculoasă a reprezentației se datorează lui Horațiu Mălăele și Dragoș Buhagiar, personalități ale teatrului nostru. Viziunea regizorală a implicat &icirc;n realizarea proiectului, &icirc;n roluri secundare, nume de vază din viața culturală ce merită apreciate și pentru reușita apropierii de teatru. </span></em></p></font><br>
+																											<div class="buton-sus"><a href="http://www.teatrulmetropolis.ro/spectacole/lautrec-la-bordel.html#top">^ Sus</a></div>
+																									</div>
+																						</td></tr></table>
+										</td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450"  height="13"></td>
+										<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+									</tr>
+								</table>
+					</td>
+				</tr>
+			</table>
+		
+		<script>show('descriere');</script>
+	</td>
+<td width="300" align="center" valign="top"><br><br>
+		<br>
+<div class="dreapta-cautare">
+		
+			<input type="text" id="keyword" value="Scrie aici și ..." onfocus="if (this.value == 'Scrie aici și ...') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Scrie aici și ...';}" class="search-input" size="19" onKeyPress="return submitenter_cauta(event)">
+			<a onclick="moduleSearch();" class="buton" >Caută</a>
+		
+</div>
+<br>
+<div class="dreapta-cos">	
+	<div id="module_cart" >
+ <div class="middle">
+	
+    	<table cellpadding="5" cellspacing="0" style="width: 200px;color:white;" background="catalog/view/theme/default/image/c.png"><tr><td>
+		<img src="catalog/view/theme/default/image/bilete_fara_rezervari.png" width="181" height="129" border="0"/>
+	</td></tr></table>
+    	
+  </div>
+</div>
+<script type="text/javascript"><!--
+$(document).ready(function () {
+	$('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+	$("a[id^='adaugabilet']").click(function () {
+		 var randlocIDValSplitter    = (this.id).split("-");
+    var rand            = randlocIDValSplitter[1];
+	var loc            = randlocIDValSplitter[2];
+	var reprezentatie_id            = randlocIDValSplitter[3];
+	
+	control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoatebilet']").click(function () {
+		 var randlocIDValSplitter   = (this.id).split("-");
+		 var rand            		= randlocIDValSplitter[1];
+		 var loc            		= randlocIDValSplitter[2];
+		 var reprezentatie_id       = randlocIDValSplitter[3];
+	
+		control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control_scoate='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoate_sala']").click(function () {
+		var randlocIDValSplitter    = (this.id).split("-");
+		var reprezentatie_id        = randlocIDValSplitter[1];
+	
+	
+    
+        $.ajax({
+            url: 'index.php?route=continut/cart/callback&reprezentatie_id='+reprezentatie_id,
+            type: 'get',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='clear_cart']").click(function () {
+		$.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/clear',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            } 
+                   
+        });
+		
+	});
+	
+	 $('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+ 
+});
+</script>
+
+
+</div>
+<br>
+<div class="dreapta-cont">
+	<table width="200" cellspacing='0' cellpadding='0'>
+		
+				<tr><td background="catalog/view/theme/default/image/c.png" width="110" height="30" valign="middle" align="center" >
+				<font color="#d2d0d0">Accesează cont</font>
+		</td>
+		<td width="90" valign="middle" align="center">
+			<a class="buton" href="http://www.teatrulmetropolis.ro/creaza_cont.html" id="fancybox_page_no_reload">Cont nou ?</a>
+		</td></tr>
+		<tr><td colspan="2" height="50" width="200" background="catalog/view/theme/default/image/c.png" valign="middle" align="center">
+			<form action="http://www.teatrulmetropolis.ro/index.php?route=common/home/autentificare" method="post" id="form_autentificare">
+				<input type="text" name="email" value="Email utilizator" onfocus="if (this.value == 'Email utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Email utilizator';}" class="user-input">
+				<input type="password" name="password" value="Parola utilizator" onfocus="if (this.value == 'Parola utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Parola utilizator';}" class="pass-input" onKeyPress="return submitenter_login_cont(event)">
+				<input type="hidden" name="redirect" value="http://www.teatrulmetropolis.ro/index.php?route=continut/spectacole&amp;spectacol_id=52">
+			</form>
+		</td></tr>
+		<tr><td width=110" height="30"></td>
+		<td background="catalog/view/theme/default/image/c.png" width="90" height="30" valign="middle" align="center">
+			<a onClick="$('#form_autentificare').submit();"  class="buton" >Accesează</a>
+		</td></tr>
+		</table>
+</div>
+<br>
+<br>
+<div class="dreapta-comentarii">
+	<a href="http://www.teatrulmetropolis.ro/stiri/adela-popescu-si-mihai-bendeac-in-premiera-pe-o-banca-la-metropolis.html#comentariu3" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','catalog/view/theme/default/image/parereaTA_hover.png',1)">
+		<img src="catalog/view/theme/default/image/parereaTA_normal.png" name="Image50" width="188" height="126" border="0" id="Image50" /><br>
+		<table id="Ultim_Coment">
+							<tr>
+								<td id="dataUltim_Coment">
+									15 octombrie 2011 la 16:17
+								</td>
+							<tr>
+								<td id="idUltim_Coment">
+									*Nume:
+								</td>
+							<tr>
+								<td id="contentUltim_Coment">
+									nu va suparati , cand se va mai juca piesa?
+								</td>
+							</tr>
+						</table>		
+	</a>
+</div>
+<br>
+<br>
+<div class="dreapta-ajutor">
+	<a href="http://www.teatrulmetropolis.ro/ajutor" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','catalog/view/theme/default/image/ajutor_hover.png',1)" id="fancybox_page_rel">
+		<img src="catalog/view/theme/default/image/ajutor_normal.png" name="Image51" width="171" height="101" border="0" id="Image51" /><br>
+	</a>
+</div></td>
+</tr></table>
+</div>	
+</td>
+</tr></table>
+</div>				
+
+<div id="footer_continut">
+	<table width="1000" align="center" height="200" background="catalog/view/theme/default/image/c.png"><tr><td><br>
+		<table width="90%" cellpadding="0" cellspacing="0"  style="color: #999;font-family:Arial, Helvetica, sans-serif;font-size:14px;">
+  <tr>
+    <td width="23%" rowspan="6" align="right" valign="top" >
+    <img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/sigla_tm.png" width="100" height="100" border="0" style="margin-right:30px;"/>
+    </td>
+    <td width="70%">Adresa: Str. Mihai Eminescu nr.89, sector 2, București.</td>
+    <td width="7%" rowspan="6" align="center" valign="top">
+   <a href="http://www.pmb.ro" target="blank"><img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/primaria_mun_buc.png" width="75" height="150" border="0" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Rezervări bilete se pot face și telefonic, la numerele: <br />
+      <strong style="color:#FFF">021 210 51 08</strong>  sau  <strong style="color:#FFF">0728 138 265</strong><br />
+      (în intervalul orar 10:00 - 19.00)<br />
+    Rezervarea telefonică este valabilă 48 de h.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font style="font-size:16px; color:#FFF">&copy;Teatrul Metropolis. Toate drepturile rezervate</font></td>
+  </tr>
+  <tr>
+    <td ><font style="font-size:12px;">Site produs de <strong style="color: #CCC">Legolas Media</strong><br />
+        Design by <strong style="color: #CCC">Alexandru Șulai</strong></font></td>
+  </tr>
+</table>	</td></tr></table>
+</div>
+
+
+</div>
+
+</body></html> 

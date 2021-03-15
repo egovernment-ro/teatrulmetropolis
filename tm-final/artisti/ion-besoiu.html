@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ro" xml:lang="ro">
+<head>
+<title>Teatrul Metropolis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Teatrul Metropolis" />
+<meta name="keywords" content="" />
+<link href="http://www.teatrulmetropolis.ro/tm-final/image/data/ico.gif" rel="shortcut icon" type="image/x-icon" />
+<base href="http://www.teatrulmetropolis.ro/tm-final/" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<!--[if IE]>
+	
+<![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-collapser/jquery.collapser.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+
+</head>
+<body bgcolor="#000000">
+<a name="top"></a>
+<div id="container">
+	<div id="div2_continut"></div>
+	
+	<div id="header_continut">
+		<table width="100%">
+		<tr><td height="20" colspan="8"></td></tr>
+		<tr><td width="10%"></td><td align="center" valign="top" >
+				
+				<a href="http://www.teatrulmetropolis.ro/tm-final/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','catalog/view/theme/default/image/prima_pg_hover.png',1)">
+						<img src="catalog/view/theme/default/image/prima_pg_normal.png" name="Image1" width="85" height="45" border="0" id="Image1" />
+					</a><br/>
+					<div class="contact_continut">
+                       <a class="contact1_continut" href="http://www.teatrulmetropolis.ro/tm-final/contact.html" id="fancybox_page_rel">&nbsp;</a>
+                    </div>
+					</td>
+					<td align="center" valign="top" >
+											<a href="http://www.teatrulmetropolis.ro/tm-final/artisti"><img src="catalog/view/theme/default/image/artisti_hover.png" width="195" height="196" border="0"  /></a>
+										</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/tm-final/program" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','catalog/view/theme/default/image/program_hover.png',1)">
+						<img src="catalog/view/theme/default/image/program_normal.png" name="Image3" width="222" height="175" border="0" id="Image3" />
+					</a>
+										</td>
+					
+				<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/tm-final/spectacole" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','catalog/view/theme/default/image/spectacole_hover.png',1)">
+						<img src="catalog/view/theme/default/image/spectacole_normal.png" name="Image5" width="154" height="145" border="0" id="Image5" />
+					</a>
+									</td>
+					<td align="center" valign="top" >
+									
+					
+					<a href="http://www.teatrulmetropolis.ro/tm-final/despre_noi" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','catalog/view/theme/default/image/despre_noi_hover.png',1)">
+						<img src="catalog/view/theme/default/image/despre_noi_normal.png" name="Image6" width="174" height="145" border="0" id="Image6" />
+					</a>
+							</td>
+		<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/tm-final/stiri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','catalog/view/theme/default/image/stiri_ANTET_hover.png',1)">
+						<img src="catalog/view/theme/default/image/stiri_ANTET_normal.png" name="Image4" width="144" height="120" border="0" id="Image4" />
+					</a>
+									</td>
+		<td width="10%"></td></tr></table>		
+	</div>
+<script>
+
+function show(control){
+var pagina = new Array()
+pagina[0]="descriere"
+pagina[1]="roluri"
+pagina[2]="premii"
+
+if (document.layers) { // NN4+
+	document.layers['table_artist'].height = '100%';
+	document.layers['table_caract_artist'].height = '100%';
+	
+	for (i=0;i<pagina.length;i++){
+		
+		if (pagina[i] == control) {
+			document.layers[pagina[i]].visibility = "show";
+			document.layers[pagina[i]].display = "block";
+			document.layers[pagina[i]].position = "absolute";
+			document.layers["martor_" + pagina[i]].visibility = "show";
+			document.layers["martor_" + pagina[i]].display = "block";
+			}
+		else
+			{
+			document.layers[pagina[i]].visibility = "hide";
+			
+			document.layers["martor_" + pagina[i]].visibility = "hide";
+			
+      			}
+  		}
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+		document.getElementById('table_artist').style.height='100%';
+		document.getElementById('table_caract_artist').style.height='100%';
+		for (i=0;i<pagina.length;i++){
+			if (pagina[i] == control) {
+				var obj = document.getElementById(pagina[i]);
+				
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "visible";
+				obj.style.display = "block";
+				
+
+				obj.style.position = "relative";
+				objSD.style.visibility = "visible";
+				objSD.style.display = "block";
+				}
+			else
+				{
+				var obj = document.getElementById(pagina[i]);
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "hidden";
+				
+				obj.style.display = "none";
+				objSD.style.visibility = "hidden";
+				
+				}
+		}
+	}
+else if (document.all) { // IE 4
+	document.all['table_artist'].style.height = '100%';
+	document.all['table_caract_artist'].style.height = '100%';
+	for (i=0;i<pagina.length;i++){
+		if (pagina[i] == control) {
+			document.all[pagina[i]].style.visibility = "visible";
+			document.all[pagina[i]].style.display = "block";
+			document.all[pagina[i]].style.position = "absolute";
+			document.all["martor_" + pagina[i]].style.visibility = "visible";
+			document.all["martor_" + pagina[i]].style.display = "block";
+			}
+		else {
+			document.all[pagina[i]].style.visibility = "hidden";
+			
+			document.all["martor_" + pagina[i]].style.visibility = "hidden";
+			
+			}
+  		}
+	}
+}
+</script>
+
+<div id="content_continut">
+	<table cellspacing="0" cellpadding="0" border="0"  width="100%"><tr><td align="center" >
+		<div class="center" id="table_artist">
+			<table width="1000" cellspacing="0" cellpadding="0" border="0" >
+             <tr>
+              <td align="center" valign="top"  style="min-height:700px;" width="700" >
+								<table cellspacing="20" cellpadding="0" width="100%" >
+					<tr>
+                     <td width="33%" valign="top" align="center" >
+						<a rel="example_group" href="http://www.teatrulmetropolis.ro/tm-final/image/cache/data/artisti/9/ion_besoiu-500x500.png" class="grouped_elements" title="Imagine 1 din 1"><img src="http://www.teatrulmetropolis.ro/tm-final/image/cache/data/artisti/9/ion_besoiu-200x300.png" border="0" width="200" height="286"></a>
+                        <br>
+                        <br>
+						                                                <br>
+                        <br>
+						<table border='0' width="126" cellspacing='0' cellpadding='0' >
+							<tr>
+                                <td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+                                <td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+                                <td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+                            	<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+								 <a onclick="show('descriere');"><font size="4" >Descriere</font></a>
+								</td>
+                            </tr>
+							<tr>
+                                <td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+                                <td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+                                <td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+                            </tr>
+						</table>
+						<div id="martor_descriere" style="margin-top:-40px;margin-right:10px;float:right;"><img src="catalog/view/theme/default/image/martor.png"></div>
+																		<br><br>
+						<table border='0' width="126" cellspacing='0' cellpadding='0' >
+							<tr>
+                                <td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+                                <td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+                                <td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+                                <td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+                                    <a onclick="show('roluri');"><font size="4" >Roluri</font></a>
+                                </td>
+                            </tr>
+							<tr>
+                                <td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+                                <td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+                                <td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+                            </tr>
+						</table>
+						<div id="martor_roluri" style="margin-top:-40px;margin-right:10px;float:right;"><img src="catalog/view/theme/default/image/martor.png"></div>
+												<div id="martor_premii" style="display:none;"></div>						<br>
+                        <br>
+						<div class="buton-inapoi" ><a href="http://www.teatrulmetropolis.ro/tm-final/artisti">< Artiști</a></div>
+					</td>
+					<td width="67%" valign="top" height="56">
+						<table border='0' width="476" cellspacing='0' cellpadding='0' style="height: auto;">
+							<tr>
+								<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+                            	<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476"  valign="middle">
+								<font size="4" style="margin-left:20px;" color="white">Ion BESOIU</font>
+								</td>
+                            </tr>
+							<tr>
+                            	<td background="catalog/view/theme/default/image/lb.png" width="13" height="13" ></td>
+                                <td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+                                <td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+                            </tr>
+						</table>
+					<br>
+                    <br>
+					<table border='0' width="476" cellspacing='0' cellpadding='0' valign="top" align="left" >
+									<tr>
+										<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+										<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476" >
+											<table style="margin-left:20px;margin-right:10px;" align="left" id="table_caract_artist">
+                                            	<tr>
+                                                	<td align="left" valign="top">
+																													<div id="descriere" style="display:block;">
+                                                                <font size="2" color="white"><p>
+	Ion Besoiu (n. 11 martie 1931, Sibiu) este un actor de teatru și film rom&acirc;n.<br />
+	<br />
+	A absolvit Academia de Teatru și Muzică din Sibiu.<br />
+	<br />
+	A debutat &icirc;n 1950, dar consacrarea a venit abia după turnarea filmului Toate p&acirc;nzele sus, &icirc;n regia lui Mircea Mureșan, &icirc;n care a avut ca parteneri mari actori ca Ilarion Ciobanu și Jean Constantin.<br />
+	<br />
+	Timp de 16 ani, a jucat pe scena Teatrului &quot;Radu Stanca&quot;, din Sibiu, după care s-a mutat la București, unde a jucat la Teatrul &quot;Lucia Sturza Bulandra&quot; și a fost, ulterior, timp de 12 ani directorul acestui teatru.<br />
+	<br />
+	Cele mai cunoscute roluri ale sale sunt Cloșca, &icirc;n &quot;Procesul lui Horia&quot; (1967), Serebreakov, &icirc;n &quot;Unchiul Vanea&quot; (1983), Polonius, &icirc;n &quot;Hamlet&quot; (1985), Oronte, &icirc;n &quot;Mizantropul&quot; (1989), Corifeu, &icirc;n &quot;Antigona&quot; (1993), Ferapont, &icirc;n &quot;Trei surori&quot; (1995), Senecus, &icirc;n &quot;Caligula&quot; (1996), și Muhoianov Ivan Matveevici, &icirc;n &quot;Oblomov&quot; (2003).<br />
+	<br />
+	Activitatea sa cinematografică este și ea impresionantă. C&acirc;teva dintre filmele &icirc;n care a jucat Ion Besoiu sunt: &quot;Furtuna&quot;, &quot;Neamul Șoimărestilor&quot;, &quot;Haiducii&quot;, &quot;Răscoala&quot;, &quot;Mihai Viteazul&quot;, &quot;Ciprian Porumbescu&quot;, &quot;Păcală&quot;, &quot;Ion, blestemul păm&acirc;ntului, blestemul iubirii&quot;, &quot;Ultima noapte de dragoste&quot;, &quot;Lumini și umbre&quot;.<br />
+	<br />
+	&Icirc;n 2002, a primit Premiul de excelență al Cinematografiei Rom&acirc;ne.<br />
+	<br />
+	&Icirc;n 2001, a fost declarat cetățean de onoare al orașului Sibiu, &icirc;n care s-a născut.<br />
+	<br />
+	Ion Besoiu este președinte executiv al Fundației &quot;Sibiul Vechi. Sibiu - Hermannstadt&quot;, asociație care &icirc;i ajută pe tinerii talentați și care oferă premii etnografilor.</p>
+<p>
+	Sursa: <a href="http://ro.wikipedia.org/wiki/Ion_Besoiu" target="_blank">Wikipedia</a></p>
+</font>
+                                                                <br>
+                                                                															</div>
+														                                                            <div id="roluri" style="display:none;" >
+                                                                <font size="2" color="white"><p>
+	&Icirc;l puteţi vedea la Teatrul Metropolis &icirc;n spectacolul:<br />
+	<br />
+	<a href="http://www.teatrulmetropolis.ro/index.php?route=continut/spectacole&amp;spectacol_id=14"><strong><span style="font-size: 16px;">SFARSIT DE PARTIDA de Samuel Beckett</span></strong></a><br />
+	Regia: Alexandru TOCILESCU</p>
+<p>
+	SELECTIE ROLURI FILM</p>
+<ul>
+	<li>
+		&quot;Regina - Don Tito&quot; (2009)</li>
+	<li>
+		&quot;Lombarzilor 8&quot; (2006)</li>
+	<li>
+		Tancul (2003)</li>
+	<li>
+		Șoapte de amor (1994)</li>
+	<li>
+		Oglinda (1993)</li>
+	<li>
+		Polul Sud (1993)</li>
+	<li>
+		Subspecies (1991)</li>
+	<li>
+		Im S&uuml;den meiner Seele (1989)</li>
+	<li>
+		Kilometrul 36 (1989)</li>
+	<li>
+		Mircea (1989)</li>
+	<li>
+		Iacob (1988)</li>
+	<li>
+		Liliacul &icirc;nflorește a doua oară (1988)</li>
+	<li>
+		Fran&ccedil;ois Villon - Poetul vagabond (1987)</li>
+	<li>
+		Totul se plătește (1986)</li>
+	<li>
+		Colierul de turcoaze (1985)</li>
+	<li>
+		Masca de argint (1985)</li>
+	<li>
+		Noi, cei din linia &icirc;nt&icirc;i (1985)</li>
+	<li>
+		Racolarea (1985)</li>
+	<li>
+		Secretul lui Nemesis (1985)</li>
+	<li>
+		Sper să ne mai vedem (1985)</li>
+	<li>
+		Ziua Z (1985)</li>
+	<li>
+		Horea (1984)</li>
+	<li>
+		Căruța cu mere (1983)</li>
+	<li>
+		Fructe de pădure (1983)</li>
+	<li>
+		Misterele Bucureștilor (1983)</li>
+	<li>
+		Viraj periculos (1983)</li>
+	<li>
+		&quot;Lumini și umbre: Partea II&quot; (1982)</li>
+	<li>
+		Mult mai de preț e iubirea (1982)</li>
+	<li>
+		Pădurea nebună (1982)</li>
+	<li>
+		Convoiul (1981)</li>
+	<li>
+		Duelul (1981)</li>
+	<li>
+		Un echipaj pentru Singapore (1981)</li>
+	<li>
+		&quot;Lumini și umbre: Partea I&quot; (1981)</li>
+	<li>
+		Șantaj (1981)</li>
+	<li>
+		Capcana mercenarilor (1980)</li>
+	<li>
+		Drumul oaselor (1980)</li>
+	<li>
+		La răscrucea marilor furtuni (1980)</li>
+	<li>
+		Bietul Ioanide (1979)</li>
+	<li>
+		Ion: Blestemul păm&icirc;ntului, blestemul iubirii (1979)</li>
+	<li>
+		Mihail, c&acirc;ine de circ (1979)</li>
+	<li>
+		Ultima noapte de dragoste (1979)</li>
+	<li>
+		Cianură și picatură de ploaie (1978)</li>
+	<li>
+		Doctorul Poenaru (1978)</li>
+	<li>
+		Rătăcire (1978)</li>
+	<li>
+		Revanșa (1978)</li>
+	<li>
+		&Icirc;mpușcături sub clar de lună (1977)</li>
+	<li>
+		Toate p&icirc;nzele sus (1976)</li>
+	<li>
+		Mușchetarul rom&acirc;n (1975)</li>
+	<li>
+		Actorul și sălbaticii (1974)</li>
+	<li>
+		Agentul straniu (1974)</li>
+	<li>
+		Nemuritorii (1974)</li>
+	<li>
+		Păcală (1974)</li>
+	<li>
+		Un comisar acuza(1973)</li>
+	<li>
+		Dimitrie Cantemir (1973)</li>
+	<li>
+		Ultimul cartuș (1973)</li>
+	<li>
+		Vifornița (1973)</li>
+	<li>
+		Bariera (1972)</li>
+	<li>
+		Ciprian Porumbescu (1972)</li>
+	<li>
+		Săgeata căpitanului Ion (1972)</li>
+	<li>
+		Atunci i-am condamnat pe toți la moarte (1971)</li>
+	<li>
+		Printre colinele verzi (1971)</li>
+	<li>
+		Puterea și adevărul (1971)</li>
+	<li>
+		Asediul (1970)</li>
+	<li>
+		B.D. &icirc;n alertă (1970)</li>
+	<li>
+		Mihai Viteazul (1970)</li>
+	<li>
+		Mihai Viteazul - Unirea (1970)</li>
+	<li>
+		Castelul condamnaților (1969)</li>
+	<li>
+		Răpirea fecioarelor (1968)</li>
+	<li>
+		Fantomele se grăbesc (1966)</li>
+	<li>
+		Haiducii (1966)</li>
+	<li>
+		Calea Victoriei sau cheia visurilor (1965)</li>
+	<li>
+		Neamul Șoimăreștilor (1965)</li>
+	<li>
+		Răscoala (1965)</li>
+	<li>
+		Șah la rege (1965)</li>
+	<li>
+		Camera albă (1964)</li>
+	<li>
+		Cartierul veseliei (1964)</li>
+	<li>
+		Partea ta de vină (1963)</li>
+	<li>
+		Tudor (1962)</li>
+	<li>
+		Furtuna (1960)</li>
+	<li>
+		Setea (1960)</li>
+	<li>
+		Vultur 101 (1957)</li>
+</ul>
+<p>
+	SELECTIE ROLURI TEATRU</p>
+<ul>
+	<li>
+		<i>Cloșca</i> - &bdquo;Procesul lui Horia&rdquo; de Alexandru Voitin, regia Liviu Ciulei, Teatrul Bulandra, 1967</li>
+	<li>
+		<i>Corbea</i> - &bdquo;Luceafărul&rdquo; de Barbu Ștefănescu Delavrancea, regia Ion Cojar, Teatrul Bulandra, 1967</li>
+	<li>
+		<i>Iasa</i> - &bdquo;Livada de vișini&rdquo; de A.P. Cehov, regia Lucian Pintilie, Teatrul Bulandra, 1967</li>
+	<li>
+		<i>Kurt</i> - &bdquo;Dansul mortii&rdquo; de August Strinberg, regia Iannis Veakis, Teatrul Bulandra, 1968</li>
+	<li>
+		<i>Tournel</i> - &bdquo;Puricele&rdquo; de Georges Feydeau, regia Emil Mandric, Teatrul Bulandra, 1969</li>
+	<li>
+		<i>Valentine</i> - &bdquo;Love for Love&rdquo; de William Congreve, regia Emil Mandric, Teatrul Bulandra, 1969</li>
+	<li>
+		<i>Dobrișor</i> - &bdquo;Acești nebuni fățarnici&rdquo; de Teodor Mazilu, regia Emil Mandric, Teatrul Bulandra, 1970</li>
+	<li>
+		<i>Ofițerul</i> - &bdquo;Patru oameni fără nume&rdquo; de Radu Badila, regia Petre Popescu, Teatrul Bulandra, 1971</li>
+	<li>
+		<i>Lorenzo</i> - &bdquo;Anunțul la mica publicitate&rdquo; de Natalia Gingsburg, Teatrul Bulandra, 1973</li>
+	<li>
+		<i>Damian</i> - &bdquo;&Icirc;ntre noi n-a fost dec&acirc;t tacere&rdquo; de Lia Crisan, regia Petre Popescu, Teatrul Bulandra, 1973</li>
+	<li>
+		<i>Trigorin</i> - &bdquo;Pescărușul&rdquo; de A. P. Cehov, regia Liviu Ciulei, Teatrul Bulandra, 1977</li>
+	<li>
+		<i>Gicu Crucescu</i> - &bdquo;Alibi&rdquo; de Ion Băieșu, regia Cornel Todea, Teatrul Bulandra, 1978</li>
+	<li>
+		<i>Roman Romanovici</i> - &bdquo;Infidelitate conjugală&rdquo; de Leonid Zorin, regia Petre Popescu, Teatrul Bulandra, 1979</li>
+	<li>
+		<i>Reporterul</i> - &bdquo;Anchetă asupra unui t&acirc;nar care nu a făcut nimic&rdquo; de Adrian Dohotaru, regia Petre Popescu, Teatrul Bulandra, 1980</li>
+	<li>
+		<i>Gines Pardo</i> - &bdquo;Judecata &icirc;n noapte&rdquo; de Antonio Buero Vallejo, Teatrul Bulandra, 1981</li>
+	<li>
+		<i>Gilu</i> - &bdquo;Morm&acirc;ntul calaretului avar&rdquo; de D.R. Popescu, regia Mircea Marin, Teatrul Bulandra, 1981</li>
+	<li>
+		<i>Timofei</i> - &bdquo;Rezervatia de pelicani&rdquo; de D.R. Popescu, regia Valeriu Moisescu, Teatrul Bulandra, 1983</li>
+	<li>
+		<i>Knapp</i> - &bdquo;Passacaglia&rdquo; de Titus Popovici, regia Mircea Cornisteanu, Teatrul Bulandra, 1984</li>
+	<li>
+		<i>Serebreakov</i> - &bdquo;Unchiul Vanea&rdquo; de A. P. Cehov, regia Alexa Visarion, Teatrul Bulandra, 1985</li>
+	<li>
+		<i>Polonius</i> - &bdquo;Hamlet&rdquo; de William Shakespeare, regia Alexandru Tocilescu, Teatrul Bulandra, 1985</li>
+	<li>
+		<i>Ioan</i> - &bdquo;Io, Mircea Voievod&rdquo; de Dan Tarchila, regia Alexandru Tocilescu, 1986</li>
+	<li>
+		<i>Nichi</i> - &bdquo;Dimineața pierdută&rdquo; de Gabriela Adameșteanu, regia Cătălina Buzoianu, Teatrul Bulandra, 1986</li>
+	<li>
+		<i>Oronte</i> - &bdquo;Mizantropul&rdquo; de Moliere, regia Valeriu Moisescu, Teatrul Bulandra, 1989</li>
+	<li>
+		<i>Tezeu</i> - &bdquo;Visul unei nopți de vară&rdquo; de William Shakespeare, regia Liviu Ciulei, Teatrul Bulandra, 1991</li>
+	<li>
+		<i>Petronio</i> - &bdquo;Teatrul comic&rdquo; de Carlo Goldoni, regia Silviu Purcarete, Teatrul Bulandra, 1992</li>
+	<li>
+		<i>Oscar Kroge</i> - &bdquo;Mephisto&rdquo; de Klaus Mann, regia Alexandru Darie, Teatrul Bulandra, 1993</li>
+	<li>
+		<i>Corifeu</i> - &bdquo;Antigona&rdquo; de Sofocle, regia Alexandru Tocilescu, Teatrul Bulandra, 1993</li>
+	<li>
+		<i>Antigonus</i> - &bdquo;Poveste de iarnă&rdquo; de William Shakespeare, regia Alexandru Darie, Teatrul Bulandra, 1994</li>
+	<li>
+		<i>Ferapont</i> - &bdquo;Trei surori&rdquo; de A. P. Cehov, regia Alexandru Darie, Teatrul Bulandra, 1995</li>
+	<li>
+		<i>Octavius Caesar</i> - &bdquo;Julius Caesar&rdquo; de William Shakespeare, regia Alexandru Darie, Teatrul Bulandra, 1995</li>
+	<li>
+		<i>Primul interpret</i> - &bdquo;Șase personaje &icirc;n cautarea unui autor&rdquo; de Luigi Pirandello, regia Catalina Buzoianu, Teatrul Bulandra, 1995</li>
+	<li>
+		<i>Senecus</i> - &bdquo;Caligula&rdquo; de Albert Camus, regia Mihai Maniutiu, Teatrul Bulandra, 1996</li>
+	<li>
+		<i>Contele Lieuville</i> - &bdquo;V&acirc;nzătorii gloriei&rdquo; de Marcel Pagnol, regia Eli Malka, Teatrul Bulandra, 1996</li>
+	<li>
+		<i>Colonelul</i> - &bdquo;Mutter Courage&rdquo; de Bertolt Brecht, regia Catalina Buzoianu, Teatrul Bulandra, 1999</li>
+	<li>
+		<i>Profesorul</i> - &bdquo;Există nervi&rdquo; de Marin Sorescu, regia Puiu Serban, Teatrul Bulandra, 2001</li>
+	<li>
+		<i>Muhoianov Ivan Matveevici</i> - &bdquo;Oblomov&rdquo; dupa I. A. Goncearov, regia Alexandru Tocilescu, Teatrul Bulandra 2003</li>
+</ul>
+</font>
+                                                                                                                                    <div class="buton-sus"><a href="http://www.teatrulmetropolis.ro/tm-final/artisti/ion-besoiu.html#top">^ Sus</a></div>
+                                                                                                                            </div>
+                                                                                                                    	<div id="premii" style="display:none;"></div>
+                                                        													</td>
+                                                 </tr>
+                                             </table>
+										</td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450"  height="13"></td>
+										<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+									</tr>
+								</table>
+					</td></tr>
+				</table>
+			</div>
+			<script>show('descriere');</script>
+					</td>
+	<td width="300" align="center" valign="top"><br><br>
+		<br>
+<div class="dreapta-cautare">
+		
+			<input type="text" id="keyword" value="Scrie aici și ..." onfocus="if (this.value == 'Scrie aici și ...') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Scrie aici și ...';}" class="search-input" size="20" onKeyPress="return submitenter_cauta(event)">
+			<a onclick="moduleSearch();" class="buton" >Caută</a>
+		
+</div>
+<br>
+<div class="dreapta-cos">	
+	<div id="module_cart" >
+ <div class="middle">
+	
+        <img src="catalog/view/theme/default/image/bilete_fara_rezervari.png" width="181" height="129" border="0"/>
+    	
+  </div>
+</div>
+<script type="text/javascript"><!--
+$(document).ready(function () {
+	$('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+	$("a[id^='adaugabilet']").click(function () {
+		 var randlocIDValSplitter    = (this.id).split("-");
+    var rand            = randlocIDValSplitter[1];
+	var loc            = randlocIDValSplitter[2];
+	var reprezentatie_id            = randlocIDValSplitter[3];
+	
+	control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+	
+	});
+	$("a[id^='scoatebilet']").click(function () {
+		 var randlocIDValSplitter   = (this.id).split("-");
+		 var rand            		= randlocIDValSplitter[1];
+		 var loc            		= randlocIDValSplitter[2];
+		 var reprezentatie_id       = randlocIDValSplitter[3];
+	
+		control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control_scoate='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+	
+	});
+	$("a[id^='scoate_sala']").click(function () {
+		var randlocIDValSplitter    = (this.id).split("-");
+		var reprezentatie_id        = randlocIDValSplitter[1];
+	
+	
+    
+        $.ajax({
+            url: 'index.php?route=continut/cart/callback&reprezentatie_id='+reprezentatie_id,
+            type: 'get',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+	
+	});
+	$("a[id^='clear_cart']").click(function () {
+		$.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/clear',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+		
+	});
+	
+	 $('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+ 
+});
+</script>
+
+
+</div>
+<br>
+<div class="dreapta-cont">
+	<table width="200" cellspacing='0' cellpadding='0'>
+		
+				<tr><td background="catalog/view/theme/default/image/c.png" width="110" height="30" valign="middle" align="center" >
+				<font color="#d2d0d0">Accesează cont</font>
+		</td>
+		<td width="90" valign="middle" align="center">
+			<a class="buton" href="http://www.teatrulmetropolis.ro/tm-final/creaza_cont.html" id="fancybox_page_no_reload">Cont nou ?</a>
+		</td></tr>
+		<tr><td colspan="2" height="50" width="200" background="catalog/view/theme/default/image/c.png" valign="middle" align="center">
+			<form action="http://www.teatrulmetropolis.ro/tm-final/index.php?route=common/home/autentificare" method="post" id="form_autentificare">
+				<input type="text" name="email" value="Email utilizator" onfocus="if (this.value == 'Email utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Email utilizator';}" class="user-input">
+				<input type="password" name="password" value="Parola utilizator" onfocus="if (this.value == 'Parola utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Parola utilizator';}" class="pass-input" onKeyPress="return submitenter_login_cont(event)">
+				<input type="hidden" name="redirect" value="http://www.teatrulmetropolis.ro/tm-final/index.php?route=continut/artisti&amp;artist_id=6">
+			</form>
+		</td></tr>
+		<tr><td width=110" height="30"></td>
+		<td background="catalog/view/theme/default/image/c.png" width="90" height="30" valign="middle" align="center">
+			<a onclick="$('#form_autentificare').submit();" class="buton" >Accesează</a>
+		</td></tr>
+		</table>
+</div>
+<br>
+<br>
+<div class="dreapta-comentarii">
+	<a href="http://www.teatrulmetropolis.ro/tm-final/stiri/george-ivascu-la-metropolis-functioneaza-conceptul-de-teatru-hipermarket.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','catalog/view/theme/default/image/parereaTA_hover.png',1)">
+		<img src="catalog/view/theme/default/image/parereaTA_normal.png" name="Image50" width="188" height="126" border="0" id="Image50" /><br>
+				
+	</a>
+</div>
+<br>
+<br>
+<div class="dreapta-ajutor">
+	<a href="http://www.teatrulmetropolis.ro/tm-final/ajutor" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','catalog/view/theme/default/image/ajutor_hover.png',1)" id="fancybox_page_rel">
+		<img src="catalog/view/theme/default/image/ajutor_normal.png" name="Image51" width="171" height="101" border="0" id="Image51" /><br>
+	</a>
+</div>
+				</td>
+	</tr></table>
+		</div>
+	</td>
+</tr></table>
+</div>
+
+<div id="footer_continut">
+	<table width="1000" align="center" height="200" background="catalog/view/theme/default/image/c.png"><tr><td><br>
+		<table width="90%" cellpadding="0" cellspacing="0"  style="color: #999;font-family:Arial, Helvetica, sans-serif;font-size:14px;">
+  <tr>
+    <td width="23%" rowspan="6" align="right" valign="top" >
+    <img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/sigla_tm.png" width="100" height="100" border="0" style="margin-right:30px;"/>
+    </td>
+    <td width="70%">Adresa: Str. Mihai Eminescu nr.89, sector 2, București.</td>
+    <td width="7%" rowspan="6" align="center" valign="top">
+   <a href="http://www.pmb.ro" target="blank"><img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/primaria_mun_buc.png" width="75" height="150" border="0" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Rezervări bilete se pot face și telefonic, la numerele: <br />
+      <strong style="color:#FFF">021 210 51 08</strong>  sau  <strong style="color:#FFF">0728 138 265</strong><br />
+      (în intervalul orar 10:00 - 19.00)<br />
+    Rezervarea telefonică este valabilă 48 de h.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font style="font-size:16px; color:#FFF">&copy;Teatrul Metropolis. Toate drepturile rezervate</font></td>
+  </tr>
+  <tr>
+    <td ><font style="font-size:12px;">Site produs de <strong style="color: #CCC">Legolas Media</strong><br />
+        Design by <strong style="color: #CCC">Alexandru Șulai</strong></font></td>
+  </tr>
+</table>	</td></tr></table>
+</div>
+
+
+</div>
+
+</body></html> 

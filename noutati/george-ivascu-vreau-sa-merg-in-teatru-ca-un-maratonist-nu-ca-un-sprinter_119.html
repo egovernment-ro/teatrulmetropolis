@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="teatrul metropolis" />
+    <meta name="author" content="www.pixozz.com">
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:description" content="" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="google-site-verification" content="VjLzf8ebl_NgoK_drWZD47l4a0rxVMFJsMtnYEEIds0" />
+    <link rel="stylesheet" href="https://www.teatrulmetropolis.ro/view/theme/front/css/style.css">
+    <link rel="stylesheet" href="https://www.teatrulmetropolis.ro/view/theme/front/css/login.css">
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <link rel="shortcut icon" href="https://www.teatrulmetropolis.ro/view/theme/front/images/logo-tm-25-20.png">
+</head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38399383-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<body class="front noutati computer">
+        <div id="navigation" class="clearfix fixedsticky">
+        <nav class="navbar navbar-default collapsed" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="fa fa-bars"></span>
+                            </button>
+                            <a class="navbar-brand" href="https://www.teatrulmetropolis.ro">
+                                <img src="https://www.teatrulmetropolis.ro/view/theme/front/images/logo.png" title="" alt="" />
+                                <span class="logo-text">Teatrul Metropolis</span>
+                            </a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                            <div class="hidden-bars">
+                                <span class="fa fa-bars"></span>
+                            </div>
+                            <ul class="nav navbar-nav">
+								<li> <a href="https://www.teatrulmetropolis.ro" class="active">Acasă</a></li>
+								<li><a href="https://www.teatrulmetropolis.ro/program" id="program">Program</a></li>
+								<li> <a href="https://www.teatrulmetropolis.ro/bilete">Cumpără Bilete</a></li>
+                                <li><a href="https://www.teatrulmetropolis.ro/spectacole">Spectacole </a></li>
+								<li><a href="https://www.teatrulmetropolis.ro/artisti">Artiști</a></li>
+                                <li> <a href="https://www.teatrulmetropolis.ro/noutati">Noutăți</a></li>
+								<li> <a href="https://www.teatrulmetropolis.ro/despre">Despre Noi</a></li>
+                                <li> <a href="https://www.teatrulmetropolis.ro/contact">Contact</a> </li>
+                                <li>
+																<div id="topnav" class="topnav"><a class="signin"><span>Contul Meu</span><i class="fa fa-user"></i></a> </div>
+								  <fieldset id="signin_menu">
+									<form method="post" id="loginForm">
+									  <label for="email">Email</label>
+									  <input id="email" name="email" onKeyPress="return submitenter(this,event);" value="" title="email" tabindex="4" type="email">
+									  </p>
+									  <p>
+										<label for="password">Parola</label>
+										<input id="password" onKeyPress="return submitenter(this,event);" name="password" value="" title="password" tabindex="5" type="password">
+									  </p>
+									  <p id="warning"></p>
+									 <p class="login">
+										<a id="gologin" onclick="login();">Conectare</a><a href="/resetareparola" class="forgot tipsy" title="Dacă ați uitat parola, o puteți reseta folosind adresa de email atasată contului personal">Ai uitat parola?</a>
+									  </p>
+									  <p class="register">  <a class="register tipsy" href="/inregistrare" title="Daca nu aveti un cont personal Metropolis, puteti crea unul in mai putin de 2 minute.">Nu aveti un cont Metropolis?</a> </p>
+									</form>
+								  </fieldset>
+																</li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.container -->
+        </nav>
+	
+    </div>
+	<script>
+function login(){
+var form = $("#loginForm").serializeArray();
+$.post("/front/auth/", {data: form}).done(function(response) {
+	var login = $.parseJSON(response); 
+	if(login.warning){
+		$("p#warning").html(login.warning);
+		$("a#gologin").html('Reincearcă');
+	} 
+	if(login.customer){
+		location.reload();
+	}
+	
+}); 
+}
+function submitenter(myfield,e)
+{
+var keycode;
+if (window.event) keycode = window.event.keyCode;
+else if (e) keycode = e.which;
+else return true;
+
+if (keycode == 13)
+   {
+   login();
+   return false;
+   }
+else
+   return true;
+}
+</script>	    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+
+            <!-- head -->
+            <div class="head big blog-home-head wow bounceIn">
+                <h3 class="post-title"><a href="george-ivascu-vreau-sa-merg-in-teatru-ca-un-maratonist-nu-ca-un-sprinter_119.html">George Ivaşcu: „Vreau să merg în teatru ca un maratonist, nu ca un sprinter“</a></h3>
+				
+                <div class="head-break-line">
+                    <span class="head-line-blue"></span>
+                </div>
+                <h6 class="subtext">Noutăţile Teatrului Metropolis.</h6>
+            </div>
+            <!-- .head -->
+
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .container -->
+
+    <div class="site-wrapper">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                   
+                    <p>Sursa: <a class="name-anchor" href="http://www.ziarulmetropolis.ro/george-ivascu-vreau-sa-merg-in-teatru-ca-un-maratonist-nu-ca-un-sprinter/" target="_blank">Ziarul Metropolis</a></p>
+
+                    <p>
+                        <span class="icon ion-ios7-clock"></span>Adăugat în 30 Oct 2014</p>
+						<div class="single-content">
+						<p>&Icirc;n cele ce urmează va fi vorba despre teatru, despre Metropolis, despre Festival, despre maestrul Radu Beligan, dar şi despre omul George Ivaşcu, despre Don Quijote şi Cristofor Columb, eroii preferaţi ai acestui visător care se &icirc;ngrijeşte de un teatru.</p>
+<div class="excerpt">
+<p class="about">&nbsp;</p>
+</div>
+<div id="lightbox"><a href="http://www.ziarulmetropolis.ro/george-ivascu-vreau-sa-merg-in-teatru-ca-un-maratonist-nu-ca-un-sprinter/"><img class="singleimg" src="../apps/data/resize.php?src=/uploads/IMG_0062_1.jpg&amp;w=1000&amp;h=auto" alt="George Ivaşcu: &bdquo;Vreau să merg &icirc;n teatru ca un maratonist, nu ca un sprinter&ldquo;" width="1000" height="728" /></a></div>
+<div class="entry">
+<p>Va mai fi vorba şi despre cum a căzut de două ori primul sub linie la actorie, despre ce va fi scris pe piatra funerară a omului nostru, despre cartierul Militari, despre Marea Neagră și alte mări și oceane&hellip;</p>
+<p>Actorul George Ivașcu (46 de ani), directorul Teatrului Metropolis, a oferit un interviu &icirc;n avanpremiera Festivalului Național de Teatru, pentru site-ul&nbsp;<a href="http://www.fnt.ro/" target="_blank">www.fnt.ro</a>. Publicăm acest interviu şi &icirc;n Ziarul Metropolis.</p>
+<p><strong>Teatrul Metropolis are trei spectacole selectate &icirc;n acest la Festivalul Național de Teatru. E mult, e puțin?</strong></p>
+<p>E foarte bine țin&acirc;nd cont că anul ăsta &icirc;mplinim șapte ani de existență.</p>
+<p><strong>Mulți &icirc;nainte!</strong></p>
+<p>Mulțumesc. &nbsp;A fi invitat și selectat &icirc;n Festivalul Național de Teatru, asta &icirc;nseamnă că strategia noastră repertorială e &icirc;n regulă, dacă reușim să intrăm &icirc;n categoria spectacolelor importante pe care le vom vedea la FNT. &Icirc;i mulțumesc selecționerei și directoarei Marina Constantinescu, care a avut &icirc;n comparație cu alți colegi de-ai ei bucuria de a fi alături de noi la premiere, la spectacole.</p>
+<p><strong>Cum a fost Marina Constantinescu ca selecționer?</strong><strong><br /></strong></p>
+<p>Mi s-a părut corectă. A muncit foarte mult, a mers foarte mult, a văzut multe spectacole, nu doar a auzit de ele. E o mare diferență. Și asta mă bucură. Totul ține de importanța pe care o ai &icirc;n breaslă. Ea a reușit să nu aibă parti-pris-uri.</p>
+<p><strong>&Icirc;ntotdeauna vor fi oameni nemulțumiți.</strong><strong><br /></strong></p>
+<p>E firesc. Dar important e că ea a căutat echilibru și imparțialitate. Pot fi ani cu roade mai bogate, cum pot fi și ani slabi.</p>
+<p>&Icirc;<strong>n acești șapte ani au fost și ediții mai bune pentru Metropolis?</strong></p>
+<p>Au fost ani buni, am crescut puțin c&acirc;te puțin. N-a fost un&nbsp;<em>boom</em>. Ne-am dezvoltat pas cu pas. Ca selecție, e cel mai bun an, categoric, dar e o &icirc;ncununare a celor șapte ani de acasă. Nu &icirc;ncercăm să părem noi cei mai buni, cei mai viteji, cei mai &icirc;nalți.</p>
+<p><strong>Nu s-au ars etapele, așadar.</strong></p>
+<p>Și nici nu cred că era bine să ardem etapele, pentru că răm&acirc;neam &icirc;ntr-un formalism și publicul nu merită să fie &icirc;nșelat.</p>
+<p><strong>Cele trei spectacole sunt &ldquo;Tartuffe sau Impostorul&rdquo;, &ldquo;Lecția de violoncel&rdquo; și &ldquo;Vocea umană&rdquo;. Ar fi meritat și altele de la Metropolis?</strong><strong><br /></strong></p>
+<p>Sunt convins că da, dar nu se numește &ldquo;Festivalul Metropolis&rdquo;. Lăs&acirc;nd gluma la o parte, eu am o privire subiectivă.</p>
+<p><strong>&ldquo;&Icirc;ngeri &icirc;n America&rdquo; (n.m. &ndash; spectacol &icirc;n care joacă și actorul George Ivașcu)?</strong></p>
+<p>S-a dorit, chiar s-a dorit, dar una dintre actrițe nu e &icirc;n țară &icirc;n perioada respectivă. Dar sunt subiectiv &ndash; pentru mine, toate spectacolele de la Metropolis sunt importante. De ce? Pentru că le cunosc de la primul pas, atunci c&acirc;nd se propune proiectul, p&acirc;nă la aplauzele finale de la premieră.</p>
+<p><strong>Și cum e să cunoști tot drumul, să ai &icirc;n vedere tot acest proces? Bănuiesc că atunci c&acirc;nd erați doar actor nu vă preocupau lucrurile acestea.</strong><strong><br /></strong></p>
+<p>Deloc chiar.</p>
+<p><strong>S-a schimbat mult perspectiva &icirc;n ultimii ani?</strong><strong><br /></strong></p>
+<p>Da, pentru că trebuie să ai grijă de spectacol, trebui să ai grijă de sensibilități, de orgolii, pentru că toate fac parte din actul de creație. Am &icirc;nțeles că ea, creația, trebuie să devină produs cultural.</p>
+<p><strong>A fost greu să acceptați această realitate?</strong></p>
+<p>Nu știu dacă a fost neapărat greu. Nu mă g&acirc;ndesc dacă a fost sau nu greu, c&acirc;t m-am &icirc;ntrebat ce pot eu să fac eu &icirc;n mod real. Mi-am suflecat m&acirc;necile și mi-am asumat acest frumos rol &ndash; de a construi un teatru, un concept, un repertoriu, lucruri care vor răm&acirc;ne.</p>
+<p><strong>Și acum, că tot v-am luat dintre muncitori, extindeți și o clădire.</strong></p>
+<p>Asta zic. P&acirc;nă la urmă&hellip; Nu știu c&acirc;t de mare actor sunt eu, dar cred că menirea mea &icirc;n teatrul rom&acirc;nesc &nbsp;a fost asta din acești ultimi ani &ndash; să construiesc un teatru. Sigur, au fost ani grei, uneori nedrepți, uneori mi-am sacrificat viața de actor. Pe vremuri eram unul dintre cei mai solicitați actori din București. Jucam peste tot și &icirc;mi făcea plăcere. Acum nu mai am timp de mine deloc.</p>
+<p><strong>L-ați sacrificat pe actorul George Ivașcu? Pe el l-ați zidit aici, la temelia Metropolisului?</strong></p>
+<p>Da, da. P&acirc;nă la &icirc;ndemnul profesorului meu Gelu Colceag sau la al lui Tocilescu, Dumnezeu să-l ierte, bunul meu prieten Toca, au fost vreo trei ani de zile &icirc;n care eu n-am mai jucat. Deloc! Din proprie voință am decis că e mai important ce am de făcut administrativ. Evident că m-au tras de urechi și bine au făcut. Nu e bine.</p>
+<p><a href="http://www.ziarulmetropolis.ro/wp-content/uploads/2014/10/IMG_0103_1.jpg"><img class="alignleft wp-image-42949" src="http://www.ziarulmetropolis.ro/wp-content/uploads/2014/10/IMG_0103_1-511x768.jpg" alt="George Ivascu" width="511" height="768" /></a></p>
+<p><strong>Trece talentul?</strong></p>
+<p>Poate că talentul nu, fiindcă nu știm ce e talentul &ndash; un dar, un har&hellip; Trece altceva: ca la orice profesionist, dacă nu ții bisturiul &icirc;n m&acirc;nă, pierzi&hellip;</p>
+<p><strong>&Icirc;ndem&acirc;narea?</strong></p>
+<p>Da. Și intervine &ndash; mai ales &icirc;n profesia noastră, care e expusă public și unde lucrezi cu vulnerabilități &ndash; frica. Ți se face frică. Recunosc cu m&acirc;na pe suflet că după perioada de pauză, mi s-a făcut frică.</p>
+<p><strong>Mai frică dec&acirc;t la debut?</strong></p>
+<p>Mult mai frică. La debut nutrești speranțe. Aici vii pe un fond de așteptări &ndash; pro sau contra. Nu toată lumea te iubește, e o profesie subiectivă. Așteptările te fac mult mai responsabil. Frica, recunosc, m-a &icirc;nsoțit după anii c&acirc;nd n-am jucat. Jucasem mult p&acirc;nă atunci și pauza a fost bruscă.</p>
+<p><strong>Dar plăcerea de a juca n-a dispărut.</strong><strong><br /></strong></p>
+<p>Nici n-o să dispară. Cineva care are ca vocație profesia asta nu poate să-și piardă bucuria. Ăsta e drumul pe care vreau să merg. Și vreau să merg &icirc;n teatru ca un maratonist, nu ca un sprinter. Dacă g&acirc;ndești așa, &icirc;ți lipsește mult jocul.</p>
+<p><strong>Ce a adus bun pauza asta?</strong></p>
+<p>Teatrul Metropolis.</p>
+<p><strong>Pentru dumneavoastră, personal?</strong></p>
+<p>Pentru mine? O g&acirc;ndire mult mai rațională. Am fost obligat să &icirc;nvăț legi, să &icirc;nvăț aia, să &icirc;nvăț aia, să &icirc;nvăț, să &icirc;nvăț, să &icirc;nvăț.</p>
+<p><strong>E cumplit să manageriezi artiști?</strong></p>
+<p>Nu e deloc cumplit. Pentru a nu intra &icirc;n derută, eu nu-mi spun director. &Icirc;mi spun &ldquo;un actor care are grijă de un teatru&rdquo;.</p>
+<p><strong>Și oamenii cum vă strigă pe aici &ndash; &ldquo;Domnule actor care aveți grijă de un teatru&rdquo;?</strong><strong><br /></strong></p>
+<p>Nu. &Icirc;mi spun &ldquo;domnule director&rdquo;.</p>
+<p><strong>Păi vedeți!</strong></p>
+<p>Dar ar fi foarte mișto să mă strige așa (r&acirc;de). Chiar, ce idee! C&acirc;nd m-or duce la groapă, la morm&acirc;nt tot actor o să scrie, acolo n-o să scrie niciodată director sau altceva. Există normele standard de comunicare &nbsp;&ndash; ele te obligă să păstrezi formalul.</p>
+<p><strong>&Icirc;n termeni strict contabili, Metropolisul are succes, are profit?</strong></p>
+<p>Dovezile sunt consemnate &icirc;n raportul de activitate. Anul trecut am jucat &icirc;n vreo 250 de zile! Cea mai mare cerere e cererea de bilete. Ni se reclama mereu că nu se găsesc locuri, că sună ocupat telefonul. &Icirc;n fiecare an noi ne-am depășit cheltuielile. Jucăm des, aproape &icirc;n fiecare zi a săptăm&acirc;nii, uneori de două ori pe zi. E bine, da.</p>
+<p><strong>C&acirc;t de mult contează relația specială pe care o are maestrul Radu Beligan cu Teatrul Metropolis &icirc;n această ecuație financiară?</strong></p>
+<p>Contează enorm pentru că un actor cu operă, cum este maestrul Beligan și cum sunt ceilalți mari actori care sunt &icirc;n Metropolis sau vor veni să joace aici, &icirc;ţi acordă&nbsp;un credit pe care &icirc;l primești ca instituție. Ei nu-și mai doresc să intre &icirc;ntr-o zonă &icirc;n care să fii &ndash; vorba lui Caragiale &ndash; at&acirc;t de ieftin compromis. Ei simt nevoia unui loc &icirc;n care numele lor să fie apărat. Cei care &icirc;nconjoară spectacolul țin, aici, la un tip de standard, de calitate.</p>
+<p><strong>Ce amintiri mai nostime aveți cu maestrul Beligan? Ceva ce se poate spune public. Oamenii așteaptă lucruri de genul ăsta.</strong><strong><br /></strong></p>
+<p>Mă uitam la c&acirc;t de t&acirc;năr e maestrul Beligan&hellip; După cum se vede, biroul meu e la ultimul nivel. Atunci c&acirc;nd a venit să discutăm despre proiectul &ldquo;Lecția de violoncel&rdquo; , evident că eu i-am spus portarului, din respect pentru maestru, să mă anunțe c&acirc;nd vine Radu Beligan, fiindcă o să cobor eu. Și am avut marea surpriză ca domnia sa să urce p&acirc;nă la biroul meu, așa, &icirc;ncet-&icirc;ncet, treaptă cu treaptă, să se uite cu mare atenție la fiecare detaliu care e pe aici. Și cum mie &icirc;mi place să-i onorez pe cei care au jucat la noi, să pun peste tot afișe cu actorii &icirc;n spectacol, domnia sa, cum nu jucase la Metropolis, a remarcat că nu e nicio fotografie cu el. Mi-a și spus: &ldquo;Observ că nu ai nicio fotografie cu mine!&rdquo;.</p>
+<div id="attachment_26594" class="wp-caption aligncenter"><img class="wp-image-26594" src="http://www.ziarulmetropolis.ro/wp-content/uploads/2013/12/FotografulTAU-7510-1024x682.jpg" alt="Radu Beligan" width="750" height="500" />
+<p class="wp-caption-text">S&acirc;mbătă, 14 decembrie 2013, Teatrul Metropolis l-a sărbătorit pe maestrul Radu Beligan, la &icirc;mplinirea v&acirc;rstei de 95 de ani de viaţă şi 75 de ani de carieră, &icirc;n Piaţa Timpului din Bucureşti</p>
+</div>
+<p><strong>A fost prima remarcă a maestrului?</strong></p>
+<p>Nu. A venit firesc &icirc;n conversație. Și eu sunt foarte fericit că maestrul a venit să joace aici acest spectacol minunat care este &ldquo;Lecția de violoncel&rdquo;. Domnia sa &icirc;mi povestea de toate detaliile pe care le-a observat pe drumul p&acirc;nă aici. Și mi-am dat seama c&acirc;t de atent, de viu e. Sunt oameni care vin, &icirc;și fac treaba și pleacă imediat, fără să se uite la nimic &icirc;n jurul lor.</p>
+<p><strong>Nu observă că acolo, &icirc;n colțul din spatele meu, sunt trei diplome de la &ldquo;Premiile VIP&rdquo; spre exemplu.</strong></p>
+<p>Nu se uită. Exact! Și vedeam c&acirc;t de atent la detalii e. Probabil că de-asta a făcut și o carieră așa de &icirc;ndelungată &ndash; fiindcă a fost atent la detalii. Poate acesta este secretul, nu știu. &Icirc;mi mai trebuie ceva timp să mă dumiresc. &Icirc;nt&acirc;mplări nostime? E greu de spus pentru că domnia sa farmecă prin personalitate și inteligență. Mă așteptam să fiu copleșit de personalitatea sa.</p>
+<p><strong>Nu e, deci, un om care-și duce statuia &icirc;n spate, e un om firesc?</strong></p>
+<p>Asta spun, că era o relație firească.</p>
+<p><strong>Nu impune o barieră.</strong></p>
+<p>&Icirc;n raportul cu mine și cu Metropolis, nu. Deloc. A fost o relație care s-a bazat pe căldură și prietenie. D&acirc;nsul și venea la spectacolele teatrului nostru, i-a plăcut ce a văzut, s-a obișnuit cu locul.</p>
+<p><strong>Are o energie bună Metropolisul.</strong></p>
+<p>Probabil că de-aia a și propus acest proiect aici. Spectacolul trebuie să-și găsească timpul său și cred că &ldquo;Lecția de violoncel&rdquo; și-a găsit timpul lui. A coincis chiar cu ziua maestrului &ndash; 14 decembrie. Paranteză: fiecare spectacol av&acirc;nd propria distribuție, &icirc;ntr-un teatru de proiect, cum e Metropolisul, cel mai greu e să le programezi &icirc;ntr-o zi și la o oră.</p>
+<p><strong>Fiecare actor are alte obligații, are altceva de făcut.</strong><strong><br /></strong></p>
+<p>Trebuie să ții cont și de programele celorlalte teatre, căci ele au &icirc;nt&acirc;ietate, unii actori fiind angajații lor. Apoi, fiecare actor mai are și alte job-uri, are filmări, are &icirc;nregistrări. E greu. Dar fiecare spectacol &icirc;și găsește timpul său.</p>
+<p><strong>Se joacă iar anul acesta pe 14 decembrie?</strong></p>
+<p>Cu siguranță. Da.</p>
+<p><strong>E anunțat deja?</strong></p>
+<p>Am și vorbit cu maestrul. Cel mai frumos cadou pentru un actor e să &icirc;i spui la mulți ani c&acirc;nd e pe scenă, aplaud&acirc;ndu-l.</p>
+<p><strong>Vi s-a &icirc;nt&acirc;mplat?</strong></p>
+<p>Nu.</p>
+<blockquote class="big">
+<p>Despre iubire, ţigări şi roluri importante</p>
+</blockquote>
+<p><strong>C&acirc;nd e ziua dumneavoastră?</strong></p>
+<p>Pe 15 februarie. Sunt vărsător. Nu mi s-a &icirc;nt&acirc;mplat. Dar așa simt. Acum, că mi-ai zis, mă g&acirc;ndesc deja la 15 februarie anul viitor. Cred că orice actor asta &icirc;și dorește &ndash; să fie aplaudat, nu să &icirc;i c&acirc;nți la mulți ani.</p>
+<p><strong>Să fie iubiți &ndash; asta vor actorii?</strong><strong><br /></strong></p>
+<p>Toți avem nevoie de iubire.</p>
+<p><strong>Actorii mai mult?</strong></p>
+<p>Evident. Pentru că actorul, oric&acirc;t am &icirc;ncerca noi să-l definim, e un copil mai mare care, exact ca pe vremuri c&acirc;nd ziceai &ldquo;hai să ne jucăm de-a doctorul și pacientul&rdquo;, iubește să se joace. Avem &icirc;n noi un spirit de copil, intrăm &icirc;ntr-o convenție, ne jucăm de-a ceva, noi naștem poveștile, trăim &icirc;n poveștile respective. Așa &icirc;mi place mie să cred. Nu vreau eu să pară că e ceva incredibil, nemaipomenit, greu. C&acirc;nd ți se pare greu, te și inhibi. Bine&icirc;nțeles că e greu să joci un rol important, și nu mă refer la cel principal neapărat. Atunci c&acirc;nd un rol e important, dacă &icirc;l mai vezi și greu, te blochezi.</p>
+<p><strong>E mai bine să te joci cu el.</strong></p>
+<p>Noi folosim cuv&acirc;ntul &ldquo;repetiție&rdquo;. Dar mie mi se pare mult mai bun cuv&acirc;ntul german &ndash; &ldquo;probă&rdquo;, să &icirc;ncerci, să probezi, să verifici cu nervii tăi, cu sentimentele tale, &icirc;n practică, nu doar teoretic. Dacă spui că e greu, intră &icirc;n acțiune mintea și omori din intuiție. &nbsp;Nu mintea trebuie să fie locomotiva, ci inima, afectele, cum vrei să le spunem. Nu știu unde sunt sentimentele localizate. Din fericire. La cum e de curioasă natura umană, ar opera și acolo.</p>
+<p><strong>S-ar face implanturi de sentimente?</strong></p>
+<p>Da. Și e mai bine să nu știm. Spunem generic &ldquo;suflet&rdquo;. Important e că e zona aia care uneori dă emoții. De-aia și c&acirc;nd te &icirc;ndrăgostești nu ești lucid și te mai lași purtat de val.</p>
+<p><strong>Actoria e o permanentă relație de dragoste? O dragoste &icirc;ntre om și o meserie?</strong><strong><br /></strong></p>
+<p>E dragoste cu meseria, dar &icirc;n mod special cu rolul. Nu poți să faci un rol doar pentru că ești la serviciu, de serviciu, căci se va vedea. Trebuie să te apropii de rolul acela.</p>
+<p><strong>C&acirc;t de greu e să faci asta &icirc;n fiecare zi sau de două ori pe zi? &Icirc;nțeleg că ați fost primul actor care a jucat două roluri &icirc;ntr-o zi, &icirc;n anii `90, deci știți.</strong></p>
+<p>Da. Nu e greu dacă te &icirc;ndrăgostești de poveste. C&acirc;nd &icirc;ți place și ești &icirc;ndrăgostit &icirc;ți dorești și a doua oară. Nu poți să spui c&acirc;nd iubești că te vezi cu dragostea ta doar joia. Nu! Vrei și vinerea și s&acirc;mbăta, la micul-dejun, la pr&acirc;nz, seara, la miezul nopții&hellip; Vrei mereu!</p>
+<p><strong>V-ar mai plăcea să duceți viața asta de actor care joacă mai multe roluri &icirc;ntr-o zi, să alergați dintr-un teatru &icirc;n altul, ca la douăzeci și cinci de ani?</strong><strong><br /></strong></p>
+<p>Acum sunt un pic obosit. Instinctul mi-ar spune nu. Mi-aș dori mai multă odihnă, mai multă acumulare. Mi-e dor să &icirc;mi dau mai mult timp să citesc.</p>
+<p><strong>De c&acirc;nd n-ați mai fost &icirc;n concediu?</strong></p>
+<p>Nu mai știu. Aproape că nu mai știu ce e un concediu. Concediile sunt doar niște weekend-uri pe care le petrecem la mare, la munte&hellip; Probabil că sunt o natură dinamică și mi-e frică atunci c&acirc;nd nu mai sună telefonul, deși mi-aș dori să nu mai sune, să mă lase &icirc;n pace!</p>
+<p>Mi-e frică atunci c&acirc;nd nu mă mai &icirc;nt&acirc;lnesc cu oameni. Ce să fac și la mare? Să stau două săptăm&acirc;ni cu fața la soare? Nu e un act de curaj, de eroism, de dăruire totală, e ceva uman &ndash; acum, dacă tot pot, hai să fac! Mereu spui: ce mișto era la 25 de ani și mi-aș dori să fiu iar așa! Și se poartă acest dialog cordial &icirc;n mine &ndash; ce bine ar fi să ai mai mult timp pentru tine, George, și &icirc;n același timp mă &icirc;ntreb ce să fac cu timpul? Nu &icirc;not, nu nimic. Să stau ca micul pe grătar? Să mă prăjesc așa, aiurea?<br /><strong><br /></strong><strong>Nu știți să &icirc;notați. N-aveați mare &icirc;n Cr&acirc;ngași, de unde sunteți, să &icirc;nvățați să &icirc;notați &icirc;n ea.</strong></p>
+<p>Nu &icirc;n Cr&acirc;ngași. &Icirc;n Militari.</p>
+<p><strong>Așa, scuze.</strong></p>
+<p>Nu, n-aveam, dar mergeam la mare &icirc;n fiecare an. Și la șase ani m-a aruncat un coleg de &icirc;not &icirc;n apă și m-am speriat tare. &Icirc;mi place mult să mă bălăcesc, dar să văd eu limitele, fundul apei. De atunci am rămas cu frica asta. Mama m-a dat la &icirc;not mai departe, a vrut ea să mă scape de fobie. Am și brevet de &icirc;notător, dat de pe vremea aia!</p>
+<p><strong>Aveți de g&acirc;nd să fumați pachetele astea de țigări p&acirc;nă diseară (n.m. &ndash; interviul s-a desfășurat &icirc;n jurul orelor 17.00, actorul mai avea o singură țigară &icirc;ntr-un pachet, și alte două ne&icirc;ncepute pe masă)?</strong></p>
+<p>Da.</p>
+<p><strong>C&acirc;te țigări fumați pe zi?</strong></p>
+<p>Două pachete.</p>
+<p><strong>Nu e mult?</strong><strong><br /></strong></p>
+<p>E foarte mult. Și e și de demult.</p>
+<p><strong>De c&acirc;t timp fumați?</strong><strong><br /></strong></p>
+<p>La 16 ani am &icirc;nceput să pufăi.</p>
+<p><strong>Treizeci de ani! Enorm.</strong></p>
+<p>Da și de la 18 am &icirc;nceput rău, de c&acirc;nd am plecat &icirc;n Armată, cum se pleca atunci c&acirc;nd picai la facultate.</p>
+<p><strong>Ați picat la facultate?</strong><strong><br /></strong></p>
+<p>Am picat de două ori primul sub linie!</p>
+<p><strong>Și nu v-ați lăsat!</strong></p>
+<p>Nu. De ce? Ce altceva mai bun puteam să fac?</p>
+<p><strong>Se obișnuiseră cei din comisie cu dumneavoastră? Sau n-ați nimerit la aceiași profesori?</strong></p>
+<p>Nu nimerisem. Nu se obișnuiseră. Eram și eu un candidat acolo. Nu eram special. Adică acum cred că nu eram special. Atunci credeam că sunt special și mi se face o nedreptate dacă nu intru.</p>
+<p><strong>Ați mai văzut și alte spectacole selectate la FNT dintre cele care nu se joacă la Metropolis?</strong></p>
+<p>Din păcate &ndash; asta-ți spuneam &ndash; mi-aș dori mai mult timp. Nu mai ajung la spectacole, &icirc;mi lipsește! Astăzi dacă ar fi un spectacol n-aș ajunge, căci la șapte seara, am o &icirc;nt&acirc;lnire, la ora opt, la fel!</p>
+<p><strong>&Icirc;n ce spectacole jucați &icirc;n afară de &ldquo;&Icirc;ngeri &icirc;n America&rdquo; și &ldquo;Tarelkin&rdquo;, &icirc;n care aveți rolul dublat?</strong></p>
+<p>Nimic &icirc;n rest.</p>
+<p><strong>Nu e puțin?</strong></p>
+<p>La douăzeci și cinci de ani, dacă mi s-ar fi spus &ldquo;vrei să joci două roluri, importante, dar doar două?&rdquo;, aș fi răspuns că e puțin. Asta, atunci. Acum spun că nu vreau să &icirc;i &icirc;ncurc pe colegi. La ce program am, nu vreau să nu se programeze un spectacol tocmai din cauza mea!</p>
+<p><strong>Vi s-a &icirc;nt&acirc;mplat vreodată să &icirc;i &icirc;ncurcați?</strong></p>
+<p>N-am &icirc;ncurcat, dar mă simt ușor nedrept față de colegii mei să zic că nu jucăm din cauza mea&hellip; Paradoxul e că am și puterea să decid! Am zis că e mai bine așa &ndash; să nu &icirc;ncurc.</p>
+<p><strong>Cum e cu puterea de decizie &ndash; v-a schimbat? Ce aduce rău?</strong></p>
+<p>Puterea de decizie ce aduce rău?</p>
+<p><strong>Puterea de orice fel. Trebuie să fie și părți rele.</strong><strong><br /></strong></p>
+<p>Ți-am spus că nu-mi zic director, ca să nu uit ce e important. Te poți &icirc;mbăta cu puterea, dacă nu te privești &icirc;n oglinda care trebuie, dacă oglinda aia deformează și pari mai &icirc;nalt dec&acirc;t ești&hellip; Nu aduci niciun beneficiu bunei tale intenții, că probabil ai bune intenții. Toată lumea &icirc;și doreşte succesul, orice s-ar spune, tu trebuie să contribui la succesul proiectului, al spectacolului, și dacă nu mai știi cine ești&hellip; De-aia zic: sunt un actor care &icirc;ngrjiește un teatru.</p>
+<p><a href="http://www.ziarulmetropolis.ro/wp-content/uploads/2014/10/IMG_9989_1.jpg"><img class="alignleft wp-image-42950" src="http://www.ziarulmetropolis.ro/wp-content/uploads/2014/10/IMG_9989_1.jpg" alt="george ivascu" width="600" height="400" /></a></p>
+<p><strong>Ați mai făcut și ceva care nu se mai face &icirc;n ziua de azi. Ați făcut un ziar &ndash; Ziarul Metropolis -, nu doar un teatru. De ce?&nbsp;</strong><strong><br /></strong></p>
+<p>Pentru că mi se pare incredibil c&acirc;te lucruri minunate se &icirc;nt&acirc;mplă &icirc;n cultura rom&acirc;nească, &icirc;n arta rom&acirc;nească, și c&acirc;ți oameni de valoare avem. Și nu sunt vehicule prin care să fie promovați, prin care să știi ce fac oamenii ăia. Mi se pare incredibil! &Icirc;n orice capitală civilizată te duci, cultura e la mare preț! Tocmai cultura vinde! Despre asta este vorba. Dacă tot am avut puterea de a decide, am decis să fac ziarul acesta, fiindcă avem nevoie.</p>
+<p><strong>Drept dovadă că a și mers, merge bine, a prins, era cerere.</strong><strong><br /></strong></p>
+<p>Era cerere foarte mare și merge bine tocmai pentru că eu vreau să știu ce se mai &icirc;nt&acirc;mplă pe l&acirc;ngă mine, prin țară, ce mai face colegul meu, chiar dacă nu am timp să merg la spectacolul lui. E un paradox ca tocmai &icirc;n epoca aceasta a comunicațiilor, a telefoanelor, să știm at&acirc;t de puțin. Nu e firesc! &Icirc;n luna martie, c&acirc;nd e luna femeii, a avut un imens succes rubrica &ldquo;Actrița de la pagina &icirc;nt&acirc;i&rdquo;! Avem actrițe superbe, actrițe cu o poveste, cu roluri minunate și noi nu promovăm exact acest omagiu către frumusețe, către dăruire, către carieră? &Icirc;mi pare rău, cred că suntem idioți. E păcat să nu spui poveștile astea. Nu sunt adeptul de a impune modele cu forța.</p>
+<p><strong>Dar măcar să avem grijă de ce avem, nu?</strong></p>
+<p>Exact! Măcar să putem să nu distrugem prin ignoranță, prin necunoaștere. Primul lucru pentru a fi recunoscut e să fii cunoscut. Primul vechicul e &icirc;nt&acirc;i să cunosc. Mai vin cu taximetrul și mă &icirc;nciudez c&acirc;nd mă &icirc;ntreabă taximetristul:&nbsp;<em>ooo, dar ce actori mai sunt astăzi, domnule?</em>&nbsp;Și eu &icirc;i &icirc;ntreb: ați&nbsp;<em>mai fost la teatru, ca să-i vedeți, ați mai citit ceva despre ei?</em>&nbsp;Ei sunt buni, dar nu-i știe nimeni!</p>
+<p><strong>Auziți discursul ăsta cu &ldquo;Generația noastră de Aur&rdquo;, care nu mai există și nu mai&hellip;</strong></p>
+<p>Sunt de acord, marii actori sunt unici.</p>
+<p><strong>Atunci, &icirc;n timpurile &ldquo;de aur&rdquo; erau opt absolvenți pe an, acum sunt de zece ori mai mulți.</strong></p>
+<p>Un mare actor e unic. Și publicul de această unicitate se &icirc;ndrăgostește. Un mare actor poate fi și t&acirc;năr, nu doar bătr&acirc;n. Actorul e la vedere, &icirc;n prim-plan, e expus. El are nevoie de vehicule de promovare. Toți avem nevoie de asta, să mai aflăm și de lucrurile frumoase. Arta ce &icirc;nseamnă? A cultiva frumosul din tine și din ceilalți. Indiferent care e tipul de poveste pe care o &icirc;mpărtășim, ca mijloace, p&acirc;nă la urmă spui o poveste, nu? De aici, cu ziarul.</p>
+<p><strong>Vă felicit, a fost o idee bună.</strong></p>
+<p>Mulțumesc. Și &icirc;ți mulțumesc că scrii la noi. &Icirc;mi place că scrii și frumos. Primul ziar pe care &icirc;l citesc &icirc;n fiecare zi este Ziarul Metropolis. Nu pentru că e al nostru, ci pentru că e interesant. Nu am nicio influență, nu mă bag &icirc;n politica editorială, &icirc;l las pe Dan Boicea (n.m. &ndash; redactorul-șef), mă interesează să se exprime ceilalți, sunt bucuros să aflu ce mai fac. C&acirc;nd eram puști eram &icirc;nnebunit să-mi iau almanahul &ldquo;Cinema&rdquo;. Avea și pagini de divertisment, erau scrise acolo tot felul de lucruri despre actori, pentru mine era superb să citesc așa ceva!</p>
+<p><strong>Aveați spre ce modele să vă uitați.</strong></p>
+<p>Cred că ăsta e și sensul nostru acum, apropo de a forma opinia, nu de a deforma opinia.</p>
+<p><strong>Ce actor vă plăcea c&acirc;nd erați puști?</strong><strong><br /></strong></p>
+<p>Charlie Chaplin. Spun chestia asta ca să nu fiu nedrept cu actorii mari cu care am avut șansa să joc.</p>
+<p><strong>Cu Charlie Chaplin n-ați avut șansa să jucați.</strong></p>
+<p>Cu Chaplin nu. Și dacă zic de Chaplin nu supăr pe nimeni.</p>
+<p><strong>E greu să ai obiecții la Chaplin.</strong></p>
+<p>El &icirc;mbina absolut colosal drama și comedia.</p>
+<p><strong>Am citit, &icirc;ntr-un interviu mai vechi, că Don Quijote și Cristofor Columb sunt eroii dumneavoastră preferați. Cum și de ce acești doi mari visători?</strong><strong><br /></strong></p>
+<p>Și eu sunt un visător, &icirc;n sensul că dacă m-am apucat de visare a fost pentru că nu totdeauna ce se &icirc;nt&acirc;mplă &icirc;n realitate &icirc;mi și place. Teatrul e pentru mine o oază de vise.</p>
+<blockquote class="big">
+<p>Despre America lui George Ivaşcu</p>
+</blockquote>
+<p><strong>Teatrul e o ieșire din realitate?</strong></p>
+<p>Da, e așa &ldquo;mă duc la teatru, ce mișto!&rdquo;. Eu mă trezesc greu dimineața. C&acirc;nd eram copil, doar bunica știa să mă trezească &icirc;ntr-un fel care să-mi placă dimineața.</p>
+<p><strong>Și cum vă trezea?</strong><strong><br /></strong></p>
+<p>Spunea &icirc;ntr-un anume fel &ldquo;George&hellip;&rdquo;, &icirc;nc&acirc;t era o trezire din aia caldă. Sigur că atunci c&acirc;nd mi-am ales meseria, a contribuit și asta &ndash; că la teatru ai repetiții de la zece sau dacă nici repetiții n-ai, ai treabă doar seara. A contat și asta &icirc;n alegerea mea, vă spun! Bine&icirc;nțeles că nu mi-au ieșit socotelile. Am treabă acum de la prima la ultima oră.</p>
+<p><strong>Teatrul vă lasa iluzia unei libertăți absolute.</strong></p>
+<p>Cel puțin &icirc;n perioada aia &icirc;n care teatrul reprezenta un spațiu al libertăților, nu al libertinismului. Trebuie să știm să facem diferența, să nu cădem &icirc;n panta cealaltă. Da, sunt un visător! Și din acest motiv, Quijote și Columb.</p>
+<p><strong>Și ce Americă ați descoperit?</strong></p>
+<p>Teatrul. Teatrul e America mea. Dacă aș fi &icirc;ntrebat rapid cu ce aș putea să &icirc;nlocuiesc teatrul, n-aș ști ce să răspund. Ca orice om, poți să fii dezamăgit, poți să dai și mari rateuri, dar toate acestea fac parte din frumoasa noastră călătorie.</p>
+<p><strong>Ați dat-o &icirc;n bară rău cu vreun rol?</strong></p>
+<p>Nu. Asta trebuie să-ți spună colegii mei. Unii vor spune că da, alții vor spune că am dat-o cu toate. Nu contează. Pentru mine, cel mai important este că at&acirc;t c&acirc;t sunt, sunt onest &icirc;n relația mea cu teatrul. De-asta e importantă e America asta. E un teritoriu at&acirc;t de vast. Nu pot să spun &ldquo;<em>teatrul e așa</em>:&hellip;&rdquo;.</p>
+<p><strong>La fiecare om, teatrul e altfel.</strong></p>
+<p>Descoperi de fiecare dată un continent. Oric&acirc;t ai crede că &icirc;l cunoști, de fapt nu-l cunoști &icirc;ncă! Teatrul e un continent imens, se face de at&acirc;tea mii de ani. Au fost milioane de actori&hellip;<br /><strong><br /></strong><strong>Nu se sf&acirc;rșește lumea cu tine.</strong></p>
+<p>Niciodată. Fiecare avem doar o bucată de drum de parcurs și fiecare descoperă alte și alte teritorii &icirc;n continentul ăsta, alte frumuseți.</p>
+<p><strong>Și morile de v&acirc;nt care vă sunt?</strong></p>
+<p>Realitatea. Uneori simt și o spun cu regret &ndash; realitatea e o mare dezamăgire, trăim &icirc;ntr-o realitate care nu mai face acel demers simplu de recunoaștere a valorilor noastre, ele nu mai sunt nici măcar cunoscute.</p>
+<p><strong>E de luptat, așadar.</strong></p>
+<p>Nu o spun neapărat cu tristețe, caut să &icirc;nțeleg, să definesc termenii, să-mi explic. E greu să te faci cunoscut și cel mai greu e pentru că nu e un sistem firesc care să-ți și recunoască valoarea și să o pună la locul ei.</p>
+<p><strong>E o bulversare generală a valorilor.</strong></p>
+<p>Cultura rom&acirc;nească e și identitatea noastră. Ne definește. E ca acel &ldquo;cine ești TU?&rdquo;, cu majuscule, ca la Pirandello. Cine ești tu, societate? Cine ești tu, națiune? Cultura ne definește. E păcat să ne folosim doar de exemplele trecutului: &icirc;n perioadă interbelică&hellip;. Ooook, &icirc;n regulă, dar acolo era un sistem care recunoștea valoarea. Și astea sunt morile de v&acirc;nt. Căci ți-am spus, cultura nu face rău, chiar nu face rău. Deloc.</p>
+<p><strong>Deși nu face rău, ea poate fi periculoasă pentru autorități.</strong></p>
+<p>Asta așa e. Dar mi se pare și mai periculos să nu ai cultură. Vorbim ca strategie. Chiar dacă e o strategie locală.&nbsp;<em>Domnule, &icirc;n orașul Y s-a hotăr&acirc;t să se suprime orice act de cultură, o &icirc;nchidem cu totul!</em></p>
+<p><strong>Chiar, ce s-ar &icirc;nt&acirc;mpla dacă &icirc;ntr-un loc s-ar renunțat cu totul, dar cu totul, la cultură?</strong>&nbsp;<strong>Dacă s-ar interzice.</strong></p>
+<p>Să-ți spun banalități? Că lumea ar fi mai ur&acirc;tă?<br /><strong><br /></strong><strong>Chiar ar fi mai ur&acirc;tă.</strong></p>
+<p>Da. Ce ai face atunci? Ai trăi &icirc;ntr-un ev mediu &icirc;ntunecat.</p>
+<p><strong>Te-ai uita la televizor.</strong></p>
+<p>E absurd! E ca și cum ai spune că ție nu-ți place dec&acirc;t un anotimp. Da, e bine să preferi un anotimp, dar fiecare are frumusețea lui. Căderea frunzelor toamna e superbisimă, c&acirc;nd mergi la ski și vezi albul ăla imaculat&hellip; e superb! Cum să zici că ție &icirc;ți place doar vara? Poți să o preferi, dar frumusețea vine din diversitate. Diversitatea te face să vezi &icirc;n ROGVAIV.</p>
+<p><strong>Cultura te face să &icirc;nțelegi că există diversitate. Fără cultură, habar n-ai de una ca asta.</strong></p>
+<p>Prin formele ei, cultura asta &icirc;ți arată. &Icirc;ți place muzica clasică! Dar ce frumos că există o diferență &icirc;ntre Mozart și Chopin! Mie asta mi se pare interesant. Eu nu &icirc;ndrăznesc să spun că Mozart e mai mare dec&acirc;t Chopin, pentru că fiecare om are spectrul lui de vibrații, &icirc;n funcție de așteptările lui, de speranțele lui, de iubirile lui, de tristețile lui, de m&acirc;hnirile lui. Tu c&acirc;nd spui pe scenă &ldquo;te iubesc&rdquo;, &ldquo;te iubesc-ul&rdquo; tău vibrează &icirc;n fiecare altfel. Nu putem cuantifica sentimentele, nu putem să le afișăm ca pe lista de &icirc;ntreținere la bloc.</p>
+<p><strong>Cum e să mori pe scenă?</strong></p>
+<p>Orice actor &icirc;și dorește asta.</p>
+<p><strong>Nu ca om, ca personaj. Să mori &icirc;n spectacol, apoi să te ridici și să te duci acasă. Cum e c&acirc;nd ești mort acolo, &icirc;n poveste?</strong></p>
+<p>E ciudat!</p>
+<p><strong>Vi s-a &icirc;nt&acirc;mplat des?</strong></p>
+<p>Da. Această mare necunoscută &ndash; ce urmează după? &ndash; te face să-ți pui tot felul de &icirc;ntrebări. Știi cum e? După ce &ldquo;mori&rdquo;, mai și stai &icirc;n scenă &ldquo;mort&rdquo;. Și stai acolo, trup, cu ochii &icirc;nchiși, &icirc;ncerci să-ți ții respirația, să nu se vadă că ești un personaj, și &icirc;n jurul tău se dau replici, povestea merge mai departe. Și atunci te &icirc;ntrebi dacă așa e și &icirc;n viața adevărată.</p>
+<p>Așa o fi? &ndash; tu stai acolo &icirc;ntins și totul continuă? Marele meu semn de &icirc;ntrebare se naște &icirc;n cele c&acirc;teva minute de după ce &ldquo;mori&rdquo;. &Icirc;ți dorești &icirc;n carieră să mori c&acirc;t mai des, că e tot un fel de căutare &icirc;n zona vieții. Fiecare rol &icirc;ți naște un semn de &icirc;ntrebare. E frumosă meseria noastră! Mai toți actorii au murit cel puțin o dată &icirc;n scenă. E o șansă. E minunat să poți să-ți pui &icirc;ntrebări despre om.</p>
+<p><strong>Cred că teatrul, continentul ăsta despre care vorbiți, e, de fapt, natura umană.&nbsp;</strong><strong><br /></strong></p>
+<p>Da! Da! Și eu cred la fel. Nu cred că un spectacol de teatru te poate face mai bun sau mai rău &ndash; dacă nu cauți unde trebuie. Căutarea corectă aduce răspunsurile. Nu știu să definesc teatrul. Cu c&acirc;t parcurg mai mult acest continent și trec anii, cu at&acirc;t sunt mai multe &icirc;ntrebări dec&acirc;t răspunsuri. Mă &icirc;ntreb mereu &ldquo;Oare?&rdquo;.</p>
+<p><strong>C&acirc;nd erați t&acirc;năr vă orbea setea de glorie?</strong></p>
+<p>Setea de afirmare. Dacă nu o ai atunci, c&acirc;nd să o ai?</p>
+<p><strong>E un pic caraghios, &icirc;ntr-adevăr, să te apuce setea de afirmare la șaizeci de ani.</strong></p>
+<p>Da, e. Tinerii trebuie să caute și caută afirmarea. E firesc.</p>
+<p><strong>Ați fost &ndash; ca să &icirc;nțeleagă și publicul nostru t&acirc;năr &ndash; un Marius Manole al anilor `90.</strong><br /><strong>(r&acirc;de)</strong></p>
+<p><strong>Sau el e un George Ivașcu al anilor 2000?</strong></p>
+<p>A fost, lăs&acirc;nd iar gluma la o parte, o perioadă &icirc;n care am muncit imens. Am muncit mult pentru că am avut și cu cine. Eu cred că sunt cine sunt astăzi datorită &icirc;nt&acirc;lnirilor pe care le-am avut &ndash; cu mari artiști, cu mari actori, cu mari regizori. Eu sunt suma acestor &icirc;nt&acirc;lniri. E normal ca tinerii să caute c&acirc;t mai multe &icirc;nt&acirc;lniri și cu oameni valoroși.</p>
+<p>E important, te formează. Care e cheia succesului? Nu există o rețetă. Cheia succesului e aia de mă &icirc;ntoarce tot timpul la origini &ndash; da, sunt un băiat din cartierul Militari, care visam să apar și eu la televizor, care visam și eu să fiu aplaudat pe o scenă. Nu e voie să uiți asta niciodată.</p>
+<p><a href="http://www.ziarulmetropolis.ro/wp-content/uploads/2014/10/IMG_0115_1.jpg"><img class="aligncenter wp-image-42951" src="http://www.ziarulmetropolis.ro/wp-content/uploads/2014/10/IMG_0115_1.jpg" alt="george ivascu" width="750" height="500" /></a></p>
+<p><strong>Acum &icirc;n ce cartier stați?</strong></p>
+<p>Acum stau &icirc;n centru. E mai aproape de teatru, &icirc;mi place să vin pe jos la teatru. &Icirc;mi place să merg, să am timp să mă g&acirc;ndesc la ceea ce urmează să fac. Nu-mi place să conduc, să fiu tot timpul stresat, să mă feresc, să nu fac greșeli, să fiu claxonat. &Icirc;mi place să-mi adun g&acirc;ndurile.</p>
+<p><strong>Vă cunosc oamenii pe stradă?</strong></p>
+<p>Da!</p>
+<p><strong>Și ce vă spun?</strong></p>
+<p>Am venit cu un taximetrist și-mi spunea: &ldquo;Să știți că am dus multe personalități &icirc;n acest taximetru și m-am comportat cu ei absolut normal&rdquo;. I-am răspuns: &ldquo;Să știți că și noi ne-am comportat la fel de normal cu dumneavoastră&rdquo;. Depinde de la om la om. Unii sunt drăguți.</p>
+<p><strong>Vă știu de la televizor sau de la teatru?</strong></p>
+<p>Mulți și de la televizor, au fost perioade &icirc;n care am făcut lucruri &icirc;n televiziune. Sunt amestecați. Taximetristul ăsta de care &icirc;ți spun cred că mă știa de la teatru, pentru că se vedea că nu e genul de om care are timp de televizor, &icirc;mi spunea că regretă că nu mai are timp să vină la teatru, că are doi copii acasă de crescut, dar că &icirc;nainte, &icirc;n tinerețea lui, venea mereu. Probabil că d&acirc;nsul mă știa de la teatru. Mai dai un interviu, te mai văd oamenii pe colo, pe dincolo, și nu te uită.</p>
+<p><strong>Pe internet sunteți activ?</strong></p>
+<p>Nu-mi place. A fost și un refuz de-al meu. Mie &icirc;mi place comunicarea asta de foc de tabără, să ne &icirc;nt&acirc;lnim, să vorbim. Poate sunt desuet, asta și apropo de Don Quijote. Sunt niște reflexe care &icirc;mi dau confortul creativității. Nu știu să scriu cu prescurtari, fara diacritice, păi mie &icirc;mi ia imens de mult să scriu un sms! Mai bine te sun.</p>
+<p><strong>Oamenii știu de unde să vă ia, dacă au nevoie de dumneavoastră, vă găsesc aici, la teatru.</strong></p>
+<p>Am parcurs o perioadă lungă &icirc;n teatru, ca să fiu tot aici. Chiar dacă &icirc;mi schimb domiciliul, din Militari &icirc;n centru, tot la teatru ajung.</p>
+<p>Fotografii cu&nbsp;<em><a href="http://www.teatrulmetropolis.ro/" target="_blank">George Ivascu</a></em>&nbsp;&nbsp;&ndash; Petrică Tănase</p>
+</div>
+<p>&nbsp;</p>						</div>
+                </div>
+
+                
+            </div>
+
+        </div>
+        <!-- End Container -->
+
+    </div>
+    <!-- End Site Wrapper -->    <div class="scroll-to-top wow rollIn" data-wow-delay="0.5s">
+        <a href="#home"><i class="fa fa-angle-up"></i></a>
+    </div>
+    <footer class="dark wow flipInY">
+      <table width="100%"><tr>
+      <td width="50%"><center>
+<img src="https://www.teatrulmetropolis.ro/view/theme/front/images/secure.png" style="width:500px;"></>
+</center>
+      </td>
+
+       <td width="50%"> <center><p class="copyright">
+            <img src="https://www.teatrulmetropolis.ro/view/theme/front/images/logo-tm-25-20.png" title="Teatrul Metropolis" alt="Teatrul Metropolis">
+            <span class="logo-text">Teatrul Metropolis</span>
+            <span class="text-divide">|</span>by
+            <a href="http://pixozz.com" title="Web Design" target="_blank">
+                 <img src="https://www.teatrulmetropolis.ro/view/theme/front/images/logo-pixozz.png" style="height:auto; width:70px;" alt="Dezvoltare Web">
+            </a>
+            <br />&copy; 2015 Toate drepturile rezervate.</p></center></td></tr></table>
+    </footer>
+	<script src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/QueryLoader.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/wow.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/sticky.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/easing.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/gmap3.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.flexslider-min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.mb.YTPlayer.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/fitVids.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/isotope.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/form-validate.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/SmoothScroll.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/backstretch.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/twitter/jquery.tweet.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/twitter/ticker.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/functions.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/custom.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.metadata.min.js"></script>
+	<script type="text/javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.maphilight.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/zebra_dialog.js"></script>
+	<script type="text/javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.tipsy.js"></script>
+	<script src="https://www.teatrulmetropolis.ro:8000/socket.io/socket.io.js"></script>	
+	<script type="text/javascript">
+	$( document ).ready(function() {
+		$.ajax({
+			url: "https://www.teatrulmetropolis.ro:8000/socket.io",
+			type: "get",
+			cache: false,
+			dataType: 'jsonp', // it is for supporting crossdomain
+			crossDomain : true,
+			asynchronous : false,
+			jsonpCallback: 'deadCode',
+			timeout : 700, // set a timeout in milliseconds
+			complete : function(xhr, responseText, thrownError) {
+				if(xhr.status == "200") {
+					var firewall_alert = 'Conectare la sala cu success!';
+				} else {
+					var firewall_alert = 'Atentie Firewall-ul dumneavoastra blocheaza conexiunea cu Teatrul Metropolis!.';
+				}
+				$("body").attr("firewall", firewall_alert);
+			}
+		});	
+		$(".day").on( "mouseover", function() {
+			var id = $(this).attr('id');
+			$( "div.spectacol[id!='"+id+"']").addClass('fade');
+		})
+		.on( "mouseout", function() {
+			$( "div.spectacol" ).removeClass("fade");
+		});
+		$(".spectacol").on( "mouseover", function() {
+			var id = $(this).attr('id');
+			$( "div.day[id='"+id+"']").addClass('over');
+			$( "div.spectacol[id!='"+id+"']").addClass('fade');
+		})
+		.on( "mouseout", function() {
+			var id = $(this).attr('id');
+			$( "div.day[id='"+id+"']").removeClass("over");
+			$( "div.spectacol" ).removeClass("fade");
+		});		
+			var footer = $("footer").height();
+			var header = $("#navigation").height();
+			var windowh = $(window).height();
+			var pano = windowh-footer-header-71;
+			$("#pano").height(pano);	
+			$('table#comenzi').dataTable( {
+				"sDom": '<"toolbar">frtip'
+			} );
+			$("a#comenzi_previous").html('');
+			$("a#comenzi_next").html('');
+	});		
+	</script>	
+	<script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".signin").click(function(e) {          
+				e.preventDefault();
+                $("fieldset#signin_menu").toggle();
+				$(".signin").toggleClass("menu-open");
+            });
+			
+			$("fieldset#signin_menu").mouseup(function() {
+				return false
+			});
+			$(document).mouseup(function(e) {
+				if($(e.target).parent("a.signin").length==0) {
+					$(".signin").removeClass("menu-open");
+					$("fieldset#signin_menu").hide();
+				}
+			});			
+			
+        });
+		$(function() {
+		  $('a.tipsy').tipsy({gravity: 'w'});   
+		});		
+	</script>
+</body>
+</html>

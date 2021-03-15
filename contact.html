@@ -1,0 +1,75 @@
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" media="screen" />
+
+
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+
+</head>
+<body id="facybox_fundal">
+<div id="content_account">
+  
+    <div class="center">
+		<table><tr>
+			<td><h1>Contact</h1></td>
+		</tr>
+		</table>
+    </div>
+  
+  <div class="middle">
+    
+	<p>
+	Adresa: Str. Mihai Eminescu nr.89, sector 2, Bucureşti.</p>
+<p>
+	Rezervari bilete se pot face telefonic la numarul&nbsp;<strong>021 210 51 08</strong>.<br />
+	(&Icirc;n perioada 19- 31 august 2013 &icirc;n intervalul orar 12:00 - 19.00)<br />
+	Rezervarea telefonică este valabila 24 de h.</p>
+<p>
+	Sunt disponibile bilete şi la v&acirc;nzare on-line.</p>
+<p>
+	Pentru probleme tehnice privind cumpararea online a biletelor vă rugăm sunaţi la <strong> 021 210 99 07,</strong> luni-vineri, 10.00-18.00</p>
+<p>
+	Dupa &icirc;nceperea spectacolului biletele şi invitaţiile &icirc;şi pierd valabilitatea.</p>
+<br/>
+	<br/><br/>
+	    <form action="https://teatrulmetropolis.ro/index.php?route=continut/contact/mesaj_contact" method="post" id="mesaj_contact">
+					<div style="display: inline-block; width: 100%;">
+		
+						<input type="text" name="nume" value="adaugă numele aici" onfocus="if (this.value == 'adaugă numele aici') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'adaugă numele aici';}" class="user-input" >
+								
+																
+						<br/><br/>	
+						
+						<input type="text" name="email" value="adaugă adresa@email aici" onfocus="if (this.value == 'adaugă adresa@email aici') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'adaugă adresa@email aici';}" class="user-input" >
+								
+														<br/><br/>		
+						
+						
+						
+						
+						<textarea name="mesaj" class="user-textarea" noresize></textarea>
+						
+												<br/><br/>
+						
+						<b>Cod de verificare</b><br />
+						<input id="captcha" type="text" name="captcha" value="" class="captcha-input" /><br/>
+						<br/>
+						<img src="index.php?route=information/contact/captcha" /><br/><br/>
+										
+						<a onclick="$('#mesaj_contact').submit();" class= "buton" >Trimite</a>
+					
+					</div>
+					</form>
+					
+					
+  </div>
+  
+</div>
+</body>
+</html>

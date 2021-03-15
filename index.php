@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ro" xml:lang="ro">
+<head>
+<title>Teatrul Metropolis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="ro" />
+<link href="http://www.teatrulmetropolis.ro/image/data/logo-ico.gif" rel="shortcut icon" type="image/x-icon" />
+<meta name="description" content="Teatrul Metropolis" />
+<meta name="keywords" content="" />
+<base href="http://www.teatrulmetropolis.ro/" />
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<!--[if IE]>
+	
+<![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+</head>
+<body onload="MM_preloadImages()" bgcolor="#000000">
+
+<div id="container">
+	<div id="div1"></div>
+	<div id="div3"></div>
+	<div id="header"><table width="100%"><tr><td align="center"><img src="catalog/view/theme/default/image/home_antet_aniversar.png" width="855" height="405"></td></tr></table></div>
+
+
+
+
+
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+
+function showcaptcha(){
+
+
+if (document.layers) { // NN4+
+	
+			document.layers['captcha_form'].visibility = "show";
+			document.layers['captcha_form'].display = "block";
+			document.layers['adauga'].display = "none";
+			document.layers['captcha'].focus();
+			
+
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+				var obj = document.getElementById('captcha_form');
+				obj.style.visibility = "visible";
+				obj.style.display = "block";
+				var obj = document.getElementById('adauga');
+				obj.style.display = "none";
+				document.getElementById('captcha').focus();
+				
+	}
+else if (document.all) { // IE 4
+			document.all['captcha_form'].style.visibility = "visible";
+			document.all['captcha_form'].style.display = "block";
+			document.all['adauga'].style.display = "none";
+			document.all['captcha'].style.focus();
+			
+	}
+	
+}
+</script>
+
+
+
+
+<div id="content">
+
+<table width="100%"><tr><td align="center">
+	
+			
+	
+	<div class="center">
+		<table width="1000"  cellpadding="0" cellspacing="0"><tr><td width="216" valign="top" align="center">
+			<div class="button-artisti">
+					<a href="http://www.teatrulmetropolis.ro/artisti" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','catalog/view/theme/default/image/artisti_hover.png',1)">
+						<img src="catalog/view/theme/default/image/artisti_normal.png" name="Image1" width="195" height="196" border="0" id="Image1" />
+					</a>
+				</div>
+			<div class="button-despre_noi">
+					<a href="http://www.teatrulmetropolis.ro/despre_noi" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','catalog/view/theme/default/image/despre_noi_hover.png',1)">
+						<img src="catalog/view/theme/default/image/despre_noi_normal.png" name="Image4" width="174" height="145" border="0" id="Image4" />
+					</a>
+				</div>
+			<div class="button-rp">
+					<br>
+					<table class="p-table" cellpadding="0" cellspacing="0" >
+						<tr>
+                            <td height="65">
+                             <div class="contact">
+                                <a class="contact1" href="http://www.teatrulmetropolis.ro/contact.html" id="fancybox_page_rel">&nbsp;</a>
+                             </div>
+                            </td>
+                        </tr>
+						<tr>
+						  <td height="132">
+                           <div class="parteneri">
+                                <a class="parteneri1" href="http://www.teatrulmetropolis.ro/parteneri.html" id="fancybox_page_rel">&nbsp;</a>
+                           </div>
+                          </td>
+					    </tr>
+						<tr><td align="left" height="25">
+							<div class="newsletter">
+								<img src="catalog/view/theme/default/image/newsletter_normal.png" name="Image7" width="131" height="25" border="0" id="Image7" />
+							</div>
+						</td></tr>
+						<tr><td align="left" valign="top">
+							<div id="table_newsletter">
+														Pentru abonare<br>
+							<form action="http://www.teatrulmetropolis.ro/index.php?route=common/home/newsletter" method="post" id="newsletter">
+								<input type="text" name="email" value="adaugă adresa@email aici" onfocus="if (this.value == 'adaugă adresa@email aici') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'adaugă adresa@email aici';}" class="user-input" onKeyPress="return submitenter_newsletter(event)">
+																<br>
+								<div id="adauga" style="display:block;" >
+									<div class="login-submit" onclick="$('#captcha_form').show();$('#table_newsletter').height(200);" >Adaugă</div >
+								</div >
+								<div id="captcha_form" height="100" style="display:none;">
+									<table border='0' cellspacing='0' cellpadding='0' height="100">
+										<tr>
+											<td height="50"><br />Introduceți codul de verificare<br />
+												<input id="captcha" type="text" name="captcha" value="" class="captcha-input" onKeyPress="return submitenter_newsletter_trimite(event)"/>
+																							</td>
+										</tr>
+										<tr><td>
+											<img src="index.php?route=information/contact/captcha" />
+										</td></tr>
+									</table>
+									<a onclick="$('#newsletter').submit();" class= "buton" >Trimite</a>
+								</div>
+							</form>
+							</div>
+						</td></tr>
+						<tr><td>&nbsp;</td></tr>
+						<tr><td>&nbsp;</td></tr>
+					</table>
+					
+				
+					
+				</div>
+			</td>
+		<td width="564" valign="top" align="center">
+					
+			<div class="left-top0"></div>
+			<div class="right-top0"></div>
+			<div class="center-top0"></div>
+		
+			<div class="center-middle0">
+			
+				<table width="330" align="left" height="100%" >
+					<tr>
+						<td align="RIGHT" valign="top" width="10" rowspan="6"></td>
+						
+													<tr><td width="10" valign="middle">
+								<table width="10" cellspacing='0' cellpadding='0' border="0" >
+									<tr><td background="catalog/view/theme/default/image/vineri/lt.png" width="13" height="16"></td></tr>
+									<tr><td background="catalog/view/theme/default/image/vineri/c.png" width="13" height="0"></td></tr>
+									<tr><td background="catalog/view/theme/default/image/vineri/lb.png" width="13" height="16"></td></tr>
+								</table>
+							</td>
+							<td align="left" valign="middle" width="313">
+							<a href="http://www.teatrulmetropolis.ro/program/reprezentatie_baba-care-asculta-abba-de-catherine-aigner-_246.html"><b>BABA CARE ASCULTĂ ABBA de Catherine AIGNER  </b>
+							<br>
+							2 decembrie 2011							<br>
+							</a>
+							</td></tr>
+													<tr><td width="10" valign="middle">
+								<table width="10" cellspacing='0' cellpadding='0' border="0" >
+									<tr><td background="catalog/view/theme/default/image/sambata/lt.png" width="13" height="16"></td></tr>
+									<tr><td background="catalog/view/theme/default/image/sambata/c.png" width="13" height="0"></td></tr>
+									<tr><td background="catalog/view/theme/default/image/sambata/lb.png" width="13" height="16"></td></tr>
+								</table>
+							</td>
+							<td align="left" valign="middle" width="313">
+							<a href="http://www.teatrulmetropolis.ro/program/reprezentatie_doi-pe-o-banca-de-aleksandr-ghelman_247.html"><b>DOI PE O BANCĂ de Aleksandr Ghelman</b>
+							<br>
+							3 decembrie 2011							<br>
+							</a>
+							</td></tr>
+													<tr><td width="10" valign="middle">
+								<table width="10" cellspacing='0' cellpadding='0' border="0" >
+									<tr><td background="catalog/view/theme/default/image/duminica/lt.png" width="13" height="16"></td></tr>
+									<tr><td background="catalog/view/theme/default/image/duminica/c.png" width="13" height="0"></td></tr>
+									<tr><td background="catalog/view/theme/default/image/duminica/lb.png" width="13" height="16"></td></tr>
+								</table>
+							</td>
+							<td align="left" valign="middle" width="313">
+							<a href="http://www.teatrulmetropolis.ro/program/reprezentatie_fantoma-dragostea-mea-de-noel-coward-_248.html"><b>FANTOMA, DRAGOSTEA MEA! - de Noel Coward </b>
+							<br>
+							4 decembrie 2011							<br>
+							</a>
+							</td></tr>
+													<tr><td width="10" valign="middle">
+								<table width="10" cellspacing='0' cellpadding='0' border="0" >
+									<tr><td background="catalog/view/theme/default/image/luni/lt.png" width="13" height="16"></td></tr>
+									<tr><td background="catalog/view/theme/default/image/luni/c.png" width="13" height="0"></td></tr>
+									<tr><td background="catalog/view/theme/default/image/luni/lb.png" width="13" height="16"></td></tr>
+								</table>
+							</td>
+							<td align="left" valign="middle" width="313">
+							<a href="http://www.teatrulmetropolis.ro/program/reprezentatie_love-stories-de-radu-f-alexandru_249.html"><b>LOVE STORIES de Radu F. ALEXANDRU</b>
+							<br>
+							5 decembrie 2011							<br>
+							</a>
+							</td></tr>
+													<tr><td width="10" valign="middle">
+								<table width="10" cellspacing='0' cellpadding='0' border="0" >
+									<tr><td background="catalog/view/theme/default/image/marti/lt.png" width="13" height="16"></td></tr>
+									<tr><td background="catalog/view/theme/default/image/marti/c.png" width="13" height="0"></td></tr>
+									<tr><td background="catalog/view/theme/default/image/marti/lb.png" width="13" height="16"></td></tr>
+								</table>
+							</td>
+							<td align="left" valign="middle" width="313">
+							<a href="http://www.teatrulmetropolis.ro/program/reprezentatie_love-stories-de-radu-f-alexandru_250.html"><b>LOVE STORIES de Radu F. ALEXANDRU</b>
+							<br>
+							6 decembrie 2011							<br>
+							</a>
+							</td></tr>
+												<tr><td colspan="3"><div class="buton-program_negru" ><a href="index.php?route=continut/program">Vezi tot programul ></a></div>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+		
+			<div class="left-bottom0"></div>
+			<div class="right-bottom0"></div>
+			<div class="center-bottom0"></div>
+			<div class="button-program">
+					<a href="index.php?route=continut/program" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','catalog/view/theme/default/image/program_hover.png',1)">
+						<img src="catalog/view/theme/default/image/program_normal.png" name="Image2" width="222" height="175" border="0" id="Image2" />
+					</a>
+				</div>
+				
+			
+
+			<div class="biscuite2"><a href="http://www.teatrulmetropolis.ro/spectacole"><img src="catalog/view/theme/default/image/banner_spectacole.png" border="0" width="536" height="200"></a></div>
+			
+			
+			
+		<div class="button-stiri">
+					<a href="http://www.teatrulmetropolis.ro/stiri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','catalog/view/theme/default/image/stiri_hover.png',1)">
+						<img src="catalog/view/theme/default/image/stiri_normal.png" name="Image5" width="267" height="41" border="0" id="Image5" />
+					</a>
+		</div>
+				
+				
+				<div class="left-top2"></div>
+				<div class="right-top2"></div>
+				<div class="center-top2"></div>
+			
+				<div class="center-middle2">
+				<table width="495" align="left" style="margin-left:25px;">
+					<tr>
+						
+						<td valign="top" align="left" >
+													<a href="http://www.teatrulmetropolis.ro/stiri/reprezentatia-cu-spectacolul-peste-cu-mazare-de-marti-15-noiembrie-ora-1900-se-inlocuieste-cu-vocea-umana.html"><font style="font-size:16px;line-height:14px;"><b>REPREZENTATIA CU SPECTACOLUL &ldquo;PESTE CU MAZARE &rdquo; de MARTI 15 NOIEMBRIE, ora 19.00 SE INLOCUIESTE CU &ldquo; VOCEA UMANA &rdquo;</b></font>
+							
+							<p style="margin-top:-5px;"></p>
+							
+	&nbsp;
+
+	REPREZENTATIA CU SPECTACOLUL
+
+	&ldquo;PESTE CU MAZARE&nbsp;&rdquo;
+
+	de&nbsp;MARTI 15 NOIEMBRIE, ora 19.00
+
+	SE INLOCUIESTE CU
+
+	&ldquo;&nbsp;VOCEA UMANA&nbsp;&rdquo;
+
+	BILETELE VANDUTE RAMAN VALABILE
+
+	INFORMATII SUPLIMENTARE LA
+
+	CASA DE BILETE sau LA NUMERELE DE TELEFON
+
+	021 210 51 08&nbsp;SI&nbsp;0728 138 265
+
+	Va multumim pentru intelegere!
+							</a><br><br>
+													<a href="http://www.teatrulmetropolis.ro/stiri/oana-pellea-in-vocea-umana-in-premiera-la-metropolis.html"><font style="font-size:16px;line-height:14px;"><b>OANA PELLEA &icirc;n VOCEA UMANĂ, &icirc;n PREMIERĂ la METROPOLIS</b></font>
+							
+							<p style="margin-top:-5px;"></p>
+							
+	Teatrul Metropolis va aşteaptă miercuri, 16 noiembrie, la ora 19.30, la premiera spectacolul &ldquo;VOCEA UMANĂ&rdquo;, de Jean Cocteau, &icirc;n regia doamnei Sanda Manu.
+
+	O femeie - un bărbat - o iubire&hellip;. Sau poate nu.
+
+	&nbsp;O iluzie? O minciună? Durere, fericire, speranţă, iar durere&hellip; 
+
+	un telefon care tace&hellip; sau sună&hellip;
+
+	&nbsp;bărbatul vorbeşte...							</a><br><br>
+												</td>
+					</tr>
+				</table>
+				</div>
+			
+				<div class="left-bottom2"></div>
+				<div class="right-bottom2"></div>
+				<div class="center-bottom2"></div>
+				
+		
+			
+				
+			
+				<!--<div class="left-top4"></div>
+				<div class="right-top4"></div>
+				<div class="center-top4"></div>
+			
+				<div class="center-middle4"></div>
+			
+				<div class="left-bottom4"></div>
+				<div class="right-bottom4"></div>
+				<div class="center-bottom4"></div>-->
+		</td>
+		<td width="220" valign="top" align="center">
+		<br>
+<div class="dreapta-cautare">
+		
+			<input type="text" id="keyword" value="Scrie aici și ..." onfocus="if (this.value == 'Scrie aici și ...') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Scrie aici și ...';}" class="search-input" size="20" onKeyPress="return submitenter_cauta(event)">
+			<a onclick="moduleSearch();" class="buton" >Caută</a>
+		
+</div>
+<br>
+<div class="dreapta-cos">	
+	<div id="module_cart" >
+ <div class="middle">
+	
+        <img src="catalog/view/theme/default/image/bilete_fara_rezervari.png" width="181" height="129" border="0"/>
+    	
+  </div>
+</div>
+<script type="text/javascript"><!--
+$(document).ready(function () {
+	$('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+	$("a[id^='adaugabilet']").click(function () {
+		 var randlocIDValSplitter    = (this.id).split("-");
+    var rand            = randlocIDValSplitter[1];
+	var loc            = randlocIDValSplitter[2];
+	var reprezentatie_id            = randlocIDValSplitter[3];
+	
+	control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+	
+	});
+	$("a[id^='scoatebilet']").click(function () {
+		 var randlocIDValSplitter   = (this.id).split("-");
+		 var rand            		= randlocIDValSplitter[1];
+		 var loc            		= randlocIDValSplitter[2];
+		 var reprezentatie_id       = randlocIDValSplitter[3];
+	
+		control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control_scoate='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+	
+	});
+	$("a[id^='scoate_sala']").click(function () {
+		var randlocIDValSplitter    = (this.id).split("-");
+		var reprezentatie_id        = randlocIDValSplitter[1];
+	
+	
+    
+        $.ajax({
+            url: 'index.php?route=continut/cart/callback&reprezentatie_id='+reprezentatie_id,
+            type: 'get',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+	
+	});
+	$("a[id^='clear_cart']").click(function () {
+		$.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/clear',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+		
+	});
+	
+	 $('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+ 
+});
+</script>
+
+
+</div>
+<br>
+<div class="dreapta-cont">
+	<table width="200" cellspacing='0' cellpadding='0'>
+		
+				<tr><td background="catalog/view/theme/default/image/c.png" width="110" height="30" valign="middle" align="center" >
+				<font color="#d2d0d0">Accesează cont</font>
+		</td>
+		<td width="90" valign="middle" align="center">
+			<a class="buton" href="http://www.teatrulmetropolis.ro/creaza_cont.html" id="fancybox_page_no_reload">Cont nou ?</a>
+		</td></tr>
+		<tr><td colspan="2" height="50" width="200" background="catalog/view/theme/default/image/c.png" valign="middle" align="center">
+			<form action="http://www.teatrulmetropolis.ro/index.php?route=common/home/autentificare" method="post" id="form_autentificare">
+				<input type="text" name="email" value="Email utilizator" onfocus="if (this.value == 'Email utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Email utilizator';}" class="user-input">
+				<input type="password" name="password" value="Parola utilizator" onfocus="if (this.value == 'Parola utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Parola utilizator';}" class="pass-input" onKeyPress="return submitenter_login_cont(event)">
+				<input type="hidden" name="redirect" value="http://www.teatrulmetropolis.ro/">
+			</form>
+		</td></tr>
+		<tr><td width=110" height="30"></td>
+		<td background="catalog/view/theme/default/image/c.png" width="90" height="30" valign="middle" align="center">
+			<a onclick="$('#form_autentificare').submit();" class="buton" >Accesează</a>
+		</td></tr>
+		</table>
+</div>
+<br>
+<br>
+<div class="dreapta-comentarii">
+	<a href="http://www.teatrulmetropolis.ro/stiri/adela-popescu-si-mihai-bendeac-in-premiera-pe-o-banca-la-metropolis.html#comentariu3" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','catalog/view/theme/default/image/parereaTA_hover.png',1)">
+		<img src="catalog/view/theme/default/image/parereaTA_normal.png" name="Image50" width="188" height="126" border="0" id="Image50" /><br>
+		<table id="Ultim_Coment">
+							<tr>
+								<td id="dataUltim_Coment">
+									15 octombrie 2011 la 16:17
+								</td>
+							<tr>
+								<td id="idUltim_Coment">
+									*Nume:
+								</td>
+							<tr>
+								<td id="contentUltim_Coment">
+									nu va suparati , cand se va mai juca piesa?
+								</td>
+							</tr>
+						</table>		
+	</a>
+</div>
+<br>
+<br>
+<div class="dreapta-ajutor">
+	<a href="http://www.teatrulmetropolis.ro/ajutor" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','catalog/view/theme/default/image/ajutor_hover.png',1)" id="fancybox_page_rel">
+		<img src="catalog/view/theme/default/image/ajutor_normal.png" name="Image51" width="171" height="101" border="0" id="Image51" /><br>
+	</a>
+</div>
+			</td></tr></table>
+		
+	</div>	
+
+
+<div class="footer">
+	<div class="center-footer">
+		<br>
+		<table width="90%" cellpadding="0" cellspacing="0"  style="color: #999;font-family:Arial, Helvetica, sans-serif;font-size:14px;">
+  <tr>
+    <td width="23%" rowspan="6" align="right" valign="top" >
+    <img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/sigla_tm.png" width="100" height="100" border="0" style="margin-right:30px;"/>
+    </td>
+    <td width="70%">Adresa: Str. Mihai Eminescu nr.89, sector 2, București.</td>
+    <td width="7%" rowspan="6" align="center" valign="top">
+   <a href="http://www.pmb.ro" target="blank"><img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/primaria_mun_buc.png" width="75" height="150" border="0" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Rezervări bilete se pot face și telefonic, la numerele: <br />
+      <strong style="color:#FFF">021 210 51 08</strong>  sau  <strong style="color:#FFF">0728 138 265</strong><br />
+      (în intervalul orar 10:00 - 19.00)<br />
+    Rezervarea telefonică este valabilă 48 de h.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font style="font-size:16px; color:#FFF">&copy;Teatrul Metropolis. Toate drepturile rezervate</font></td>
+  </tr>
+  <tr>
+    <td ><font style="font-size:12px;">Site produs de <strong style="color: #CCC">Legolas Media</strong><br />
+        Design by <strong style="color: #CCC">Alexandru Șulai</strong></font></td>
+  </tr>
+</table>		
+	</div>
+</div>
+</td></tr></table>
+  
+</div>
+<script type="text/javascript"> var _gaq = _gaq || [];  _gaq.push(['_setAccount','UA-20895213-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })(); </script></body></html> 

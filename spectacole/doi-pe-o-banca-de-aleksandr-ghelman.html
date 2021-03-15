@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ro" xml:lang="ro">
+<head>
+<title>Teatrul Metropolis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Teatrul Metropolis" />
+<meta name="keywords" content="" />
+<link href="https://teatrulmetropolis.ro/image/data/logo-ico.gif" rel="shortcut icon" type="image/x-icon" />
+<base href="https://teatrulmetropolis.ro/" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<!--[if IE]>
+	
+<![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-collapser/jquery.collapser.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+
+</head>
+<body bgcolor="#000000">
+<a name="top"></a>
+<div id="container">
+	<div id="div2_continut"></div>
+	
+	<div id="header_continut">
+		<table width="100%">
+		<tr><td height="20" colspan="8"></td></tr>
+		<tr><td width="10%"></td><td align="center" valign="top" >
+				
+				<a href="https://teatrulmetropolis.ro/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','catalog/view/theme/default/image/prima_pg_hover.png',1)">
+						<img src="catalog/view/theme/default/image/prima_pg_normal.png" name="Image1" width="85" height="45" border="0" id="Image1" />
+					</a><br/>
+					<div class="contact_continut">
+                       <a class="contact1_continut" href="https://teatrulmetropolis.ro/contact.html" id="fancybox_page_rel">&nbsp;</a>
+                    </div>
+					</td>
+					<td align="center" valign="top" >
+										<a href="https://teatrulmetropolis.ro/artisti" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','catalog/view/theme/default/image/artisti_hover.png',1)">
+						<img src="catalog/view/theme/default/image/artisti_normal.png" name="Image2" width="195" height="196" border="0" id="Image2" />
+					</a>
+										</td>
+					<td align="center" valign="top" >
+										<a href="https://teatrulmetropolis.ro/program" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','catalog/view/theme/default/image/program_hover.png',1)">
+						<img src="catalog/view/theme/default/image/program_normal.png" name="Image3" width="222" height="175" border="0" id="Image3" />
+					</a>
+										</td>
+					
+				<td align="center" valign="top" >
+											<a href="https://teatrulmetropolis.ro/spectacole"><img src="catalog/view/theme/default/image/spectacole_hover.png" width="154" height="145" border="0"  /></a>
+									</td>
+					<td align="center" valign="top" >
+									
+					
+					<a href="https://teatrulmetropolis.ro/despre_noi" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','catalog/view/theme/default/image/despre_noi_hover.png',1)">
+						<img src="catalog/view/theme/default/image/despre_noi_normal.png" name="Image6" width="174" height="145" border="0" id="Image6" />
+					</a>
+							</td>
+		<td align="center" valign="top" >
+										<a href="https://teatrulmetropolis.ro/stiri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','catalog/view/theme/default/image/stiri_ANTET_hover.png',1)">
+						<img src="catalog/view/theme/default/image/stiri_ANTET_normal.png" name="Image4" width="144" height="120" border="0" id="Image4" />
+					</a>
+									</td>
+		<td width="10%"></td></tr></table>		
+	</div>
+<script>
+
+function show(control){
+var pagina = new Array()
+pagina[0]="descriere"
+pagina[1]="distributia"
+pagina[2]="cronici"
+
+if (document.layers) { // NN4+
+	document.layers['table_spectacol'].height = '100%';
+	document.layers['table_caract_spect'].height = '100%';
+	
+	for (i=0;i<pagina.length;i++){
+		
+		if (pagina[i] == control) {
+			document.layers[pagina[i]].visibility = "show";
+			document.layers[pagina[i]].display = "block";
+			document.layers[pagina[i]].position = "absolute";
+			document.layers["martor_" + pagina[i]].visibility = "show";
+			document.layers["martor_" + pagina[i]].display = "block";
+			}
+		else
+			{
+			document.layers[pagina[i]].visibility = "hide";
+			
+			document.layers["martor_" + pagina[i]].visibility = "hide";
+			
+      			}
+  		}
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+		document.getElementById('table_spectacol').style.height='100%';
+		document.getElementById('table_caract_spect').style.height='100%';
+		for (i=0;i<pagina.length;i++){
+			if (pagina[i] == control) {
+				var obj = document.getElementById(pagina[i]);
+				
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "visible";
+				obj.style.display = "block";
+				
+
+				obj.style.position = "relative";
+				objSD.style.visibility = "visible";
+				objSD.style.display = "block";
+				}
+			else
+				{
+				var obj = document.getElementById(pagina[i]);
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "hidden";
+				
+				obj.style.display = "none";
+				objSD.style.visibility = "hidden";
+				
+				}
+		}
+	}
+else if (document.all) { // IE 4
+	document.all['table_spectacol'].style.height = '100%';
+	document.all['table_caract_spect'].style.height = '100%';
+	for (i=0;i<pagina.length;i++){
+		if (pagina[i] == control) {
+			document.all[pagina[i]].style.visibility = "visible";
+			document.all[pagina[i]].style.display = "block";
+			document.all[pagina[i]].style.position = "absolute";
+			document.all["martor_" + pagina[i]].style.visibility = "visible";
+			document.all["martor_" + pagina[i]].style.display = "block";
+			}
+		else {
+			document.all[pagina[i]].style.visibility = "hidden";
+			
+			document.all["martor_" + pagina[i]].style.visibility = "hidden";
+			
+			}
+  		}
+	}
+}
+</script>
+
+<div id="content_continut" >
+	<table cellspacing="0" cellpadding="0" border="0" width="100%" ><tr><td align="center">
+		<div class="center" id="table_spectacol">
+			<table width="1000" cellspacing="0" cellpadding="0" border="0" ><tr><td align="center" valign="top" width="700" style="min-height:700px;">
+							<table cellspacing="20" cellpadding="0" width="100%" >
+					<tr><td width="33%" valign="top" align="center" >
+						<a rel="example_group" href="https://teatrulmetropolis.ro/image/cache/data/spectacole/36/Doi%20pe%20o%20banca_4-500x500-500x500.png" class="grouped_elements" ><img src="https://teatrulmetropolis.ro/image/cache/data/spectacole/36/Doi%20pe%20o%20banca_4-500x500-200x300.png" border="0" width="199" height="300"></a><br><br>
+													<div style="display: block;">
+																	<a rel="example_group" href="https://teatrulmetropolis.ro/image/cache/data/spectacole/36/Doi%20pe%20o%20banca_4-500x500.png" class="grouped_elements">
+										<img src="https://teatrulmetropolis.ro/image/cache/data/spectacole/36/Doi%20pe%20o%20banca_4-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="https://teatrulmetropolis.ro/image/cache/data/spectacole/36/Doi%20pe%20o%20banca_3-500x500.png" class="grouped_elements">
+										<img src="https://teatrulmetropolis.ro/image/cache/data/spectacole/36/Doi%20pe%20o%20banca_3-50x50.png" border="0" width="49" height="33" >
+									</a>
+																										<a rel="example_group" href="https://teatrulmetropolis.ro/image/cache/data/spectacole/36/Doi%20pe%20o%20banca_2-500x500.png" class="grouped_elements">
+										<img src="https://teatrulmetropolis.ro/image/cache/data/spectacole/36/Doi%20pe%20o%20banca_2-50x50.png" border="0" width="50" height="32" >
+									</a>
+									<br>																	<a rel="example_group" href="https://teatrulmetropolis.ro/image/cache/data/spectacole/36/Doi%20pe%20o%20banca_5-500x500.png" class="grouped_elements">
+										<img src="https://teatrulmetropolis.ro/image/cache/data/spectacole/36/Doi%20pe%20o%20banca_5-50x50.png" border="0" width="50" height="33" >
+									</a>
+																								</div>
+												<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('descriere');"><font size="4" >Descriere</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_descriere" style="margin-top:-40px;margin-right:10px;float:right;">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+									
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('distributia');"><font size="4" >Distributia</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_distributia" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+										
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('cronici');"><font size="4" >Cronici</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_cronici" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+												<br><br>
+						<div class="buton-inapoi"><a href="https://teatrulmetropolis.ro/spectacole">< Spectacole</a></div>
+					</td>
+					<td width="67%" valign="top" >
+						<table border='0' width="476" cellspacing='0' cellpadding='0' style="height: auto;">
+							<tr>
+								<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476"  align="center" valign="middle">
+									<font size="4"  color="white">DOI PE O BANCA de Aleksandr Ghelman</font><br>
+									<font size="3"  color="white">regia: Emanuel Pârvu</font>
+																			<br>
+										<table style="margin-left:20px;margin-right:10px;" ><tr><td>
+											<font style="font-size:18px;" color="white"><b><p style="text-align: center">
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span><span _fck_bookmark="1" style="display: none">&nbsp;</span></p>
+<p>
+	<span style="font-size: 14px">O poveste emotionanta &icirc;n care adevarurile se &nbsp;dezvaluie greu, dureros, cu intensitate.</span></p>
+</b></font>
+										</td></tr></table>
+																	</td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/lb.png" width="13" height="13" ></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+							</tr>
+						</table>
+						<br><br>
+													<table border='0'  cellspacing='0' cellpadding='0' valign="top">
+							<tr>
+																	<td background="catalog/view/theme/default/image/joi/l.png" width="7" height="20"></td>
+									<td background="catalog/view/theme/default/image/joi/c.png" width="90" height="20" align="center" valign="middle">
+										<a href="https://teatrulmetropolis.ro/program/reprezentatie_doi-pe-o-banca-de-aleksandr-ghelman_425.html" class="buton-data">
+											<font size="1"><b>J</b></font> | <font size="1">1 nov | 19:00</font>										</a>
+									</td>
+									<td background="catalog/view/theme/default/image/joi/r.png" width="7" height="20"></td>
+									<td width="10" height="20"></td>
+																								</tr>
+							</table>
+												<br><br>
+						
+								<table border='0' width="476" cellspacing='0' cellpadding='0' valign="top" align="left" >
+									<tr>
+										<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+										<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476" >
+											<table style="margin-left:20px;margin-right:10px;" align="left" id="table_caract_spect"><tr><td align="left" valign="top">
+																							<div id="descriere" style="display:block;">
+													<font size="2" color="white"><div id="_mcePaste">
+	<em><strong><a href="http://www.teatrulmetropolis.ro/index.php?route=continut/spectacole&amp;spectacol_id=36" target="_blank">&bdquo;Doi pe o banca&rdquo;</a></strong></em> este un spectacol care uneste, &icirc;n premiera, pe scena Teatrului Metropolis, sub &icirc;ndrumurarea regizorului Emanuel P&acirc;rvu, doi tineri actori &icirc;ndragiti, Adela Popescu si Mihai Bendeac.</div>
+<div>
+	&nbsp;</div>
+<div>
+	Cei doi actori sunt protagonistii unei piese &icirc;n doua personaje, scrise de Aleksandr Ghelman, o poveste emotionanta &icirc;n care adevarurile se &nbsp;dezvaluie greu, dureros, cu intensitate.</div>
+<div>
+	&nbsp;</div>
+<div id="_mcePaste">
+	<em>&ldquo;Este vorba despre doua destine ciudate, fr&acirc;nte, doua destine tragic-comice. &Icirc;nt&acirc;lnirea acestor destine &icirc;ncepe cu machiaje puternice, cu minciuni mari si treptat se ajunge la adevar, la concret. Actorii pornesc de la haine multe si ajung la haine putine, sumare, p&acirc;na c&acirc;nd sunt ei &icirc;n adevar&rdquo;</em> a declarat Emanuel P&acirc;rvu, regizorul spectacolului.</div>
+<div>
+	&nbsp;</div>
+<div id="_mcePaste">
+	<em>&bdquo;Este un spectactol de o ora si jumatate, sustinut exclusiv de doua persoanje. &nbsp;Ajutati de scenariul exceptional scris si regia ofertanta, at&acirc;t eu c&acirc;t si Mihai Bendeac trecem printr-o paleta completa de stari, de trairi. Este un spectacol pe muchie de cutit, care face trecerea de la r&acirc;s la pl&acirc;ns &icirc;n doar o clipa&rdquo;</em>, marturiseste Adela Popescu.</div>
+<div>
+	&nbsp;</div>
+<div>
+	Mihai Bendeac declara ca<em> &quot;Este un spectacol al redescoperirii de sine. Nu este o comedie, asa cum poate s-ar fi asteptat multi, este un spectacol care invita la meditatie si redescoperire de sine. In special doamnele vor fi cele care se vor regasi &icirc;n piesa si carora, probabil, acest spectacol le va da un prilej de introspectie. &quot; </em></div>
+<div>
+	&nbsp;</div>
+<div id="_mcePaste">
+	Din echipa care a participat la realizarea acestei piesei fac parte si Bogdan Spataru, scenograf, Cassandra Bodron, designer si Corina Hera, make-up artist.</div>
+<div>
+	&nbsp;</div>
+<p>
+	cu: Adela POPESCU si Mihai BENDEAC</p>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/4PIR01TAZe0" frameborder="0" allowfullscreen></iframe>
+</font>
+													<br>
+													<font size="2" color="white">Durată: 1h 30 min (fara pauza)</font><br><br>																									</div>
+																																		<div id="distributia" style="display:none;">
+													<font size="2" color="white"><p>
+	cu : Adela Popescu si Mihai Bendeac</p>
+</font><br>
+																									</div>
+																																		<div id="cronici" style="display:none;">
+													<font size="2" color="white"><p>
+	<span _fck_bookmark="1" style="display: none; ">&nbsp;</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none; ">&nbsp;</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none; ">&nbsp;</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none; ">&nbsp;</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none; ">&nbsp;</span><span _fck_bookmark="1" style="display: none; ">&nbsp;</span></p>
+<p>
+	<span class="Apple-style-span" style="font-size: 18px; "><b><span lang="EN-US" style="font-family: Arial, sans-serif; "><span lang="FR">Doi pe o banca &icirc;ntr-un parc numit Destin</span></span></b></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-outline-level:3">
+	<span style="color:#(color);"><span style="font-size:16px;"><span class="Apple-style-span" style="font-family: Arial, sans-serif; ">Postat de <span style="color:#f00;">Marina Roman</span>&nbsp;</span><span lang="FR" style="font-family: Arial, sans-serif; ">in 17 October 2011 - revista&nbsp;</span></span></span><span lang="FR" style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:silver;mso-ansi-language:FR"><o:p></o:p></span><span style="color:#(color);"><span style="font-size:16px;"><b><span lang="EN-US" style="font-family: Arial, sans-serif; ">YORICK</span></b></span></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal">
+	<span style="color:#(color);"><font class="Apple-style-span" face="Arial, sans-serif" size="2"><br />
+	</font></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+150%">
+	<span style="color:#(color);"><span lang="EN-US" style="font-size: 12pt; line-height: 150%; font-family: Arial, sans-serif; ">Adevarul. EA vrea adevarul. &Icirc;l poarta cu sine, &icirc;l arata, &icirc;l piteste uneori &icirc;n spatele unei minciuni benigne &ndash; ca &icirc;ntr-un joc de-a baba oarba &ndash;, apoi i-l cere cu insistenta partenerului. </span><span lang="FR" style="font-size: 12pt; line-height: 150%; font-family: Arial, sans-serif; ">EA pare rabdatoare, dar se transforma, la prima greseala a lui, &icirc;ntr-un detectiv a carui luciditate duce actiunea mai departe. EL fuge de adevar. Lui &icirc;i e frica de adevar. Cel mai la-ndem&acirc;na &icirc;i este minciuna. </span></span><span lang="FR" style="font-size:12.0pt;
+line-height:150%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:FR"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; ">
+	<span style="color:#(color);"><span class="Apple-style-span" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; ">Masca. Un clovn alb, fara lacrima si cu un rictus &icirc;n loc de z&acirc;mbet, h&acirc;r&acirc;ind vorbe ironice. EL se ascunde &icirc;n spatele unui personaj caruia &icirc;i inventeaza nume dupa nume, dupa cum si &icirc;n bagajul de conjunctura poarta c&acirc;teva verighete, de marimi diferite,&nbsp;<i>just in case,</i>&nbsp;pentru veridicitatea logodnicului de profesie. Si batista. Un accesoriu esential. EL are o batista alba pe care o scoate firesc din buzunar si cu care se sterge firesc pe fata, p&acirc;na ce si masca se sterge &icirc;ncet-&icirc;ncet, cu fiecare acest gest. Un rol &icirc;n care Mihai Bendeac face nu doar proba talentului, ci si a unei inteligente scenice cu totul exceptionale, datorita careia nu se lasa prins &icirc;n capcana spectaculosului.</span></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+150%">
+	<span style="color:#(color);"><span lang="FR" style="font-size: 12pt; line-height: 150%; font-family: Arial, sans-serif; ">&ldquo;Doi pe o banca&rdquo;. EL si EA &icirc;ntr-un parc imaginat de Bogdan Spataru ori pentru un desen animat pentru copii, ori perfect functional simbolic destinat unui spectacol pentru adulti. Ca o ilustratie de carte, &icirc;n care personajele piesei &ndash; pe care Alexandr Ghelman (nascut pe 21 decembrie 1960) a scris-o &icirc;nainte de 1988 &ndash; devin atemporale, iar localizarea irelevanta: &ldquo;Este vorba despre doua destine ciudate, fr&acirc;nte, doua destine tragi-comice. &Icirc;nt&acirc;lnirea acestor destine &icirc;ncepe cu machiaje puternice, cu minciuni mari si treptat se ajunge la adevar, la concret. Actorii pornesc de la haine multe si ajung la haine putine, sumare, p&acirc;na c&acirc;nd sunt ei &icirc;n adevar&rdquo; &ndash; &icirc;si explica regizorul Emanuel P&acirc;rvu demersul. Costumele &ndash; Casandra &ndash; i-l sustin: EA, pe banca, astept&acirc;ndu-l pe EL, seara de seara &icirc;n acelasi loc, poarta, la &icirc;nceput, trenci si palarie &ndash; o masca pe care o va arunca destul de cur&acirc;nd &icirc;n cosul de gunoi, o data cu prima impresie, falsa, pe care (ne-)a facut-o. &Icirc;n cosul de gunoi &icirc;n care vor fi abandonate, pe r&acirc;nd, toate succesivele masti ale celor doua personaje.</span></span><span lang="FR" style="font-size:12.0pt;line-height:150%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black;mso-ansi-language:FR"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; ">
+	<span style="color:#(color);"><span class="Apple-style-span" style="line-height: 18px; "><span lang="FR" style="font-size: 12pt; line-height: 150%; font-family: Arial, sans-serif; ">Aduceam &icirc;n discutie, &icirc;n paginile revistei noastre, remodernismul, curentul ReMo, o miscare despre care cred ca este, si &icirc;n teatru, o &icirc;ncercare de armonizare cu adevarul. Asa cum este acest spectacol semnat de Emanuel P&acirc;rvu &ndash; costume: Casandra, make-up: Corina Hera &ndash; si care &icirc;i are ca protagonisti pe Adela Popescu si Mihai Bendeac. </span><span lang="EN-US" style="font-size: 12pt; line-height: 150%; font-family: Arial, sans-serif; ">Cu sinceritate, despre minciuna si adevar. Confesiune. Comunicare. Adevar valabil oric&acirc;nd si oriunde. </span><span lang="FR" style="font-size: 12pt; line-height: 150%; font-family: Arial, sans-serif; ">O spune si Mihai Bendeac: &ldquo;Este un spectacol al redescoperirii de sine. Nu este o comedie, asa cum poate s-ar fi asteptat multi, este un spectacol care invita la meditatie si redescoperire de sine. &Icirc;n special, doamnele vor fi cele care se vor regasi &icirc;n piesa si carora, probabil, acest spectacol le va da un prilej de introspectie.<i>&rdquo; O spune si</i>&nbsp;Adela Popescu: &ldquo;Ajutati de scenariul exceptional scris si regia ofertanta, at&acirc;t eu c&acirc;t si Mihai Bendeac trecem printr-o paleta completa de stari, de trairi. Este un spectacol pe muchie de cutit, care face trecerea de la r&acirc;s la pl&acirc;ns &icirc;n doar o clipa&rdquo;. Din pacate, &icirc;n programul de sala nu este mentionat autorul traducerii sau al unui eventual scenariu. Probabil ca echipa a adaptat excelenta traducere a lui Tudor Steriade &ndash; rafinatul om de teatru si legendarul secretar literar al Teatrului Lucia Sturdza Bulandra &ndash;, text pe care Tudor Marascu a montat spectacolul de la Nottara, jucat cu mare succes de Catrinel Dumitrescu si Emil Hossu.</span></span></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+150%">
+	<span style="color:#(color);"><span lang="FR" style="font-size: 12pt; line-height: 150%; font-family: Arial, sans-serif; ">Cert este ca &icirc;n spectacolul de la Metropolis actorii &icirc;si asuma replicile &ndash; unele cu detalii anacronice pentru spectatorii foarte tineri &ndash; cu o emotie fertila. Emotia femeii care spera ca orice barbat abia &icirc;nt&acirc;lnit &icirc;i poate deveni sot. Emotia barbatului care spera ca orice femeie nou aparuta &icirc;l poate smulge din minciuna. Si emotia spectatorului &icirc;n fata unui gest simplu, altruist, esential &ndash; femeia &icirc;i da barbatului cheia apartamentului ei doar pentru ca el sa-si recapete &icirc;ncrederea &icirc;n sine &ndash;, un gest gratuit care restabileste starea de echilibru.</span></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+150%">
+	&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+150%">
+	&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; ">
+	&nbsp;</p>
+<p class="MsoNormal" style="line-height: normal; ">
+	<span lang="FR" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-ansi-language:FR"><o:p>&nbsp;</o:p></span><b><span lang="FR" style="font-size:16.0pt;
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:18.0pt;mso-ansi-language:FR">Adela Popescu si Mihai Bendeac in premiera la Teatrul Metropolis</span></b></p>
+<p class="MsoNormal" style="line-height: normal; ">
+	<span lang="FR" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-ansi-language:FR"><o:p>&nbsp;</o:p></span><span class="Apple-style-span" style="font-family: 'Times New Roman', serif; font-size: 16px; ">13.10.2011 -&nbsp;</span><b><span lang="FR" style="font-size: 18pt; font-family: 'Times New Roman', serif; ">timp-liber.acasa.ro</span></b></p>
+<p>
+	<font class="Apple-style-span" face="'Times New Roman', serif" size="3"><br />
+	</font></p>
+<p class="MsoNormal" style="line-height: 150%; ">
+	<span lang="FR" style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-ansi-language:FR">&quot;Doi pe o banca&quot; este un spectacol care uneste, pentru prima data, pe scena Teatrului Metropolis, doi tineri actori talentati, Adela Popescu si Mihai Bendeac.<br />
+	<br />
+	<b>&quot;Este vorba despre doua destine ciudate, frante, doua destine tragi-comice. intalnirea acestor destine incepe cu machiaje puternice, cu minciuni mari si treptat se ajunge la adevar, la concret. Actorii pornesc de la haine multe si ajung la haine putine, sumare, pana cand sunt ei in adevar&quot;,</b> a declarat <u>Emanuel Parvu, regizorul spectacolului.<br />
+	<br />
+	</u><b><i>&quot;Este un spectacol de o ora si jumatate, sustinut exclusiv de doua persoanje. Ajutati de scenariul exceptional scris si regia ofertanta, atat eu cat si Mihai Bendeac trecem printr-o paleta completa de stari, de trairi. Este un spectacol pe muchie de cutit, care face trecerea de la ras la plans in doar o clipa&quot;,</i></b> marturiseste <u>Adela Popescu.<br />
+	<br />
+	Mihai Bendeac</u> declara ca <b>&quot;este un spectacol al redescoperirii de sine. Nu este o comedie, asa cum poate s-ar fi asteptat multi, este un spectacol care invita la meditatie si redescoperire de sine. in special, doamnele vor fi cele care se vor regasi in piesa si carora, probabil, acest spectacol le va da un prilej de introspectie. &quot;</b><br />
+	<br />
+	Din echipa care a participat la realizarea acestui spectacol fac parte si Bogdan Spataru-scenograf, Cassandra Bodron-designer si Corina Hera-make-up artist.</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none; ">&nbsp;</span><span _fck_bookmark="1" style="display: none; ">&nbsp;</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none; ">&nbsp;</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none; ">&nbsp;</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none; ">&nbsp;</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none; ">&nbsp;</span></p>
+</font><br>
+																											<div class="buton-sus"><a href="https://teatrulmetropolis.ro/spectacole/doi-pe-o-banca-de-aleksandr-ghelman.html#top">^ Sus</a></div>
+																									</div>
+																						</td></tr></table>
+										</td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450"  height="13"></td>
+										<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+									</tr>
+								</table>
+					</td>
+				</tr>
+			</table>
+		
+		<script>show('descriere');</script>
+	</td>
+<td width="300" align="center" valign="top"><br><br>
+		<br>
+<div class="dreapta-cautare">
+		
+			<input type="text" id="keyword" value="Scrie aici și ..." onfocus="if (this.value == 'Scrie aici și ...') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Scrie aici și ...';}" class="search-input" size="19" onKeyPress="return submitenter_cauta(event)">
+			<a onclick="moduleSearch();" class="buton" >Caută</a>
+		
+</div>
+<br>
+<div class="dreapta-cos">	
+	<div id="module_cart" >
+ <div class="middle">
+	
+    	<table cellpadding="5" cellspacing="0" style="width: 200px;color:white;" background="catalog/view/theme/default/image/c.png"><tr><td>
+		<img src="catalog/view/theme/default/image/bilete_fara_rezervari.png" width="181" height="129" border="0"/>
+	</td></tr></table>
+    	
+  </div>
+</div>
+<script type="text/javascript"><!--
+$(document).ready(function () {
+	$('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+	$("a[id^='adaugabilet']").click(function () {
+		 var randlocIDValSplitter    = (this.id).split("-");
+    var rand            = randlocIDValSplitter[1];
+	var loc            = randlocIDValSplitter[2];
+	var reprezentatie_id            = randlocIDValSplitter[3];
+	
+	control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoatebilet']").click(function () {
+		 var randlocIDValSplitter   = (this.id).split("-");
+		 var rand            		= randlocIDValSplitter[1];
+		 var loc            		= randlocIDValSplitter[2];
+		 var reprezentatie_id       = randlocIDValSplitter[3];
+	
+		control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control_scoate='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoate_sala']").click(function () {
+		var randlocIDValSplitter    = (this.id).split("-");
+		var reprezentatie_id        = randlocIDValSplitter[1];
+	
+	
+    
+        $.ajax({
+            url: 'index.php?route=continut/cart/callback&reprezentatie_id='+reprezentatie_id,
+            type: 'get',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='clear_cart']").click(function () {
+		$.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/clear',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            } 
+                   
+        });
+		
+	});
+	
+	 $('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+ 
+});
+</script>
+
+
+</div>
+<br>
+<div class="dreapta-cont">
+	<table width="200" cellspacing='0' cellpadding='0'>
+		
+				<tr><td background="catalog/view/theme/default/image/c.png" width="110" height="30" valign="middle" align="center" >
+				<font color="#d2d0d0">Accesează cont</font>
+		</td>
+		<td width="90" valign="middle" align="center">
+			<a class="buton" href="https://teatrulmetropolis.ro/creaza_cont.html" id="fancybox_page_no_reload">Cont nou ?</a>
+		</td></tr>
+		<tr><td colspan="2" height="50" width="200" background="catalog/view/theme/default/image/c.png" valign="middle" align="center">
+			<form action="https://teatrulmetropolis.ro/index.php?route=common/home/autentificare" method="post" id="form_autentificare">
+				<input type="text" name="email" value="Email utilizator" onfocus="if (this.value == 'Email utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Email utilizator';}" class="user-input">
+				<input type="password" name="password" value="Parola utilizator" onfocus="if (this.value == 'Parola utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Parola utilizator';}" class="pass-input" onKeyPress="return submitenter_login_cont(event)">
+				<input type="hidden" name="redirect" value="https://teatrulmetropolis.ro/index.php?route=continut/spectacole&amp;spectacol_id=36">
+			</form>
+		</td></tr>
+		<tr><td width=110" height="30"></td>
+		<td background="catalog/view/theme/default/image/c.png" width="90" height="30" valign="middle" align="center">
+			<a onClick="$('#form_autentificare').submit();"  class="buton" >Accesează</a>
+		</td></tr>
+		</table>
+</div>
+<br>
+<br>
+<div class="dreapta-comentarii">
+	<a href="https://teatrulmetropolis.ro/stiri/adela-popescu-si-mihai-bendeac-in-premiera-pe-o-banca-la-metropolis.html#comentariu70" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','catalog/view/theme/default/image/parereaTA_hover.png',1)">
+		<img src="catalog/view/theme/default/image/parereaTA_normal.png" name="Image50" width="188" height="126" border="0" id="Image50" /><br>
+		<table id="Ultim_Coment">
+							<tr>
+								<td id="dataUltim_Coment">
+									12 octombrie 2012 la 11:42
+								</td>
+							<tr>
+								<td id="idUltim_Coment">
+									Loredana
+								</td>
+							<tr>
+								<td id="contentUltim_Coment">
+									Buna ziua , Va fi piesa "Doctor de femei" in stagiunea 2012-2013 ?
+								</td>
+							</tr>
+						</table>		
+	</a>
+</div>
+<br>
+<br>
+<div class="dreapta-ajutor">
+	<a href="https://teatrulmetropolis.ro/ajutor" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','catalog/view/theme/default/image/ajutor_hover.png',1)" id="fancybox_page_rel">
+		<img src="catalog/view/theme/default/image/ajutor_normal.png" name="Image51" width="171" height="101" border="0" id="Image51" /><br>
+	</a>
+</div>
+<div style="width:210px;margin-top:20px;"><img src="catalog/view/theme/default/image/visa_icon.jpg"></div></td>
+</tr></table>
+</div>	
+</td>
+</tr></table>
+</div>				
+
+<div id="footer_continut">
+	<table width="1000" align="center" height="200" background="catalog/view/theme/default/image/c.png"><tr><td><br>
+		<table width="90%" cellpadding="0" cellspacing="0"  style="color: #999;font-family:Arial, Helvetica, sans-serif;font-size:14px;">
+  <tr>
+    <td width="23%" rowspan="6" align="right" valign="top" >
+    <img src="https://teatrulmetropolis.ro/catalog/view/theme/default/image/sigla_tm.png" width="100" height="100" border="0" style="margin-right:30px;"/>
+    </td>
+    <td width="70%">Adresa: Str. Mihai Eminescu nr.89, sector 2, Bucure?ti.</td>
+    <td width="7%" rowspan="6" align="center" valign="top">
+   <a href="http://www.pmb.ro" target="blank"><img src="https://teatrulmetropolis.ro/catalog/view/theme/default/image/primaria_mun_buc.png" width="75" height="150" border="0" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Rezervari bilete se pot face ?i telefonic, la numerele: <br />
+      <strong style="color:#FFF">021 210 51 08</strong>  sau  <strong style="color:#FFF">0728 138 265</strong><br />
+      (în intervalul orar 10:00 - 19.00)<br />
+    Rezervarea telefonica este valabila 48 de h.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font style="font-size:16px; color:#FFF">&copy;Teatrul Metropolis. Toate drepturile rezervate</font></td>
+  </tr>
+  <tr>
+    <td ><font style="font-size:12px;">Site produs de <strong style="color: #CCC">Legolas Media</strong><br />
+        Design by <strong style="color: #CCC">Alexandru ?ulai</strong></font></td>
+  </tr>
+</table>	</td></tr></table>
+</div>
+
+
+</div>
+
+</body></html> 

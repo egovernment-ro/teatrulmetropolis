@@ -1,0 +1,48 @@
+/*
+Theme Name: Effect
+Description: Creative|Portfolio Theme
+Author: Bane Stojanovic - @banes
+Author URI: http://themeforest.net/user/banes/
+Version: 1.0
+*/
+
+/**** Google Font ****/
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+
+/**** Base Style ****/
+@import url('bootstrap.min.css');
+
+/**** Font Awesome ****/
+@import url('font-awesome.min.css');
+
+/**** Query Loader ****/
+@import url('queryLoader.css');
+
+/**** Animate ****/
+@import url('animate.css');
+
+/**** Forms ****/
+@import url('forms.css');
+
+/**** Flex Slider ****/
+@import url('flexslider.css');
+
+/**** Magnific Popup ****/
+@import url('magnific-popup.css');
+
+/**** YTPlayer ****/
+@import url('YTPlayer.css');
+
+/**** Twitter ****/
+@import url('../twitter/tweetfeed.css');
+
+/**** Layout ****/
+@import url('layout.css');
+
+/**** Responsive ****/
+@import url('responsive.css');
+
+/**** Zebra Dialog ****/
+@import url('zebra_dialog.css');
+
+

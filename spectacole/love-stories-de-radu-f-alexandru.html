@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ro" xml:lang="ro">
+<head>
+<title>Teatrul Metropolis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Teatrul Metropolis" />
+<meta name="keywords" content="" />
+<link href="http://www.teatrulmetropolis.ro/image/data/logo-ico.gif" rel="shortcut icon" type="image/x-icon" />
+<base href="http://www.teatrulmetropolis.ro/" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<!--[if IE]>
+	
+<![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-collapser/jquery.collapser.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+
+</head>
+<body bgcolor="#000000">
+<a name="top"></a>
+<div id="container">
+	<div id="div2_continut"></div>
+	
+	<div id="header_continut">
+		<table width="100%">
+		<tr><td height="20" colspan="8"></td></tr>
+		<tr><td width="10%"></td><td align="center" valign="top" >
+				
+				<a href="http://www.teatrulmetropolis.ro/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','catalog/view/theme/default/image/prima_pg_hover.png',1)">
+						<img src="catalog/view/theme/default/image/prima_pg_normal.png" name="Image1" width="85" height="45" border="0" id="Image1" />
+					</a><br/>
+					<div class="contact_continut">
+                       <a class="contact1_continut" href="http://www.teatrulmetropolis.ro/contact.html" id="fancybox_page_rel">&nbsp;</a>
+                    </div>
+					</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/artisti" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','catalog/view/theme/default/image/artisti_hover.png',1)">
+						<img src="catalog/view/theme/default/image/artisti_normal.png" name="Image2" width="195" height="196" border="0" id="Image2" />
+					</a>
+										</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/program" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','catalog/view/theme/default/image/program_hover.png',1)">
+						<img src="catalog/view/theme/default/image/program_normal.png" name="Image3" width="222" height="175" border="0" id="Image3" />
+					</a>
+										</td>
+					
+				<td align="center" valign="top" >
+											<a href="http://www.teatrulmetropolis.ro/spectacole"><img src="catalog/view/theme/default/image/spectacole_hover.png" width="154" height="145" border="0"  /></a>
+									</td>
+					<td align="center" valign="top" >
+									
+					
+					<a href="http://www.teatrulmetropolis.ro/despre_noi" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','catalog/view/theme/default/image/despre_noi_hover.png',1)">
+						<img src="catalog/view/theme/default/image/despre_noi_normal.png" name="Image6" width="174" height="145" border="0" id="Image6" />
+					</a>
+							</td>
+		<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/stiri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','catalog/view/theme/default/image/stiri_ANTET_hover.png',1)">
+						<img src="catalog/view/theme/default/image/stiri_ANTET_normal.png" name="Image4" width="144" height="120" border="0" id="Image4" />
+					</a>
+									</td>
+		<td width="10%"></td></tr></table>		
+	</div>
+<script>
+
+function show(control){
+var pagina = new Array()
+pagina[0]="descriere"
+pagina[1]="distributia"
+pagina[2]="cronici"
+
+if (document.layers) { // NN4+
+	document.layers['table_spectacol'].height = '100%';
+	document.layers['table_caract_spect'].height = '100%';
+	
+	for (i=0;i<pagina.length;i++){
+		
+		if (pagina[i] == control) {
+			document.layers[pagina[i]].visibility = "show";
+			document.layers[pagina[i]].display = "block";
+			document.layers[pagina[i]].position = "absolute";
+			document.layers["martor_" + pagina[i]].visibility = "show";
+			document.layers["martor_" + pagina[i]].display = "block";
+			}
+		else
+			{
+			document.layers[pagina[i]].visibility = "hide";
+			
+			document.layers["martor_" + pagina[i]].visibility = "hide";
+			
+      			}
+  		}
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+		document.getElementById('table_spectacol').style.height='100%';
+		document.getElementById('table_caract_spect').style.height='100%';
+		for (i=0;i<pagina.length;i++){
+			if (pagina[i] == control) {
+				var obj = document.getElementById(pagina[i]);
+				
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "visible";
+				obj.style.display = "block";
+				
+
+				obj.style.position = "relative";
+				objSD.style.visibility = "visible";
+				objSD.style.display = "block";
+				}
+			else
+				{
+				var obj = document.getElementById(pagina[i]);
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "hidden";
+				
+				obj.style.display = "none";
+				objSD.style.visibility = "hidden";
+				
+				}
+		}
+	}
+else if (document.all) { // IE 4
+	document.all['table_spectacol'].style.height = '100%';
+	document.all['table_caract_spect'].style.height = '100%';
+	for (i=0;i<pagina.length;i++){
+		if (pagina[i] == control) {
+			document.all[pagina[i]].style.visibility = "visible";
+			document.all[pagina[i]].style.display = "block";
+			document.all[pagina[i]].style.position = "absolute";
+			document.all["martor_" + pagina[i]].style.visibility = "visible";
+			document.all["martor_" + pagina[i]].style.display = "block";
+			}
+		else {
+			document.all[pagina[i]].style.visibility = "hidden";
+			
+			document.all["martor_" + pagina[i]].style.visibility = "hidden";
+			
+			}
+  		}
+	}
+}
+</script>
+
+<div id="content_continut" >
+	<table cellspacing="0" cellpadding="0" border="0" width="100%" ><tr><td align="center">
+		<div class="center" id="table_spectacol">
+			<table width="1000" cellspacing="0" cellpadding="0" border="0" ><tr><td align="center" valign="top" width="700" style="min-height:700px;">
+							<table cellspacing="20" cellpadding="0" width="100%" >
+					<tr><td width="33%" valign="top" align="center" >
+						<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1769%20-%20sc-500x500.png" class="grouped_elements" ><img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1769%20-%20sc-200x300.png" border="0" width="200" height="132"></a><br><br>
+													<div style="display: block;">
+																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/Zlov-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/Zlov-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1055%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1055%20-%20sc-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1735%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1735%20-%20sc-50x50.png" border="0" width="33" height="50" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1846%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1846%20-%20sc-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1769%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1769%20-%20sc-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1125%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1125%20-%20sc-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1714%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1714%20-%20sc-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1764%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1764%20-%20sc-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1079%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/IMG_1079%20-%20sc-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1863%20-%20sc-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/37/5Z9Y1863%20-%20sc-50x50.png" border="0" width="50" height="33" >
+									</a>
+																								</div>
+												<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('descriere');"><font size="4" >Descriere</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_descriere" style="margin-top:-40px;margin-right:10px;float:right;">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+									
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('distributia');"><font size="4" >Distributia</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_distributia" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+										
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('cronici');"><font size="4" >Cronici</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_cronici" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+												<br><br>
+						<div class="buton-inapoi"><a href="http://www.teatrulmetropolis.ro/spectacole">< Spectacole</a></div>
+					</td>
+					<td width="67%" valign="top" >
+						<table border='0' width="476" cellspacing='0' cellpadding='0' style="height: auto;">
+							<tr>
+								<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476"  align="center" valign="middle">
+									<font size="4"  color="white">LOVE STORIES de Radu F. ALEXANDRU</font><br>
+									<font size="3"  color="white">regia: Claudiu GOGA</font>
+																			<br>
+										<table style="margin-left:20px;margin-right:10px;" ><tr><td>
+											<font style="font-size:18px;" color="white"><b><p style="text-align: center">
+	&nbsp;</p>
+<p>
+	Premiul pentru &bdquo;Cea mai bună piesă rom&acirc;nească a anului 2010&rdquo;-<br style="position: relative" />
+	desemnat de juriul UNITER</p>
+</b></font>
+										</td></tr></table>
+																	</td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/lb.png" width="13" height="13" ></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+							</tr>
+						</table>
+						<br><br>
+												<br><br>
+						
+								<table border='0' width="476" cellspacing='0' cellpadding='0' valign="top" align="left" >
+									<tr>
+										<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+										<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476" >
+											<table style="margin-left:20px;margin-right:10px;" align="left" id="table_caract_spect"><tr><td align="left" valign="top">
+																							<div id="descriere" style="display:block;">
+													<font size="2" color="white"><p>
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span><span _fck_bookmark="1" style="display: none">&nbsp;</span></p>
+<p>
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span><span _fck_bookmark="1" style="display: none">&nbsp;</span><span _fck_bookmark="1" style="display: none">&nbsp;</span></p>
+<p style="text-align: center; ">
+	<span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Douǎ generaţii, douǎ cupluri &ndash; parinţi şi copii, o emoţionantǎ poveste a cǎutǎrilor de sine, un labirint al emoţiilor şi dramelor existenţiale, un spectacol care vorbeşte despre acceptare şi autenticitate. Despre fascinanta relaţie &icirc;ntre autor şi personajele lui.Despre limite si despre tabuuri.</span></span></p>
+<p style="text-align: center; ">
+	<span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Despre adevărul care surprinde şi şocheazǎ.</span></span></p>
+<p style="text-align: center; ">
+	<span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">De fapt, despre matricea existenţialǎ a fiecaruia dintre noi.</span></span></p>
+<p style="text-align: center; ">
+	<span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;"><br />
+	Cu: Maia MORGENSTERN, Mircea RUSU, Alexandru PAVEL, Diana CAVALLIOTI</span></span></p>
+<p style="text-align: center; ">
+	<span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Cu participarea lui Emil HUREZEANU</span></span></p>
+<p style="text-align: center; ">
+	<span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">&nbsp;Regia: Claudiu Goga</span></span></p>
+<p style="text-align: center; ">
+	<span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">&nbsp;Scenografia: Lia Dogaru</span></span></p>
+<p style="text-align: center; ">
+	&nbsp;</p>
+<p style="text-align: center; ">
+	<span _fck_bookmark="1" style="display: none">&nbsp;</span></p>
+<p style="text-align: center; ">
+	<iframe allowfullscreen="" frameborder="0" height="349" src="http://www.youtube.com/embed/cSfd9XteGVM?hl=ro&amp;fs=1" width="425"></iframe></p>
+</font>
+													<br>
+													<font size="2" color="white">Durată: 1h 40m (fără pauză)</font><br><br>																									</div>
+																																		<div id="distributia" style="display:none;">
+													<font size="2" color="white"><p>
+	cu: Maia Morgenster, Mircea Rusu, Alexandru Pavel, Diana Cavallioti</p>
+<p>
+	cu participarea lui Emil Hurezeanu</p>
+</font><br>
+																									</div>
+																																		<div id="cronici" style="display:none;">
+													<font size="2" color="white"><p>
+	<span class="Apple-style-span" style="line-height: 24px; "><b><span lang="FR" style="font-size: 15pt; font-family: Georgia, serif; ">Dragoste &icirc;mpovărătoare&hellip;</span></b></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+150%">
+	<span lang="FR" style="font-size: 11.5pt; line-height: 150%; font-family: Georgia, serif; "><span class="Apple-style-span" style="font-family: Arial, Verdana, sans-serif; font-size: 12px; line-height: 24px; "><b><span lang="FR" style="font-size: 10pt; font-family: Georgia, serif; ">07.10.2011 -&nbsp;</span></b></span><span class="Apple-style-span" style="font-family: Arial, Verdana, sans-serif; font-size: 12px; line-height: 24px; "><b><i><span lang="FR" style="font-size: 10pt; font-family: Georgia, serif; "><span style="color:#f00;">Veronica Marinescu </span>-&nbsp;</span></i></b></span><span class="Apple-style-span" style="font-family: Arial, Verdana, sans-serif; font-size: 12px; line-height: 24px; "><b><span lang="FR" style="font-size: 15pt; font-family: Georgia, serif; ">CURIERUL NATIONAL</span></b></span></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+150%">
+	<br />
+	<span lang="FR" style="font-size: 12pt; line-height: 150%; font-family: Georgia, serif; ">Av&acirc;nd la bază textul &quot;Labirintul&quot; al lui Radu F. Alexandru, spectacolul de la Teatrul Metropolis, &quot;Love Stories&quot; (&quot;Poveşti de dragoste&quot;, Regia - Claudiu Goga; Scenografia: Lia Dogaru) pune sub lupă două generaţii de cupluri. Doi părinţi nefericiţi (interpretaţi de Maia Morgenstern şi Mircea Rusu) şi fiul lor (Alexandru Pavel, &icirc;n rolul lui Dan) care o iubeşte pe Giulia (Diana Cavallioti) - dar a căror ieşire din lanţul căutărilor de sine, apăsătoare, traumatizante, pare fără sf&acirc;rşit.&nbsp;<br />
+	Cele două poveşti de iubire - emoţionante şi derutante prin trăirea fiecăruia dintre protagonişti &icirc;n cercul suspiciunilor, de fapt,&nbsp; prin auto&icirc;ncarcerarea &icirc;n propriile drame existenţiale - sunt rupte din viaţă; chinuită, ce-i drept, lipsită de orice perspectivă care le-ar putea &icirc;ncununa sentimentele.&nbsp;<br />
+	Labirintul acestor iubiri &icirc;mpovărătoare - pe de o parte, tocmai prin lipsa de comunicare, iar pe de altă parte prin tendinţa personajelor de a-şi apăra propriile frustrări şi orgolii sau de a-şi pune la adăpost picătura de &icirc;ncredere unul &icirc;n celălalt -&nbsp; este, &icirc;n realitate, povestea unui eşec; a unui dublu eşec, pentru cele două cupluri, pentru cei patru eroi ai &icirc;nt&acirc;mplărilor, povestite chiar de către autor - interpretat de Emil Hurezeanu, a cărui prestaţie se limitează la simpla relatare a subiectului.&nbsp; Altfel spus, monologul unui scriitor care va scrie povestea eroilor, după o &icirc;nt&acirc;lnire cu ei la Albena, &icirc;n Bulgaria.&nbsp;<br />
+	Drama Giuliei şi a lui Dan, care, deşi se căsătoresc, nu reuşesc să comunice, el solicit&acirc;nd, &icirc;n cele din urmă, sfatul părinţilor - impresionează spectatorul care empatizează cu aceştia&hellip; Dar problemele lor se complică, aliment&acirc;ndu-le &icirc;nstrăinarea. Nici părinţii nu prea au sorţi de izb&acirc;ndă &icirc;n propria relaţie conjugală, iar scena devine un &icirc;ncr&acirc;ncenat c&acirc;mp de luptă, fără speranţă, spre dezamăgirea spectatorului.&nbsp;<br />
+	Totul se termină trist. Drama e la ea acasă. Iar actorii o susţin din răsputeri. Maia Morgenstern şi Mircea Rusu sunt convingători, la fel şi tinerii, &icirc;n mod deosebit Diana Cavallioti. E adevărat, toată lumea s-a străduit să facă faţă textului - cu bune şi rele - scris de Radu F. Alexandru. Noi aplaudăm interpreţii&hellip; Chiar dacă piesa &quot;Labirintul&quot;, de la care au pornit &quot;poveştile de dragoste&quot;, a obţinut premiul UNITER pentru &quot;Cea mai bună piesă rom&acirc;nească a anului 2010&quot;.</span></p>
+<p>
+	<span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;"><br />
+	</span></span></p>
+<p>
+	<span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;"><br />
+	</span></span></p>
+<p>
+	&nbsp;</p>
+<div>
+	<span style="font-size:18px;"><span style="font-family:arial,helvetica,sans-serif;">Spectator </span></span></div>
+<div>
+	<span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Publicat de Ileana Lucaciu&nbsp;</span><span class="Apple-style-span" style="font-family: arial, helvetica, sans-serif; ">marți, 25 octombrie 2011</span></span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">&ldquo;LOVE STORIES&ldquo; &ndash; TEATRUL METROPOLIS </span></span></strong></div>
+<div>
+	<strong><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AVEM ACTORI MINUNAȚI &hellip; </span></span></strong></div>
+<div>
+	<span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &Icirc;n sf&acirc;rşit apare &icirc;n repertoriul unui teatru şi o piesă a unui dramaturg rom&acirc;n contemporan. Teatrul Metropolis amintim că este un teatru de proiecte şi răm&acirc;ne demnă de stimă opţiunea sa pentru o piesă actuală, de-a noastră. &ldquo;Love stories&rdquo;, mai pe rom&acirc;neşte spus &ldquo;Poveşti de dragoste&rdquo; aparţine lui Radu F. Alexandru şi a fost distinsă cu Premiul UNITER drept &ldquo;Cea mai bună piesă a anului 2010&rdquo;. Titlul &icirc;n engleză al piesei, s-ar putea să inducă unor spectatori confuzie prin amintirea celebrului film &ldquo;Love Story&rdquo;, o dramă romantică din anii &rsquo;70. Tot despre dragoste povesteşte şi Radu F. Alexandru, dar &hellip; pe un alt drum al acţiunii, prin conflicte confuze. P&acirc;nă la un punct textul său promitea un conflict credibil &icirc;ntre generaţii, av&acirc;nd drept bază iubirea cuplurilor. Pe parcurs, motivările degradării acestui sentiment sunt &icirc;nsă, &icirc;n text, forţat aduse.</span></span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<p dir="ltr">
+		<strong><span style="font-size:24px;">JURNALUL</span></strong></p>
+	<p>
+		<br />
+		<span style="font-size:16px;">Autor: <a href="http://sarbu/">MARIA SARBU</a> <br />
+		14 octombrie 2011<br />
+		</span><br />
+		<br />
+		<em><span style="font-size:16px;">Pasiuni confuze &icirc;n &quot;Love Stories&quot;<br />
+		La Metropolis se &quot;spun&quot; poveşti de dragoste. De pe scenă vine emoţia care cotropeşte<br />
+		<br />
+		<img src="https://lh5.googleusercontent.com/kKDCXjUiXek_Ard6jaDHKSzpMt6MesBJl8BBfxayp9DUbRV_BRMoSS5fU1k02tTdMgKBZHASxCMYcbhmkiMpOOL-NCr_wKmlL0T8fxZV-DMC4J3f1hY" /><br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		La realizarea spectacolului s-a lucrat pe text. Goga spune că a avut c&acirc;teva doleanţe, &icirc;n sensul de a restr&acirc;nge textul şi Radu F. Alexandru l-a rescris. Au lucrat &icirc;mpreună, a fost un fel de &quot;working progress&quot;, &icirc;n timpul repetiţiilor. Regizorul a respectat &quot;stilul impus Love Stories&quot; (&quot;Poveşti de dra gos te&quot;) e titlul spectacolului montat la Teatrul Metropolis de Claudiu Goga. Pe afiş &ndash; două nume mari din lumea teatrului: Maia Morgenstern şi Mircea Rusu. Distribuţia o completează două nume promiţătoare: Diana Cavallioti şi Alexandru Pavel. Tot pe afiş, mai jos, citeşti: cu parti ciparea lui Emil Hurezeanu &ndash; e vorba de cunoscutul publicist şi nu de vreun actor cu acelaşi nume. Titlul original al textului, ales pentru a fi pus &icirc;n scenă, este &quot;Labirint&quot; &ndash; piesă scrisă &icirc;n rom&acirc;neşte de Radu F. Alexandru şi considerată cea mai bună dintre toate cele prezentate la Concursul UNITER pe anul 2010. <br />
+		<br />
+		Multe piese premiate la noi nu prea &icirc;şi găsesc &quot;locul&quot; pe o scenă, dar &quot;Labirint&quot; e printre cele norocoase. Goga a optat pentru acest text şi dintr-un motiv că piesa &quot;are un potenţial de emoţie foarte mare&quot;, consider&acirc;nd că dacă &icirc;mpreună cu actorii reuşesc să emoţioneze pu blicul, partida va fi c&acirc;ştigată. La premieră, am simţit cum emoţia inunda sala, emoţia &icirc;nlesnită, sigur, de drama trăită de personaje prin interpretarea actorilor.<br />
+		<br />
+		Nimic deosebit, la prima vedere: două cupluri, două generaţii, părinţi &ndash; copii, aflaţi &icirc;ntr-un hăţiş fără de ieşire. Sau mai degrabă sunt prinşi &icirc;ntr-un cerc vicios, iar c&acirc;nd cineva &icirc;ncearcă să-l spargă nu reuşeşte. E un destin comun şi &icirc;n acelaşi timp fiecare e singur cu destinul lui.<br />
+		<br />
+		Cu o intensitate interioară men ţi nută &icirc;n creştere, Mircea Rusu face un rol emoţionant. &Icirc;l &icirc;ntruchipează pe un profesor de filozofie, a cărui cumpătare poate fi lecţie de viaţă. E altfel nevasta lui &ndash; interpretată de Maia Morgenstern &ndash;, femeia vulcanică, fără ast&acirc;mpăr, care &icirc;şi &icirc;năbuşă sentimentele de care se loveşte tot timpul. Ei sunt &icirc;ntr-o balanţă, dar fără starea de linişte sufletească. Fiul (Alexandru Pavel) e &icirc;ndrăgostit şi se &icirc;nsoară, cu o fată (Diana Cavallioti). Mama nu e de acord, iar tata da. Mama nu vede cu ochi buni căsnicia lor nici c&acirc;nd există un copil. De fapt, este măcinată de drama ei existenţială, ca şi nora, ca şi fiul, ca şi soţul. &Icirc;i uneşte dragostea, &icirc;i uneşte şi ura şi &icirc;i poate dezbina destinul. Dureros şi fascinant totodată. <br />
+		de dramaturgie&quot;, a potenţat linia filmică a spectacolului, care este fragmentat, i-a dat cursivitate, &quot;ca publicul să &icirc;nţeleagă şi să accepte această convenţie&quot;. Scenografia, semnată de Lia Dogaru, nu e deloc complicată şi are un caracter funcţional, rezolv&acirc;nd şi situaţii greu de redat. De fapt, creatorii spectacolului au hotăr&acirc;t ca decorul să fie g&acirc;ndit, chiar şi citit, mai degrabă ca o instalaţie şi nu ca un decor de teatru convenţional. Pe scena acoperită cu plută făr&acirc;miţată &ndash; c&acirc;teva scaune şi fotolii. Un ecran mare, instalat pe peretele din faţă al scenei, şi altul mai mic ce &icirc;şi are locul chiar pe scenă sunt ca două spaţii ajutătoare. Pe primul apare Emil Hurezeanu, &icirc;n rolul Autorului. Din dorinţa de a da veridicitate acestei poveşti, după cum ne-a mărturisit regizorul, s-a căutat o personalitate publică, care să fie credibilă &icirc;n acest rol, oprindu-se la Emil Hurezeanu, &quot;pentru că e un om pe care l-ai putea aborda să scrie o poveste complicată, dacă l-ai &icirc;nt&acirc;lni undeva şi dacă ţi-ai propune acest lucru, dar şi pentru discursul său echilibrat şi intelectual...&quot;. Astfel, &quot;autorul&quot; este prezent prin imagine video. Cel de-al doilea ecran serveşte drept fotografia personajului despre care este vorba &icirc;n scena respectivă (fiecare scenă e scrisă pe un conflict puternic) şi absenţa fizică e &icirc;nlocuită de prezenţa &icirc;n fotografie, cu anumite efecte care &quot;să transpună o idee sau o stare&quot;. Contribuie şi luminile şi ilustraţia muzicală, dar şi pereţii teatrului &quot;folosiţi&quot; &icirc;n decor &icirc;n forma lor obişnuită. Frumos construit şi frumos jucat acest spectacol.</span></em></p>
+	<p>
+		&nbsp;</p>
+	<p>
+		&nbsp;</p>
+	<p dir="ltr">
+		<span style="font-size:24px;"><strong><br />
+		www.revista22.ro</strong></span></p>
+	<span style="font-size:16px;"><br />
+	</span>
+	<p dir="ltr">
+		<strong><span style="font-size:16px;">Labirintul poveştilor de dragoste</span></strong></p>
+	<p dir="ltr">
+		<strong><span style="font-size:16px;">de Doina Papp&nbsp; </span></strong></p>
+	<span style="font-size:16px;">25.10.2011</span><em><span style="font-size:16px;"><br />
+	<img src="https://lh5.googleusercontent.com/FSK8dTsgtaNAzltvrWlWKCvQzSzzn2VBha_KOsy6DjhaZaWUEuYbMTs3Wrwu5O3XA1ehzstf5JrstsBuIyv1iu4zqfmFoFxQtV5Z3k24o9ucypP16J4" /><br />
+	<br />
+	</span></em>
+	<p dir="ltr">
+		<span style="font-size:16px;">Love stories, de Radu F. Alexandru, &icirc;n regia lui Claudiu Goga, cu Maia Morgenstern, Mircea Rusu, Alexandru Pavel, Diana Cavallioti, la Teatrul Metropolis.</span></p>
+	<p dir="ltr">
+		<em><span style="font-size:16px;">Premiată la concursul Piesa anului (2010) al UNITER, piesa Labirint, de Radu F. Alexandru, ce se joacă acum la Teatrul Metropolis cu titlul Love stories, produce &icirc;ncă de la lectură oarecare stupoare cu privire la viziunea autorului asupra iubirii &icirc;n relaţia de cuplu. O seamă de ne&icirc;nţelegeri bizare scoase la iveală prin forţarea notei duc la situaţii ireconciliabile faţă de care o simplă ridicare din umeri nu este &icirc;nsă suficientă, fiindcă pretenţiile autorului sunt ceva mai mari şi bat spre misterul fiinţei şi al existenţei.</span></em></p>
+	<p dir="ltr">
+		<em><span style="font-size:16px;">O mamă autoritară, intolerantă şi nefericită, un tată filozof carismatic, profesor universitar intră &icirc;n derută la aflarea veştii căsătoriei fiului lor, băiat de treabă, fiinţă vulnerabilă, dar avid de dragoste (care i-a lipsit probabil &icirc;n familie). Aleasa, Giulia, e prezenţa cea mai stranie din piesă, fiindcă face un copil fără să-l fi dorit, se căsătoreşte cu tatăl acestuia tot &agrave; contre coeur, pentru ca spre final să-şi dezvăluie pornirile perverse (e lesbiană) dintr-un prea plin al accidentelor biografice. E orfană de mamă, o părăseşte mai apoi şi tatăl, care se sinucide &icirc;ntr-o cameră de hotel cu ea alături, caută afecţiunea şi o găseşte pe undeva prin junglele Americii de Sud, l&acirc;ngă o fiinţă de acelaşi sex şi cu aceeaşi vocaţie a suferinţei, dar şi a speranţei. (Cam trasă de păr această istorie exotică!) &Icirc;n final, din toată astă &icirc;ncrucişare de destine, tatăl care părea cel mai raţional şi detaşat (ironic &icirc;n exprimare), se sinucide (lovitură de teatru) lăs&acirc;ndu-i pe toţi cu gura căscată, inclusiv pe spectatorii care sperau probabil la o revenire la verosimil a celor despre care autorul se angajează a ne povesti. Mai ales că acesta ni se adresează &icirc;n mod direct &icirc;n vreo trei reprize relat&acirc;nd de la faţa locului, adică de la Albena, unde se afla &icirc;n vacanţă, martor, zice-se, al &icirc;nt&acirc;mplărilor.</span></em></p>
+	<p dir="ltr">
+		<em><span style="font-size:16px;">Procedeul autoreferenţial &icirc;l include &icirc;n piesă şi pe autorul adevărat, care a pus probabil şi ceva din aventura propriei vieţi &icirc;n acest love story cu aer de policier. Mai sunt şi alte ingrediente la modă &icirc;n text şi &icirc;n spectacol, respectiv limbajul derapat &icirc;n trivialitate de care abundă textele contemporane şi ecranele cu filmări din dreptunghiul cărora ne urmăresc insistent privirile eroilor. (Episoadele filmate sunt şi ele indicate &icirc;n piesă, evident, lăs&acirc;nd libertatea regizorului de a le folosi după plac.)</span></em></p>
+	<p dir="ltr">
+		<em><span style="font-size:16px;">Regizorul Claudiu Goga, tentat iniţial de melodrama subsidiară explicitată mai cu seamă &icirc;n laitmotivul musical bine ales, dă montării de la Metropolis şi o tentă de dezbatere, de proces (de aici şi distribuirea unor scaune &icirc;n decor care aşază &icirc;n dialog direct personajele) prelungit &icirc;n etajul filmic, unde gros-planurile vor să sugereze ad&acirc;nci fixaţii &icirc;n conştiinţă. Cu alte cuvinte, eroii se &icirc;nt&acirc;lnesc doi c&acirc;te doi sau trei &icirc;n şedinţe de psihoterapie inutile, de vreme ce acestea mai degrabă &icirc;i &icirc;nvrăjbesc, scoţ&acirc;nd la iveală loessul din relaţiile cu aparenţă de normalitate (e atacat, evident, şi convenţioalismul vieţii civilizate). Problema nu e doar a relaţiilor, ci şi a personajelor a căror psihologie contorsionată regizorul e preocupat să o &icirc;nţeleagă şi redea prin intermediul distribuţiei bine alese. Dana (mama) e Maia Morgenstern cu tot ce ştie ea să aducă &icirc;n scenă ca inteligenţă şi backround cultural.</span></em></p>
+	<p dir="ltr">
+		<em><span style="font-size:16px;">E pedantă p&acirc;nă la rigiditate şi dramatică p&acirc;nă la lacrimă, izbutind să-şi ascundă drama p&acirc;nă la acea scenă memorabilă cu Giulia, c&acirc;nd aceasta se năpusteşte asupra ei &icirc;ntr-un sărut ce pare al morţii, nu al iubirii. Scena care se petrece l&acirc;ngă un st&acirc;lp coşcovit, sub un felinar care p&acirc;lp&acirc;ie enervant (scenografie: Lia Dogaru), e destinată să o demaşte şi pe ea, cu suferinţă cu tot. Un strigăt bine plasat... pe banda sonoră marchează momentul. Diana Cavallioti, sigură pe ea, se dovedeşte aceeaşi actriţă de mari resurse pe care am remarcat-o &icirc;ncă de la debut şi nu demult &icirc;n Cui i-e frică de Virginia Woolf?. Are aplomb, forţă şi un tremur interior indeniabil care o plasează adesea &icirc;n centrul de greutate al spectacolului. Mircea Rusu, cu prestanţa-i artistică tot mai evidentă &icirc;n ultima vreme, joacă subtil ambiguităţile rolului, rezon&acirc;ndu-se de unul singur &icirc;n faţa perplexităţii provocate de viaţa ce-i lunecă printre degete. Ca nisipul pe care e pus să calce &icirc;n scenă. &Icirc;n fine, t&acirc;nărul Alexandru Pavel răm&acirc;ne un naiv care ştie să facă din sinceritate o armă pe scenă. Marcat profitabil de rolul doctorului din Ivanov, spectacolul Teatrului Bulandra, actorul dă consistenţă unui personaj cam indecis din scriitură. Mai apare &icirc;n c&acirc;teva momente filmate şi cunoscutul jurnalist Emil Hurezeanu, care ridică pe afiş cota de interes a spectacolului, deşi rolul putea să-i revină de drept autorului &icirc;nsuşi. ( Cum jurnalistul e şi poet, poate istoria poveştilor la care asistă &icirc;l va inspira, cine ştie.) Această primă ieşire la rampă a piesei premiate &icirc;n 2010, Labirint, de Radu F. Alexandru, de la Teatrul Metropolis, a fost, cum era şi firesc, cu... şampanie. //</span></em></p>
+	<p dir="ltr">
+		&nbsp;</p>
+	<p dir="ltr">
+		<span style="font-size:24px;"><strong><br />
+		<br />
+		<a href="http://ileanalucaciu.blogspot.com/">Spectator</a> <br />
+		marți, 25 octombrie 2011<br />
+		Publicat de Ileana Lucaciu &nbsp;<br />
+		</strong></span></p>
+	<p dir="ltr">
+		<strong><span style="font-size:14px;">&ldquo; LOVE STORIES &ldquo; &ndash; TEATRUL METROPOLIS </span></strong></p>
+	<p dir="ltr">
+		<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AVEM ACTORI MINUNAȚI &hellip; </em></p>
+	<p dir="ltr">
+		<span style="font-size:16px;"><em>&nbsp;&nbsp;&nbsp;&Icirc;n sf&acirc;rșit apare &icirc;n repertoriul unui teatru și o piesă a unui dramaturg rom&acirc;n contemporan. Teatrul Metropolis amintim că este un teatru de proiecte și răm&acirc;ne demnă de stimă opțiunea sa pentru o piesă actuală, de-a noastră. &ldquo;Love stories&rdquo;, mai pe rom&acirc;nește spus &ldquo;Povești de dragoste&rdquo; aparține lui Radu F. Alexandru și a fost distinsă cu Premiul UNITER drept &ldquo;Cea mai bună piesă a anului 2010&rdquo;. Titlul &icirc;n engleză al piesei, s-ar putea să inducă unor spectatori confuzie prin amintirea celebrului film &ldquo;Love Story&rdquo;, o dramă romantică din anii &rsquo;70. Tot despre dragoste povestește și Radu F. Alexandru, dar &hellip; pe un alt drum al acțiunii, prin conflicte confuze. P&acirc;nă la un punct textul său promitea un conflict credibil &icirc;ntre generații, av&acirc;nd drept bază iubirea cuplurilor. Pe parcurs, motivările degradării acestui sentiment sunt &icirc;nsă, &icirc;n text, forțat aduse.</em></span></p>
+	<p dir="ltr">
+		<span style="font-size:16px;"><em>&nbsp;&nbsp;&nbsp;Dan (Alexandru Pavel) este hotăr&acirc;t să se &icirc;nsoare cu iubita sa Giulia (Diana Cavallioti) care este gravidă. Părinții săi, Cristian (Mircea Rusu) &ndash; profesor de filosofie și Dana (Maia Morgenstern) &ndash; cu o ocupație neprecizată ca sprijin al definirii personajului, răm&acirc;n surprinși la aflarea veștii. Mama se opune categoric. Inspirat dramaturgul sugerează, că mariajul părinților ar fi &icirc;n impas. Replica este directă și sugestivă. P&acirc;nă aici toate bune, cu promisiuni pentru dezvoltarea conflictului. Dramaturgul nu &icirc;i mai găsește apoi, o linie c&acirc;t de c&acirc;t logică de dezvoltare. După zece luni de la nașterea copilului și cuplul t&acirc;năr e &icirc;n prag de destrămare pentru că relația sa erotică nu mi există &hellip; Giulia destăinuind că este lesbiană. Finalul surprindre mai mult prin moartea tatălui &icirc;ntr-un accident de mașină, ce este de fapt, un act sinucigaș. Relatarea pe scurt a acțiunii este un argument pentru fragilitatea scrierii. Conflictele nu au o bază solidă, personajele &icirc;ncearcă să se explice prin numeroase confesiuni-monolog și nu prin relații.</em></span></p>
+	<p dir="ltr">
+		<span style="font-size:16px;"><em>&nbsp;&nbsp;&nbsp;Regizorul Claudiu Goga și-a ales o distribuție remarcabilă, prin harul lor actorii reușind să configureze &icirc;n spectacol unele momente emoționante, trec&acirc;nd peste hibele textului. Cu atenție, regizorul i-a &icirc;ndrumat și a speculat calitățile lor. Dar tot regizorul pentru amplificarea vizualizării teatrale, apelează la moda de acum expirată &icirc;n lume, a proiecțiilor. Decorul simplist imaginat de Lia Dogaru este dominat de două rame imense de tablou &icirc;n care se vor proiecta insistent multiple fotografii cu personaje ce constituie subiectul discuțiilor conflictuale dintre fiu și părinți, dintre părinți, etc. Proiecțiile devin efecte derizorii, pleonastic atribuite vizualizării teatrale. De pildă, c&acirc;nd Giulia anunță că este gravidă, se proiectează imaginea unui făt de la o ecografie. O proiecție centrală aduce &icirc;n acțiune rolul &hellip; povestitorului, un scriitor care s-ar inspira din viața cuplurilor, un personaj fără sens pentru rostul acțiunii. </em></span></p>
+	<p dir="ltr">
+		<span style="font-size:16px;"><em>Cunoscutului comentator politic de pe micile ecrane, Emil Hurezeanu &icirc;i este atrubuit acest personaj inutil ! Proiecțiile distorționează percepția elementară a scrierii și afectează interpretarea actorilor.</em></span></p>
+	<p dir="ltr">
+		<span style="font-size:16px;"><em>&nbsp;&nbsp;&nbsp;Descoperim &icirc;n distribuție un t&acirc;năr talent care promite prin calitățile personale o evoluție viitoare deosebită ; Alexandru Pavel &icirc;n rolul lui Dan sugerează că acesta este marcat de conflictul dintre părinți și surprizele confesiunilor iubitei. Trece peste dificultățiile falsului unor situații și dă veridicitate stărilor interioare ale personajului. &Icirc;n personajul confesiunilor, Giulia, are o partitură mult mai dificilă pe care Diana Cavallioti o salvează de la eșec, d&acirc;ndu-i o aură de mister. Incoerent desenată psihologic, Giulia devine prin interpretarea actriței, o femeie dezorientată datorită experiențele de viață trecute, ce ascunde o tristețe interioară. La nuanță prin expresie și gest, actrița trăiește stările personajului. Un cuplu artistic au devenit &icirc;n urma unor spectacole apreciate de la Teatrul Evreiesc de Stat, Maia Morgenstern și Mircea Rusu.</em></span></p>
+	<p dir="ltr">
+		<span style="font-size:16px;"><em>&nbsp;&Icirc;n Dana, soție și mamă, actrița brodează caracterizarea pe &icirc;mbinarea celor două planuri &ndash; nefericirile mariajului și nemulțumirea vestei &icirc;nsurătorii fiului. Cu marea sa experiență, actrița aduce discret lacrimi ce inundă uneori privirile Danei, care manifestă o tăinuită sensibilitate, dar subliniază și autoritatea unei femei frustrate de ne&icirc;mpliniri personale. Sugerează cu finețe nemulțumirile intime ale lui Cristian, păstr&acirc;nd &icirc;nsă, coerent aparența de cinic, ironic filosof, Mircea Rusu. Actorii se dovedesc a fi minunați &icirc;n interpretarea unor personaje firav construite, reușind prin jocul lor să le estompeze lipsa de logică elementară &icirc;n evoluție. </em></span></p>
+	<p dir="ltr">
+		<span style="font-size:16px;"><em>&nbsp;&ldquo;Love stories&rdquo; răm&acirc;ne un proiect onorabil de a sprijini dramaturgia noastră, un spectacol ce pare mult prea lung &icirc;n ciuda duratei sale de o oră și patruzeci de minute, cu actori admirabili, pe un text plăp&acirc;nd, cu ambiții de a fi reprezentativ pentru realitatea ce o trăim. </em></span></p>
+	<p>
+		&nbsp;</p>
+	<p>
+		&nbsp;</p>
+</div>
+</font><br>
+																											<div class="buton-sus"><a href="http://www.teatrulmetropolis.ro/spectacole/love-stories-de-radu-f-alexandru.html#top">^ Sus</a></div>
+																									</div>
+																						</td></tr></table>
+										</td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450"  height="13"></td>
+										<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+									</tr>
+								</table>
+					</td>
+				</tr>
+			</table>
+		
+		<script>show('descriere');</script>
+	</td>
+<td width="300" align="center" valign="top"><br><br>
+		<br>
+<div class="dreapta-cautare">
+		
+			<input type="text" id="keyword" value="Scrie aici și ..." onfocus="if (this.value == 'Scrie aici și ...') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Scrie aici și ...';}" class="search-input" size="19" onKeyPress="return submitenter_cauta(event)">
+			<a onclick="moduleSearch();" class="buton" >Caută</a>
+		
+</div>
+<br>
+<div class="dreapta-cos">	
+	<div id="module_cart" >
+ <div class="middle">
+	
+    	<table cellpadding="5" cellspacing="0" style="width: 200px;color:white;" background="catalog/view/theme/default/image/c.png"><tr><td>
+		<img src="catalog/view/theme/default/image/bilete_fara_rezervari.png" width="181" height="129" border="0"/>
+	</td></tr></table>
+    	
+  </div>
+</div>
+<script type="text/javascript"><!--
+$(document).ready(function () {
+	$('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+	$("a[id^='adaugabilet']").click(function () {
+		 var randlocIDValSplitter    = (this.id).split("-");
+    var rand            = randlocIDValSplitter[1];
+	var loc            = randlocIDValSplitter[2];
+	var reprezentatie_id            = randlocIDValSplitter[3];
+	
+	control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoatebilet']").click(function () {
+		 var randlocIDValSplitter   = (this.id).split("-");
+		 var rand            		= randlocIDValSplitter[1];
+		 var loc            		= randlocIDValSplitter[2];
+		 var reprezentatie_id       = randlocIDValSplitter[3];
+	
+		control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control_scoate='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='scoate_sala']").click(function () {
+		var randlocIDValSplitter    = (this.id).split("-");
+		var reprezentatie_id        = randlocIDValSplitter[1];
+	
+	
+    
+        $.ajax({
+            url: 'index.php?route=continut/cart/callback&reprezentatie_id='+reprezentatie_id,
+            type: 'get',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            }   
+                   
+        });
+	
+	});
+	$("a[id^='clear_cart']").click(function () {
+		$.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/clear',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            } 
+                   
+        });
+		
+	});
+	
+	 $('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+ 
+});
+</script>
+
+
+</div>
+<br>
+<div class="dreapta-cont">
+	<table width="200" cellspacing='0' cellpadding='0'>
+		
+				<tr><td background="catalog/view/theme/default/image/c.png" width="110" height="30" valign="middle" align="center" >
+				<font color="#d2d0d0">Accesează cont</font>
+		</td>
+		<td width="90" valign="middle" align="center">
+			<a class="buton" href="http://www.teatrulmetropolis.ro/creaza_cont.html" id="fancybox_page_no_reload">Cont nou ?</a>
+		</td></tr>
+		<tr><td colspan="2" height="50" width="200" background="catalog/view/theme/default/image/c.png" valign="middle" align="center">
+			<form action="http://www.teatrulmetropolis.ro/index.php?route=common/home/autentificare" method="post" id="form_autentificare">
+				<input type="text" name="email" value="Email utilizator" onfocus="if (this.value == 'Email utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Email utilizator';}" class="user-input">
+				<input type="password" name="password" value="Parola utilizator" onfocus="if (this.value == 'Parola utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Parola utilizator';}" class="pass-input" onKeyPress="return submitenter_login_cont(event)">
+				<input type="hidden" name="redirect" value="http://www.teatrulmetropolis.ro/index.php?route=continut/spectacole&amp;spectacol_id=37">
+			</form>
+		</td></tr>
+		<tr><td width=110" height="30"></td>
+		<td background="catalog/view/theme/default/image/c.png" width="90" height="30" valign="middle" align="center">
+			<a onClick="$('#form_autentificare').submit();"  class="buton" >Accesează</a>
+		</td></tr>
+		</table>
+</div>
+<br>
+<br>
+<div class="dreapta-comentarii">
+	<a href="http://www.teatrulmetropolis.ro/stiri/adela-popescu-si-mihai-bendeac-in-premiera-pe-o-banca-la-metropolis.html#comentariu3" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','catalog/view/theme/default/image/parereaTA_hover.png',1)">
+		<img src="catalog/view/theme/default/image/parereaTA_normal.png" name="Image50" width="188" height="126" border="0" id="Image50" /><br>
+		<table id="Ultim_Coment">
+							<tr>
+								<td id="dataUltim_Coment">
+									15 octombrie 2011 la 16:17
+								</td>
+							<tr>
+								<td id="idUltim_Coment">
+									*Nume:
+								</td>
+							<tr>
+								<td id="contentUltim_Coment">
+									nu va suparati , cand se va mai juca piesa?
+								</td>
+							</tr>
+						</table>		
+	</a>
+</div>
+<br>
+<br>
+<div class="dreapta-ajutor">
+	<a href="http://www.teatrulmetropolis.ro/ajutor" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','catalog/view/theme/default/image/ajutor_hover.png',1)" id="fancybox_page_rel">
+		<img src="catalog/view/theme/default/image/ajutor_normal.png" name="Image51" width="171" height="101" border="0" id="Image51" /><br>
+	</a>
+</div>
+<div style="width:210px;margin-top:20px;"><img src="catalog/view/theme/default/image/visa_icon.jpg"></div></td>
+</tr></table>
+</div>	
+</td>
+</tr></table>
+</div>				
+
+<div id="footer_continut">
+	<table width="1000" align="center" height="200" background="catalog/view/theme/default/image/c.png"><tr><td><br>
+		<table width="90%" cellpadding="0" cellspacing="0"  style="color: #999;font-family:Arial, Helvetica, sans-serif;font-size:14px;">
+  <tr>
+    <td width="23%" rowspan="6" align="right" valign="top" >
+    <img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/sigla_tm.png" width="100" height="100" border="0" style="margin-right:30px;"/>
+    </td>
+    <td width="70%">Adresa: Str. Mihai Eminescu nr.89, sector 2, București.</td>
+    <td width="7%" rowspan="6" align="center" valign="top">
+   <a href="http://www.pmb.ro" target="blank"><img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/primaria_mun_buc.png" width="75" height="150" border="0" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Rezervări bilete se pot face și telefonic, la numerele: <br />
+      <strong style="color:#FFF">021 210 51 08</strong>  sau  <strong style="color:#FFF">0728 138 265</strong><br />
+      (în intervalul orar 10:00 - 19.00)<br />
+    Rezervarea telefonică este valabilă 48 de h.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font style="font-size:16px; color:#FFF">&copy;Teatrul Metropolis. Toate drepturile rezervate</font></td>
+  </tr>
+  <tr>
+    <td ><font style="font-size:12px;">Site produs de <strong style="color: #CCC">Legolas Media</strong><br />
+        Design by <strong style="color: #CCC">Alexandru Șulai</strong></font></td>
+  </tr>
+</table>	</td></tr></table>
+</div>
+
+
+</div>
+
+</body></html> 

@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ro" xml:lang="ro">
+<head>
+<title>Teatrul Metropolis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Teatrul Metropolis" />
+<meta name="keywords" content="" />
+<link href="http://www.teatrulmetropolis.ro/image/data/logo-ico.gif" rel="shortcut icon" type="image/x-icon" />
+<base href="http://www.teatrulmetropolis.ro/" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<!--[if IE]>
+	
+<![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-collapser/jquery.collapser.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+
+</head>
+<body bgcolor="#000000">
+<a name="top"></a>
+<div id="container">
+	<div id="div2_continut"></div>
+	
+	<div id="header_continut">
+		<table width="100%">
+		<tr><td height="20" colspan="8"></td></tr>
+		<tr><td width="10%"></td><td align="center" valign="top" >
+				
+				<a href="http://www.teatrulmetropolis.ro/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','catalog/view/theme/default/image/prima_pg_hover.png',1)">
+						<img src="catalog/view/theme/default/image/prima_pg_normal.png" name="Image1" width="85" height="45" border="0" id="Image1" />
+					</a><br/>
+					<div class="contact_continut">
+                       <a class="contact1_continut" href="http://www.teatrulmetropolis.ro/contact.html" id="fancybox_page_rel">&nbsp;</a>
+                    </div>
+					</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/artisti" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','catalog/view/theme/default/image/artisti_hover.png',1)">
+						<img src="catalog/view/theme/default/image/artisti_normal.png" name="Image2" width="195" height="196" border="0" id="Image2" />
+					</a>
+										</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/program" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','catalog/view/theme/default/image/program_hover.png',1)">
+						<img src="catalog/view/theme/default/image/program_normal.png" name="Image3" width="222" height="175" border="0" id="Image3" />
+					</a>
+										</td>
+					
+				<td align="center" valign="top" >
+											<a href="http://www.teatrulmetropolis.ro/spectacole"><img src="catalog/view/theme/default/image/spectacole_hover.png" width="154" height="145" border="0"  /></a>
+									</td>
+					<td align="center" valign="top" >
+									
+					
+					<a href="http://www.teatrulmetropolis.ro/despre_noi" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','catalog/view/theme/default/image/despre_noi_hover.png',1)">
+						<img src="catalog/view/theme/default/image/despre_noi_normal.png" name="Image6" width="174" height="145" border="0" id="Image6" />
+					</a>
+							</td>
+		<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/stiri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','catalog/view/theme/default/image/stiri_ANTET_hover.png',1)">
+						<img src="catalog/view/theme/default/image/stiri_ANTET_normal.png" name="Image4" width="144" height="120" border="0" id="Image4" />
+					</a>
+									</td>
+		<td width="10%"></td></tr></table>		
+	</div>
+<script>
+
+function show(control){
+var pagina = new Array()
+pagina[0]="descriere"
+pagina[1]="distributia"
+pagina[2]="cronici"
+
+if (document.layers) { // NN4+
+	document.layers['table_spectacol'].height = '100%';
+	document.layers['table_caract_spect'].height = '100%';
+	
+	for (i=0;i<pagina.length;i++){
+		
+		if (pagina[i] == control) {
+			document.layers[pagina[i]].visibility = "show";
+			document.layers[pagina[i]].display = "block";
+			document.layers[pagina[i]].position = "absolute";
+			document.layers["martor_" + pagina[i]].visibility = "show";
+			document.layers["martor_" + pagina[i]].display = "block";
+			}
+		else
+			{
+			document.layers[pagina[i]].visibility = "hide";
+			
+			document.layers["martor_" + pagina[i]].visibility = "hide";
+			
+      			}
+  		}
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+		document.getElementById('table_spectacol').style.height='100%';
+		document.getElementById('table_caract_spect').style.height='100%';
+		for (i=0;i<pagina.length;i++){
+			if (pagina[i] == control) {
+				var obj = document.getElementById(pagina[i]);
+				
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "visible";
+				obj.style.display = "block";
+				
+
+				obj.style.position = "relative";
+				objSD.style.visibility = "visible";
+				objSD.style.display = "block";
+				}
+			else
+				{
+				var obj = document.getElementById(pagina[i]);
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "hidden";
+				
+				obj.style.display = "none";
+				objSD.style.visibility = "hidden";
+				
+				}
+		}
+	}
+else if (document.all) { // IE 4
+	document.all['table_spectacol'].style.height = '100%';
+	document.all['table_caract_spect'].style.height = '100%';
+	for (i=0;i<pagina.length;i++){
+		if (pagina[i] == control) {
+			document.all[pagina[i]].style.visibility = "visible";
+			document.all[pagina[i]].style.display = "block";
+			document.all[pagina[i]].style.position = "absolute";
+			document.all["martor_" + pagina[i]].style.visibility = "visible";
+			document.all["martor_" + pagina[i]].style.display = "block";
+			}
+		else {
+			document.all[pagina[i]].style.visibility = "hidden";
+			
+			document.all["martor_" + pagina[i]].style.visibility = "hidden";
+			
+			}
+  		}
+	}
+}
+</script>
+
+<div id="content_continut" >
+	<table cellspacing="0" cellpadding="0" border="0" width="100%" ><tr><td align="center">
+		<div class="center" id="table_spectacol">
+			<table width="1000" cellspacing="0" cellpadding="0" border="0" ><tr><td align="center" valign="top" width="700" style="min-height:700px;">
+							<table cellspacing="20" cellpadding="0" width="100%" >
+					<tr><td width="33%" valign="top" align="center" >
+						<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/17/podu-500x500.png" class="grouped_elements" ><img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/17/podu-200x300.png" border="0" width="200" height="282"></a><br><br>
+													<div style="display: block;">
+																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/17/IMG_5804-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/17/IMG_5804-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/17/podu_1-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/17/podu_1-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/17/IMG_5841-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/17/IMG_5841-50x50.png" border="0" width="33" height="50" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/17/IMG_5833-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/17/IMG_5833-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/17/IMG_5814-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/17/IMG_5814-50x50.png" border="0" width="33" height="50" >
+									</a>
+																								</div>
+												<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('descriere');"><font size="4" >Descriere</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_descriere" style="margin-top:-40px;margin-right:10px;float:right;">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+									
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('distributia');"><font size="4" >Distributia</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_distributia" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+										
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('cronici');"><font size="4" >Cronici</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_cronici" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+												<br><br>
+						<div class="buton-inapoi"><a href="http://www.teatrulmetropolis.ro/spectacole">< Spectacole</a></div>
+					</td>
+					<td width="67%" valign="top" >
+						<table border='0' width="476" cellspacing='0' cellpadding='0' style="height: auto;">
+							<tr>
+								<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476"  align="center" valign="middle">
+									<font size="4"  color="white">PODU&rsquo; de Paul Ioachim</font><br>
+									<font size="3"  color="white">Regia : Horaţiu MĂLĂELE</font>
+																			<br>
+										<table style="margin-left:20px;margin-right:10px;" ><tr><td>
+											<font style="font-size:18px;" color="white"><b><p>
+	Horaţiu Mălăele şi George Ivaşcu &icirc;ntr-o admirabilă creaţie a situaţiilor comice&nbsp;</p>
+</b></font>
+										</td></tr></table>
+																	</td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/lb.png" width="13" height="13" ></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+							</tr>
+						</table>
+						<br><br>
+												<br><br>
+						
+								<table border='0' width="476" cellspacing='0' cellpadding='0' valign="top" align="left" >
+									<tr>
+										<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+										<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476" >
+											<table style="margin-left:20px;margin-right:10px;" align="left" id="table_caract_spect"><tr><td align="left" valign="top">
+																							<div id="descriere" style="display:block;">
+													<font size="2" color="white"><p>
+	&ldquo;PODU` este o piesa unicat cu o tema nemaiauzită. Marilor noştri nihilişti, celor care condamnă dezastrul vieţii şi neşansa naşterii, Paul Ioachim le propune această soluţie de compromis: supravieţuirea prin actul sinuciderii. Să văd un asemenea spectacol aş risipi oric&acirc;nd ceva din &ldquo;picul&rdquo; vieţii.&rdquo;<br />
+	Un supravieţuitor, <a href="http://www.teatrulmetropolis.ro/index.php?route=continut/artisti&amp;artist_id=9">HORAŢIU MĂLĂELE</a><br />
+	<br />
+	<br />
+	UN REGAL ACTORICESC:<br />
+	HORAŢIU MĂLĂELE ŞI GEORGE IVAŞCU<br />
+	&Icirc;NTR-O ADMIRABILĂ CREAŢIE A SITUAŢIILOR COMICE <br />
+	<br />
+	Orice &ldquo;sinucidere&rdquo; şi orice abdicare e un pas spre un nou &icirc;nceput.<br />
+	Trei destine, trei poveşti de viaţă, trei tipologii umane etern valabile &icirc;şi dau m&acirc;na, de fapt, pentru a o lua de la capăt. <br />
+	<br />
+	Teatrul METROPOLIS vă dă &icirc;nt&acirc;lnire pe un Pod al situaţiilor limită &icirc;n viaţă, unde &icirc;i veţi &icirc;nt&acirc;lni pe Horaţiu MĂLĂELE şi George IVAŞCU, &icirc;ntr-o farsă a existenţei absurde, a deriziunii &icirc;n faţa propriilor neputinţe. <br />
+	<br />
+	Cu imens umor, Un Ne&icirc;nţeles, Un Indrăgostit şi o Artistă vor sta la coadă &icirc;n faţa morţii, vă vor dezvălui fără milă, &icirc;n cheie caricaturală, propriile drame, <br />
+	tocmai pentru a descoperi Viaţa.<br />
+	Iubirea, faima, absolutul&hellip;trei laitmotive, sau trei constante ale existenţei noastre, ne pun la &icirc;ncercare pofta de r&acirc;s, timp de o oră, &icirc;ntr-o satiră nemiloasă la adresa caracterelor umane.</p>
+<p>
+	&nbsp;</p>
+<p style="text-align: center">
+	<iframe allowfullscreen="" frameborder="0" height="390" src="http://www.youtube.com/embed/Kjw6w_BCEMM" title="YouTube video player" width="480"></iframe></p>
+</font>
+													<br>
+													<font size="2" color="white">Durată: 1h 30 min</font><br><br>																									</div>
+																																		<div id="distributia" style="display:none;">
+													<font size="2" color="white"><p>
+	Cu: <a href="http://www.teatrulmetropolis.ro/index.php?route=continut/artisti&amp;artist_id=9">Horaţiu MĂLĂELE</a>, <a href="http://www.teatrulmetropolis.ro/index.php?route=continut/artisti&amp;artist_id=4">George IVAŞCU</a>, Meda VICTOR/ Aylin Cad&acirc;r</p>
+</font><br>
+																									</div>
+																																		<div id="cronici" style="display:none;">
+													<font size="2" color="white"><p>
+	<strong><span style="font-size: 16px">Un inger si doi ratati</span></strong><br />
+	<br />
+	Orice &ldquo;sinucidere&rdquo; si orice abdicare e un pas spre un nou inceput. Trei destine, trei povesti de viata, trei tipologii umane etern valabile isi dau mana, de fapt, pentru a o lua de la capat. Teatrul Metropolis ne da intalnire la Palatul National al Copiilor. In fata noastra (la premiera de luni sala a fost plina pana la refuz), un alegoric Pod al situatiilor limita in viata, pe care se balanseaza Horatiu Malaele si George Ivascu, intr-o farsa a existentei absurde, a deriziunii in fata propriilor neputinte. <br />
+	<br />
+	Cu imens umor, Un Neinteles, Un Indragostit si o Artista stau la coada in fata mortii. In asteptarea &ldquo;trenului&rdquo; catre o noua Viata, cele trei tipuri de ratati ne dezvaluie fara mila, in cheie caricaturala, propriile drame. Iubirea, faima, absolutul... trei laitmotive sau trei constante ale existentei noastre ne pun la incercare pofta de ras, timp de o ora si jumatate, intr-o satira nemiloasa la adresa caracterelor umane.<br />
+	<br />
+	&ldquo;Podu&rsquo;&rdquo; dupa &ldquo;Podul sinucigasilor&rdquo; de Paul Ioachim, in regia lui Horatiu Malaele, ii are in distributie pe seniorii Horatiu Malaele si George Ivascu, alaturi de tinerele talente Meda Victor, Aylin Cadar si Crina Semciuc. Personajul interpretat de Malaele da o nota aparte satirei. &ldquo;Neintelesul&rdquo; este mai mult un inger decat un sinucigas, venit sa-i salveze pe ceilalti doi interlocutori de la moarte, plonjand cu ei ca la &ldquo;bungee jumping&rdquo;.<br />
+	<br />
+	PODU&rsquo; este o piesa unicat cu o tema nemaiauzita. Marilor nostri nihilisti in traditie Ionesco-Cioran, celor care condamna dezastrul vietii si nesansa nasterii, textul lui Paul Ioachim le propune aceasta solutie de compromis: supravietuirea prin actul sinuciderii. Sa vad un asemenea spectacol as risipi oricand ceva din picul vietii&rdquo;, declara regizorul piesei. Un supravietuitor totusi, Neintelesul mai face un compromis cu aceasta viata.<br />
+	<br />
+	<strong>Cronica Romana<br />
+	Irina Pantiru</strong><br />
+	---------------------------------</p>
+<p>
+	<br />
+	<strong>Podu&rsquo;&ldquo;- să vrei să te sinucizi şi să te prăpădeşti de r&acirc;s&rdquo;</strong><br />
+	Pus &icirc;n scenă &icirc;n urmă cu şapte ani la Teatrul Naţional din Bucureşti de Horaţiu Mălăele, spectacolul &bdquo;Podu&rsquo;&ldquo; este reluat la Metropolis, &icirc;n regia aceluiaşi actor-regizor<br />
+	Să faci o comedie dintr-o temă nu foarte exploatată de dramaturgia modernă - sinuciderea - poate fi o piatră de &icirc;ncercare pentru un regizor. <br />
+	<br />
+	Nu &icirc;nsă şi pentru Horaţiu Mălăele, care cu umor dezvăluie &icirc;ntocmai ca &icirc;n caricaturile pe care le realizează tuşele unor personaje tragice prin destin, nu &icirc;nsă şi prin finalitatea lui: un ne&icirc;nţeles, un &icirc;ndrăgostit şi o artistă &icirc;şi aşteaptă sf&acirc;rşitul la capătului liniei de tren, dezvăluindu-şi fiecare drama personală. <br />
+	<br />
+	Iubirea, faima, absolutul sunt trei teme fundamentale ale fiinţei umane regăsite &icirc;n aceste personaje eşuate, care, dorind să se sinucidă, &icirc;şi transformă eşecul &icirc;ntr- un final fericit: fiecare &icirc;şi reia viaţa din punctul &icirc;n care ar fi trebuit să se sf&acirc;rşească. <br />
+	<br />
+	Spectacolul este o comedie spumoasă, care balansează &icirc;ntre absurd şi realist despre trei variante de sinucidere şi o satiră nemiloasă la adresa caracterelor umane. &ldquo;&laquo;Podu&rsquo;&raquo; este o piesă unicat, cu o temă nemaiauzită. <br />
+	<br />
+	Marilor noştri nihilişti, celor care condamnă dezastrul vieţii şi neşansa naşterii, Paul Ioachim le propune această soluţie de compromis: supravieţuirea prin actul sinuciderii. Să văd un asemenea spectacol, aş risipi oric&acirc;nd ceva din &laquo;picul&raquo; vieţii&rdquo;, spune &icirc;n descrierea spectacolului Horaţiu Mălăele. <br />
+	<br />
+	Cu alt decor şi altă distribuţie (Ioana Moldovan este &icirc;nlocuită acum de Meda Victor), &icirc;i include pe George Ivaşcu, Horaţiu Mălăele, Meda Victor, Aylin Cad&icirc;r şi Crina Semciuc. Spectacolul &bdquo;Podu&rsquo;&ldquo; are la bază un text de Paul Ioachim, &ldquo;Podul Sinucigaşilor&rdquo;. <br />
+	<br />
+	Scrisă &icirc;nainte de &rsquo;89, interzisă de cenzură, piesa cultivă absurdul şi laşitatea &icirc;n faţa vieţii, dar şi &icirc;n faţa morţii - de fapt, niciunul dintre personaje nu vrea cu adevărat să moară. Ideea sinuciderii, ca sindrom al societăţii actuale, implică şi explicaţia pentru care, &icirc;n foarte multe cazuri, acest act disperat nu se concretizează. <br />
+	<br />
+	&Icirc;ntotdeauna mai există o şansă &icirc;n neprevăzut, &icirc;n viaţa care merită trăită măcar pentru surprizele pe care ni le rezervă viitorul. Textul &ldquo;Podul sinucigaşilor&rdquo; al lui Paul Ioachim a stat la baza spectacolului irlandez regizat de Donal Gallagher, care a avut premiera &icirc;n iunie 2008, la Festivalul de vară de la Cork. <br />
+	<br />
+	Regizorul irlandez şi-a manifestat interesul faţă de textul autorului rom&acirc;n pentru că &icirc;n Dublin există un pod supranumit &ldquo;al sinucigaşilor&rdquo;. Paul Ioachim (1930-2002) este un actor şi dramaturg rom&acirc;n care a avut şi funcţia de director al Teatrului &bdquo;George Ciprian&rdquo;, din Buzău.<br />
+	<br />
+	<strong>ADEVARUL<br />
+	Florina Tecuceanu</strong> <br />
+	---------------------------------<br />
+	<br />
+	<strong>Mălăele de cinci stele </strong><br />
+	Ştiam că la teatru nu ai voie cu dinamită, dar Mălăele a venit cu buzunarele pline. Şi a aruncat &icirc;n aer toată plictiseala. Horaţiu Mălăele nu are teatrul &icirc;n s&acirc;nge. Este invers: teatrul &icirc;l are &icirc;n s&acirc;nge pe Mălăele. Actorul şi regizorul a devenit un fel de particulă esenţială a teatrului de l&acirc;ngă noi.<br />
+	Abuzul de cuvinte mari se poate demonstra foarte uşor. Cu un spectacol, &icirc;n care Mălăele face totul: joacă, regizează şi este cu uşurinţă uluitor. &bdquo;Podu&rsquo;&rdquo;, o producţie a teatrului Metropolis, este acel gen de spectacol care va umple orice sală, pentru că hohotele de r&acirc;s trec printre r&acirc;nduri ca trenurile prin gări. <br />
+	<br />
+	Vin şi pleacă, &icirc;ncărc&acirc;ndu-se cu pasageri.Trei personaje: un &icirc;ndrăgostit (George Ivaşcu), un geniu ne&icirc;nţeles (Horaţiu Mălăele) şi o actriţă (Meda Victor) se &icirc;nt&acirc;lnesc pe calea ferată a unui pod, fie-care doar cu un bilet &bdquo;dus&rdquo;, &icirc;n m&acirc;nă.<br />
+	<br />
+	&Icirc;n piesa lui Paul Ioachim, cei trei sinucigaşi iau ultimul pr&acirc;nz &icirc;mpreună, aştept&acirc;nd un accelerat care să le grăbească sf&acirc;rşitul. Se cunosc, at&acirc;t c&acirc;t se pot cunoaşte trei oameni care nu au de &icirc;mpărţit &icirc;n trei dec&acirc;t o şină de tren. <br />
+	<br />
+	Dar fiecare &icirc;şi dă seama că motivele pentru care celălalt vrea să-şi ia viaţa sunt ne&icirc;ntemeiate. Iar asta &icirc;i face să se g&acirc;ndească dacă dramele lor merită, cu adevărat, un troc cu moartea.<br />
+	<br />
+	Ne&icirc;nţelesul: &bdquo;Nu te mai iubeşte?&rdquo;. &Icirc;ndrăgostitul: &bdquo;Nu!&rdquo; N: &bdquo;Sunt convins că nu te merită&rdquo;. &Icirc;: &bdquo;Vai de mine! Are ochii cei mai frumoşi din lume&ldquo;. N: &bdquo;Ai &icirc;ncercat să-i scoţi unul?&ldquo; &Icirc;: &bdquo;Cum să fac aşa ceva? Odată, c&acirc;nd era bine dispusă, mi-a zis: &laquo;Orice bărbat are dreptul să fie ur&acirc;t, dar tu cam abuzezi. <br />
+	<br />
+	Motoreta ta e depăşită&raquo;. Şi-a plecat cu altul&ldquo;. N: &bdquo;Pentru asta vrei să te sinucizi dumneata, domnule? Pentru o femeie? Pentru că nu te iubeşte o femeie? Eşti ridicol, d-le! O femeie nu merită nici măcar un căscat!&ldquo;<br />
+	<br />
+	Un actor contaminant<br />
+	<br />
+	Dacă Alfred Nobel ar fi inventat dinamita &icirc;n zilele noastre, ar fi trebuit s-o boteze &bdquo;Mălăele&rdquo;. Pentru că actorul este at&acirc;t de exploziv &icirc;nc&acirc;t spulberă orice urmă de tristeţe. Şi mai este şi contagios. Cei doi actori care se ating de el se aprind ca nişte fitiluri l&acirc;ngă o fabrică de artificii.<br />
+	<br />
+	Textul este plin de replici zglobii şi de banalităţi superbe. C&acirc;nd se apropie trenul, cei trei &icirc;şi dau seama că nu &icirc;ncap toţi pe şină şi &icirc;ncearcă să-şi facă loc cu coatele &icirc;n faţa morţii: Actriţa: &ldquo;Stai domnule, că-mi rupi ciorapii şi te pun să mi-i plăteşti! &Icirc;ndrăgostitul: &bdquo;Scuzaţi!&rdquo; Ne&icirc;nţelesul: &bdquo;Unde te-mpingi, brută?&rdquo; &Icirc;: &bdquo;Te rog să nu mă insulţi! <br />
+	<br />
+	Eu am venit aici &icirc;naintea dumitale&rdquo;. N: &bdquo;Şi ce dacă ai venit &icirc;naintea mea?&rdquo; &Icirc;: &bdquo;Să ne aşezăm &icirc;n ordinea &icirc;n care am venit&rdquo;. N: &bdquo;Mă faci să r&acirc;d &icirc;ntr-un moment ca ăsta&ldquo;. &Icirc;: &bdquo;Te rog să stai la r&acirc;nd&quot;. N: &bdquo;Nu vreau. Dă-te, d-şoară!&rdquo; &Icirc;: &bdquo;Păcat de şcoala pe care ai &icirc;nvăţat-o, mă!&rdquo; ( &icirc;l scuipă) Actriţa: &bdquo;Uite-l, vine!&rdquo; Şi trenul chiar vine. Iar locomotiva Mălăele tocmai i-a dus pe spectatori &icirc;ntr-o călătorie de neuitat.<br />
+	<br />
+	<strong>ADEVARUL<br />
+	Dan Boicea </strong><br />
+	---------------------------------</p>
+<p>
+	<br />
+	<strong>O piesa satirica &ldquo;marca&rdquo; Malaele</strong><br />
+	<br />
+	O farsa a existentei absurde, in care personajele rad de propria lor neputinta. Horatiu Malaele si George Ivascu sunt protagonistii noului spectacol al teatrului Metropolis, &ldquo;Podu&rsquo;&rdquo;, ce va avea premiera in aceasta seara la Palatul National al Copiilor.<br />
+	<br />
+	Alaturi de cei doi (ultimul semnand si regia), apar pe scena Meda Victor (o preferata a regizorului, pe care am mai vazut-o de curand in &ldquo;Nunta muta&rdquo;), Aylin Cadar si Crina Semciuc. Spectacolul, avand la baza un text al regretatului autor Paul Ioachim, &ldquo;Podul sinucigasilor&rdquo;, prezinta intalnirea dintre un neinteles, un indragostit si o artista, care stau la coada in fata mortii si prezinta publicului, in cheie caricaturala, propriile drame. Textul a fost deja sursa de inspiratie pentru un regizor irlandez, Donal Gallagher, care a prezentat cu succes anul trecut, la Granary Theater din Cork, spectacolul &ldquo;End of the Line&rdquo;.<br />
+	<br />
+	In versiunea romaneasca a lui Malaele prevaleaza insa umorul. Trei destine, trei povesti de viata, trei tipologii umane etern valabile isi dau mana, de fapt, pentru a o lua de la capat. Iubirea, faima, absolutul sunt trei laitmotive, sau trei constante ale existentei noastre, care ne pun la incercare pofta de ras, timp de o ora <br />
+	si ceva, intr-o satira nemiloasa la adresa caracterelor umane.<br />
+	<br />
+	<strong>Cronica Romana</strong><br />
+	---------------------------------</p>
+<p>
+	<br />
+	<strong>Trei &quot;sinucigasi&quot; pe un... pod, Horatiu Malaele, George<br />
+	Ivascu si Aylin Cadir</strong><br />
+	<br />
+	Trei oameni, cu propriile lor drame de viata, se intilnesc, intimplator, pe acelasi pod, cu acelasi gind.<br />
+	Un geniu neinteles, &quot;copilul secolului (Horatiu Malalele), un indragostit (George Ivascu) si o actrita (Aylin Cadir) isi analizeaza viata si se gindesc ca trebuie sa puna capat, pe poduri, acestui cintec trist care este viata - vorba Neintelesului. Luni seara, la Casa de Cultura a Sindicatelor, doi mari actori care nu mai au nevoie de nicio prezentare, Horatiu Malaele - actor, dar si regizor al<br />
+	piesei prezentata de Teatrul &quot;Metropolis&rdquo; si George Ivascu, alaturi de tinara lor colega -constanteanca Aylin Cadir -, ne-au prezentat absurdul existentei, cu indemnul implicit &quot;viata trebuie traita&quot;, plecind de la textul lui Paul Ioachim, &quot;Podul sinucigasilor.<br />
+	Cele trei personaje pe care le interpreteaza cei trei actori , &quot;Neintelesul&rdquo;<br />
+	<br />
+	&quot;Indragostitul&rdquo; si &quot;Artista&rdquo; isi dau intilnire cu... moartea pe podul sub care trebuie sa treaca acceleratul de Viena - care nu intirzie niciodata si care le va aduce eliberarea de propriile suferinte - insa, constata ca nu sint singuri, prilej de a-si prezenta, in cheie caricaturala, propriile drame.<br />
+	<br />
+	In cele din urma, din trei, niciunul nu a prins trenul care ar fi putut sa le ofere scapare la aparentele lor drame. Volubil, dinamic si uneori agasant si &quot;plictisitor&rdquo;, &quot;Indragostitul&rdquo;- interpretat cu umor si expresivitate de catre George Ivascu, aflat intr-o forma de zile mari - logic si bizar metrolog - atribute pe care i le da &quot;Actrita&rdquo; - &quot;Sinteti bizar domnule!, &quot;Nu, domnisoara, sint metrolog! - traieste o iubire neimpartasita. Complexat de statura sa, el are propria definitie a vietii: &quot;viata este un razboi intre micutii nenorociti si inaltii parveniti&rdquo;, motiv pentru care decide ca e mai bine sa-si ia adio de la viata. Aparent glaciala si inabordabila, Artista, interpretata, luni seara, pentru publicul constantean, de catre Aylin Cadir, are iesiri exuberante, menite sa ii ilustreze drama care o determina sa-si dea intilnire cu moartea.<br />
+	<br />
+	Ea a vrut sa faca teatru iar nerealizarea o determina sa apara pe pod.<br />
+	&quot;Neintelesul, interpretat magistral de Horatiu Malaele, ultimul sosit pentru a se intilni cu acceleratul de Viena, este liantul care da suflet sinistrei triade. Intrarea in scena a indragitului actor, care, la finalul reprezentatiei, a marturisit ca se simte &quot;cel mai bine la Constanta, a fost primita cu aplauze de c<span style="font-size:12px;"><span style="font-family:arial,helvetica,sans-serif;">atre publicul fidel prezent in sala de spectacole a Casei de Cultura. Creator neinteles, cu respect pentru arta, dar misiogin, &quot;o femeie nu merita niciun cascat, personajul interpretat de Malaele este deosebit de sensibil, motiv pentru care incearca sa-si reprime starile care ar putea sa-i reflecte</span></span>, in fata celorlalti, latura sensibila.<br />
+	<br />
+	Intilnire pe poduri.<br />
+	&quot;Asta e povestea noastra. Ne intilnim miine; pe poduri, este replica cu care Horatiu Malaele incheie piesa despre acest cintec trist care este &quot;viata&rdquo;. Pentru tinara actrita constanteanca Aylin Cadir, prezenta pe aceeasi scena cu doi mari actori, Horatiu Malaele si George Ivascu, reprezinta un pas inainte pe plan profesional, la care se adauga si bucuria de a juca acasa. &quot;E ca si cum as fi jucat in fata unor prieteni. M-am simtit mult mai bine, am fost relaxata&rdquo;, a precizat artista. Despre performanta de a-i avea colegi de scena pe cei doi mari actori, Aylin Cadir a precizat: &quot;As dori oricarei tinere care tocmai iese din facultate sa aiba norocul sa joace cu astfel de oameni&rdquo;. Rolul Artistei mai este interpretat si de Meda Victor, dar si de Crina Semciuc. Aylin Cadir a marturisit ca oportunitatea de a juca rolul Actritei in &quot;Podu&rdquo; are ca punct de plecare un alt spectacol regizat de Horatiu Malaele -&quot;Leonce si Lena&rdquo;, de Georg Buchner, productie a Teatrului de Comedie - in care evolueaza alaturi de cele doua colege Meda Victor si Crina Semciuc.<br />
+	<br />
+	Presarata cu umor, piesa &quot;Podu&rdquo; a adus buna dispozitie in rindul publicului, care, fara impotrivire, timp de aproximativ o ora si jumatate, s-a lasat purtat de acceleratul &quot;Malaele-Ivascu-Cadir&rdquo;, pe caile umorului. <br />
+	<br />
+	Aplauzele indelungate pe care cei trei le-au primit la final au confirmat, inca o data, succesul de care se bucura, la Constanta, Horatiu Malaele si spectacolele pe care acesta le monteaza.<br />
+	<br />
+	<strong>Cultura</strong><br />
+	---------------------------------</p>
+<p>
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;"><br />
+	</span></span></p>
+<p align="center" class="MsoNormal" style="margin-top:11.25pt;margin-right:0cm;
+margin-bottom:3.75pt;margin-left:0cm;text-align:center;line-height:normal;
+mso-outline-level:2">
+	<strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;"><i>Teatrul &ldquo;Metropolis&rdquo;- &ldquo;PODU&rsquo;&rdquo;- să mori de r&acirc;s&hellip; sau de&nbsp;pl&acirc;ns?</i></span></span></strong><i><span style="font-size:14.0pt;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-no-proof:no"><o:p></o:p></span></i></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;">&nbsp;</span></span><span style="font-size:14.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;mso-no-proof:no"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;">&nbsp;Spectacolul, regizat de&nbsp;Horaţiu Mălăele,&nbsp;după textul&nbsp;&bdquo;Podul sinucigaşilor&rdquo;, de&nbsp;Paul Ioachim, a adus &icirc;n faţa publicului o temă mai puţin abordată &icirc;n trecut: sinuciderea.</span></span><span style="font-size:14.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;mso-no-proof:no"><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+line-height:16.5pt">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;">Personajele s-au &icirc;nt&acirc;lnit pe &bdquo;podul sinucigaşilor&rdquo;, unde aşteptau un tren care să le pună capăt zilelor, şi au făcut haz de propria lor neputinţă. Ideea sinuciderii celor trei personaje, care &icirc;şi povestesc propriile drame, nu se concretizează, pentru că, de fapt, nici unul dintre ei nu vrea să moară cu adevărat. Este de fapt esenţa piesei, care &icirc;l face pe spectator să plece spre casă cu ideea că există &icirc;ntotdeauna speranţa şi motivaţia pentru care viaţa merită să fie trăită.</span></span><span style="font-size:14.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;mso-no-proof:no"><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+line-height:16.5pt">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;">Destine fr&acirc;nte</span></span><span style="font-size:14.0pt;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-no-proof:no"><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+line-height:16.5pt">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;">&Icirc;n prezentarea menită să informeze publicul asupra textului şi a jocului actorilor, secretariatul literar al Teatrului&nbsp;Metropolis&nbsp;scrie că piesa lui&nbsp;Paul Ioachim, scrisă &icirc;n 1965, a fost interzisă de cenzura comunistă.&nbsp;<i>&ldquo;Piesa cultivă absurdul şi deriziunea &icirc;n faţa vieţii, dar şi &icirc;n faţa morţii. Ideea sinuciderii, ca sindrom al societăţii actuale, &icirc;şi găseşte ecou pe versantul comediei: să vrei să te sinucizi şi să te prăpădeşti de r&acirc;s.&rdquo;</i></span></span><span style="font-size:14.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;mso-no-proof:no"><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+line-height:16.5pt">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;">Trei destine, trei poveşti de viaţă, trei tipologii. &Icirc;ndrăgostitul &ndash; bizarul şi logicul metrolog &ndash; a fost abandonat de iubita lui pentru alt bărbat mai &icirc;nalt, mai frumos şi puternic. Deşi lua vitamine cu regularitate, pentru men&shy;ţinerea tonusului, nimic nu l-a ajutat să &icirc;şi rec&acirc;ştige iubita, aşa că a decis să meargă pe pod.</span></span><span style="font-size:14.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;mso-no-proof:no"><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+line-height:16.5pt">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;">Cel de-al doilea personaj care a ales podu&rsquo; este o t&acirc;nără care a picat examenul la actorie şi, spune ea, a fost &bdquo;călcată &icirc;n picioare de toată lumea&rdquo;.</span></span><span style="font-size:14.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;mso-no-proof:no"><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+line-height:16.5pt">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;">Al treilea personaj este un intelectual nefericit, &bdquo;copilul secolului&rdquo;, ale cărui creaţii literare absurde sunt de ne&icirc;nţeles.</span></span><span style="font-size:14.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;mso-no-proof:no"><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+line-height:16.5pt">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;">Toţi trei au aşteptat &bdquo;trenul morţii&rdquo;. Deşi ţinea un ceas &icirc;n m&acirc;nă şi socotea minutele care se scurg p&acirc;nă la momentul morţii, &icirc;ndrăgostitul a fost primul care a dat bir cu fugiţii. Artista vede &icirc;n intelectual un posibil iubit, care, &icirc;n aceste condiţii, zăreşte o speranţă pentru reuşita operei lui.<br />
+	Horaţiu Mălăele&nbsp;afirmă că&nbsp;&ldquo;Podu&rsquo;&rdquo;&nbsp;este o piesă unicat, cu o temă nemaiauzită:<i>&nbsp;&ldquo;Marilor noştri nihilişti, celor care condamnă dezastrul vieţii şi neşansa naşterii, Paul Ioachim le propune această soluţie de compromis: supravieţuirea prin actul sinuciderii. Să văd un asemenea spectacol aş risipi oric&acirc;nd ceva din &laquo;picul&raquo; vieţii&rdquo;.</i></span></span><span style="font-size:14.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;mso-no-proof:no"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-align: right; ">
+	<strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;"><span style="line-height: 115%; "><o:p>Despre teatru...</o:p></span></span></span></strong><span style="color:#fff;"><strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;"><span style="line-height: 115%; "><o:p></o:p></span></span></span></strong></span></p>
+<p class="MsoNormal" style="text-align: right; ">
+	<strong><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;"><span style="line-height: 115%; "><o:p></o:p></span></span></span></strong></p>
+<p class="MsoNormal" style="text-align: right; ">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:12px;"><span style="line-height: 115%; "><o:p></o:p></span></span></span></p>
+<p class="MsoNormal" style="text-align: right; ">
+	<strong><span style="font-size:12px;"><span style="line-height: 115%; "><o:p>...blog fara aere teatrale...</o:p></span></span></strong></p>
+<p class="MsoNormal" style="text-align: right; ">
+	<span style="color:#fff;"><strong><span style="font-size:12px;"><span style="line-height: 115%; "><o:p></o:p></span></span></strong></span></p>
+<p class="MsoNormal" style="text-align: right; ">
+	<strong><span style="font-size:12px;"><span style="line-height: 115%; "><o:p></o:p></span></span></strong></p>
+<p class="MsoNormal">
+	<span style="font-size:12px;"><span style="line-height: 115%; "><o:p></o:p></span></span><span style="font-size:14.0pt;line-height:115%"><o:p></o:p><o:p></o:p></span></p>
+</font><br>
+																											<div class="buton-sus"><a href="http://www.teatrulmetropolis.ro/spectacole/podu-de-paul-ioachim.html#top">^ Sus</a></div>
+																									</div>
+																						</td></tr></table>
+										</td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450"  height="13"></td>
+										<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+									</tr>
+								</table>
+					</td>
+				</tr>
+			</table>
+		
+		<script>show('descriere');</script>
+	</td>
+<td width="300" align="center" valign="top"><br><br>
+		<br>
+<div class="dreapta-cautare">
+		
+			<input type="text" id="keyword" value="Scrie aici și ..." onfocus="if (this.value == 'Scrie aici și ...') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Scrie aici și ...';}" class="search-input" size="20" onKeyPress="return submitenter_cauta(event)">
+			<a onclick="moduleSearch();" class="buton" >Caută</a>
+		
+</div>
+<br>
+<div class="dreapta-cos">	
+	<div id="module_cart" >
+ <div class="middle">
+	
+        <img src="catalog/view/theme/default/image/bilete_fara_rezervari.png" width="181" height="129" border="0"/>
+    	
+  </div>
+</div>
+<script type="text/javascript"><!--
+$(document).ready(function () {
+	$('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+	$("a[id^='adaugabilet']").click(function () {
+		 var randlocIDValSplitter    = (this.id).split("-");
+    var rand            = randlocIDValSplitter[1];
+	var loc            = randlocIDValSplitter[2];
+	var reprezentatie_id            = randlocIDValSplitter[3];
+	
+	control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+	
+	});
+	$("a[id^='scoatebilet']").click(function () {
+		 var randlocIDValSplitter   = (this.id).split("-");
+		 var rand            		= randlocIDValSplitter[1];
+		 var loc            		= randlocIDValSplitter[2];
+		 var reprezentatie_id       = randlocIDValSplitter[3];
+	
+		control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control_scoate='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+	
+	});
+	$("a[id^='scoate_sala']").click(function () {
+		var randlocIDValSplitter    = (this.id).split("-");
+		var reprezentatie_id        = randlocIDValSplitter[1];
+	
+	
+    
+        $.ajax({
+            url: 'index.php?route=continut/cart/callback&reprezentatie_id='+reprezentatie_id,
+            type: 'get',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+	
+	});
+	$("a[id^='clear_cart']").click(function () {
+		$.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/clear',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+		
+	});
+	
+	 $('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+ 
+});
+</script>
+
+
+</div>
+<br>
+<div class="dreapta-cont">
+	<table width="200" cellspacing='0' cellpadding='0'>
+		
+				<tr><td background="catalog/view/theme/default/image/c.png" width="110" height="30" valign="middle" align="center" >
+				<font color="#d2d0d0">Accesează cont</font>
+		</td>
+		<td width="90" valign="middle" align="center">
+			<a class="buton" href="http://www.teatrulmetropolis.ro/creaza_cont.html" id="fancybox_page_no_reload">Cont nou ?</a>
+		</td></tr>
+		<tr><td colspan="2" height="50" width="200" background="catalog/view/theme/default/image/c.png" valign="middle" align="center">
+			<form action="http://www.teatrulmetropolis.ro/index.php?route=common/home/autentificare" method="post" id="form_autentificare">
+				<input type="text" name="email" value="Email utilizator" onfocus="if (this.value == 'Email utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Email utilizator';}" class="user-input">
+				<input type="password" name="password" value="Parola utilizator" onfocus="if (this.value == 'Parola utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Parola utilizator';}" class="pass-input" onKeyPress="return submitenter_login_cont(event)">
+				<input type="hidden" name="redirect" value="http://www.teatrulmetropolis.ro/index.php?route=continut/spectacole&amp;spectacol_id=17">
+			</form>
+		</td></tr>
+		<tr><td width=110" height="30"></td>
+		<td background="catalog/view/theme/default/image/c.png" width="90" height="30" valign="middle" align="center">
+			<a onclick="$('#form_autentificare').submit();" class="buton" >Accesează</a>
+		</td></tr>
+		</table>
+</div>
+<br>
+<br>
+<div class="dreapta-comentarii">
+	<a href="http://www.teatrulmetropolis.ro/stiri/adela-popescu-si-mihai-bendeac-in-premiera-pe-o-banca-la-metropolis.html#comentariu3" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','catalog/view/theme/default/image/parereaTA_hover.png',1)">
+		<img src="catalog/view/theme/default/image/parereaTA_normal.png" name="Image50" width="188" height="126" border="0" id="Image50" /><br>
+		<table id="Ultim_Coment">
+							<tr>
+								<td id="dataUltim_Coment">
+									15 octombrie 2011 la 16:17
+								</td>
+							<tr>
+								<td id="idUltim_Coment">
+									*Nume:
+								</td>
+							<tr>
+								<td id="contentUltim_Coment">
+									nu va suparati , cand se va mai juca piesa?
+								</td>
+							</tr>
+						</table>		
+	</a>
+</div>
+<br>
+<br>
+<div class="dreapta-ajutor">
+	<a href="http://www.teatrulmetropolis.ro/ajutor" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','catalog/view/theme/default/image/ajutor_hover.png',1)" id="fancybox_page_rel">
+		<img src="catalog/view/theme/default/image/ajutor_normal.png" name="Image51" width="171" height="101" border="0" id="Image51" /><br>
+	</a>
+</div>
+	</td>
+</tr></table>
+</div>	
+</td>
+</tr></table>
+</div>				
+
+<div id="footer_continut">
+	<table width="1000" align="center" height="200" background="catalog/view/theme/default/image/c.png"><tr><td><br>
+		<table width="90%" cellpadding="0" cellspacing="0"  style="color: #999;font-family:Arial, Helvetica, sans-serif;font-size:14px;">
+  <tr>
+    <td width="23%" rowspan="6" align="right" valign="top" >
+    <img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/sigla_tm.png" width="100" height="100" border="0" style="margin-right:30px;"/>
+    </td>
+    <td width="70%">Adresa: Str. Mihai Eminescu nr.89, sector 2, București.</td>
+    <td width="7%" rowspan="6" align="center" valign="top">
+   <a href="http://www.pmb.ro" target="blank"><img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/primaria_mun_buc.png" width="75" height="150" border="0" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Rezervări bilete se pot face și telefonic, la numerele: <br />
+      <strong style="color:#FFF">021 210 51 08</strong>  sau  <strong style="color:#FFF">0728 138 265</strong><br />
+      (în intervalul orar 10:00 - 19.00)<br />
+    Rezervarea telefonică este valabilă 48 de h.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font style="font-size:16px; color:#FFF">&copy;Teatrul Metropolis. Toate drepturile rezervate</font></td>
+  </tr>
+  <tr>
+    <td ><font style="font-size:12px;">Site produs de <strong style="color: #CCC">Legolas Media</strong><br />
+        Design by <strong style="color: #CCC">Alexandru Șulai</strong></font></td>
+  </tr>
+</table>	</td></tr></table>
+</div>
+
+
+</div>
+
+</body></html> 

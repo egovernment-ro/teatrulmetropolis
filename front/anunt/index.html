@@ -1,0 +1,522 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="teatrul metropolis" />
+    <meta name="author" content="www.pixozz.com">
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:description" content="" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="google-site-verification" content="VjLzf8ebl_NgoK_drWZD47l4a0rxVMFJsMtnYEEIds0" />
+    <link rel="stylesheet" href="https://www.teatrulmetropolis.ro/view/theme/front/css/style.css">
+    <link rel="stylesheet" href="https://www.teatrulmetropolis.ro/view/theme/front/css/login.css">
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <link rel="shortcut icon" href="https://www.teatrulmetropolis.ro/view/theme/front/images/logo-tm-25-20.png">
+</head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38399383-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<body class="front anunt computer">
+        <div id="navigation" class="clearfix fixedsticky">
+        <nav class="navbar navbar-default collapsed" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="fa fa-bars"></span>
+                            </button>
+                            <a class="navbar-brand" href="https://www.teatrulmetropolis.ro">
+                                <img src="https://www.teatrulmetropolis.ro/view/theme/front/images/logo.png" title="" alt="" />
+                                <span class="logo-text">Teatrul Metropolis</span>
+                            </a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                            <div class="hidden-bars">
+                                <span class="fa fa-bars"></span>
+                            </div>
+                            <ul class="nav navbar-nav">
+								<li> <a href="https://www.teatrulmetropolis.ro" class="active">Acasă</a></li>
+								<li><a href="https://www.teatrulmetropolis.ro/program" id="program">Program</a></li>
+								<li> <a href="https://www.teatrulmetropolis.ro/bilete">Cumpără Bilete</a></li>
+                                <li><a href="https://www.teatrulmetropolis.ro/spectacole">Spectacole </a></li>
+								<li><a href="https://www.teatrulmetropolis.ro/artisti">Artiști</a></li>
+                                <li> <a href="https://www.teatrulmetropolis.ro/noutati">Noutăți</a></li>
+								<li> <a href="https://www.teatrulmetropolis.ro/despre">Despre Noi</a></li>
+                                <li> <a href="https://www.teatrulmetropolis.ro/contact">Contact</a> </li>
+                                <li>
+																<div id="topnav" class="topnav"><a class="signin"><span>Contul Meu</span><i class="fa fa-user"></i></a> </div>
+								  <fieldset id="signin_menu">
+									<form method="post" id="loginForm">
+									  <label for="email">Email</label>
+									  <input id="email" name="email" onKeyPress="return submitenter(this,event);" value="" title="email" tabindex="4" type="email">
+									  </p>
+									  <p>
+										<label for="password">Parola</label>
+										<input id="password" onKeyPress="return submitenter(this,event);" name="password" value="" title="password" tabindex="5" type="password">
+									  </p>
+									  <p id="warning"></p>
+									 <p class="login">
+										<a id="gologin" onclick="login();">Conectare</a><a href="/resetareparola" class="forgot tipsy" title="Dacă ați uitat parola, o puteți reseta folosind adresa de email atasată contului personal">Ai uitat parola?</a>
+									  </p>
+									  <p class="register">  <a class="register tipsy" href="/inregistrare" title="Daca nu aveti un cont personal Metropolis, puteti crea unul in mai putin de 2 minute.">Nu aveti un cont Metropolis?</a> </p>
+									</form>
+								  </fieldset>
+																</li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.container -->
+        </nav>
+	
+    </div>
+	<script>
+function login(){
+var form = $("#loginForm").serializeArray();
+$.post("/front/auth/", {data: form}).done(function(response) {
+	var login = $.parseJSON(response); 
+	if(login.warning){
+		$("p#warning").html(login.warning);
+		$("a#gologin").html('Reincearcă');
+	} 
+	if(login.customer){
+		location.reload();
+	}
+	
+}); 
+}
+function submitenter(myfield,e)
+{
+var keycode;
+if (window.event) keycode = window.event.keyCode;
+else if (e) keycode = e.which;
+else return true;
+
+if (keycode == 13)
+   {
+   login();
+   return false;
+   }
+else
+   return true;
+}
+</script>	    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+
+            <!-- head -->
+            <div class="head big blog-home-head wow bounceIn">
+             <h3 class="post-title"></h3>
+                <h3 class="post-title"><a href="">ANUN&#354; ORGANIZARE CONCURS</a></h3>
+				
+                <div class="head-break-line">
+                    <span class="head-line-blue"></span>
+                </div>
+            <p class="infor" style="color: #2D2D2D; font-size: 18px;text-align: center;"> <br />
+<b>Teatrul Tineretului Metropolis</b>
+</p> <div class="button buy-button wow flipInX" data-wow-delay="0.5s" style="margin-top: 20px;"><a href="/front/selectie">&raquo; II. Selecție Dosare</a></div>
+ <div class="button buy-button wow flipInX" data-wow-delay="0.5s" style="margin-top: 20px;"><a href="/front/contestatii_selectie_dosare">&raquo; III. Contestații selecție dosare</a></div>
+   <div class="button buy-button wow flipInX" data-wow-delay="0.5s" style="margin-top: 20px;"><a href="/front/rezultate_proba_scrisa_15092015">&raquo; IV. Rezultatul probei scrise - 15.09.2015</a></div><div class="button buy-button wow flipInX" data-wow-delay="0.5s" style="margin-top: 20px;"><a href="/front/rezultate_proba_interviu_17092015">&raquo; V. Rezultatul probei interviu - 17.09.2015</a></div>  <div class="button buy-button wow flipInX" data-wow-delay="0.5s" style="margin-top: 20px;"><a href="/front/rezultatul_final_al_concursului_din_data_de_15_si_17_septembrie_2015_pentru_ocuparea_unor_posturi_vacante">&raquo; VI. Rezultatul final al concursului din data de 15 si 17 septembrie 2015</a></div>
+            </div>
+            <!-- .head -->
+
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .container -->
+
+    <div class="site-wrapper">
+
+           <div class="container">
+           
+                <!-- row -->
+                <div class="row">
+organizeaz&#259; concurs pentru ocuparea urm&#259;toarelor posturi contractuale vacante:<br /><br />
+<ul>
+<li> 1 post consultant artistic (S) grad profesional IA,</li> 
+<li> 1 post secretar p.r (S) grad profesional I, </li>
+<li> 3 muncitori calificaţi</li>
+
+ </ul> 
+				
+             
+	<p>Concursul se va desf&#259;&#351;ura la sediul din Bucure&#351;ti, strada Mihai Eminescu nr. 89, sector 2, &#238;n  data de 15.09.2015 ora 12.00  p&#226;n&#259; la ora 14.00, proba scris&#259;, iar &#238;n data de 17.09.2015 ora 12.00, interviul pentru cei declara&#355;i admi&#351;i la prima prob&#259;.<br />
+Data limit&#259; p&#226;n&#259; c&#226;nd se pot depune dosarele de concurs este 07.09.2015, inclusiv.</p>
+<br />
+
+
+<b>Condi&#355;ii specifice pentru ocuparea posturilor:</b>
+<ul>
+<li> consultant artistic - studii superioare de specialitate &#238;n actorie, regie teatru/film, management sau studii economice, cuno&#351;tin&#355;e operare PC, cu vechime &#238;n domeniul artistic de minimum 5 ani,</li>
+<li> secretar P.R - studii superioare de specialitate &#238;n domeniul teatral, literar, comunicare, cultural, cuno&#351;tin&#355;e de operare PC, cu vechime &#238;n domeniu de minimum 4 ani,</li>
+<li> muncitori califica&#355;i - studii medii/generale,</li></ul>
+
+<b>Condi&#355;ii de participare:</b>
+<ol>
+<li>are cet&#259;&#355;enia rom&#226;n&#259;, cet&#259;&#355;enie a altor state membre ale Uniunii Europene sau a statelor apar&#355;in&#226;nd Spa&#355;iului Economic European &#351;i domiciliul &#238;n Rom&#226;nia;</li>
+<li>cunoa&#351;te limba rom&#226;n&#259;, scris &#351;i vorbit,</li>
+<li>are v&#226;rsta minim&#259; reglementat&#259; de prevederile legale,</li>
+<li>are capacitate deplin&#259; de exerci&#355;iu,</li>
+<li>are o stare de s&#259;n&#259;tate corespunz&#259;toare postului pentru care candideaz&#259;, atestat&#259; pe baza adeverin&#355;ei medicale eliberate de medicul de familie sau de unit&#259;&#355;ile sanitare abilitate,</li>
+<li>&#238;ndepline&#351;te condi&#355;iile de studii &#351;i, dup&#259; caz, de vechime sau alte condi&#355;ii specifice potrivit cerin&#355;elor postului scos la concurs,</li>
+<li>nu a fost condamnat definitiv pentru s&#259;v&#226;r&#351;irea unei infrac&#355;iuni contra umanit&#259;&#355;ii, contra statului ori contra autorit&#259;&#355;ii, de serviciu sau &#238;n leg&#259;tur&#259; cu serviciul, care &#238;mpiedic&#259; &#238;nf&#259;ptuirea justi&#355;iei, de fals ori a unor fapte de corup&#355;ie sau a unei infrac&#355;iuni s&#259;v&#226;r&#351;ite cu inten&#355;ie, care ar face-o incompatibil&#259; cu exercitarea func&#355;iei, cu excep&#355;ia situa&#355;iei &#238;n care a intervenit reabilitarea.</li></ol>
+
+<b>Concursul se organizeaz&#259; dupa cum urmeaz&#259;: </b>
+
+<table>
+<tr>
+<td>
+a.)
+</td>
+<td>
+24.08.2015</td>
+<td> - </td>
+<td>   - afi&#351;are anun&#355; privind concursul scris &#351;i interviul,</td>
+</tr>
+<tr>
+<td>
+b.)
+</td>
+<td>
+07.09.2015</td>
+<td> -   inclusiv</td>
+<td>   - data limit&#259; pentru depunere dosare,</td>
+</tr>
+<tr>
+<tr>
+<td>
+c.)
+</td>
+<td>
+07.09.2015</td>
+<td> - ora 17.00 </td>
+<td>   - selec&#355;ie dosare &#351;i afi&#351;are rezultate,</td>
+</tr>
+<td>
+d.)
+</td>
+<td>
+08.09.2015</td>
+<td> - ora 12.00 </td>
+<td>   - depunere contesta&#355;ii,</td>
+</tr>
+<tr>
+<td>
+e.)
+</td>
+<td>
+09.09.2015</td>
+<td> - ora 12.00 </td>
+<td>   - solu&#355;ionare contesta&#355;ii &#351;i afi&#351;are rezultate contesta&#355;ii,</td>
+</tr>
+<tr>
+<td>
+f.)
+</td>
+<td>
+15.09.2015</td>
+<td> - ora 12.00 </td>
+<td>   - proba scris&#259;,</td>
+</tr>
+<tr>
+<td>
+g.)
+</td>
+<td>
+15.09.2015</td>
+<td> - ora 17.00 </td>
+<td>   - afi&#351;are rezultate proba scris&#259;,</td>
+</tr>
+
+<tr>
+<td>
+h.)
+</td>
+<td>
+16.09.2015</td>
+<td> - ora 10.00 </td>
+<td>   - depunere contesta&#355;ii</td>
+</tr>
+
+<tr>
+<td>
+i.)
+</td>
+<td>
+16.09.2015</td>
+<td> - ora 17.00 </td>
+<td>   - solu&#355;ionare contesta&#355;ii, afi&#351;are rezultate contesta&#355;ii,</td>
+</tr>
+<tr>
+<td>
+j.)
+</td>
+<td>
+17.09.2015</td>
+<td> - ora 12.00 </td>
+<td>   - interviu cu cei declara&#355;i admi&#351;i la proba scris&#259;,</td>
+</tr>
+<tr>
+<td>
+k.)
+</td>
+<td>
+17.09.2015</td>
+<td> - ora 17.00 </td>
+<td>   - afi&#351;are rezultate interviu,</td>
+</tr>
+<tr>
+<td>
+l.)
+</td>
+<td>18.09.2015</td>
+<td> - ora 10.00 </td>
+<td>   - depunere contesta&#355;ii interviu,</td>
+</tr>
+<tr>
+<td>
+m.)
+</td>
+<td>
+18.09.2015</td>
+<td> - ora 12.00 </td>
+<td>   - solu&#355;ionare contesta&#355;ii interviu, afi&#351;are rezultate contesta&#355;ii,</td>
+</tr>
+<tr>
+<td>
+n.)
+</td>
+<td>
+18.09.2015</td>
+<td> - ora 16.00 </td>
+<td>   - afi&#351;area rezultatelor finale.</td>
+</tr>
+</table>
+
+<br /><br />
+
+Membrii comisiei noteaz&#259; fiecare lucrare cu puncte de la 1 la 100.<br />
+Nota final&#259; reprezint&#259; media aritmetic&#259; a notelor ob&#355;inute la cele dou&#259; probe.<br />
+Pentru a fi declarat admis, candidatul trebuie s&#259; ob&#355;in&#259; minimum 50 puncte la fiecare prob&#259; de examinare &#351;i minimum 70 puncte la not&#259; final&#259;.<br />
+Este declarat admis candidatul cu cea mai mare not&#259; final&#259;.<br />
+Candida&#355;ii pot contesta numai rezultatele propriilor lucr&#259;ri.<br /><br />
+Nota acordat&#259; dup&#259; contesta&#355;ie este definitiv&#259;.<br /><br />
+Dosarele pentru concurs se depun la Compartimentul Resurse Umane, p&#226;n&#259; la data de 07.09.2015, inclusiv.
+<br /><br />
+<b>Dosarul de concurs trebuie s&#259; con&#355;in&#259;:</b>
+
+<ul>
+<li>cerere de &#238;nscriere la concurs cu precizarea datelor personale de contact: telefon mobil &#351;i adresa de e-mail;</li>
+<li>copie a actului de identitate;</span></li>
+<li>curriculum vitae;</span></li>
+<li>diplome de studii &#351;i, dup&#259; caz, documente care atest&#259; efectuarea unei calific&#259;ri, copii &#351;i originale,</li>
+<li>adeverin&#355;&#259; care s&#259; ateste starea de s&#259;n&#259;tate corespunz&#259;toare, eliberat&#259; cu cel mult 6 luni anterior derul&#259;rii concursului, de c&#259;tre medicul de familie al candidatului sau de c&#259;tre unit&#259;&#355;ile sanitare abilitate,</li>
+<li>cazierul judiciar,</span></li>
+<li>copia carnetului de munc&#259; sau, dup&#259; caz, o adeverin&#355;&#259; care s&#259; ateste vechimea &#238;n meserie, &#351;i/sau &#238;n specialitatea studiilor, </li>
+</ul>
+Copiile actelor din dosarul de concurs se prezint&#259; &#238;nso&#355;ite de documentele originale, care se certific&#259; pentru conformitate de c&#259;tre secretarul comisiei de concurs, sau &#238;n copii legalizate.
+<br /><br />
+
+<b>Tematica &#351;i bibliografia pentru postul de Consultant Artistic :</b>
+<ul>
+<li>cultur&#259; de specialitate,</li>
+<li>modalit&#259;&#355;i de a face publicitate institu&#355;iei &#351;i a activit&#259;&#355;ilor implementate, &#238;n cadrul legal,</li>
+<li>cuno&#351;tin&#355;e privind managementul de proiect,</li>
+<li>regulamentul de organizare &#351;i func&#355;ionare al Teatrului Tineretului Metropolis, </li>
+<li>Legea nr. 477/2004 privind Codul de conduit&#259; a personalului contractual din autorit&#259;&#355;ile &#351;i institu&#355;iile publice,</li>
+<li>ordonan&#355;a nr. 21/2007, actualizat&#259;, privind institu&#355;iile &#351;i companiile de spectacole sau concerte,</li>
+<li>Legea 182/2000 privind protejarea patrimoniului cultural na&#355;ional mobil, cu modific&#259;rile &#351;i complet&#259;rile ulterioare,</li>
+<li>Legea 8 /1996, a dreptului de autor &#351;i drepturilor conexe, cu modific&#259;rile &#351;i complet&#259;rile ulterioare,</li>
+<li>OMFP nr 946/2005 privind controlul intern managerial cu modific&#259;rile &#351;i complet&#259;rile ulterioare.</li>
+</ul>
+<br /><br />
+<b>Tematica &#351;i bibliografia pentru postul de Secretar PR :</b>
+<li>Legea 477/2004 - Codul de Conduit&#259; a personalului contractual din autorit&#259;&#355;ile &#351;i institu&#355;iile publice,</li>
+<li>principiile care stau la baza activit&#259;&#355;ii de Rela&#355;ii Publice,</li>
+<li>protec&#355;ia &#351;i gestionarea datelor cu caracter personal &#238;n activitatea de rela&#355;ii publice,</li>
+<li>organizarea &#351;i asigurarea accesului la informa&#355;ii de interes public,</li>
+<li>mediatizarea datelor &#351;i informa&#355;iior &#238;n exercitarea atribu&#355;iilor,</li>
+<li>redactarea materialelor specifice activit&#259;&#355;ii de rela&#355;ii publice &#351;i comunicare,</li>
+<li>fluxul informa&#355;ional &#238;ntre institu&#355;ii &#351;i mass-media.</li>
+<li>manualul PR "Publicitate &#351;i new-media" - editura Tritonic Bucure&#351;ti 2009, autori Delia Cristina Balaban, Ioana Iancu &#351;i Radu Meza,</li>
+<li>manualul "Noile Reguli de Marketing &#351;i PR", cum s&#259; ajungi la clien&#355;i prin re&#355;ele de socializare, bloguri, comunicate de pres&#259;, site-uri video &#351;i marketing viral - editura Public&#259; Bucure&#351;ti 2010, autor David Meerman Scott,</li>
+<li>manualul "Ghidul redact&#259;rii &#238;n rela&#355;ii publice - Era digital&#259;", editura Amsta Publishing Bucure&#351;ti 2008, autori Merrz Aronson, Don Spetner &#351;i Carol Ames.</li>
+<li>drepturi &#351;i obliga&#355;ii ale salaria&#355;ior conform Codului Muncii actualizat</li>
+</ul>
+<br /><br />
+<b>Tematica &#351;i bibliografia pentru posturile de muncitor calificat:</b>
+<li>testarea cuno&#351;tin&#355;elor minime,</li>
+<li>rolul muncitorului &#238;n cadrul unei institu&#355;ii,</li>
+<li>obliga&#355;iile &#351;i &#238;ndatoririle,</li>
+<li>cunoa&#351;terea Codului Muncii</li>
+</ul>
+
+<br /><br />
+
+<p>Rela&#355;ii suplimentare se pot ob&#355;ine de la Compartimentul Resurse Umane, telefon 021/2105192 &#351;i 0722468835.</p>
+
+<br /><br />
+
+
+
+                            <!-- .promo-items-container -->
+
+                        </div>
+                        <!-- .row -->
+
+                    </div>
+
+                    <!-- head -->
+         
+
+                </div>
+                <!-- .row -->
+     </div>
+            </div>
+        <!-- End Container -->
+
+    </div>
+    <!-- End Site Wrapper -->    <div class="scroll-to-top wow rollIn" data-wow-delay="0.5s">
+        <a href="#home"><i class="fa fa-angle-up"></i></a>
+    </div>
+    <footer class="dark wow flipInY">
+      <table width="100%"><tr>
+      <td width="50%"><center>
+<img src="https://www.teatrulmetropolis.ro/view/theme/front/images/secure.png" style="width:500px;"></>
+</center>
+      </td>
+
+       <td width="50%"> <center><p class="copyright">
+            <img src="https://www.teatrulmetropolis.ro/view/theme/front/images/logo-tm-25-20.png" title="Teatrul Metropolis" alt="Teatrul Metropolis">
+            <span class="logo-text">Teatrul Metropolis</span>
+            <span class="text-divide">|</span>by
+            <a href="http://pixozz.com" title="Web Design" target="_blank">
+                 <img src="https://www.teatrulmetropolis.ro/view/theme/front/images/logo-pixozz.png" style="height:auto; width:70px;" alt="Dezvoltare Web">
+            </a>
+            <br />&copy; 2015 Toate drepturile rezervate.</p></center></td></tr></table>
+    </footer>
+	<script src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/QueryLoader.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/wow.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/sticky.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/easing.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/gmap3.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.flexslider-min.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.mb.YTPlayer.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/fitVids.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/isotope.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/form-validate.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/SmoothScroll.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/backstretch.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/twitter/jquery.tweet.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/twitter/ticker.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/functions.js" type="text/javascript"></script>
+    <script src="https://www.teatrulmetropolis.ro/view/theme/front/js/custom.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.metadata.min.js"></script>
+	<script type="text/javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.maphilight.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/zebra_dialog.js"></script>
+	<script type="text/javascript" src="https://www.teatrulmetropolis.ro/view/theme/front/js/jquery.tipsy.js"></script>
+	<script src="https://www.teatrulmetropolis.ro:8000/socket.io/socket.io.js"></script>	
+	<script type="text/javascript">
+	$( document ).ready(function() {
+		$.ajax({
+			url: "https://www.teatrulmetropolis.ro:8000/socket.io",
+			type: "get",
+			cache: false,
+			dataType: 'jsonp', // it is for supporting crossdomain
+			crossDomain : true,
+			asynchronous : false,
+			jsonpCallback: 'deadCode',
+			timeout : 700, // set a timeout in milliseconds
+			complete : function(xhr, responseText, thrownError) {
+				if(xhr.status == "200") {
+					var firewall_alert = 'Conectare la sala cu success!';
+				} else {
+					var firewall_alert = 'Atentie Firewall-ul dumneavoastra blocheaza conexiunea cu Teatrul Metropolis!.';
+				}
+				$("body").attr("firewall", firewall_alert);
+			}
+		});	
+		$(".day").on( "mouseover", function() {
+			var id = $(this).attr('id');
+			$( "div.spectacol[id!='"+id+"']").addClass('fade');
+		})
+		.on( "mouseout", function() {
+			$( "div.spectacol" ).removeClass("fade");
+		});
+		$(".spectacol").on( "mouseover", function() {
+			var id = $(this).attr('id');
+			$( "div.day[id='"+id+"']").addClass('over');
+			$( "div.spectacol[id!='"+id+"']").addClass('fade');
+		})
+		.on( "mouseout", function() {
+			var id = $(this).attr('id');
+			$( "div.day[id='"+id+"']").removeClass("over");
+			$( "div.spectacol" ).removeClass("fade");
+		});		
+			var footer = $("footer").height();
+			var header = $("#navigation").height();
+			var windowh = $(window).height();
+			var pano = windowh-footer-header-71;
+			$("#pano").height(pano);	
+			$('table#comenzi').dataTable( {
+				"sDom": '<"toolbar">frtip'
+			} );
+			$("a#comenzi_previous").html('');
+			$("a#comenzi_next").html('');
+	});		
+	</script>	
+	<script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".signin").click(function(e) {          
+				e.preventDefault();
+                $("fieldset#signin_menu").toggle();
+				$(".signin").toggleClass("menu-open");
+            });
+			
+			$("fieldset#signin_menu").mouseup(function() {
+				return false
+			});
+			$(document).mouseup(function(e) {
+				if($(e.target).parent("a.signin").length==0) {
+					$(".signin").removeClass("menu-open");
+					$("fieldset#signin_menu").hide();
+				}
+			});			
+			
+        });
+		$(function() {
+		  $('a.tipsy').tipsy({gravity: 'w'});   
+		});		
+	</script>
+</body>
+</html>

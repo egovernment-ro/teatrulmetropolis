@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ro" xml:lang="ro">
+<head>
+<title>Teatrul Metropolis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Teatrul Metropolis" />
+<meta name="keywords" content="" />
+<link href="http://www.teatrulmetropolis.ro/image/data/logo-ico.gif" rel="shortcut icon" type="image/x-icon" />
+<base href="http://www.teatrulmetropolis.ro/" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<!--[if IE]>
+	
+<![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-collapser/jquery.collapser.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+
+</head>
+<body bgcolor="#000000">
+<a name="top"></a>
+<div id="container">
+	<div id="div2_continut"></div>
+	
+	<div id="header_continut">
+		<table width="100%">
+		<tr><td height="20" colspan="8"></td></tr>
+		<tr><td width="10%"></td><td align="center" valign="top" >
+				
+				<a href="http://www.teatrulmetropolis.ro/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','catalog/view/theme/default/image/prima_pg_hover.png',1)">
+						<img src="catalog/view/theme/default/image/prima_pg_normal.png" name="Image1" width="85" height="45" border="0" id="Image1" />
+					</a><br/>
+					<div class="contact_continut">
+                       <a class="contact1_continut" href="http://www.teatrulmetropolis.ro/contact.html" id="fancybox_page_rel">&nbsp;</a>
+                    </div>
+					</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/artisti" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','catalog/view/theme/default/image/artisti_hover.png',1)">
+						<img src="catalog/view/theme/default/image/artisti_normal.png" name="Image2" width="195" height="196" border="0" id="Image2" />
+					</a>
+										</td>
+					<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/program" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','catalog/view/theme/default/image/program_hover.png',1)">
+						<img src="catalog/view/theme/default/image/program_normal.png" name="Image3" width="222" height="175" border="0" id="Image3" />
+					</a>
+										</td>
+					
+				<td align="center" valign="top" >
+											<a href="http://www.teatrulmetropolis.ro/spectacole"><img src="catalog/view/theme/default/image/spectacole_hover.png" width="154" height="145" border="0"  /></a>
+									</td>
+					<td align="center" valign="top" >
+									
+					
+					<a href="http://www.teatrulmetropolis.ro/despre_noi" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','catalog/view/theme/default/image/despre_noi_hover.png',1)">
+						<img src="catalog/view/theme/default/image/despre_noi_normal.png" name="Image6" width="174" height="145" border="0" id="Image6" />
+					</a>
+							</td>
+		<td align="center" valign="top" >
+										<a href="http://www.teatrulmetropolis.ro/stiri" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','catalog/view/theme/default/image/stiri_ANTET_hover.png',1)">
+						<img src="catalog/view/theme/default/image/stiri_ANTET_normal.png" name="Image4" width="144" height="120" border="0" id="Image4" />
+					</a>
+									</td>
+		<td width="10%"></td></tr></table>		
+	</div>
+<script>
+
+function show(control){
+var pagina = new Array()
+pagina[0]="descriere"
+pagina[1]="distributia"
+pagina[2]="cronici"
+
+if (document.layers) { // NN4+
+	document.layers['table_spectacol'].height = '100%';
+	document.layers['table_caract_spect'].height = '100%';
+	
+	for (i=0;i<pagina.length;i++){
+		
+		if (pagina[i] == control) {
+			document.layers[pagina[i]].visibility = "show";
+			document.layers[pagina[i]].display = "block";
+			document.layers[pagina[i]].position = "absolute";
+			document.layers["martor_" + pagina[i]].visibility = "show";
+			document.layers["martor_" + pagina[i]].display = "block";
+			}
+		else
+			{
+			document.layers[pagina[i]].visibility = "hide";
+			
+			document.layers["martor_" + pagina[i]].visibility = "hide";
+			
+      			}
+  		}
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+		document.getElementById('table_spectacol').style.height='100%';
+		document.getElementById('table_caract_spect').style.height='100%';
+		for (i=0;i<pagina.length;i++){
+			if (pagina[i] == control) {
+				var obj = document.getElementById(pagina[i]);
+				
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "visible";
+				obj.style.display = "block";
+				
+
+				obj.style.position = "relative";
+				objSD.style.visibility = "visible";
+				objSD.style.display = "block";
+				}
+			else
+				{
+				var obj = document.getElementById(pagina[i]);
+				var objSD = document.getElementById("martor_" + pagina[i]);
+				obj.style.visibility = "hidden";
+				
+				obj.style.display = "none";
+				objSD.style.visibility = "hidden";
+				
+				}
+		}
+	}
+else if (document.all) { // IE 4
+	document.all['table_spectacol'].style.height = '100%';
+	document.all['table_caract_spect'].style.height = '100%';
+	for (i=0;i<pagina.length;i++){
+		if (pagina[i] == control) {
+			document.all[pagina[i]].style.visibility = "visible";
+			document.all[pagina[i]].style.display = "block";
+			document.all[pagina[i]].style.position = "absolute";
+			document.all["martor_" + pagina[i]].style.visibility = "visible";
+			document.all["martor_" + pagina[i]].style.display = "block";
+			}
+		else {
+			document.all[pagina[i]].style.visibility = "hidden";
+			
+			document.all["martor_" + pagina[i]].style.visibility = "hidden";
+			
+			}
+  		}
+	}
+}
+</script>
+
+<div id="content_continut" >
+	<table cellspacing="0" cellpadding="0" border="0" width="100%" ><tr><td align="center">
+		<div class="center" id="table_spectacol">
+			<table width="1000" cellspacing="0" cellpadding="0" border="0" ><tr><td align="center" valign="top" width="700" style="min-height:700px;">
+							<table cellspacing="20" cellpadding="0" width="100%" >
+					<tr><td width="33%" valign="top" align="center" >
+						<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/AZILUL%20FINAL2-500x500.png" class="grouped_elements" ><img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/AZILUL%20FINAL2-200x300.png" border="0" width="200" height="285"></a><br><br>
+													<div style="display: block;">
+																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/azilul_5-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/azilul_5-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/azilul_3-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/azilul_3-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/azilul_7-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/azilul_7-50x50.png" border="0" width="50" height="33" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/azilul_8-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/azilul_8-50x50.png" border="0" width="33" height="50" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/azilul_10-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/azilul_10-50x50.png" border="0" width="50" height="33" >
+									</a>
+																										<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/azilul_15-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/azilul_15-50x50.png" border="0" width="33" height="50" >
+									</a>
+									<br>																	<a rel="example_group" href="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/ZG_9998%20copy-500x500.png" class="grouped_elements">
+										<img src="http://www.teatrulmetropolis.ro/image/cache/data/spectacole/34/ZG_9998%20copy-50x50.png" border="0" width="33" height="50" >
+									</a>
+																								</div>
+												<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('descriere');"><font size="4" >Descriere</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_descriere" style="margin-top:-40px;margin-right:10px;float:right;">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+									
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('distributia');"><font size="4" >Distributia</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_distributia" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+										
+													<br><br>
+							<table border='0' width="126" cellspacing='0' cellpadding='0' >
+								<tr>
+									<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/c.png" colspan='3' width="126"  valign="middle" align="center">
+										<a onclick="show('cronici');"><font size="4" >Cronici</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+									<td background="catalog/view/theme/default/image/c.png" width="100" height="13"></td>
+									<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+								</tr>
+							</table>
+							<div id="martor_cronici" style="margin-top:-40px;margin-right:10px; float:right; ">
+								<img src="catalog/view/theme/default/image/martor.png">
+							</div>
+												<br><br>
+						<div class="buton-inapoi"><a href="http://www.teatrulmetropolis.ro/spectacole">< Spectacole</a></div>
+					</td>
+					<td width="67%" valign="top" >
+						<table border='0' width="476" cellspacing='0' cellpadding='0' style="height: auto;">
+							<tr>
+								<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476"  align="center" valign="middle">
+									<font size="4"  color="white">AZILUL DE NOAPTE de Maxim Gorki</font><br>
+									<font size="3"  color="white">regia Mircea MARIN</font>
+																	</td>
+							</tr>
+							<tr>
+								<td background="catalog/view/theme/default/image/lb.png" width="13" height="13" ></td>
+								<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+								<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+							</tr>
+						</table>
+						<br><br>
+												<br><br>
+						
+								<table border='0' width="476" cellspacing='0' cellpadding='0' valign="top" align="left" >
+									<tr>
+										<td background="catalog/view/theme/default/image/lt.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450" height="13"></td>
+										<td background="catalog/view/theme/default/image/rt.png" width="13" height="13"></td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/c.png" colspan='3' width="476" >
+											<table style="margin-left:20px;margin-right:10px;" align="left" id="table_caract_spect"><tr><td align="left" valign="top">
+																							<div id="descriere" style="display:block;">
+													<font size="2" color="white"><p>
+	O reflecţie asupra condiţiei umane, transpusă cu umor, cu luciditate şi cu emoţie, <br />
+	&icirc;ntr-un spectacol ce dezvăluie natura profundă a umanităţii &hellip;<br />
+	&hellip;&ldquo;Omul, ce m&acirc;ndru sună acest cuvant!&rdquo;..</p>
+<p>
+	<br />
+	cu: Ştefan RADOF, Mircea RUSU , Alexandru BINDEA , Tudorel FILIMON, Mirela MARIN, Niculae URS, Antoaneta ZAHARIA / Ioana CALOTA, Gavril PATRU, Maria JUNGHIETU, Romeo TUDOR, Ovidiu GHERASIM Robu, Ioana ANTON, Claudia NEGROIU, Orlando PETRICEANU / Ioan Gyuri PASCU, Igor CARAS</p>
+<p>
+	regia Mircea MARIN,<br />
+	scenografia Ştefania CENEAN, <br />
+	asistent scenografie Simona MARCU</p>
+</font>
+													<br>
+													<font size="2" color="white">Durată: 1 h 55 min</font><br><br>																									</div>
+																																		<div id="distributia" style="display:none;">
+													<font size="2" color="white"><p>
+	Cu: Ştefan RADOF, Mircea RUSU, Tudorel FILIMON, Mirela MARIN, Ioana Anastasia ANTON, Romeo TUDOR, Gavril PĂTRU, Ovidiu GHERASIM, Claudia NEGROIU, Antoaneta ZAHARIA, Ioana CALOTĂ, Maria JUNGHIETU, Alexandru BINDEA, Niculae URS, Ioan Gyuri PASCU, Orlando PETRICEANU, Igor CARAS<br />
+	<br />
+	Scenografia: Ştefania CENEAN<br />
+	Asistent de scenografie: Simona MARCU<br />
+	Coloana sonora: Mihnea CHELARU <br />
+	<br />
+	&nbsp;</p>
+</font><br>
+																									</div>
+																																		<div id="cronici" style="display:none;">
+													<font size="2" color="white"><p>
+	&nbsp;</p>
+<p>
+	<em><strong>LUCEAFARUL - Mircea Ghitulescu&nbsp;</strong></em></p>
+<p>
+	&nbsp;Spectacolul semnat de Mircea Marin este emoţionant şi vom &icirc;ncerca să explicăm de ce. &Icirc;n primul r&acirc;nd, pentru că &nbsp;regizorul reuşeşte să se &icirc;nt&acirc;lnească &icirc;n punctul optim cu autorul, ceea ce alţii refuză din capul locului. Dacă Azilul&hellip; era pus &icirc;n scenă de Alexander Hausvater, Andrei Zoldak sau, mai nou, Mihai Măniuţiu (vezi Moartea lui Danton ,de Georg B&uuml;chner) şi Radu Afrim - personajul Luca era Dalai Lama &icirc;n luptă cu China comunistă, iar Vaska Pepel - Al Capone sau Che Guevara, la Mircea Marin nu merg lucrurile chiar aşa de simplu. El &nbsp;este un analist al textului de o rigoare şi o mobilitate care &nbsp;nu au alt scop dec&acirc;t &nbsp;intensificarea situaţiei literare. A unui text şi aşa intens, scris &nbsp;&icirc;n stilul pasional slav, &nbsp;cu at&acirc;t mai greu de intensificat. &nbsp;Pivniţa mizerabilă a lui Gorki unde trăiesc de-a valma &nbsp;dezmoşteniţii soartei pare &nbsp;un infern social al &bdquo;proletariatului&rdquo;. Este şi asta, &nbsp;dar, &nbsp;&icirc;ncet-&icirc;ncet, &icirc;ţi dai seama că este unul existenţial şi etern care te &nbsp;priveşte &icirc;n modul cel mai intim cu putinţă. Moartea Annei este moartea ta, aşa cum sinuciderea finală a Actorului poate fi oric&acirc;nd propria sinucidere. Pivniţa lui Gorki este omenirea &icirc;nsăşi, care &icirc;şi &icirc;nchipuie că lumea se &icirc;mparte &icirc;n săraci şi bogaţi ,pe c&acirc;nd, &icirc;n eternitate, nu există dec&acirc;t omul sărac şi gol care &icirc;ncearcă să-şi ducă viaţa la bun sf&acirc;rşit cu orice preţ. Fiecare cu viciul său care &icirc;i dă senzaţia de plăcere, făc&acirc;nd, astfel, ca viaţa să alunece mai departe. Dragostea rea a patroanei Vasilisa pentru corpul t&acirc;năr al lui Vaska Pepel, alcoolismul Actorului, nevoia Nastei de a crede &icirc;n iubire citind romane frivole, Baronul, mai ales Baronul, cu legenda nobleţei pierdute pe care nu i-o poate fura nimeni fără să-l nimicească sunt c&acirc;teva din acele &bdquo;vicii&rdquo; pe care &icirc;şi reazemă existenţa. Nu este nici un personaj, oric&acirc;t de ticălos, care să nu-ţi st&acirc;rnească mila pentru că nu ei sunt vinovaţi de soarta lor deoarece &nbsp;sunt victime ale &nbsp;fatalităţii de a exista. &nbsp;Nimic nu este mai impresionant &nbsp;dec&acirc;t strigătele de moarte ale Annei &icirc;n mijlocul acestei umanităţi surde la suferinţa aproapelui, preocupată doar de spectacolul propriei degradări. Tocmai prin supradimensionarea nimicniciei, Gorki creează un contrapunct dramatic, relev&acirc;nd clipele de demnitate secretă ce luminează, intermitent, aceste destine. Oamenii nu s-au născut decăzuţi, ci au decăzut &nbsp;prin naştere şi au conştiinţa &icirc;ncărcată a căderii. &nbsp;Fiecare are un titlu de nobleţe pierdut, o utopie personală, un mit &icirc;n care se &icirc;ncăpăţ&acirc;nează să creadă. Aceste titluri de nobleţe de care fac at&acirc;ta caz sunt &nbsp;zonele ne&icirc;ntinate ale fiinţei, niciodată complet abandonată, pe care le apără cu disperare, cu sălbăticie, uneori. Aceste zone de demnitate secretă sunt şi punctele lor vulnerabile. Miturile personale pe care le ocrotesc sunt licăriri ale speranţei &nbsp;care nu moare.&nbsp;</p>
+<p>
+	Nimeni nu iubeşte pe nimeni, nimănui nu-i este milă de nimeni, de aceea apare un trimis al lui Dumnezeu &nbsp;care iubeşte şi compătimeşte pe toată lumea, &nbsp;alin&acirc;ndu-i &nbsp;cu mila sa. Este &nbsp;&bdquo;sf&acirc;ntul&rdquo; Luca, jucat de ştefan Radoff magnific, desprins parcă din calendarul cu sfinţi ortodocşi ai pravoslavnicei Rusii. &nbsp;O compoziţie de performanţă (Ştefan Radoff nu avea nimic de compus, &nbsp;fiindcă se joacă ideal pe sine) face &nbsp;Mircea Rusu &icirc;n rolul lui Satin, &nbsp;personajul care emite ilustra replică &bdquo;Omul, ce m&acirc;ndru sună acest cuv&acirc;nt!&rdquo;, Monologul lui Mircea Rusu pe această temă &nbsp;este scos de sub semnul sublimului şi introdus &icirc;ntr-un grotesc complex cu mormăieli şi sughiţuri, poticneli şi scr&acirc;şnete. Este un Satin neobişnuit cu un fel ieşit din comun de a compune rolul acestui &nbsp;ratat care te atrage ca un magnet cu ratarea lui. &nbsp;Are un relief aparte Ioana Calotă &icirc;n Nastia, care citeşte furibund minciuni despre iubire din romane franţuzeşti, dar crede &icirc;n ele din tot sufletul şi &icirc;şi apără credinţa din toate puterile, str&acirc;mbată de pl&acirc;ns şi congestionată. Pentru că &icirc;ncă una din replicile lui Gorki dintre cele care au făcut carieră &icirc;i aparţine lui Luca. Iubirea seamănă cu Dumnezeu, &bdquo;dacă nu crezi, nu există&rdquo;.&nbsp;</p>
+<p>
+	Oamenii lui Gorki se frăm&acirc;ntă, se iubesc, se omoară, se bat, se zbat &nbsp;şi se &icirc;mbată, joacă cărţi şi mor. Sunt transformate &icirc;n personaje toate păcatele şi servituţile omului: Moartea (Anna &icirc;n ago&not;nie, o imagine de coşmar interpretată de Claudia Negroiu), Crima (Vaska Pepel), Sexul &nbsp;(Vassilisa, un amestec teribil de autoritate şi su&not;punere descris de Mirela Comnoiu Marin), Munca &icirc;n zadar (Cleşci, soţul Annei, un amăr&acirc;t orgolios jucat de Ovidiu Gherasim Robu), Soţul &icirc;nşelat (Kost&acirc;liov, &icirc;n care Tudorel Filimon afişează o ameninţare de carnaval care &icirc;l va costa viaţa), &nbsp;Nobleţea pierdută (Baronul, un rol &icirc;n care Nicolae Urs cu noua sa faţă de Don Quijote cu mustaţa-n furculiţă, merge de minune, deşi ratează &nbsp;&bdquo;scena lătratului&rdquo;, jucată pe comedie, şi nu pe dramă). Igor Caras, este exuberant şi &nbsp;exploziv cu armonica sa rusească, iar Alexandru Bindea/Bubnov, cojocarul, punctează cu umor din v&acirc;rful patului replicile filozofice ale piesei. &nbsp;&nbsp;</p>
+<p>
+	Mircea Marin lucrează cu identităţi relativ fixe care dau impresia că &nbsp;este vorba despre tine, şi nu despre lume, &icirc;n general. Este un spectacol complet &nbsp;despre omul cu nevoia lui de milă şi minciună necesare pentru a supravieţui. Din drama fiecăruia se naşte o imensă dramă colectivă imposibil de atenuat şi o compasiune imensă greu de potolit.&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong><em>JURNALUL NATIONAL - Maria Sarbu</em></strong></p>
+<p>
+	<strong>Partituri actoriceşti de luat &icirc;n seama</strong></p>
+<p>
+	Regizorul Mircea Marin a pus &icirc;n scenă &quot;Azilul de noapte&quot; din dorinţa, poate, de a arăta că această piesă scrisă de clasicul Maxim Gorki este foarte modernă ca scriitură. A ales actori diferiţi, unii trat&acirc;ndu-şi rolul cu multă responsabilitate, alţii cu superficialitate. Merită de văzut fie şi pentru c&acirc;ţiva extraordinari interpreţi. Nu vă va dezamăgi &icirc;n primul r&acirc;nd Ştefan Radof. Poate convinge &icirc;n continuare de forţa sa actoricească Mircea Rusu (foto). Dar şi Niculae Urs. O să-l vedeţi c&acirc;t de credibil poate fi Igor Caras. La acest spectacol, unde este &quot;urmărită&quot; tot condiţia umană, a lucrat şi scenografa Ştefania Cenean.&nbsp;</p>
+</font><br>
+																											<div class="buton-sus"><a href="http://www.teatrulmetropolis.ro/spectacole/azilul-de-noapte-de-maxim-gorki.html#top">^ Sus</a></div>
+																									</div>
+																						</td></tr></table>
+										</td>
+									</tr>
+									<tr>
+										<td background="catalog/view/theme/default/image/lb.png" width="13" height="13"></td>
+										<td background="catalog/view/theme/default/image/c.png" width="450"  height="13"></td>
+										<td background="catalog/view/theme/default/image/rb.png" width="13" height="13"></td>
+									</tr>
+								</table>
+					</td>
+				</tr>
+			</table>
+		
+		<script>show('descriere');</script>
+	</td>
+<td width="300" align="center" valign="top"><br><br>
+		<br>
+<div class="dreapta-cautare">
+		
+			<input type="text" id="keyword" value="Scrie aici și ..." onfocus="if (this.value == 'Scrie aici și ...') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Scrie aici și ...';}" class="search-input" size="20" onKeyPress="return submitenter_cauta(event)">
+			<a onclick="moduleSearch();" class="buton" >Caută</a>
+		
+</div>
+<br>
+<div class="dreapta-cos">	
+	<div id="module_cart" >
+ <div class="middle">
+	
+        <img src="catalog/view/theme/default/image/bilete_fara_rezervari.png" width="181" height="129" border="0"/>
+    	
+  </div>
+</div>
+<script type="text/javascript"><!--
+$(document).ready(function () {
+	$('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+	$("a[id^='adaugabilet']").click(function () {
+		 var randlocIDValSplitter    = (this.id).split("-");
+    var rand            = randlocIDValSplitter[1];
+	var loc            = randlocIDValSplitter[2];
+	var reprezentatie_id            = randlocIDValSplitter[3];
+	
+	control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+	
+	});
+	$("a[id^='scoatebilet']").click(function () {
+		 var randlocIDValSplitter   = (this.id).split("-");
+		 var rand            		= randlocIDValSplitter[1];
+		 var loc            		= randlocIDValSplitter[2];
+		 var reprezentatie_id       = randlocIDValSplitter[3];
+	
+		control = reprezentatie_id+':'+rand+':'+loc;
+    
+        $.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/callback&control_scoate='+control,
+			dataType: 'html',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+	
+	});
+	$("a[id^='scoate_sala']").click(function () {
+		var randlocIDValSplitter    = (this.id).split("-");
+		var reprezentatie_id        = randlocIDValSplitter[1];
+	
+	
+    
+        $.ajax({
+            url: 'index.php?route=continut/cart/callback&reprezentatie_id='+reprezentatie_id,
+            type: 'get',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+	
+	});
+	$("a[id^='clear_cart']").click(function () {
+		$.ajax({
+            type: 'get',
+            url: 'index.php?route=continut/cart/clear',
+            success: function (html) {
+                $('#module_cart .middle').html(html);
+            },   
+                   
+        });
+		
+	});
+	
+	 $('a.add2cart[class]').each(function() {
+        var $t = $(this);
+        $t.removeAttr('onclick')
+    });
+ 
+});
+</script>
+
+
+</div>
+<br>
+<div class="dreapta-cont">
+	<table width="200" cellspacing='0' cellpadding='0'>
+		
+				<tr><td background="catalog/view/theme/default/image/c.png" width="110" height="30" valign="middle" align="center" >
+				<font color="#d2d0d0">Accesează cont</font>
+		</td>
+		<td width="90" valign="middle" align="center">
+			<a class="buton" href="http://www.teatrulmetropolis.ro/creaza_cont.html" id="fancybox_page_no_reload">Cont nou ?</a>
+		</td></tr>
+		<tr><td colspan="2" height="50" width="200" background="catalog/view/theme/default/image/c.png" valign="middle" align="center">
+			<form action="http://www.teatrulmetropolis.ro/index.php?route=common/home/autentificare" method="post" id="form_autentificare">
+				<input type="text" name="email" value="Email utilizator" onfocus="if (this.value == 'Email utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Email utilizator';}" class="user-input">
+				<input type="password" name="password" value="Parola utilizator" onfocus="if (this.value == 'Parola utilizator') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'Parola utilizator';}" class="pass-input" onKeyPress="return submitenter_login_cont(event)">
+				<input type="hidden" name="redirect" value="http://www.teatrulmetropolis.ro/index.php?route=continut/spectacole&amp;spectacol_id=34">
+			</form>
+		</td></tr>
+		<tr><td width=110" height="30"></td>
+		<td background="catalog/view/theme/default/image/c.png" width="90" height="30" valign="middle" align="center">
+			<a onclick="$('#form_autentificare').submit();" class="buton" >Accesează</a>
+		</td></tr>
+		</table>
+</div>
+<br>
+<br>
+<div class="dreapta-comentarii">
+	<a href="http://www.teatrulmetropolis.ro/stiri/adela-popescu-si-mihai-bendeac-in-premiera-pe-o-banca-la-metropolis.html#comentariu3" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','catalog/view/theme/default/image/parereaTA_hover.png',1)">
+		<img src="catalog/view/theme/default/image/parereaTA_normal.png" name="Image50" width="188" height="126" border="0" id="Image50" /><br>
+		<table id="Ultim_Coment">
+							<tr>
+								<td id="dataUltim_Coment">
+									15 octombrie 2011 la 16:17
+								</td>
+							<tr>
+								<td id="idUltim_Coment">
+									*Nume:
+								</td>
+							<tr>
+								<td id="contentUltim_Coment">
+									nu va suparati , cand se va mai juca piesa?
+								</td>
+							</tr>
+						</table>		
+	</a>
+</div>
+<br>
+<br>
+<div class="dreapta-ajutor">
+	<a href="http://www.teatrulmetropolis.ro/ajutor" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','catalog/view/theme/default/image/ajutor_hover.png',1)" id="fancybox_page_rel">
+		<img src="catalog/view/theme/default/image/ajutor_normal.png" name="Image51" width="171" height="101" border="0" id="Image51" /><br>
+	</a>
+</div>
+	</td>
+</tr></table>
+</div>	
+</td>
+</tr></table>
+</div>				
+
+<div id="footer_continut">
+	<table width="1000" align="center" height="200" background="catalog/view/theme/default/image/c.png"><tr><td><br>
+		<table width="90%" cellpadding="0" cellspacing="0"  style="color: #999;font-family:Arial, Helvetica, sans-serif;font-size:14px;">
+  <tr>
+    <td width="23%" rowspan="6" align="right" valign="top" >
+    <img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/sigla_tm.png" width="100" height="100" border="0" style="margin-right:30px;"/>
+    </td>
+    <td width="70%">Adresa: Str. Mihai Eminescu nr.89, sector 2, București.</td>
+    <td width="7%" rowspan="6" align="center" valign="top">
+   <a href="http://www.pmb.ro" target="blank"><img src="http://teatrulmetropolis.ro/catalog/view/theme/default/image/primaria_mun_buc.png" width="75" height="150" border="0" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Rezervări bilete se pot face și telefonic, la numerele: <br />
+      <strong style="color:#FFF">021 210 51 08</strong>  sau  <strong style="color:#FFF">0728 138 265</strong><br />
+      (în intervalul orar 10:00 - 19.00)<br />
+    Rezervarea telefonică este valabilă 48 de h.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font style="font-size:16px; color:#FFF">&copy;Teatrul Metropolis. Toate drepturile rezervate</font></td>
+  </tr>
+  <tr>
+    <td ><font style="font-size:12px;">Site produs de <strong style="color: #CCC">Legolas Media</strong><br />
+        Design by <strong style="color: #CCC">Alexandru Șulai</strong></font></td>
+  </tr>
+</table>	</td></tr></table>
+</div>
+
+
+</div>
+
+</body></html> 

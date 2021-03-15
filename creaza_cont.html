@@ -1,0 +1,300 @@
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" media="screen" />
+
+
+<script type="text/javascript" src="catalog/view/javascript/unitpngfix/unitpngfix.js"></script>
+
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.5.js"></script>
+
+<script type="text/javascript" src="catalog/view/javascript/tm.js"></script>
+
+
+<script>
+
+function showhideptva(createForm){
+
+if  (createForm.ptva.checked == true){
+  createForm.ptva.value=1;
+
+if (document.layers) { // NN4+
+	
+			document.layers['ptva'].visibility = "show";
+			document.layers['ptva'].display = "block";
+			
+
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+				var obj = document.getElementById('ptva');
+				obj.style.visibility = "visible";
+				obj.style.display = "block";
+				
+	}
+else if (document.all) { // IE 4
+			document.all['ptva'].style.visibility = "visible";
+			document.all['ptva'].style.display = "block";
+			
+	}
+}
+else
+{
+createForm.ptva.value=0;
+if (document.layers) { // NN4+
+	
+			document.layers['ptva'].visibility = "hide";
+			document.layers['ptva'].display = "none";
+	}
+else 
+	if (document.getElementById) { // gecko(NN6) + IE 5+
+				var obj = document.getElementById('ptva');
+				//obj.style.visibility = "hide";
+				obj.style.display = "none";
+	}
+else if (document.all) { // IE 4
+			document.all['ptva'].style.visibility = "hide";
+			document.all['ptva'].style.display = "none";
+			}
+}
+}
+</script>
+</head>
+<body>
+<!--[if IE]>
+	<body id="facybox_fundal">
+    <style type="text/css">
+      .slide_content{height:300px;}
+	</style>
+<![endif]-->
+
+
+<div id="content_account">
+  
+    <div class="center">
+      <h1>Creare Cont</h1>
+    </div>   
+	<div class="middle">
+		
+		<form action="https://teatrulmetropolis.ro/index.php?route=account/create" method="post" enctype="multipart/form-data" id="create">
+			<div class='tabbed_content'>
+				<div class='tabs'>
+					<div class='moving_bg'>&nbsp;</div>
+					<span class='tab_item'>Detalii Personale</span>
+					<span class='tab_item'>Avatar și Parola</span>
+                    <span class='tab_item'>Persoană juridică</span>
+                    <span class='tab_item'>Date opţionale</span>
+                </div>
+				<div class='slide_content'>						
+					<div class='tabslider'>
+						<table>
+						
+						<tr>
+							<td width="150"><p><span class="required">*</span> Prenume:</p></td>
+							<td ><input name="firstname" type="text" value="" size="45" /></td>
+						</tr>
+						<tr>
+							<td><p><span class="required">*</span> Nume:</p></td>
+							<td ><input type="text" name="lastname" value="" size="45" /></td>
+						</tr>
+						<tr>
+							<td><p><span class="required">*</span> E-Mail:</p></td>
+							<td ><input type="text" name="email" value="" size="45" /></td>
+						</tr>
+						<tr>
+							<td><p><span class="required">*</span> Telefon:</p></td>
+							<td ><input type="text" name="telephone" value="" size="45" /></td>
+						</tr>
+						<tr>
+							<td><p><span class="required">*</span> Adresa:</p></td>
+							<td ><input name="address_1" type="text" value="" size="45" /></td>
+						</tr>
+						<tr>
+							<td><p><span class="required">*</span> Oraş:</p></td>
+							<td ><input name="city" type="text" value="" size="45" /></td>
+						</tr>
+						<tr>
+							<td >Cod Poştal:</td>
+							<td ><input name="postcode" type="text" value="" size="45" /></td>
+						</tr>
+						<tr>
+							<td><p>Ţara:</p></td>
+							<td ><select name="country_id" id="country_id" onChange="$('select[name=\'zone_id\']').load('index.php?route=account/create/zone&country_id=' + this.value + '&zone_id=2688');">
+								
+																	<option value="140">Republica Moldova</option>
+																	<option value="175">Romania</option>
+															</select></td>
+						</tr>
+						<tr>
+							<td><p>Regiune / Judeţ:</p></td>
+							<td ><select name="zone_id"></select></td>
+						</tr>
+						</table>
+						<table>
+						<tr><td width="150"><p> Avatar:</p></td>
+													<td width="50" align="left">
+								<img src="https://teatrulmetropolis.ro/image/cache/avatare/av_1-30x30.png" width="30" height="30"><br>
+								<input type="radio" value="1" checked="checked" name="avatar">
+							</td>
+													<td width="50" align="left">
+								<img src="https://teatrulmetropolis.ro/image/cache/avatare/av_2-30x30.png" width="30" height="30"><br>
+								<input type="radio" value="2"  name="avatar">
+							</td>
+													<td width="50" align="left">
+								<img src="https://teatrulmetropolis.ro/image/cache/avatare/av_3-30x30.png" width="30" height="30"><br>
+								<input type="radio" value="3"  name="avatar">
+							</td>
+													<td width="50" align="left">
+								<img src="https://teatrulmetropolis.ro/image/cache/avatare/av_4-30x30.png" width="30" height="30"><br>
+								<input type="radio" value="4"  name="avatar">
+							</td>
+													<td width="50" align="left">
+								<img src="https://teatrulmetropolis.ro/image/cache/avatare/av_5-30x30.png" width="30" height="30"><br>
+								<input type="radio" value="5"  name="avatar">
+							</td>
+													<td width="50" align="left">
+								<img src="https://teatrulmetropolis.ro/image/cache/avatare/av_6-30x30.png" width="30" height="30"><br>
+								<input type="radio" value="6"  name="avatar">
+							</td>
+													<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td width="150"><p><span class="required">*</span> Parola:</p></td>
+							<td colspan="7"><input type="password" name="password" value="" /></td>
+						</tr>
+						<tr>
+							<td><p><span class="required">*</span> Confirmare Parolă:</p></td>
+							<td colspan="7"><input type="password" name="confirm" value="" /></td>
+						</tr>
+					</table>
+					 <table width="562">
+						<tr>
+					<td width="122"><p><span class="required">+</span> Firma:</p></td>
+					<td width="30">&nbsp;</td>
+					<td width="250"><input name="firma" type="text" value="" size="45" />
+					<td width="178">&nbsp;</td>
+					</td>
+				</tr>
+									
+				<tr>
+				  <td width="122"><p><span class="required">+</span> CUI / CIF:</p></td>
+				  <td width="30" align='center'><b id="ptva" >RO</b></td>
+				  <td width="250"><input name="cif" type="text" value="" size="45" /></td>
+				  <td width="178"><p>
+					  <input type="checkbox" name="ptva" id="ptva1" onClick='showhideptva(this.form);' value="0" checked />
+					  <label for="ptva1">Platitor TVA</label>
+					  </p></td>
+			      
+	          </tr>
+				<tr>
+					<td width="122"><p><span class="required">+</span> Nr. Reg. Com.:</p></td>
+					<td width="30">&nbsp;</td>
+					<td width="250"><input name="nrc" type="text" value="" size="45" /></td>
+					<td width="178">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="122"><p><span class="required">+</span> IBAN:</p></td>
+					<td width="30">&nbsp;</td>
+					<td width="250"><input name="iban" type="text" value="" size="45" /></td>
+					<td width="178">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="122"><p><span class="required">+</span> Banca:</p></td>
+					<td width="30">&nbsp;</td>
+					<td width="250"><input name="bank" type="text" value="" size="45"></td>
+					<td width="178">&nbsp;</td>
+				</tr>
+				<tr>
+	        <td width="70"><p><span class="required">+</span> Adresa:</p></td>
+			<td>&nbsp;</td>
+	        <td colspan="2"><input name="address_pj" type="text" value="" size="45"></td>
+	        </tr>
+	      
+	      <tr>
+				      <td><p><span class="required">+</span> Oraş:</p></td>
+					  <td>&nbsp;</td>
+				      <td colspan="2"><input name="city_pj" type="text" value="" size="45" />
+			          </td>
+			        </tr>
+					 <tr>
+	        <td width="70">Cod Poştal:</td>
+			<td>&nbsp;</td>
+	        <td colspan="2"><input name="postcode_pj" type="text" value="" size="45" /></td>
+	        </tr>
+				    <tr>
+				      <td><p>Ţara:</p></td>
+					  <td>&nbsp;</td>
+				      <td colspan="2"><select name="country_id_pj" id="country_id_pj" onChange="$('select[name=\'zone_id_pj\']').load('index.php?route=account/create/zone_pj&country_id_pj=' + this.value + '&zone_id_pj=2688');">
+				        
+				        				        <option value="140">Republica Moldova</option>
+				        				        <option value="175">Romania</option>
+				        				        </select>
+			          </td>
+			        </tr>
+				    <tr>
+				      <td><p>Regiune / Judeţ:</p></td>
+					  <td>&nbsp;</td>
+				      <td colspan="2"><select name="zone_id_pj">
+				        </select>
+			          </td>
+			        </tr>
+				</table>
+				<table>
+					<tr>
+						<td width="150">Abonare:</td>
+						<td >
+															<input id="nl1" type="radio" class="styled"  name="newsletter" value="1" />
+								<label for="nl1">Da</label>
+								<input id="nl2" type="radio" class="styled"  name="newsletter" value="0" checked="checked" />
+								<label for="nl2">Nu</label>
+													</td>
+					</tr>
+					<tr>
+						<td width="150"><p><span class="required">+</span> CNP:</p></td>
+						<td ><input name="cnp" type="text" value="" size="45" /></td>
+					</tr>
+					<tr>
+						<td width="70">Fax:</td>
+						<td><input name="fax" type="text" value="" size="45" /></td>
+					</tr>
+				</table>
+			</div>
+		<br style='clear: both' />
+	</div>
+</div>
+		<table>
+			<tr><td >Prin confimarea creării contului confirmaţi că sunteţi de acord cu <a href="https://teatrulmetropolis.ro/ajutor">Termenii şi Condiţiile</a> impuse de către Teatrul Metropolis. </td></tr>
+			<tr><td >Câmpurile marcate cu * sunt obligatorii. În cazul în care vor fi completate câmpurile marcate cu + acestea vor fi verificate.</td></tr>
+		</table>
+		
+		<table id="table_error" cellspacing="0" cellpadding="3" border="0"><tr><td>
+																																																					</td></tr></table>
+	  	      <br />
+        <table cellspacing="0" cellpadding="0" border="0" >
+          <tr>
+            <td align="left">
+			<a onClick="$('#create').submit();" class="buton">Confirmare</a>
+			
+			</td>
+          </tr>
+        </table>
+      
+          </form>
+	</div>
+</div> 
+  <script type="text/javascript"><!--
+$('select[name=\'zone_id\']').load('index.php?route=account/create/zone&country_id=175&zone_id=2688');
+
+$('#country_id').attr('value', '175');
+
+$('select[name=\'zone_id_pj\']').load('index.php?route=account/create/zone_pj&country_id_pj=175&zone_id_pj=2688');
+
+$('#country_id_pj').attr('value', '175');
+//-->
+$(document).ready(function() {
+	TabbedContent.init();
+});
+</script>
+</body>
+</html>
